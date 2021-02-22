@@ -1,0 +1,99 @@
+ <% t =  data.gliomas%>
+<div class="navigation">
+   <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
+      <label for="navi-toggle" class="navigation__button">
+        <span class="navigation__icon--1">&nbsp;</span>
+        <span class="navigation__icon--2">&nbsp;</span>
+        <span class="navigation__icon--3">&nbsp;</span>
+      </label>
+      <div class="navigation__background">&nbsp;</div>
+
+</div>
+
+
+<div id="sidebar" class= "hidden-phone">
+  <div class="sidebar">
+    <div class="sidebar__top">
+      <div class="sidebar__title">
+        <h2><%= t.title  %></h2>
+      </div>
+      <div class="sidebar__percentage ">
+        <p><span id= "%number">0%completado</span> </p>
+        <span class="sidebar__percentage__bar sidebar__percentage__bar--1"></span>
+        <span class="sidebar__percentage__bar sidebar__percentage__bar--2"></span>
+      </div>
+    </div>
+
+    <div class="sidebar__content  ">
+
+      <div id="contenidos-tabs" >
+        <div id= "contenidos-title" class="sidebar__content__item sidebar__content__title">
+          CONTENIDOS
+          <i class="fas fa-chevron-down sidebar__content__chevron-down"></i>
+        </div>
+        <% capitulos = [t.presentacion_side  , t.objetivos_side  , t.epidemiologia_side  , t.diagnostico_side , t.tratamiento_side  , t.inicio_side  , t.tendencias_side  ] %>
+        <% capitulos.each do |capitulo| %>
+
+        <a href= #<%= capitulo.tr(" ", "").byteslice(0,5)%> class="sidebar__content__item sidebar__content__chapter" id= side_<%=capitulo.tr(" ", "")  %>>
+          <p><%= capitulo%></p>
+          <i class="fas fa-check-circle check "></i>
+          <span class="fas fa-chevron-right sidebar__content__chevron"></span>
+        </a>
+        <% end %>
+      </div>
+
+      <div id="evaluacion-tabs" >
+        <div id= "evaluacion-title" class="sidebar__content__item sidebar__content__title">
+          EVALUACIÓN
+          <i class="fas fa-chevron-down sidebar__content__chevron-down"></i>
+        </div>
+        <a href="#pregunta1"  class="sidebar__content__item sidebar__content__chapter" id= "side_pregunta1">
+          <p>Pregunta 1</p>
+          <i class="fas fa-check-circle green"></i>
+          <span class="fas fa-chevron-right sidebar__content__chevron"></span>
+
+        </a>
+        <a href="#pregunta2"  class="sidebar__content__item sidebar__content__chapter" id= "side_pregunta2" >
+          <p>Pregunta 2</p>
+          <i class="fas fa-check-circle  green"></i>
+          <span class="fas fa-chevron-right sidebar__content__chevron"></span>
+        </a>
+      </div>
+
+    <a id="side_bibliografia" href="#bibliografia" class="sidebar__content__item sidebar__content__title">
+        BIBLIOGRAFIA
+    </a>
+
+
+      <div id="caso-practico-tabs" >
+          <a id= "caso-practico-title" href="#caso_practico" class="sidebar__content__item sidebar__content__title">
+            <%= t.caso_practico.upcase  %>
+            <i class="fas fa-chevron-down sidebar__content__chevron-down"></i>
+          </a>
+        <a href="#pregunta3"  class="sidebar__content__item sidebar__content__chapter" id= "side_pregunta3">
+          <p>Pregunta de reflexión</p>
+          <i class="fas fa-check-circle green"></i>
+          <span class="fas fa-chevron-right sidebar__content__chevron"></span>
+
+        </a>
+        <a href="#pregunta4"  class="sidebar__content__item sidebar__content__chapter" id= "side_pregunta4" >
+          <p>Continuación del caso</p>
+          <i class="fas fa-check-circle  green"></i>
+          <span class="fas fa-chevron-right sidebar__content__chevron"></span>
+        </a>
+      </div>
+
+ </div>
+ <br>
+ <br>
+ <br><br>
+ <br><br>
+ <br>
+ <br><br>
+ <br>
+ <br><br>
+ <br>
+ <br>
+
+  </div>
+</div>

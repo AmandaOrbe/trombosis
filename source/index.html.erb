@@ -1,0 +1,235 @@
+
+<% t =  data.gliomas%>
+<div id="home">
+  <%=partial(:'components/sidebar')  %>
+
+  <div id="main">
+    <div class="container">
+      <div class="content">
+        <%= partial(:'components/header1', :locals => { :text => t.title}) %>
+
+        <div id="Prese">
+          <%= partial(:'components/header2', :locals => { :text => t.presentacion}) %>
+          <p class= "indented margin5 "> <%= t.presentacion_text1 %> </p>
+          <p class= "indented  "> <%= t.presentacion_text2 %> </p>
+            <p class="indented "><span class=" container__highlight"><%= t.presentacion_span %></span></p>
+        </div>
+
+        <div id="Objet">
+          <%= partial(:'components/header2', :locals => { :text => t.objetivos}) %>
+          <p class= "indented margin5"> <%= t.objetivos_text %></p>
+        </div>
+
+        <div id="1.Epi">
+          <%= partial(:'components/header2', :locals => { :text => t.epidemiologia}) %>
+          <p class= "indented margin5"> <%= t.epidemiologia_text %></p>
+          <div class="card_row">
+            <%= partial(:'components/card', :locals => { :title => t.hipertension, :body => t.hipertension_body }) %>
+            <%= partial(:'components/card', :locals => { :title => t.focalidad, :body => t.focalidad_body }) %>
+          </div>
+          <div class="card_row">
+            <%= partial(:'components/card', :locals => { :title => t.epilepsia, :body => t.epilepsia_body }) %>
+          </div>
+          <p class= "indented margin5"> <span class="container__highlight"><%= t.incidencia_span %></span> <%= t.incidencia_text %> </p>
+          <%= partial(:'components/list',  :locals => { :list_items => [t.edad, t.tamaño, t.reseccion, t.idh ]}) %>
+          <p class= "indented margin5"><%= t.criterios  %></p>
+          <p class= "indented margin5"><%= t.sospecha  %></p>
+          <%= partial(:'components/image-big',  :locals => { :image => "images/astrocitoma.png", :title => t.image1_title, :text => t.image1_text, :id => "astrocitoma"}) %>
+        </div>
+<br>
+        <div id="2.Dia">
+          <%= partial(:'components/header2', :locals => { :text => t.diagnostico}) %>
+          <p class= "indented margin5"><%= t.histologicamente  %></p>
+          <div class="card_row">
+            <%= partial(:'components/card', :locals => { :title => t.astrocitoma, :body => t.astrocitoma_body }) %>
+            <%= partial(:'components/card', :locals => { :title => t.oligodendroglioma, :body => t.oligodendroglioma_body }) %>
+          </div>
+          <p class= "margin5"><strong>Figura 2</strong></p>
+          <div class="card_row">
+            <%= partial(:'components/image-small',  :locals => { :image => "images/oligodendroglioma_IDH1_mutado.png",  :title => t.figura_2_a_title, :text => t.figura_2_a_text,  :id => "IDH1"}) %>
+            <%= partial(:'components/image-small',  :locals => { :image => "images/oligodendroglioma_gradoII.png", :title => t.figura_2_b_title, :text => t.figura_2_b_text, :id => "gradoII"}) %>
+          </div>
+          <div class="card_row">
+            <%= partial(:'components/image-small',  :locals => { :image => "images/Astrocitoma_difuso_IDH1_mutado.png", :title => t.figura_2_c_title, :text => t.figura_2_c_text, :id => "mutado"}) %>
+            <%= partial(:'components/image-small',  :locals => { :image => "images/Astrocitoma_difuso.png", :title => t.figura_2_d_title, :text => t.figura_2_d_text, :id => "difuso"}) %>
+          </div>
+          <p class="indented margin5">
+            <%= t.independientemente  %>
+            <span class="container__highlight"><%= t.imprescindible %></span>
+            <%= t.marcadores  %>
+          </p>
+         <%= partial(:'components/image-big',  :locals => { :image => "images/algoritmo_diagnostico.png", :title => t.algoritmo_title, :text => "", :id => "algoritmo"}) %>
+
+          <p class="indented margin5">
+            <%= t.m  %>
+            <%= t.metilacion  %>
+          </p>
+        </div>
+
+        <div id="3.Tra">
+          <%= partial(:'components/header2', :locals => { :text => t.tratamiento}) %>
+          <p class="indented margin5"><%= t.quirurgico %> </p>
+          <p class="indented margin5"><%= t.reseccion2  %> </p>
+          <p class="indented margin5"><%= t.tumores  %> </p>
+          <%= partial(:'components/list',  :locals => { :list_items => [t.mayor, t.tamaño2, t.codeleccion, t.mutacion, t.completa ]}) %>
+          <p class="indented "><%= t.recomienda  %> </p>
+
+          <h3 class="margin7"> <%= t.radioterapia  %> </h3>
+          <p class= "indented margin5">
+            <span class="container__highlight"><%= t.radioterapia_span %></span>
+            <%= t.radioterapia_text %>
+          </p>
+           <%= partial(:'components/image-big',  :locals => { :image => "images/dosimetria_IMRT.png", :title => t.dosimetria, :text => "", :id => "dosimetria"}) %>
+          <h3 class="margin7"><%= t.quimioterapia  %> </h3>
+          <h3 class="margin7"><%= t.PCV  %> </h3>
+          <p class= "indented margin5">
+            <span class="container__highlight"><%= t.quimioterapia_span %></span>
+            <%= t.quimioterapia_text_1 %>
+          </p>
+          <p class= "indented margin5"><%= t.quimioterapia_text_2 %> </p>
+          <p class= "indented margin5"><%= t.quimioterapia_text_3 %> </p>
+
+          <h3 class="margin7"><%= t.temozolomida  %> </h3>
+          <p class= "indented margin5"><%= t.temozolomida_text_1 %> </p>
+          <p class= "indented margin5"><%= t.temozolomida_text_2 %> </p>
+
+          <h3 class="margin7"><%= t.versus  %> </h3>
+          <p class= "indented margin5"><%= t.versus_text%> </p>
+        </div>
+
+        <div id="4.Tra">
+          <%= partial(:'components/header2', :locals => { :text => t.inicio}) %>
+          <p class= "indented margin5"><%= t.inicio_text%> </p>
+        </div>
+
+        <div id="5.Tra">
+          <%= partial(:'components/header2', :locals => { :text => t.tendencias}) %>
+          <p class= "indented margin5">
+            <%= t.tendencias_text_1%>
+            <span class="container__highlight"><%= t.tendencias_span %></span>
+          </p>
+          <p class="indented margin5"><%= t.tendencias_text_2 %></p>
+        </div>
+
+      </div>
+
+    <div id="pregunta1" class="content--2">
+      <div >
+        <%= partial(:'components/header1', :locals => { :text => t.pregunta1}) %>
+        <p class="margin5"><i> <%= t.pregunta1_text  %> </i></p>
+
+
+        <%= partial(:'components/test',  :locals => { :test_options => [t.pregunta1_opt_a, t.pregunta1_opt_b, t.pregunta1_opt_c, t.pregunta1_opt_d ], :name => "pregunta1", :correct => 0}) %>
+        <div class="test__answer__correct ">
+          <h4>¡CORRECTO!</h4>
+          <p><%= t.answer1 %></p>
+          </div>
+
+        <div class="test__answer__incorrect ">
+          <h4>¡INCORRECTO!</h4>
+          <p><%= t.answer1  %></p>
+        </div>
+      </div>
+    </div>
+
+    <div id="pregunta2" class="content--2">
+      <div >
+
+      <%= partial(:'components/header1', :locals => { :text => t.pregunta2}) %>
+      <p class="margin5"><i> <%= t.pregunta2_text  %> </i></p>
+
+      <%= partial(:'components/test',  :locals => { :test_options => [t.pregunta2_opt_a, t.pregunta2_opt_b, t.pregunta2_opt_c, t.pregunta2_opt_d ], :name => "pregunta2", :correct => 0}) %>
+      <div class="test__answer__correct2 ">
+        <h4>¡CORRECTO!</h4>
+        <p><%= t.answer2 %></p>
+        </div>
+      <div class="test__answer__incorrect2 ">
+        <h4>¡INCORRECTO!</h4>
+        <p><%= t.answer2  %></p>
+      </div>
+
+    </div>
+  </div>
+
+
+    <div class="content--2" id="bibliografia">
+      <%= partial(:'components/header1', :locals => { :text => t.bibliografia}) %>
+      <br>
+      <%= partial(:'components/header2', :locals => { :text => t.revistas}) %>
+      <ul class= "list">
+        <%= partial(:'components/biblio',  :locals => { :title => t.biblio1_title, :magazine => t.biblio1_magazine, :link => t.biblio1_link}) %>
+        <%= partial(:'components/biblio',  :locals => { :title => t.biblio2_title, :magazine => t.biblio2_magazine, :link => t.biblio2_link}) %>
+        <%= partial(:'components/biblio',  :locals => { :title => t.biblio3_title, :magazine => t.biblio3_magazine, :link => t.biblio3_link}) %>
+        <%= partial(:'components/biblio',  :locals => { :title => t.biblio4_title, :magazine => t.biblio4_magazine, :link => t.biblio4_link}) %>
+        <%= partial(:'components/biblio',  :locals => { :title => t.biblio5_title, :magazine => t.biblio5_magazine, :link => t.biblio5_link}) %>
+        <%= partial(:'components/biblio',  :locals => { :title => t.biblio6_title, :magazine => t.biblio6_magazine, :link => t.biblio6_link}) %>
+        <%= partial(:'components/biblio',  :locals => { :title => t.biblio7_title, :magazine => t.biblio7_magazine, :link => t.biblio7_link}) %>
+        <%= partial(:'components/biblio',  :locals => { :title => t.biblio8_title, :magazine => t.biblio8_magazine, :link => t.biblio8_link}) %>
+        <%= partial(:'components/biblio',  :locals => { :title => t.biblio9_title, :magazine => t.biblio9_magazine, :link => t.biblio9_link}) %>
+        <%= partial(:'components/biblio',  :locals => { :title => t.biblio10_title, :magazine => t.biblio10_magazine, :link => t.biblio10_link}) %>
+        <%= partial(:'components/biblio',  :locals => { :title => t.biblio11_title, :magazine => t.biblio11_magazine, :link => t.biblio11_link}) %>
+      </ul>
+    </div>
+
+    <div id= "caso_practico" class="content--2">
+      <div id="pregunta3" >
+        <div >
+          <%= partial(:'components/header1', :locals => { :text => t.caso_practico}) %>
+          <h3 class="margin7"> <%= t.texto_planteamiento  %> </h3>
+
+          <p class="margin5"><span class="list__star">*</span><%= t.planteamiento1 %> </p>
+          <p class="margin2 " ><span class="list__star">*</span><%= t.planteamiento2 %> </p>
+          <p class="margin2 " ><span class="list__star">*</span><%= t.planteamiento3 %> </p>
+          <p  class="margin2 "><span class="list__star">*</span><%= t.planteamiento4 %> </p>
+          <p class="margin2 " ><span class="list__star">*</span><%= t.planteamiento5 %> </p>
+          <p class="margin2 " ><span class="list__star">*</span><%= t.planteamiento6 %> </p>
+
+
+          <h3 class="margin7"> <%= t.reflexion %> </h3>
+          <p class="margin5 " ><i> <%= t.pregunta_reflexion_1 %> </i></p>
+          <div class="margin5"> <%= partial(:'components/test',  :locals => { :test_options => [t.caso_practico_opt_a, t.caso_practico_opt_b, t.caso_practico_opt_c ], :name => "pregunta3", :correct => 0}) %>
+          </div>
+          <div class="test__answer__correct3">
+            <h4>¡CORRECTO!</h4>
+            <p><%= t.answer3 %></p>
+            </div>
+
+          <div class="test__answer__incorrect3 ">
+            <h4>¡INCORRECTO!</h4>
+            <p><%= t.answer3  %></p>
+          </div>
+        </div>
+      </div>
+<br>
+<br>
+<br>
+      <div id="pregunta4">
+      <h3 class="margin7"> <%= t.continuacion  %> </h3>
+      <p class="margin5"> <%= t.texto_continuacion  %> </p>
+      <p class="margin5"> <i> <%= t.pregunta_continuacion  %></i> </p>
+      <div class="margin5"> <%= partial(:'components/test',  :locals => { :test_options => [t.caso_practico2_opt_a, t.caso_practico2_opt_b, t.caso_practico2_opt_c ], :name => "pregunta4", :correct => 0}) %>
+      </div>
+      <div class="test__answer__correct4">
+          <h4>¡CORRECTO!</h4>
+          <p><%= t.answer4_a  %></p>
+          <p><%= t.answer4_b  %></p>
+          <p><%= t.answer4_b  %></p>
+        </div>
+
+        <div class="test__answer__incorrect4 ">
+          <h4>¡INCORRECTO!</h4>
+          <p><%= t.answer4_a  %></p>
+          <p><%= t.answer4_b  %></p>
+          <p><%= t.answer4_b  %></p>
+        </div>
+
+
+      </div>
+    </div>
+
+
+
+
+      </div>
+  </div>
+</div>

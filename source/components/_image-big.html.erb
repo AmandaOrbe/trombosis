@@ -1,0 +1,36 @@
+<div class="image-big margin5" data-toggle="modal" data-target=  .<%= id  %> >
+  <div class="image-big__image" >
+    <%= image_tag image %>
+  </div>
+
+  <div class="image-big__text margin-bottom2">
+    <p><strong><%=  title %> </strong></p>
+    <p  class= "image-big__text--paragraph"><%= text  %></p>
+  </div>
+  <i class="fas fa-plus orange image-small__icon"></i>
+</div>
+
+
+
+
+<div class="modal fade  <%= id  %>" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+        <div class="image-modal-header">
+        <button type="button" class="close close-button" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        </div>
+      <div class="image-modal" >
+        <div class="image-modal__image" >
+          <%= image_tag image %>
+        </div>
+        <div class="image-modal__text">
+          <p><strong><%=  title %> </strong></p>
+          <p><%= text  %></p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
