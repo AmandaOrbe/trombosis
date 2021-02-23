@@ -4,9 +4,15 @@
 
   h2{
     font-family: $display-font;
-    font-size: 2.2rem;
-    font-weight: 100;
-    text-transform: uppercase;
+    font-size: 3.2rem;
+    font-weight: 700;
+    margin-top: 0;
+    text-transform: capitalize;
+  }
+
+  &__number{
+    color: $dark-gray;
+    font-weight: 500 !important;
   }
 
   &__line{
@@ -15,7 +21,7 @@
     &::after{
       z-index: 1000;
       display: inline-block;
-      width: 30rem;
+      width: 62rem;
       height: 2px;
       background-color: $orange;
     @include respond(phone) { // width < 1200
