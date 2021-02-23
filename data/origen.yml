@@ -1,12 +1,21 @@
-title: 'Gliomas de bajo grado'
+title: 'El origen del cáncer'
 presentacion: presentación
-presentacion_text1:    "En este módulo, y en los tres siguientes dedicados a los tumores del sistema nervioso central del adulto, vamos a revisar los fundamentos prácticos de aquellos tumores que pueden presentarse más frecuentemente en las consultas de oncología médica."
-presentacion_text2:    " En todos ellos, la clave está en un manejo multidisciplinar, que comprende: una primera sospecha clínica y radiológica de la enfermedad, siendo la resonancia magnética, preferentemente con estudios de difusión y perfusión asociados, la prueba complementaria más importante; una resección quirúrgica lo más amplia posible, pero que a la vez preserve de la mejor manera la funcionalidad neurológica del paciente; un análisis patológico completo, en el que ya no nos podemos conformar, tal y como se refleja en la nueva clasificación de la OMS de 2016, con aspectos puramente histológicos, sino que debemos implementar factores moleculares diagnósticos y pronósticos; y un tratamiento posterior basado en radioterapia y quimioterapia, que podrá ser concomitante o secuencial, dependiendo de cada caso concreto."
-presentacion_span: Es por ello que el manejo de estos pacientes y la toma de decisiones, es recomendable que se realicen en el contexto de un equipo multidisciplinar compuesto por neurocirujanos, neurorradiólogos, neuropatólogos, oncólogos radioterápicos y oncólogos médicos.
+presentacion_text1:    "Nuestra comprensión del origen del cáncer ha cambiado drásticamente en las últimas tres décadas, debido en gran parte a la revolución acontecida en el campo de la biología molecular. Las nuevas herramientas que han permitido interrogar el genoma completo, han hecho posible descubrir y comprender mejor la compleja maquinaria molecular que opera dentro de una célula, ya sea normal o tumoral."
+presentacion_text2:    " En este módulo se revisan algunos de los conceptos fundamentales para sentar las bases del conocimiento de las bases genéticas del cáncer, como son los diferentes tipos de mutaciones que pueden acontecer durante el inicio y la progresión del cáncer. "
 objetivos: objetivos
-objetivos_text: Comprender los fundamentos de la epidemiología y diagnóstico clínico y radiológico, el diagnóstico patológico y molecular, el tratamiento post-quirúrgico adyuvante, el tratamiento de la enfermedad irresecable y las tendencias de investigación actuales del tratamiento a la recaída de los gliomas de bajo grado.
-epidemiologia: Epidemiología  y  diagnóstico
-epidemiologia_text: "No  existen  causas  claras  exógenas  o  endógenas  para  los  gliomas  de  bajo  grado,  habiéndose  relacionado  en  la  literatura  la  exposición  crónica  a  cloruro  de  vinilo.  Clínicamente,  los  síntomas  serán  aquellos  relacionados  con:"
+objetivo1: Comprender el concepto de biomarcador, tanto pronóstico, como predictivo.
+objetivo2: Entender el cáncer como una enfermedad genética
+objetivo3: Conocer los principales genes implicados en el cáncer y los principales tipos de mutaciones que pueden acontecer en esta enfermedad.
+objetivo4: Comprender que los avances en la biología molecular nos están permitiendo re-clasificar los tumores en función de sus alteraciones genómicas (taxonomía del cáncer).
+
+biomarcadores: Biomarcadores
+biomarcadores_text: "Los biomarcadores son aquellas características clínicas o moleculares que pueden medirse de una manera objetiva y reproducible para indicar una condición biológica, bien sea un proceso normal o patológico, así como la respuesta a una intervención terapéutica concreta. Los biomarcadores pueden clasificarse en:"
+pronosticos: Biomarcadores pronósticos
+
+
+
+
+
 hipertension: Hipertensión intracraneal
 hipertension_body:  En caso de que el espacio ocupado por el glioma supere la tolerancia de presión intracraneal. Los más frecuentes son cefalea, visión borrosa y nauseas. Son síntomas muy inespecíficos y fácilmente confundibles con otros cuadros.
 focalidad: Focalidad neurológica
@@ -125,11 +134,8 @@ biblio11_magazine: "Clinical & Translational Oncology: Official Publication of t
 biblio11_link: "https://doi.org/10.1007/s12094-017-1790-3"
 presentacion_side: Presentación
 objetivos_side: Objetivos
-epidemiologia_side: 1. Epidemiología y diagnóstico
-diagnostico_side: 2. Diagnóstico patológico y molecular
-tratamiento_side: 3. Tratamiento post quirúrgico adyuvante
-inicio_side: 4. Tratamiento de la enfermedad no resecable de inicio
-tendencias_side: "5. Tratamiento a la recaída: tendencias actuales"
+biomarcadores_side: 1. Biomarcadores
+genoma_side: 2. El genoma del cáncer
 caso_practico: "Casos clínicos "
 texto_planteamiento: "Texto de planteamiento del caso"
 planteamiento1: "Varón de 45 años, sin antecedentes de interés."

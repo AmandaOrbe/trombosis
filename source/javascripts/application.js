@@ -67,7 +67,7 @@ const objetivosTab = document.getElementById("side_Objetivos");
 const objetivos = document.getElementById("Objet");
 
 const epidemiologiaTab = document.getElementById("side_1.Epidemiologíaydiagnóstico");
-const epidemiologia = document.getElementById("1.Epi");
+const epidemiologia = document.getElementById("1.Bio");
 
 const diagnosticoTab = document.getElementById("side_2.Diagnósticopatológicoymolecular");
 const diagnostico = document.getElementById("2.Dia");
