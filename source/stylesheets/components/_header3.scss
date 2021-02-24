@@ -1,0 +1,46 @@
+
+.header3{
+  margin-top: 6rem;
+
+  h3{
+    font-family: $display-font;
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-top: 0;
+    text-transform: capitalize;
+      @include respond(portrait) {
+        text-indent: 0rem;
+        max-width: 28rem;
+        margin-left: 3rem;
+      }
+     @include respond(phone) { // width < 1200
+       max-width:22rem;
+      }
+  }
+
+  &__number{
+    color: $dark-gray;
+    font-weight: 500 !important;
+  }
+
+  &__underlined{
+    border-bottom: 1px solid $orange;
+    width: fit-content;
+    padding-bottom: 1rem;
+  }
+
+  &__line{
+    &,
+    &::before,
+    &::after{
+      z-index: 1000;
+      display: inline-block;
+      width: 62rem;
+      height: 2px;
+      background-color: $orange;
+    @include respond(phone) { // width < 1200
+      width:22rem;
+    }
+    }
+  }
+}
