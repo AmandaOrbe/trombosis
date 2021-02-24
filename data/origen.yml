@@ -8,13 +8,27 @@ objetivo2: Entender el cáncer como una enfermedad genética
 objetivo3: Conocer los principales genes implicados en el cáncer y los principales tipos de mutaciones que pueden acontecer en esta enfermedad.
 objetivo4: Comprender que los avances en la biología molecular nos están permitiendo re-clasificar los tumores en función de sus alteraciones genómicas (taxonomía del cáncer).
 
+
 biomarcadores: Biomarcadores
 biomarcadores_text: "Los biomarcadores son aquellas características clínicas o moleculares que pueden medirse de una manera objetiva y reproducible para indicar una condición biológica, bien sea un proceso normal o patológico, así como la respuesta a una intervención terapéutica concreta. Los biomarcadores pueden clasificarse en:"
+
 pronosticos: Biomarcadores pronósticos
+pronosticos_text: "Identifican características moleculares o histopatológicas específicas del tumor que se asocian con el curso clínico de la enfermedad. Como ejemplo se puede citar la plataforma genómica Oncotype Dx® para establecer el riesgo de recidiva en cáncer de mama. "
+pronosticos_highlight: "Para un biomarcador pronóstico, la probabilidad de supervivencia está relacionada con la expresión o no del biomarcador, independientemente del tratamiento administrado. "
 
+image1_title: "Figura 1. Biomarcadores pronósticos: "
+image1_text: "(A) en pacientes que reciben tratamiento activo, (B) en pacientes que no reciben tratamiento activo (placebo o tratamiento de soporte). (C) Pacientes que expresan y (D) pacientes que no expresan el biomarcador de interés. Se puede observar como la probabilidad de supervivencia está condicionada por la presencia del propio biomarcador, pero no se ve condicionada por el tratamiento administrado. Tomada de ESMO Handbook of Translational Research, 2nd edition, 2015."
 
+predictivos: Biomarcadores predictivos
+predictivos_text: "Proporcionan información sobre la probabilidad de respuesta a una terapia particular. Un ejemplo de biomarcador predictivo en cáncer de mama es la sobre-expresión de la proteína HER2/neu, de la familia de receptores transmembrana EGFR, asociada a la respuesta a los diferentes agentes dirigidos contra esta proteína, como el trastuzumab, pertuzumab, lapatinib o trastuzumab-emtansina, entre otros. Cabe destacar que en algunos casos, un biomarcador puede ser pronóstico y predictivo al mismo tiempo, como es el caso de la ya mencionada proteína HER2/neu en cáncer de mama. "
+predictivos_highlight: "Para un biomarcador predictivo, la probabilidad de supervivencia está condicionada por el tratamiento recibido en aquellos pacientes que expresan el biomarcador de interés. "
 
+image2_title: "Figura 2. Biomarcadores predictivos: "
+image2_text: "(A) en pacientes que reciben tratamiento específico frente al biomarcador, (B) en pacientes que no reciben dicho tratamiento. (C) Pacientes que expresan, y (D) patientes que no expresan el biomarcadores de interés. En este caso se puede observar como la administración de un tratamiento específico modifica la probabilidad de supervivencia de los pacientes. Tomada de ESMO Handbook of Translational Research, 2nd edition, 2015."
 
+biomarcadores_text2: "Los biomarcadores pueden ser características clínicas (como el ECOG), análisis de laboratorio (como el PSA en el caso del cáncer de próstata) o alteraciones moleculares (como determinadas mutaciones genéticas). Por otra parte, los biomarcadores también pueden ser clasificados en base a otros parámetros, como, por ejemplo, su origen: histológicos, cuando provienen de tejido, o líquidos, cuando se originan en la sangre, el plasma u otros fluidos (estos últimos englobados en la denominada “biopsia líquida”)."
+biomarcadores_text3: "También podemos clasificar los biomarcadores en genómicos, proteómicos, transcriptómicos, etc, en función de si se analizan genes, proteínas o ARN, respectivamente. "
+biomarcadores_text4:  "Es importante destacar que cada biomarcador en desarrollo debe someterse a unos requisitos previos de validación analítica y clínica antes de poder ser utilizado en la práctica clínica de manera fiable. "
 
 hipertension: Hipertensión intracraneal
 hipertension_body:  En caso de que el espacio ocupado por el glioma supere la tolerancia de presión intracraneal. Los más frecuentes son cefalea, visión borrosa y nauseas. Son síntomas muy inespecíficos y fácilmente confundibles con otros cuadros.
@@ -30,8 +44,7 @@ reseccion: Resección completa
 idh: IDH mutado y codelección 1p/19q
 criterios: En los pacientes que cumplen estos criterios, la mediana de supervivencia puede superar los 10 años, mientras que en los que tienen factores de peor pronóstico, está en torno a 4 años (Daniels et al., 2011).
 sospecha: Una vez establecida la sospecha diagnóstica, la prueba de imagen preferida es la resonancia magnética con contraste. A diferencia de los gliomas de alto grado, los gliomas de bajo grado suelen ser hipocaptantes, con imagen hipointensa en T1 e hiperintensa en T2. Clásicamente, los oligodendrogliomas pueden presentar calcificaciones en su interior y además presentar localizaciones corticales, a diferencia de los astrocitomas, más típicos de la sustancia blanca.
-image1_title: "Figura 1: Astrocitoma difuso IDH mutado grado II de la OMS diagnosticado en un varón de 51 años que sufrió una crisis epiléptica. "
-image1_text: "En la RM se identificó una lesión de bordes mal definidos, de localización periférica en el lóbulo frontal derecho, hiperintensa en secuencias FLAIR (A) y T2 (C) e hipointensa en T1 (B). La tumoración no mostraba zonas de edema, necrosis o realce tras la administración del contraste en T1 (D) que indicaran un alto grado histológico de agresividad."
+
 diagnostico: Diagnóstico patológico y molecular
 histologicamente: "Histológicamente, los gliomas de bajo grado (consideramos de aquí en adelante a los grado II) se dividían en astrocitomas difusos, oligodendrogliomas y oligoastrocitomas, siendo esta tercer entidad una denominación obsoleta. Desde el punto de vista morfológico, las diferencias fundamentales son:"
 astrocitoma: Astrocitoma

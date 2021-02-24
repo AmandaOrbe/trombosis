@@ -11,8 +11,10 @@
         <div id="Prese">
           <%= partial(:'components/header2', :locals => { :text => t.presentacion, :number => ' ' }) %>
           <p class= "indented margin5 "> <%= t.presentacion_text1 %> </p>
+          <br>
           <p class= "indented  "> <%= t.presentacion_text2 %> </p>
         </div>
+        <br><br>
 
         <div id="Objet">
           <%= partial(:'components/header2', :locals => { :text => t.objetivos, :number => ' ' }) %>
@@ -23,9 +25,25 @@
           <%= partial(:'components/header2', :locals => { :text => t.biomarcadores, :number => '01.' }) %>
           <p class= "indented margin5"> <%= t.biomarcadores_text %></p>
 
-          <h3 class="margin7"> <%= t.pronosticos  %> </h3>
+          <%= partial(:'components/header3', :locals => { :text => t.pronosticos, :number => '01.01' }) %>
+          <p  class="margin5"><%= t.pronosticos_text %></p>
+
+          <%= partial(:'components/concepto-clave', :locals => { :text => t.pronosticos_highlight}) %>
+
+          <%= partial(:'components/image-big',  :locals => { :image => "images/biomarcadores-pronosticos.png", :title => t.image1_title, :text => t.image1_text, :id => "biomarcadores-pronosticos"}) %>     
 
 
+          
+          <%= partial(:'components/header3', :locals => { :text => t.predictivos, :number => '01.02' }) %>
+          <p  class="margin5"><%= t.predictivos_text %></p>
+
+          <%= partial(:'components/concepto-clave', :locals => { :text => t.predictivos_highlight}) %>
+
+          <%= partial(:'components/image-big',  :locals => { :image => "images/biomarcadores-predictivos.png", :title => t.image2_title, :text => t.image2_text, :id => "biomarcadores-predictivos"}) %>          
+
+          <p class= "indented margin5"> <%= t.biomarcadores_text2 %></p>
+          <p class= "indented margin5"> <%= t.biomarcadores_text3 %></p>
+          <p class= "indented margin5"> <%= t.biomarcadores_text4 %></p>
 
 
           <div class="card_row">
