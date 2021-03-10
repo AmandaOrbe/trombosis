@@ -8,6 +8,7 @@ objetivo2: Entender el cáncer como una enfermedad genética
 objetivo3: Conocer los principales genes implicados en el cáncer y los principales tipos de mutaciones que pueden acontecer en esta enfermedad.
 objetivo4: Comprender que los avances en la biología molecular nos están permitiendo re-clasificar los tumores en función de sus alteraciones genómicas (taxonomía del cáncer).
 
+concepto_clave: Concepto clave
 
 biomarcadores: Biomarcadores
 biomarcadores_text: "Los biomarcadores son aquellas características clínicas o moleculares que pueden medirse de una manera objetiva y reproducible para indicar una condición biológica, bien sea un proceso normal o patológico, así como la respuesta a una intervención terapéutica concreta. Los biomarcadores pueden clasificarse en:"
@@ -29,6 +30,70 @@ image2_text: "(A) en pacientes que reciben tratamiento específico frente al bio
 biomarcadores_text2: "Los biomarcadores pueden ser características clínicas (como el ECOG), análisis de laboratorio (como el PSA en el caso del cáncer de próstata) o alteraciones moleculares (como determinadas mutaciones genéticas). Por otra parte, los biomarcadores también pueden ser clasificados en base a otros parámetros, como, por ejemplo, su origen: histológicos, cuando provienen de tejido, o líquidos, cuando se originan en la sangre, el plasma u otros fluidos (estos últimos englobados en la denominada “biopsia líquida”)."
 biomarcadores_text3: "También podemos clasificar los biomarcadores en genómicos, proteómicos, transcriptómicos, etc, en función de si se analizan genes, proteínas o ARN, respectivamente. "
 biomarcadores_text4:  "Es importante destacar que cada biomarcador en desarrollo debe someterse a unos requisitos previos de validación analítica y clínica antes de poder ser utilizado en la práctica clínica de manera fiable. "
+
+cap2_title: "El genoma del cáncer "
+cap2_t1: "El cáncer es, en esencia, una enfermedad genética; es decir, se debe principalmente a la acumulación de alteraciones moleculares en el genoma de las células. "
+cap2_img1_title: Figura 1. Estructura del ADN. Winslow. T. Recuperado de www.cancer.gov
+cap2_img1_text: "T. Recuperado de www.cancer.gov"
+cap2_t2: "En los últimos años, los avances en las técnicas de secuenciación del ADN han permitido conocer mejor el genoma humano,  generando a su vez, una mejora sustancial en el conocimiento de esta enfermedad. "
+cap2_li1_1: "Los mapas genómicos nos están permitiendo rediseñar la taxonomía de los tumores, pasando de una clasificación puramente histológica a una genómica. Como ejemplo, cabe destacar el cáncer de pulmón, en el cual ha habido una significativa evolución desde sus primeras clasificaciones puramente histológicas (adenocarcinoma, epidermoide, célula pequeña, etc) hasta las más actuales, que incluyen información molecular indispensable para el manejo terapéutico (determinación de EGFR, ALK, ROS, MET, PD1/PD-L1, etc). "
+cap2_li1_2: "El beneficio de los fármacos diseñados frente a determinadas alteraciones moleculares (ej, terapias anti-HER2 en cáncer de mama) ha puesto de manifiesto que estas alteraciones genéticas son biomarcadores muy sensibles para el tratamiento de los tumores, ayudando a los clínicos a realizar una medicina de precisión. "
+cap2_li1_3: "El análisis del genoma que se está llevando a cabo en múltiples tumores podrá identificar nuevas dianas, que junto a la exploración farmacológica adecuada, dará lugar a interesantes enfoques terapéuticos. "
+cap2_subtitle1: Genes en el cáncer
+cap2_t3: "De manera general, podemos clasificar los genes implicados en cáncer en: "
+cap2_card1_title: "Proto-oncogén "
+cap2_card1_body: "Es un gen “normal”, implicado en la regulación de la proliferación celular. Las mutaciones en estos genes pueden hacer que se conviertan en oncogenes. "  
+cap2_card2_title: "Oncogenes"
+cap2_card2_body: "Son genes “activadores”, es decir, actúan como el acelerador de un coche, de manera que una alteración en la función de un proto-oncogén sería el equivalente a tener el acelerador continuamente presionado (activación continua del proceso de carcinogénesis). Pueden activarse mediante translocaciones cromosómicas, mutaciones puntuales o amplificaciones/sobre-expresiones. Normalmente, la alteración de un solo  alelo (heterocigosis) es suficiente para que se manifieste (por eso se denominan genes dominantes). Ejemplos de oncogenes: MYC y RAS"
+cap2_img2_title: "Figura 2: Mecanismos por los que un proto-oncogén puede convertirse en oncogén " 
+cap2_img2_text: ""  
+cap2_card3_title: Genes supresores
+cap2_card3_body: "Por el contrario, estos genes actúan como “frenos”, de manera que cuando no está alterada su función, inhiben la carcinogénesis. Son los llamados “guardianes del genoma”. Las mutaciones en los genes supresores generalmente producen un truncamiento de la proteína codificada por dicho gen, y es necesaria la alteración de los dos alelos (por eso se denominan genes recesivos), causando la pérdida de heterocigosidad (en inglés, LOH), para que se manifiesten.  Ejemplos de genes supresores tumorales: p53 y RB1"
+cap2_card4_title: Genes de reparación del ADN
+cap2_card4_body: "Son genes que codifican proteínas implicadas en la reparación del ADN. Su alteración conlleva la imposibilidad de reparar estos errores, acumulándose por tanto, en las células mutaciones. Son genes recesivos, al igual que los genes supresores. Ejemplos de genes de reparación del ADN: BRCA1 y BRCA2"
+cap2_subtitle2: Tipos de mutaciones
+cap2_t3: "Los cambios genéticos que fomentan el cáncer pueden heredarse si los cambios están presentes en las células germinales (óvulos y espermatozoides). Este tipo de alteraciones, denominadas "
+cap2_span1: "mutaciones germinales, "
+cap2_t4: "están presentes en cada una de las células de la descendencia."
+cap2_t5: "Por el contrario, y de forma más frecuente, los cambios genéticos pueden adquirirse a lo largo de la vida, como resultado del cúmulo de errores en el ADN que ocurren en la división celular o por la exposición a determinadas sustancias carcinógenas que dañan el ADN, como la radiación, el tabaco o los rayos UVA. Estas alteraciones reciben el nombre de "
+cap2_span2: "mutaciones somáticas "
+cap2_t6: "(o adquiridas). "
+cap2_t7: "Ejemplo: Gracias a los avances en las técnicas de secuenciación de nueva generación, actualmente conocemos más y mejor la prevalencia de las mutaciones somáticas en diferentes tipos tumores (Ver Figura 3)"
+cap2_img3_title: "Figura 3: Prevalencia de mutaciones somáticas en todos los tipos de cáncer humano. "
+cap2_img3_text: "Cada punto representa una muestra, y las líneas horizontales rojas son la media de las mutaciones en los respectivos tipos de cáncer. El eje vertical en escala logarítmica muestra el número de mutaciones por megabase de datos, mientras que los diferentes tipos de cáncer están ordenados en el eje horizontal según su número medio de mutaciones somáticas. . Figura sacada de Alexandrov LB, Nature, 2013"
+cap2_t8: "Por otra parte, las mutaciones pueden clasificarse en 3 grandes grupos: "
+cap2_card5_title:  Moleculares
+cap2_card5_body: "Son mutaciones a nivel molecular y afectan a las bases nitrogenadas del ADN (Adenina, Citosina, Timina, Guanina). "
+cap2_card6_title:  "Cromosómicas"
+cap2_card6_body: "Afectan a un segmento del cromosoma de mayor tamaño que el gen, por tanto son estructurales. Pueden ocurrir por pérdida de grandes fragmentos (deleción), duplicaciones o reordenamientos dentro del cromosoma."
+cap2_card7_title:  "Genómicas "
+cap2_card7_body: " Afectan al conjunto del genoma, aumentando el número de pares de cromosomas (poliploidías), reduciéndolo a una sola serie (haploidía o monoploidía) o bien afectando al número de cromosomas individualmente, por exceso (ej, la trisomía del 21 o Síndrome de Down) o por defecto. "
+cap2_t9: "Las mutaciones moleculares, a su vez, pueden ser clasificadas de la siguiente manera (ver Figura 4): "
+cap2_card8_title: "Mutaciones silentes: "
+cap2_card8_body: "Existe un cambio en una de las bases del ADN, de manera que el triplete de nucleótidos se modifica, pero sigue codificando para el mismo aminoácido. Esto se debe a que el código genético tiene varias combinaciones de nucleótidos para cada aminoácido, dando un margen de seguridad (Ej, los tripletes CCA y CCC codifican para el aminoácido prolina, por lo que si se produjera este cambio por error, sería un cambio silente, sin afectar al aminoácido codificado, y por tanto, la proteína sería igual). "
+cap2_card9_title: "Polimorfismos: "
+cap2_card9_body: "Hay un cambio en una de las bases del ADN, dando lugar a un aminoácido diferente, pero este cambio resulta tener poco o ningún impacto en la función de la proteína. Aunque la mayor parte de los polimorfismos son silenciosos, en algunos casos la proteína alterada puede causar alteraciones en el metabolismo de fármacos o alterar la actividad enzimática de procesos metabólicos. "
+cap2_card10_title: "Missense mutation "
+cap2_card10_body:   "(mutación con cambio de sentido o de sentido erróneo): Hay un cambio en una de las bases del ADN, de manera que el aminoácido que codifica es diferente, alterando la función de la proteína en mayor o menor medida dependiendo de la localización. Pueden subclasificarse a su vez en:"
+cap2_card10_body_l1a: "Conservadoras: "
+cap2_card10_body_l1b: "El aminoácido es sustituido por otro similar, por lo que el efecto sobre la estructura y función de la proteína puede ser mínimo."
+cap2_card10_body_l2a: "No conservadoras: "
+cap2_card10_body_l2b: " El aminoácido es sustituido por otro no similar, cuyo efecto es más problemático."
+cap2_card11_title: "Nonsense mutation "
+cap2_card11_body:  "(mutación sin sentido): En este tipo de mutación hay un cambio en una de las bases del ADN, de forma que el nuevo triplete de nucleótidos determina un codón de terminación prematuro (o codón sin sentido), lo cual conduce a una proteína truncada o incompleta y por tanto, no funcional. "
+cap2_card12_title: "Frameshift mutation "
+cap2_card12_body: "(cambio del marco del lectura): Este tipo de mutación está causada por la inserción o deleción de un número de nucleótidos que no es múltiplo de tres, con un cambio en el marco de lectura de los nucleótidos, dando lugar a aminoácidos erróneos o incluso la posibilidad de un codón de terminación prematura. "
+
+recuerda: Recuerda
+cap2_cc1: "Las variantes genéticas que se encuentran en una frecuencia superior al 1% en la población, suelen clasificarse como polimorfismos, mientras que las variantes con frecuencias por debajo del 1% como mutaciones patogénicas. "
+cap2_cc2: "Un codón es una secuencia de tres nucleótidos de ADN o ARN que se corresponden con un aminoácido concreto. Existen 64 codones diferentes, 61 de ellos son específicos de aminoácidos, mientras que los 3 restantes son “señales de parada” (codones de terminación). "
+cap2_cc3a: "También podemos hablar de "
+cap2_cc3b: "de mutaciones sinónimas, "
+cap2_cc3c: "aquellas en las que no se produce un cambio en el aminoácido (las mutaciones silentes o los polimorfismos) o "
+cap2_cc3d: "mutaciones no sinónimas, "
+cap2_cc3e: "que por el contrario son las que conllevan cambio de aminoácido y por tanto cambios en la proteína resultante (missense, nonsense, frameshift mutation). "
+
+
 
 hipertension: Hipertensión intracraneal
 hipertension_body:  En caso de que el espacio ocupado por el glioma supere la tolerancia de presión intracraneal. Los más frecuentes son cefalea, visión borrosa y nauseas. Son síntomas muy inespecíficos y fácilmente confundibles con otros cuadros.

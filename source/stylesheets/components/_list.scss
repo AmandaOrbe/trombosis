@@ -2,9 +2,10 @@
  
 
   list-style: none;
-
-  font-weight: 100;
-  font-size: 2rem;
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 3.6rem;
+  
    @include respond(portrait) { // width < 1200
       margin-left: 3rem;
       width: 77%;
@@ -20,7 +21,7 @@
 
   } 
   &__star{
-    color: $orange;
+    color: $primary;
     margin-right: 1rem;
 
 

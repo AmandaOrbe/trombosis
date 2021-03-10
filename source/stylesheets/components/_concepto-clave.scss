@@ -1,11 +1,22 @@
 .concepto-clave{
-	 border: 1px dotted orange;
+	border-left: 10px solid $primary;
     padding: 2rem;
     margin: 8rem 0;
+    &:hover{
+    	box-shadow: $box-shadow;
+    	transform: translateY(-2px);
+    }
+
+    &--background{
+        background-color: $primary10; 
+        border-left: none; 
+        padding: 4rem;
+    }
 
     &__title{
       font-weight: 700;
-      color: $orange;
+      color: $primary;
 
     }
 }
+

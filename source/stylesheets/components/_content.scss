@@ -49,7 +49,7 @@
 
 
   .orange{
-      color: $orange;
+      color: $primary;
     }
 
 
@@ -70,7 +70,7 @@
 
   a{
     word-break: break-all;
-    color: $orange;
+    color: $primary;
   }
 
   .biblio{
@@ -116,7 +116,7 @@
   &__highlight{
     font-weight: 700;
     &:hover{
-      background-color: $light-orange;
+      background-color: $light-primary;
     }
   }
 
