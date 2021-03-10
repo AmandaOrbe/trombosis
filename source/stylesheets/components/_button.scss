@@ -27,13 +27,13 @@
   &:hover,
   {
 
-    background-color: $dark-orange;
+    background-color: $dark-primary;
     margin-top: 2.5rem;
 
   }
   &:focus,
   &:active{
-    outline: $orange;
+    outline: $primary;
 
   }
 }

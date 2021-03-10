@@ -24,7 +24,7 @@
   }
 
   &__underlined{
-    border-bottom: 1px solid $orange;
+    border-bottom: 1px solid $primary;
     width: fit-content;
     padding-bottom: 1rem;
   }
@@ -37,7 +37,7 @@
       display: inline-block;
       width: 62rem;
       height: 2px;
-      background-color: $orange;
+      background-color: $primary;
     @include respond(phone) { // width < 1200
       width:22rem;
     }

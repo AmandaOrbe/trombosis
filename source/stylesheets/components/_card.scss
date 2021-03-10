@@ -1,5 +1,5 @@
 .card_row{
-  display: flex;
+  display: block;
   justify-content: space-between;
    @include respond(portrait) { // width < 1200
       display: block;
@@ -8,10 +8,9 @@
 }
 
 .card{
-  width: 47%;
   box-shadow: $box-shadow;
-  border-left: 5px solid $orange;
-  margin-top: 4rem;
+  border-left: 5px solid $primary;
+  margin: 4rem auto;
   transition: all .5s ease-in-out;
   max-height: 7rem;
   overflow: hidden;
@@ -22,7 +21,6 @@
   @include respond(phone) { // width < 1200
     width: 100%;
   }
-
 
   &__header{
     padding-left: 2.5rem;
@@ -36,7 +34,7 @@
 
   h4{
     font-family: $serif-font;
-    font-size: 1.6rem;
+    font-size: 2rem;
     font-weight: 700;
     margin-top: 2.5rem;
   }
@@ -56,10 +54,16 @@
     // display: none;
 
     p{
-      font-size: 1.2rem;
-      line-height: 2.2rem;
+      font-size: 1.6rem !important;
+      line-height: 3rem;
       margin-top: 0;
       text-indent: 0;
+    }
+    li{
+      font-size: 1.6rem !important;
+      line-height: 3rem;
+      list-style: none;
+      margin-left: 2rem;
     }
   }
 
