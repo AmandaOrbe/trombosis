@@ -1,1 +1,127 @@
-<p>hello world</p>
+
+<% t =  data.origen%>
+<div id="home">
+  <%=partial(:'components/sidebar')  %>
+
+  <div id="main">
+    <div class="container">
+      <div class="content">
+        <%= partial(:'components/header1', :locals => { :text => "Oncogénesis y señalización celular"}) %>
+
+        <div id="Prese">
+          <%= partial(:'components/header2', :locals => { :text => t.presentacion, :number => ' ' }) %>
+          <p class= "indented margin5 "> Las características del cáncer comprenden una serie de capacidades biológicas adquiridas durante las múltiples etapas que forman parte del desarrollo de los tumores. Los sellos distintivos del cáncer (o “hallmarks”) constituyen una forma de organizar y racionalizar las complejidades de las enfermedades neoplásicas. Incluyen el mantenimiento de la señalización proliferativa, la evasión de las señales supresoras del crecimiento, la resistencia a la muerte celular, la capacidad de adquirir una inmortalidad en la replicación, la inducción de la angiogénesis y la activación de la invasión y formación de metástasis, entre otras. Subyacentes a estos “hallmarks” se encuentran la inestabilidad genómica, que genera la diversidad genómica que acelera el desarrollo de los tumores; y la inflamación, que fomenta a su vez algunas de las otras capacidades. De manera más reciente se han añadido dos nuevas características: la alteración del metabolismo energético y la evasión del sistema inmunológico. A todo esto, se debe añadir otra complejidad, y es que las células tumorales reclutan otras células normales que contribuyen a la adquisición de estos “hallmarks” creando el denominado “microambiente tumoral”.  </p>
+          <br>
+          <p class= "indented  "> En este módulo veremos el conjunto global de estas capacidades biológicas, y desarrollaremos algunas de ellas, mientras que otras serán más detalladas en módulos aparte.  </p>
+        </div>
+        <br><br>
+
+        <div id="Objet">
+          <%= partial(:'components/header2', :locals => { :text => t.objetivos, :number => ' ' }) %>
+          <div class="margin2">
+            El objetivo principal de este módulo es: 
+          </div>
+          <%= partial(:'components/list',  :locals => { :list_items => [["", "Entender y comprender las capacidades biológicas que se adquieren en las diferentes etapas del desarrollo del cáncer (hallmarks del cáncer)."]]}) %>
+        </div>
+        <div class="margin2">
+          Algunas de ellas serán desarrolladas en este módulo, mientras que otras se explicarán con mayor detalle en módulos aparte.
+        </div>
+
+        <div id="1.Bio">
+          <%= partial(:'components/header2', :locals => { :text => "Contenidos", :number => '' }) %>
+
+          <p class= "indented margin5"> Inicialmente, en el año 2000, Hanahan y Weinberg, reportaron los denominados sellos distintivos o “hallmarks” del cáncer, compuestos por seis capacidades biológicas que hicieron comprender mejor la notable diversidad de las enfermedades neoplásicas. Este proceso se basa en el principio fundamental de que las células normales evolucionan progresivamente hacia un estado tumoral, a través del cual van adquiriendo diferentes capacidades biológicas distintivas. Para ello es necesario entender que los tumores son muy complejos y están formados por múltiples tipos de células diferentes que interaccionan entre sí, formando lo que se denomina como “microambiente tumoral”. En 2011, estos mismos autores, revisaron y actualizaron estas capacidades, incorporando progresos conceptuales, ampliando el esquema <b>(Figura 1).</b>  </p>
+
+
+          <%= partial(:'components/image-big',  :locals => { :image => "images/hallmarks.png", :title => "Hallmarks o sellos distintivos del cáncer." , :text => "En el curso de la carcinogénesis se adquieren diferentes capacidades funcionales que conducen finalmente al desarrollo de los tumores. Modificada de Hanahan D, Weinberg RA. Cell, 2011.", :id => "hallmarks"}) %>  
+
+          <%= partial(:'components/header3', :locals => { :text => "Mantenimiento de la señalización proliferativa", :number => '01' }) %>
+
+          <p  class="indented margin5">Podría decirse que uno de los rasgos más importantes de las células tumorales es su capacidad para mantener la proliferación de manera crónica. De forma normal, los tejidos controlan cuidadosamente las señales que promueven el crecimiento y la división celular, asegurando así una homeostasis para mantener la arquitectura y la función de cada uno de los tejidos. Las células tumorales, al alterar esta homeostasis, se convierten en las “dueñas” de estos tejidos. Las señales proliferativas son transmitidas en gran parte por factores de crecimiento que se unen a sus receptores en la superficie celular, que normalmente contienen dominios tirosin-quinasa intracelulares. Estos proceden a enviar señales que regulan el ciclo celular, el crecimiento celular o la supervivencia celular. Las células tumorales pueden adquirir esta capacidad de mantener activa la señalización proliferativa de varias maneras: </p>
+
+          <%= partial(:'components/list',  :locals => { :list_items => [["", "Pueden producir ellas mismas ligandos de factores de crecimiento, e incluso la expresión de receptores afines, lo que da lugar a una estimulación proliferativa autocrina. "], ["", "Otra posibilidad es que las células tumorales envíen señales para estimular a las células normales que conforman el estroma asociado al tumor, que a su vez producen factores de crecimiento a favor de las células tumorales. "] , [ "","La señalización de los receptores también puede alterarse aumentando la cantidad de los mismos que se encuentran en la superficie de la célula, de tal manera, que esas células van a ser muy sensibles a la presencia de mínimas cantidades de ligando, que de otra manera no serían capaces de estimular a los receptores. El mismo resultado puede observarse cuando hay una alteración estructural en el receptor que facilita que se active en ausencia del ligando (activación constitutiva). "], ["", "Otra de las posibilidades es que se produzca una activación de la señalización intracelular sin necesidad del estímulo a través de los receptores. "]]}) %>  
+
+
+          <div class="concepto-clave--background margin5">
+            <div class="concepto-clave__title">A modo de ejemplo</div>
+            <p class="margin2">Los avances en la secuenciación de los diferentes tumores han revelado que determinadas mutaciones somáticas predicen la activación constitutiva de los circuitos de señalización. Por ejemplo, el 40% de los melanomas contienen mutaciones activadoras que afectan a la estructura de la proteína B-RAF, lo cual genera una activación constitutiva a través de las MAP-quinasas. </p>
+          </div>
+
+          <p class="indented margin5"> También pueden existir una interrupción de los mecanismos de retroalimentación negativa que atenúan la señalización proliferativa, que normalmente funcionan para asegurar la homeostasis de flujo de señales intracelulares. Uno de los prototipos de esta regulación afecta a PTEN, que de manera normal contrarresta la actividad de PI3K. Las mutaciones en PTEN amplifican, por tanto, la señalización de PI3K y promueven la tumorigénesis en diversos tipos tumorales. </p>
+
+          <p class="indented margin2">Hay que tener en cuenta que un exceso de señales proliferativas puede desencadenar un efecto contrario en las células, dando lugar a una senescencia y/o apoptosis celular. Esta respuesta aparentemente paradójica refleja los mecanismos de defensa celular intrínsecos para desechar aquellas células con un exceso de señalización proliferativa. Sin embargo, también se ha demostrado que algunas células tumorales tiene la capacidad de adaptarse a altos niveles de señalización proliferativa, inhabilitando este circuito de inducción de senescencia o apoptosis. </p>
+
+          <%= partial(:'components/header3', :locals => { :text => "Pérdida de señales supresoras de crecimiento", :number => '02' }) %>
+
+          <p class="indented margin5">Las células tumorales deben evitar los circuitos que regulan de forma negativa la proliferación celular, los cuales dependen en muchos casos de los denominados genes supresores de tumores. Los dos supresores de tumores más conocidos son RB1 y TP53, que funcionan como puntos de control dirigiendo las decisiones de las células para proliferar o por el contrario, activar la senescencia o apoptosis. </p>          
+          <p class="indented margin2">Las células tumorales con defectos en RB1 o TP53 carecen de las funciones que este gen ejerce como guardián del ciclo celular, haciendo que la proliferación sea persistente. </p>
+
+          <%= partial(:'components/header3', :locals => { :text => "Resistencia a la muerte celular", :number => '03' }) %>
+          <p class="indented margin5"> El proceso de muerte celular programada por apoptosis es una barrera natural para el desarrollo del cáncer. La maquinaria encargada de la apoptosis está compuesta por reguladores extrínsecos, los cuales reciben y procesan señales extracelulares (ligando Fas / receptor Fas) y reguladores intrínsecos, que procesan señales intracelulares. Cada una de ellos culmina con la activación de una proteasa que en condiciones normales está latente (caspasa), que al activarse, inicia una cascada de proteólisis en la que la célula se “desmonta” progresivamente hasta ser consumida por las células fagocitarias. Uno de los componentes más importantes en este circuito es la familia de proteínas reguladoras Bcl-2, un inhibidor de la apoptosis. </p>
+          <p class="indented "> Las condiciones celulares que desencadenan la apoptosis no están totalmente clarificadas, pero se han identificado varios sensores de anomalías, como TP53, que se activa ante roturas sustanciales de ADN u otras anomalías cromosómicas. Otro de los sensores es, como se ha comentado previamente, la señalización hiperactiva por parte de ciertas oncoproteínas (exceso de señalización proliferativa). La pérdida de la función de TP53 es uno de los eventos más comunes que adquieren las células tumorales para evadir o limitar la apoptosis.</p>
+          <p class="indented margin5"> Las condiciones celulares que desencadenan la apoptosis no están totalmente clarificadas, pero se han identificado varios sensores de anomalías, como TP53, que se activa ante roturas sustanciales de ADN u otras anomalías cromosómicas. Otro de los sensores es, como se ha comentado previamente, la señalización hiperactiva por parte de ciertas oncoproteínas (exceso de señalización proliferativa). La pérdida de la función de TP53 es uno de los eventos más comunes que adquieren las células tumorales para evadir o limitar la apoptosis. </p>
+          <p class="indented">Paradójicamente, la falta de nutrientes, la radioterapia o ciertos agentes citotóxicos pueden inducir niveles elevados de autofagia que son protectores para las células tumorales, perjudicando en lugar de acentuando la muerte celular. Se ha demostrado también que algunas células tumorales sometidas a un estrés grave se reducen a través de la autofagia a un estado de latencia que puede ser reversible mucho tiempo después (recidivas tardías de algunos tumores). </p>
+
+          <p class="indented margin5">A diferencia de la apoptosis, en la que la célula se contrae hasta ser consumida por sus vecinas, en la necrosis celular, las células se hinchan y explotan, liberando su contenido en el microambiente local. Esto hace que se liberan señales pro-inflamatorias en el microambiente tisular, reclutando células inflamatorias del sistema inmune, cuya función es eliminar los desechos necróticos y evaluar el daño. Sin embargo, en un ambiente tumoral, las células inmunes pueden promover activamente el tumor, fomentando la angiogénesis, la proliferación y la invasión. Por lo tanto, si bien la necrosis parece en principio algo beneficioso para contrarrestar la hiperproliferación de las células tumorales, en última instancia puede ser más perjudicial que beneficiosa. </p>
+
+          <%= partial(:'components/header3', :locals => { :text => "Activación de la inmortalidad replicativa", :number => '04' }) %>
+
+          <p class="indented margin5">Para que una célula tumoral genere un tumor macroscópico, es necesario que adquiera un potencial de replicación ilimitado. Esta capacidad contrasta con la mayoría de los linajes celulares normales del organismo humano, que son capaces de atravesar un número limitado de ciclos de crecimiento y división celular. </p>  
+          <p class="indented">La telomerasa es una polimerasa del ADN especializada en agregar segmentos teloméricos repetidos a los extremos finales del ADN (ADN telomérico). Está casi ausente en las células que no tienen una capacidad inmortal, y por el contrario, se expresa de manera significativa en la gran mayoría de las células tumorales inmortales. Al extender el ADN telomérico, se contrarresta la progresiva erosión de los telómeros. Esta erosión conduce finalmente a la muerte celular, considerada como un reloj que determina el limitado potencial de reproducción de las células normales. . Por lo tanto, la presencia de la actividad de la telomersa se vincula con la resistencia a la senescencia y/o apoptosis. </p>  
+
+
+          <%= partial(:'components/header3', :locals => { :text => "Inducción de la angiogénesis", :number => '05' }) %> 
+
+          <p class="indented margin5">Al igual que los tejidos normales, los tumores requieren un sustento en forme de nutrientes y oxígeno, así como la capacidad de desechar otros metabolitos y el dióxido de carbono. La formación de nuevos vasos sanguíneos asociada al tumor, responde a estas necesidades. Durante la embriogénesis, el desarrollo de vasos sanguíneos es fundamental, pero tras ello, la vasculatura se vuelve inactiva. En el adulto, como parte del proceso fisiológico de curación de heridas y el ciclo reproductivo femenino, la angiogénesis se activa, pero de forma transitoria. En muchos tumores, este interruptor se activa de forma constante, permitiendo la formación de nuevos vasos que ayudan a sostener el crecimiento de las células tumorales. Este proceso se desarrollará en mayor detalle en el módulo 3. </p>
+
+          <%= partial(:'components/header3', :locals => { :text => "Activación de la invasión y metástasis", :number => '06' }) %> 
+          <p class="indented margin5">El proceso de invasión y metástasis se ha esquematizado en una serie de pasos, que se suceden como una cascada, que comprenden, entre otros, la invasión local, la intravasación de las células tumorales en los vasos sanguíneos o linfáticos cercanos, el tránsito de estas células por el sistema linfático o sanguíneo, seguido de la extravasación de las células en el parénquima de un tejido a distancia, donde se formará la metástasis a través de la colonización. Esta cascada se desarrolla en mayor detalle en el módulo 3. </p>
+
+          <%= partial(:'components/header3', :locals => { :text => "Inestabilidad genómica", :number => '07' }) %> 
+          <p class="indented margin5">La adquisición de los múltiples hallmarks enumerados previamente depende en gran medida de una sucesión de alteraciones en el genoma de las células tumorales. Estas alteraciones confieren ventajas selectivas a subclones de células, permitiendo su crecimiento y proliferación. </p>
+          <p class="indented">Por otra parte, la capacidad del genoma para detectar y resolver defectos en el ADN garantiza que las probabilidades de mutaciones espontáneas sean muy bajas en cada una de las generaciones celulares. Sin embargo, las células tumorales pueden adquirir alteraciones que afecten a estos sistemas de reparación del ADN, dando lugar a la acumulación de mutaciones.</p>
+          <p class="indented">Estas vías de respuesta al daño al ADN se repasan en mayor profundidad en el módulo 4. </p>
+
+
+          <%= partial(:'components/header3', :locals => { :text => "Inflamación promovida por el tumor", :number => '08' }) %> 
+          <p class="indented margin5">Algunos tumores están ampliamente infiltrados por células del sistema inmune (tanto innato como adaptativo), y por lo tanto, reflejan las condiciones inflamatorias de los tumores. La respuesta inflamatoria de los tumores es paradójica, ya que en un principio se pensaba que ejercía solamente un efecto negativo sobre los tumores, promoviendo que el sistema inmune erradicara las células tumorales. Pero también se ha observado que mejora la tumorigénesis y la progresión, ayudando de hecho, a que las neoplasias adquieran capacidades distintivas. La inflamación puede contribuir a suministrar factores de crecimiento que sostienen la señalización proliferativa, factores que limitan la muerte celular, factores proangiogénicos, etc. Por lo tanto,  la inflamación puede considerarse una característica habilitante para la adquisición de otra serie de capacidades por parte de las células tumorales. </p>
+s
+          <%= partial(:'components/header3', :locals => { :text => "Alteración del metabolismo energético", :number => '09' }) %> 
+          <p class="indented margin5">La proliferación crónica y a menudo incontrolada que representa la esencia de la enfermedad neoplásica implica no solo la alteración de la proliferación celular, sino también de los correspondientes ajustes del metabolismo energético con el fin de impulsar el crecimiento y la división celular. La glicólisis es una ruta metabólica por la cual la glucosa es degradada para obtener energía, y es fundamental para la obtención de la misma en muchos tipos celulares. Funciona en ausencia de oxígeno (anaerobiosis). Las células tumorales son capaces, incluso en presencia de oxígeno, de reprogramar su metabolismo de la glucosa, y limitarlo a la glicólisis, lo que conduce al estado denominado “glicólisis aeróbica”. Esto se hace a expensas de una importación elevada de glucosa al citoplasma (por eso muchos tipos de tumores tienen aumento de captación de glucosa en la tomografía por emisión de positrones (PET) con un análogo de la glucosa (18F-fluorodeoxiglucosa, FCG).</p>
+
+
+          <%= partial(:'components/header3', :locals => { :text => "Evasión del sistema inmune", :number => '10' }) %> 
+          <p class="indented margin5">Existen sistemas de vigilancia inmunológica responsables de reconocer y eliminar la gran mayoría de las células tumorales incipientes. Sin embargo, parece ser que los tumores pueden adquirir la capacidad de evadir este sistema de vigilancia en un proceso denominado “inmunoedición”, por el cual los clones de células tumorales altamente inmunógenas se eliminan, dejando solamente variantes débilmente inmunógenas para poder crecer y generar tumores sin ser reconocidas por el sistema inmune. Algunos conceptos sobre la relación entre el sistema inmune y el cáncer se desarrollarán con más detalle en el módulo 5.</p>
+
+          
+
+          
+
+    
+
+
+    <div class="content--2" id="bibliografia">
+      <%= partial(:'components/header1', :locals => { :text => t.bibliografia}) %>
+      <ul class= "list">
+        <%= partial(:'components/biblio',  :locals => { :title => t.biblio1_title, :magazine => t.biblio1_magazine, :link => t.biblio1_link}) %>
+        <%= partial(:'components/biblio',  :locals => { :title => t.biblio2_title, :magazine => t.biblio2_magazine, :link => t.biblio2_link}) %>
+        <%= partial(:'components/biblio',  :locals => { :title => t.biblio3_title, :magazine => t.biblio3_magazine, :link => t.biblio3_link}) %>
+        <%= partial(:'components/biblio',  :locals => { :title => t.biblio4_title, :magazine => t.biblio4_magazine, :link => t.biblio4_link}) %>
+        <%= partial(:'components/biblio',  :locals => { :title => t.biblio5_title, :magazine => t.biblio5_magazine, :link => t.biblio5_link}) %>
+        <%= partial(:'components/biblio',  :locals => { :title => t.biblio6_title, :magazine => t.biblio6_magazine, :link => t.biblio6_link}) %>
+        <%= partial(:'components/biblio',  :locals => { :title => t.biblio7_title, :magazine => t.biblio7_magazine, :link => t.biblio7_link}) %>
+        <%= partial(:'components/biblio',  :locals => { :title => t.biblio8_title, :magazine => t.biblio8_magazine, :link => t.biblio8_link}) %>
+        <%= partial(:'components/biblio',  :locals => { :title => t.biblio9_title, :magazine => t.biblio9_magazine, :link => t.biblio9_link}) %>
+        <%= partial(:'components/biblio',  :locals => { :title => t.biblio10_title, :magazine => t.biblio10_magazine, :link => t.biblio10_link}) %>
+        <%= partial(:'components/biblio',  :locals => { :title => t.biblio11_title, :magazine => t.biblio11_magazine, :link => t.biblio11_link}) %>
+      </ul>
+    </div>
+
+    
+
+
+
+
+      </div>
+  </div>
+</div>
