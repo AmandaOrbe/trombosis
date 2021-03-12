@@ -1,0 +1,180 @@
+
+<% t =  data.origen%>
+<div id="home">
+  <%=partial(:'components/sidebar')  %>
+
+  <div id="main">
+    <div class="container">
+      <div class="content">
+        <%= partial(:'components/header1', :locals => { :text => "Microambiente tumoral y metástasis"}) %>
+
+        <div id="Prese">
+          <%= partial(:'components/header2', :locals => { :text => t.presentacion, :number => ' ' }) %>
+          <p class= "indented margin5 "> Uno de los retos más importantes de la oncología es el tratamiento de la enfermedad metastásica, ya que es la causa principal de las muertes relacionadas con cáncer. Comprender la biología y las características de las células tumorales es de importancia crítica para mejorar el pronóstico de los pacientes. Actualmente, se sugiere que los factores del microambiente, así como los cambios epigenéticos, desempeñan un papel clave en la formación de las metástasis. En este capítulo se describen los rasgos celulares y moleculares que conducen a la metástasis y cómo el microambiente influye en este proceso.  </p>
+          <br>
+          <p class= "indented  "> <%= t.presentacion_text2 %> </p>
+        </div>
+        <br><br>
+
+        <div id="Objet">
+          <%= partial(:'components/header2', :locals => { :text => t.objetivos, :number => ' ' }) %>
+          <%= partial(:'components/list',  :locals => { :list_items => [["", "Comprender que los tumores están formados por un complejo sistema de células que interaccionan entre sí (microambiente tumoral)."], ["", "	Conocer los diferentes pasos de la cascada metastásica"], ["", "	Entender el proceso de angiogéneis tumoral y sus principales componentes"]]}) %>
+        </div>
+
+        <div id="1.Bio">
+          <%= partial(:'components/header2', :locals => { :text => "Poblaciones celulares del microambiente tumoral", :number => '01' }) %>
+          <p class= "indented margin5"> Las metástasis son responsables de más del 90% de todas las muertes relacionadas con el cáncer. La formación de metástasis implica numerosos procesos, entre ellos: invasión y migración de las células tumorales desde el tumor primario, diseminación y supervivencia en el torrente circulatorio, la invasión de los tejidos a distancia, adaptación metabólica en el mismo, etc. Es decir, se trata de un proceso altamente complejo. </p>
+          <p class= "indented"> Aunque las propiedades intrínsecas adquiridas por las células tumorales son necesarias para una colonización metastásica exitosa, los factores celulares y moleculares dentro del microambiente tumoral también contribuyen de forma importante en este fenómeno. En el microambiente tumoral podemos encontrar diferentes tipos de células que promueven la progresión tumoral, incluidas las células madre (stem cells), las células vasculares angiogénicas, las células inmunes y los fibroblastos.  </p>
+
+
+          <%= partial(:'components/image-big',  :locals => { :image => "images/ambiente-tumoral.png", :title => "Figura 1: ", :text => "A) Visión más simplista del cáncer; B) Visión más realista del cáncer. Las investigaciones destinadas a comprender la biología del cáncer se han centrado históricamente en las células tumorales, que constituyen el motor de la enfermedad neoplásica. Esta visión de los tumores como “nada más” que un análisis de las células tumorales ignora la verdadera realidad: que las células tumorales reclutan y corrompen una variedad de células normales que forman el estroma asociado al tumor. Este estroma, a su vez, actúa de forma recíproca sobre las células tumorales. El conjunto de poblaciones heterogéneas de células tumorales y del estroma se suele denominar microambiente tumoral. Modificada de <i> Hanahan D, Weinberg RA. Cell, 2011.</i>", :id => "ambiente-tumoral"}) %> 
+
+          <%= partial(:'components/header3', :locals => { :text => "Células madre", :number => '01.01' }) %>
+          <p  class=" indented margin5">Las células madre son células que conservan la capacidad de renovarse a sí mismas a través de la división celular y pueden diferenciarse en una amplia gama de tipos celulares más especializados. Se han identificado células con propiedades de célula madre en diferentes tipos de tumores (colon, mama, cabeza y cuello, páncreas, melanoma, etc). El origen de estas células no está del todo claro, y puede diferir en los diferentes tipos de tumores. Se ha formulado la hipótesis de que las células madre tumorales surgen de las células madre progenitoras de ese tejido tras sufrir una transformación, o bien pueden provenir de una célula epitelial desdiferenciada. Las propiedades de las células madre también pueden ser adquiridas por las células tumorales a través de la transición epitelio-mesénquima (EMT – Epithelial-mesenchymal transition; proceso por el cual las células epiteliales se transforman en mesenquimales, ganando así capacidad migratoria e invasiva). Aunque el papel de las células madre en la progresión de los tumores no está totalmente dilucidado, se cree que estas células pueden ser las responsables de la diseminación metastásica. Sin embargo, se ha demostrado también, que para mantener el fenotipo de las células madre, son necesarios otros factores presentes en el microambiente tumoral, como los fibroblastos o células del estroma. </p>
+
+          <%= partial(:'components/header3', :locals => { :text => "Células vasculares angiogénicas", :number => '01.02' }) %>
+          <p class="indented margin5">La angiogénesis facilita la propagación hematógena de los tumores. La producción anómala de factores proangiogénicos por parte de las células tumorales da lugar a la formación de vasos sanguíneos malformados e irregulares que a menudo contienen roturas en su revestimiento que facilitan la extravasación y la diseminación de las células tumorales. Las células endoteliales y los pericitos son importantes componentes estructurales y funcionales del tumor y de su vasculatura. </p>
+          <p class="indented ">Las células endoteliales juegan un papel activo en la adhesión, extravasación y el estado latente (dormancy en inglés) de las células tumorales. La adhesión de las células tumorales al endotelio requiere la expresión de ligandos y receptores afines por parte de las células tumorales y endoteliales. De forma similar, los pericitos juegan un papel fundamental en la tumorigénesis al favorecer la maduración y el funcionamiento de los nuevos vasos sanguíneos formados en el tumor. Promueven la supervivencia de las células endoteliales y estabilizan los vasos del tumor. </p>
+
+           <%= partial(:'components/header3', :locals => { :text => "Células inmunes", :number => '01.03' }) %>
+           <p class="indented margin5"> La mayoría de los tumores contienen infiltrados de células inmunes derivados de las células mieloides y linfoides.</p>
+
+          <div class="card_row">
+            <%= partial(:'components/card', :locals => { :title => "Macrófagos: ", :body => "Existen un subconjunto de macrófagos, los denominados macrófagos asociados a tumores (TAMs) que se han vinculado a la progresión de los tumores y al proceso de metástasis. La presencia de macrófagos está asociada a mal pronóstico en mucho de los tumores sólidos. Estos macrófagos expresan una variedad de factores de crecimiento y citoquinas que promueven la angiogénesis, invasión, extravasación, metástasis y supresión inmunológica del tumor (ver módulo 5: inflamación y cáncer). Por ejemplo, liberan proteasas para favorecer la invasión y migración de las células tumorales. Estos macrófagos se localizan en regiones de hipoxia, por lo que el microambiente hipóxico parece que pueda favorecer su activación. " }) %>
+            <%= partial(:'components/card', :locals => { :title => "Neutrófilos: ", :body => "Representan entre el 50% y el 75% del total de leucocitos circulantes en sangre. Desempeñan un papel fundamental en la inflamación y son una de las primeras respuestas ante lo patógenos, incluyendo bacterias, virus y hongos. Se ha sugerido una función pro-metastásica de los neutrófilos, ya que pueden promover la permeabilidad vascular, estimular la invasión y proliferación de células tumorales en otros lugares a distancia de los tejidos. "}) %>
+          </div>          
+          <div class="card_row">
+            <%= partial(:'components/card', :locals => { :title => "Plaquetas: ", :body => "Son el segundo tipo de células más abundantes en sangre y juegan un papel importante en la hemostasia, trombosis e inflamación. Las plaquetas son una de las primeras células que interactúan con las células tumorales en el torrente sanguíneo. De hecho se observa un aumento del estado de hipercoagulabilidad en pacientes con cáncer como resultado de determinados factores pro-coagulantes producidos por las células tumorales. Se cree que las plaquetas forman una  barrera física alrededor de las células tumorales, protegiéndolas de la lisis mediada por los linfocitos natural killer. Por otra parte también mejoran la adhesión de las células tumorales al endotelio y promueven la permeabilidad del mismo. " }) %>
+          </div>
+
+          <%= partial(:'components/header2', :locals => { :text => "Proceso de invasión y metástasis", :number => '02' }) %>
+
+           <p class= "indented margin5"> <%= t.cap2_t1 %></p>
+          <%= partial(:'components/image-big',  :locals => { :image => "images/cascada-metastasica.png", :title => "Figura 2: Cascada metastásica", :text => "", :id => "cascada-metastasica"}) %>
+
+          <div class="card_row">
+            <%= partial(:'components/card', :locals => { :title => "Invasión: ", :body => "La invasión tumoral es la capacidad de las células tumorales de alterar la membrana basal y penetrar en el estroma adyacente, y es la característica distintiva de la malignidad. Este proceso requiere cambios importantes en la morfología y fenotipo de las células, como es la pérdida de la capacidad de adhesión célula-célula, junto con la degradación de la matriz y motilidad celular (proceso enmarcado dentro de la transición epitelio-mesénquima (TEM)). " }) %>
+            <%= partial(:'components/card', :locals => { :title => "Intravasación: ", :body => "La entrada de las células tumorales en la circulación puede ser a través de vasos sanguíneos o linfáticos. Durante este proceso se producen una serie de cambios en las células tumorales, ya que deben someterse a grandes deformaciones elásticas para penetrar a través del endotelio. Este paso al interior de los vasos sanguíneos puede estar motivado por estos cambios físicos, o bien por cambios estructurales en los propios vasos sanguíneos, que a su vez pueden facilitar la entrada de las células tumorales. Otra posibilidad es que se estimule la formación de nuevos vasos sanguíneos, que son más permeables y facilitan la entrada de las células tumorales (angiogénesis tumoral). "}) %>
+          </div>
+          <div class="card_row">
+            <%= partial(:'components/card', :locals => { :title => "Transporte vascular: ", :body => "Durante su tránsito por el sistema circulatorio, las células tumorales están sujetas a fuerzas hemodinámicas, inmunológicas, situaciones de estrés y colisiones con otras células sanguíneas. El estrés del propio flujo sanguíneo puede ser suficiente para destruir la mayoría de las células tumorales. Estas células también deben tener la capacidad de evadir el sistema inmune, para lo cual muchas veces se sirven de las plaquetas como escudo, como ya se ha comentado previamente. " }) %>
+            <%= partial(:'components/card', :locals => { :title => "Detención: ", :body => "La circulación termina cuando llegan a un órgano a distancia. Dependiendo del tipo célula tumoral, cada una de ellas tiene preferencia por diferentes órganos (Tabla 1). En este aspecto se ha desarrollado la teoría de la “semilla y el suelo”: las células tumorales asentarán en un lugar donde el microambiente local sea favorable."}) %>
+          </div>
+          <div class="card_row">
+            <%= partial(:'components/card', :locals => { :title => "Extravasación: ", :body => "Tiene lugar cuando las células tumorales atraviesan el endotelio del vaso hacia el parénquima del tejido de destino. Los mecanismos que intervienen son muy similares a los de la invasión, donde intervienen moléculas de adhesión celular, proteinasas y factores de movilidad. En algunas ocasiones, las células tumorales pueden adherirse al endotelio y sobrevivir, para después crecer intravasalmente. " }) %>
+            <%= partial(:'components/card', :locals => { :title => "Infiltración y colonización: ", :body => "Representa un paso muy importante en la cascada metastásica. Muy pocas células, a pesar de llevar a cabo los procesos anteriores son capaces de colonizar el tejido de asiento. Incluso en algunos tipos de tumores, las metástasis pueden surgir décadas después, lo que indica que las células tumorales pueden sobrevivir en un estado de latencia durante largo períodos. Este proceso de infiltración y colonización depende en gran medida del microambiente tumoral, que puede favorecer el crecimiento de las células tumorales. "}) %>
+          </div>
+
+			<h1>TABLA</h1>
+			<h1>TABLA</h1>
+			<h1>TABLA</h1>
+
+
+
+ 			<table class="tabla">
+		    <tr class="tabla__row">
+		      <th class="tabla__head tabla__row-header">Tipo de Tumor</th>
+		      <th class="tabla__head">Lugar de metástasis</th>
+		    </tr>
+		    <tr class="tabla__row ">
+		      <td class="tabla__row-header">Mama</td>
+		      <td class="tabla__cell">Ganglios linfáticos axilares, pulmón, pleura, hígado, hueso, cerebro, glándula suprerrenal </td>
+		    </tr>
+		    <tr class="tabla__row-gray">
+		      <td class="tabla__row-header">Colon</td>
+		      <td class="tabla__cell">Ganglios linfáticos regionales, hígado, pulmón, invasión por contigüidad a vejega o estómago</td>
+		    </tr>
+		    <tr class="tabla__row">
+		      <td class="tabla__row-header">Riñón</td>
+		      <td class="tabla__cell">Pulmón, hígado, hueso</td>
+		    </tr>
+		    <tr class="tabla__row-gray">
+		      <td class="tabla__row-header">Pulmón</td>
+		      <td class="tabla__cell">Ganglios linfáticos regionales, pluera,hígado, hueso, cerebro, glándula suprerrenal, bazo</td>
+		    </tr>
+		    <tr class="tabla__row">
+		      <td class="tabla__row-header">Ovario</td>
+		      <td class="tabla__cell">Peritoneo, Ganglios linfáticos regionales, pulmón, hígado</td>
+		    </tr>
+		    <tr class="tabla__row-gray">
+		      <td class="tabla__row-header">Páncreas</td>
+		      <td class="tabla__cell">Hígado, invasión por continuidad a estómago, colon, peritoneo</td>
+		    </tr>
+		    <tr class="tabla__row">
+		      <td class="tabla__row-header">Próstata</td>
+		      <td class="tabla__cell">Hueso, Ganglios linfáticos regionales</td>
+		    </tr>
+		    <tr class="tabla__row-gray">
+		      <td class="tabla__row-header">Gástrico</td>
+		      <td class="tabla__cell">Ganglios linfáticos regionales, hígado, pulmón, hueso</td>
+		    </tr>
+		    <tr class="tabla__row">
+		      <td class="tabla__row-header">Testículo</td>
+		      <td class="tabla__cell">Ganglios linfáticos regionales, pulmón, hueso</td>
+		    </tr>
+		    <tr class="tabla__row-gray">
+		      <td class="tabla__row-header">Vejiga</td>
+		      <td class="tabla__cell">Invasión por continuidad a recto, colon, próstata, uréter, vagina, hueso, ganglios linfáticos regionales, pulmón, peritoneo, hígado, cerebro  </td>
+		    </tr>
+		    <tr class="tabla__row">
+		      <td class="tabla__row-header">Endometrio</td>
+		      <td class="tabla__cell">Ganglios linfáticos regionales, pulmón, hígado, ovario</td>
+		    </tr>
+		  </table>
+
+				<h1>TABLA</h1>
+			<h1>TABLA</h1>
+			<h1>TABLA</h1>
+           
+
+           <%= partial(:'components/header2', :locals => { :text => "Angiogénesis tumoral", :number => '03 ' }) %>
+          <%= partial(:'components/image-big',  :locals => { :image => "images/angiogenesis.png", :title => "Figura 3: Pasos de la angiogénesis tumoral.  ", :text => "Figura modificad de <i> Siemann DW. Vascular targeting agents. Horizons in Cancer Therpeutics: From Bench to Bedise. 2002; 3(2):4-15. </i> ", :id => "angiogenesis"}) %>
+
+          <p class="indented margin5"> Los tumores sólidos requieren que el sistema vascular crezca más allá de unos 2mm de diámetro, el tamaño mínimo para permitir la difusión de oxígeno y de nutrientes. La vasculatura tumoral supera con creces este límite, proporcionando a la vez un conducto a través del cual las células tumorales pueden diseminarse por el torrente sanguíneo. El descubrimiento de la angiogésis tumoral, logró que en 2003 se marcara un hito en el tratamiento del cáncer, cuando la FDA aprobó el anticuerpo monoclonal Avastin (Bevacizumab) como tratamiento de primera línea para el cáncer colorrectal metastásico. A continuación, se dará una visión global de la angiogénesis tumoral, destacando algunas de la vías moleculares que regulan este proceso.</p>
+
+
+          <%= partial(:'components/header3', :locals => { :text => "Formación de vasos sanguíneos tumorales", :number => '03.01' }) %>
+
+
+          <p class="indented margin5">Los vasos sanguíneos de los tumores se caracterizan por estar muy desorganizados en comparación con los de órganos normales. Son tortuosos y deformes y a veces terminan en lagos de sangre abiertos. Estos vasos tienen “aperturas” entre las células endoteliales y una cobertura deficiente por parte de los pericitos, lo que explica la mayor permeabilidad de los mismos. Los patrones de flujo suelen ser lentos y desiguales. En los tumores de crecimiento rápido, la regulación angiogénica aberrante puede no llegar a ser suficiente, produciéndose regiones de anoxia y/o isquemia localizada. Esto a su vez produce un feedback, puesto que la hipoxia promueve directamente la señalización angiogénica en los tumores.</p> 
+
+          <p class="indented margin5">Numerosas moléculas regulan diferentes aspectos de la angiogénesis, tanto fisiológica. como tumoral. La principal es la familia de factores de crecimiento del endotelio vascular (VEGF – vascular endothelial growth factor), que junto con sus receptores, regulan la proliferación, la supervivencia y la función de las células endoteliales. </p>
+
+          <p class="indented margin5"> <span class="container__highlight">VEGF:</span>  El factor de crecimiento del endotelio vascular (conocido como VEGF-A), es uno de los factores angiogénicos más estudiados. Estimula la proliferación de las células endoteliales, la supervivencia y la permeabilidad de los vasos sanguíneos. Pertenece a una familia de factores de crecimiento (VEGF-B, VEGF-C y VEGF-D, entre otros). En modelos de ratones se observó que la pérdida de un solo alelo VEGF daba lugar a la letalidad temprana en los embriones de ratón, caracterizada por una morfología anormal de los vasos sanguíneos. </p>
+
+          <p class="indented margin5">  VEGF se une a sus receptores análogos, VEGFR1 y VEGFR-2. El más potente es el receptor VEGFR-2, que activa de forma robusta varias vías que conducen a la proliferación de células endoteliales. La eliminación de este receptor también produce la letalidad embrionaria en ratones. Se ha demostrado que algunas células tumorales sobreexpresan VEGF. Además, muchas otras proteínas relacionadas con la oncogénesis, como KRAS, HER2 o p53 regulan la angiogénesis mediante la inducción de expresión de VEGF.</p>
+
+          <p class="indented margin5">  El tratamiento con anti-VEGF/VEGFR se ha demostrado que tiene efectos antivasculares y puede inducir la normalización vascular. Los tumores más sensibles a este tratamiento son aquellos más vascularizados, y que dependen más de esta factor de crecimiento endotelial. Actualmente existen más de 10 antiangiogénicos que bloquean VEGF (bevacizumab, regorafenib, ramucirumab, sorafenib, sunitinib, pazopanib, axitinib, lenvatinib, cabozantinib, etc) aprobados por la FDA. </p>
+
+         <%= partial(:'components/image-big',  :locals => { :image => "images/crecimiento-endotelial.png", :title => "Figura 4: Factores de crecimiento endotelial y sus receptores.", :text => "", :id => "crecimiento-endotelial"}) %>
+
+          
+          
+
+
+
+    <div class="content--2" id="bibliografia">
+      <%= partial(:'components/header1', :locals => { :text => t.bibliografia}) %>
+      <ul class= "list">
+        <%= partial(:'components/biblio',  :locals => { :title => t.biblio1_title, :magazine => t.biblio1_magazine, :link => t.biblio1_link}) %>
+        <%= partial(:'components/biblio',  :locals => { :title => t.biblio2_title, :magazine => t.biblio2_magazine, :link => t.biblio2_link}) %>
+        <%= partial(:'components/biblio',  :locals => { :title => t.biblio3_title, :magazine => t.biblio3_magazine, :link => t.biblio3_link}) %>
+        <%= partial(:'components/biblio',  :locals => { :title => t.biblio4_title, :magazine => t.biblio4_magazine, :link => t.biblio4_link}) %>
+        <%= partial(:'components/biblio',  :locals => { :title => t.biblio5_title, :magazine => t.biblio5_magazine, :link => t.biblio5_link}) %>
+        <%= partial(:'components/biblio',  :locals => { :title => t.biblio6_title, :magazine => t.biblio6_magazine, :link => t.biblio6_link}) %>
+        <%= partial(:'components/biblio',  :locals => { :title => t.biblio7_title, :magazine => t.biblio7_magazine, :link => t.biblio7_link}) %>
+        <%= partial(:'components/biblio',  :locals => { :title => t.biblio8_title, :magazine => t.biblio8_magazine, :link => t.biblio8_link}) %>
+        <%= partial(:'components/biblio',  :locals => { :title => t.biblio9_title, :magazine => t.biblio9_magazine, :link => t.biblio9_link}) %>
+        <%= partial(:'components/biblio',  :locals => { :title => t.biblio10_title, :magazine => t.biblio10_magazine, :link => t.biblio10_link}) %>
+        <%= partial(:'components/biblio',  :locals => { :title => t.biblio11_title, :magazine => t.biblio11_magazine, :link => t.biblio11_link}) %>
+      </ul>
+    </div>
+
+    
+
+
+
+
+      </div>
+  </div>
+</div>
