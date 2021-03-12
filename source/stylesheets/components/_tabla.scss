@@ -1,0 +1,35 @@
+
+.tabla{
+	width: 100%;
+	background-color: white;
+	font-size: 1.6rem;
+	margin: 1rem;
+
+
+	tr{
+		height: 4.8rem;
+		&:hover{
+			background-color: $gray;
+		}
+	}
+
+
+
+	&__row-header{
+		width: 25%;
+		font-weight:800;
+
+	}
+
+	&__head{
+		background-color: $dark-gray;
+	}
+
+	&__row-gray{
+		background-color: $light-gray;
+	}
+	td,th{
+		padding: 1.5rem;
+	}
+
+}
