@@ -1,0 +1,122 @@
+
+<% t =  data.origen%>
+<div id="home">
+  <%=partial(:'components/sidebar')  %>
+
+  <div id="main">
+    <div class="container">
+      <div class="content">
+        <%= partial(:'components/header1', :locals => { :text => "Microambiente tumoral y metástasis"}) %>
+
+        <div id="Prese">
+          <%= partial(:'components/header2', :locals => { :text => t.presentacion, :number => ' ' }) %>
+          <p class= "indented margin5 "> En este capítulo se examinan los principales mecanismos de reparación del ADN, los cuales están relacionados de forma directa con el mantenimiento de la estabilidad genómica. La relevancia de estos mecanismos se documenta por la aparición de varios síndromes de predisposición al cáncer causados por defectos subyacentes en estas vías. La alteración de las mismas también se asocia con el aumento de la sensibilidad o de la resistencia de los tumores a diversas clases de terapias. En resumen, esta vía es una de las más importantes en el desarrollo y evolución de determinados tipos de tumores.   </p>
+          <br>
+        </div>
+
+        <br><br>
+
+        <div id="Objet">
+          <%= partial(:'components/header2', :locals => { :text => t.objetivos, :number => ' ' }) %>
+          <%= partial(:'components/list',  :locals => { :list_items => [["", "Entender y comprender cada una de las vías que participan en la reparación del ADN (vías de reparación de cadena única y de la doble cadena)."], ["", "Entender el concepto de letalidad sintética"]]}) %>
+        </div>
+
+        <div id="1.Bio">
+          <%= partial(:'components/header2', :locals => { :text => "Contenidos", :number => '' }) %>
+          <p class= "indented margin5"> Las células de los seres humanos están continuamente expuestas al daño de agentes nocivos, tanto externos (la radiación), como internos (radicales libres producidos por nuestro metabolismo), que pueden llegar a causar hasta 105 lesiones por célula y día, cada una de las cuales tiene el potencial de modificar el código del ADN. Las respuestas celulares al daño del ADN son claramente determinantes importantes tanto en el desarrollo del cáncer, como en la eficacia de algunos de los tratamientos. Para poder llevar a cabo el mantenimiento de la integridad genómica, se deben llevar a cabo elaborados sistemas de vigilancia y mecanismos de reparación del ADN. </p>
+          <p class= "indented"> Los genes implicados en la reparación y respuesta al daño del ADN (DDR por sus siglas en inglés: DNA damage repair genes) son particularmente importantes por la susceptibilidad al cáncer hereditario. Las personas que heredan una mutación en la línea germinal en determinados genes que participan en esta vía, suelen tener un mayor riesgo de desarrollar cáncer debido a la mayor frecuencia de acumular mutaciones (ya que no disponen de todos los mecanismos para reparar daños) y con ello, se promueve la inestabilidad genómica.  </p> 
+          <p class= "indented"> El ADN experimenta muchos tipos de modificaciones espontáneas, pero también puede reaccionar ante agente físicos o químicos, algunos de los cuales pueden ser producidos de forma endógena (radicales libres de oxígeno), mientas que otros, como la radiación ionizante o la luz ultravioleta (UV) son externos. Estos daños en el ADN pueden producir mutaciones, que pueden conducir a su vez, al desarrollo del cáncer. Existen unos complejos sistemas de vigilancia y reparación para revertir o limitar los daños potencialmente perjudiciales del ADN, o en última instancia, si los daños no pueden ser reparados, provocar la muerte celular programada. </p>
+
+
+          <%= partial(:'components/header3', :locals => { :text => "Vías de respuesta al daño del ADN", :number => '01' }) %>
+
+          <p class="indented margin5"> Los puntos de control de respuesta al daño del ADN funcionan de una forma muy compleja. El reconocimiento inicial del daño se produce mediante diversas proteínas de unión al ADN específicas para ese tipo de daño, que por sí solas o junto con otros complejos de proteínas señalan la repuesta al daño en el ADN. Entre estas proteínas se incluyen las relacionadas con ATM, ATR, DNA-PK y las quinasas de control CHEK1 y CHEK2, entre otras. ATM desempeña un papel fundamental en la señalización del daño en el ADN cuando se originan roturas de doble cadena, mientras que ATR está implicada en las roturas de cadena simple. Muchas de las respuestas celulares al daño del ADN se superponen e interactúan ampliamente, demostrando la complejidad de estas vías. A continuación veremos los mecanismos implicados en la reparación de las roturas de cadena simple <span class="container-highlight">(Figura 1).</span></p>
+
+          <div class="card_row">
+            <%= partial(:'components/card', :locals => { :title => "Reparación por escisión de nucleótidos", :body => "Los mecanismos más versátiles y ubicuos para la reparación del ADN son aquellos en los que se extrae la parte dañada o incorrecta de una de las cadenas del ADN, y el hueco resultante, se completa mediante la replicación con el uso de la cadena complementaria como plantilla. Este método es conocido como reparación por escisión de nucleótidos (NER – nucleotid excision repair). Sirve en aquellos casos en los que el daño se produce solamente en una de las cadenas del ADN. Cada hebra de ADN puede servir como plantilla para la reparación basada en la replicación de la otra hebra. Esta vía sirve para eliminar muchos tipos de lesiones, incluidos los daños voluminosos producidos por carcinógenos químicos, los enlaces cruzados entre nucleótidos de la misma hebra, y las alteraciones producidas por la radiación UV. Estas lesiones pueden ocasionar bloqueos en la transcripción y replicación debido a la distorsión de la conformidad helicoidal del ADN, dando lugar a mutaciones si no se reparan correctamente. Los pasos esenciales de esta vía son: <br> 
+            	<li> <ol>1) Reconocimiento del lugar dañado,</ol> 
+            		 <ol>2) Incisión de la cadena de ADN dañada cerca del lugar donde se encuentra la lesión,</ol> 
+            		 <ol>3) Eliminación de un tramo de la cadena afectada que contiene la lesión, </ol>
+            		 <ol> 4) Replicación para sustituir la región eliminada por un tramo de nucleótidos normales con el uso de la cadena complementaria como plantilla y</ol> 
+            		 <ol> 5) Ligación para unir la zona reparada en su extremo 3´ a la cadena de ADN contigua. </ol>
+            	</li>	 " }) %>
+            <%= partial(:'components/card', :locals => { :title => "Reparación por escisión de bases", :body => "Una fuente importante de daño al ADN surge del metabolismo normal que puede causar la oxidación y alquilación del ADN. El sistema de reparación que interviene principalmente en la identificación y eliminación de estas lesiones es la vía de reparación por escisión de bases (BER – Base excision repair). Esta vía es iniciada por un conjunto de glicosilasas específicas que reconocen la base alterada o inapropiada y la separan del ADN, tras lo cual se produce una ruptura de una sola cadena del ADN. Posteriormente, se añade un nucleótido normal y se completa la ligación del mismo. Uno de los elementos fundamentales en esta vía es la familia de polimerasas PARP (poly (ADP-ribose) polymerases), que une y recluta mediadores esenciales para reparar el daño. "}) %>
+            <%= partial(:'components/card', :locals => { :title => "Reparación por apareamiento erróneo ", :body => "Los mecanismos más versátiles y ubicuos para la reparación del ADN son aquellos en los que se extrae la parte dañada o incorrecta de una de las cadenas del ADN, y el hueco resultante, se completa mediante la replicación con el uso de la cadena complementaria como plantilla. Este método es conocido como reparación por escisión de nucleótidos (NER – nucleotid excision repair). Sirve en aquellos casos en los que el daño se produce solamente en una de las cadenas del ADN. Cada hebra de ADN puede servir como plantilla para la reparación basada en la replicación de la otra hebra. Esta vía sirve para eliminar muchos tipos de lesiones, incluidos los daños voluminosos producidos por carcinógenos químicos, los enlaces cruzados entre nucleótidos de la misma hebra, y las alteraciones producidas por la radiación UV. Estas lesiones pueden ocasionar bloqueos en la transcripción y replicación debido a la distorsión de la conformidad helicoidal del ADN, dando lugar a mutaciones si no se reparan correctamente. Los pasos esenciales de esta vía son: <br> 
+            	<li> <ol>1) reconocimiento de la zona de apareamiento erróneo, </ol> 
+            		 <ol>2) reclutamiento de los factores necesarios para reparar el daño, </ol> 
+            		 <ol>3) identificación de la cadena de ADN que contiene los nucleótidos apareados de manera errónea, seguida de su escisión, y </ol>
+            		 <ol> 4) síntesis de la zona eliminada y ligación. Algunos de los genes más importantes involucrados en esta vía son: MSH2, MSH3, MSH6, MLH1 y PMS2. </ol> 
+            		</li>"}) %>
+          </div>
+
+          <%= partial(:'components/image-big',  :locals => { :image => "images/reparacion-roturas.png", :title => "Figura 1: ", :text => "Las 3 principales vías de reparación de roturas de cadena simple son la reparación por escisión de bases (BER), la reparación por escisión de nucleótidos (NER) y la reparación por apareamientos erróneos (MMR). Tras el reconocimiento de las bases alteradas, se realiza una incisión del ADN a través de endonucleasas y el desplazamiento o degradación de las secciones del ADN de cadena simple que contienen el daño. La reparación de esta sección de ADN y la ligadura de las cadenas, da como resultado la reparación del ADN. Tomada de <i>Abeloff´s Clinical Oncology, 6th Edition. Elsevier, 2019. </i>", :id => "reparacion-roturas"}) %> 
+          	<br><br>
+
+          <div class="concepto-clave--background margin5">
+            <div class="concepto-clave__title">A modo de ejemplo</div>
+            <p class="indented margin2">El síndrome de Lynch es una condición hereditaria autosómica dominante con una incidencia de 1:1000 en la población general. Represente aproximadamente el 3% de todos los pacientes con cáncer colorrectal. Los pacientes con síndrome de Lynch también tienen un riesgo elevado de padecer cáncer de endometrio, ovario, gástrico o intestino delgado, entre otros. El descubrimiento de la inestabilidad de microsatélites (la alteración de ciertas secuencias cortas y repetitivas de nucleótidos) en algunos tumores colorrectales hereditarios fue el primer indicio de que la etiología de estos tumores podría implicar una alteración en el sistema MMR.</p>   
+            </div>
+          </div>
+
+          <div class="concepto-clave margin5">
+            <p class= 'concepto-clave__title'><%= t.recuerda%></p>  
+            <p class="margin2"> Uno de los avances más interesantes en la terapéutica del cáncer ha sido el uso de la inmunoterapia. Se demostrado que los pacientes con inestabilidad de microsatélites, tienen una mayor carga de neoantígenos, los cuales parecen ser un biomarcador de respuesta a estos tratamientos. De hecho, en 2017, la FDA aprobó por primera vez un tratamiento, el pembrolizumab, en base a un biomarcador (la presencia de inestabilidad de microsatélites o alteración en genes MMR), con independencia del origen primario del tumor. </p>
+          </div> 
+
+          <p class="indented margin5"> Por otra parte, las roturas de doble cadena son lesiones altamente letales si no se reparan correctamente. Los principales mecanismos para reparar estas roturas son la reparación por recombinación homóloga y la recombinación por extremos no homólogos (Figura 2). Las alteraciones en estas vías suelen inducir diversos tipos de aberraciones cromosómicas asociadas a la carcinogénesis. </p>
+
+          <div class="card_row">
+            <%= partial(:'components/card', :locals => { :title => "Recombinación homóloga (HRR-homologous recombination repair)", :body => "Es una vía muy compleja, pero de una gran fidelidad, ya que restaura el código original del ADN sin introducir errores, pero para ello requiere de una cromátida hermana como guía. Por ello, su actuación está restringida a las fases S y G2 del ciclo celular. Algunos componentes de esta vía incluyen las proteínas BRCA1, BRCA2, PALB2 y RAD51. Interviene también en la reparación de entrecruzamientos intercatenarios, que unen las cadenas de ADN con enlaces covalentes e impiden su posterior separación. " }) %>
+            <%= partial(:'components/card', :locals => { :title => "Recombinación por extremos no homólogos (NEHJ – non-homologous end-joining)", :body => "Repara las roturas de doble cadena mediante la religación de los extremos del ADN, pero sin utilizar una secuencia homóloga como guía. Esto hace que se puedan acumular errores, con la posibilidad de introducir nuevas mutaciones. Al contrario que el proceso de HRR, puede actuar durante todo el ciclo celular. "}) %>
+          </div>
+
+          <%= partial(:'components/image-big',  :locals => { :image => "images/mecanismo-reparacion.png", :title => "Figura 2: Mecanismo de reparación de roturas de doble cadena. ", :text => ". A la izquierda, la más rápida, pero propensa a acumular errores, que sella directamente las roturas, dando lugar en ocasiones a la ganancia o la pérdida de varios nucleótidos. La recombinación homóloga, tiene más fidelidad al utilizar una cromátida hermana como guía para reparar el daño. Tomada de<i>Abeloff´s Clinical Oncology, 6th Edition. Elsevier, 2019. </i>", :id => "mecanismo-reparacion"}) %> 
+          	<br><br>
+
+         <div class="concepto-clave--background margin5">
+            <div class="concepto-clave__title">A modo de ejemplo</div>
+            <p class="indented margin2">El síndrome de cáncer de mama hereditario incluye un amplio grupo de condiciones de predisposición hereditaria. Representa entre el 5% y el 10% de todos los casos de cáncer de mama. Se ha asociado con mutaciones en la línea germinal en dos genes, BRCA1 y BRCA2. Se ha demostrado que cuando alguno de estos genes está alterado, y por tanto sus proteínas no son funcionales, existe una mayor inestabilidad genómica, que puede ser debida a que en ausencia de la reparación por HRR, se reparan las roturas de doble cadena a través de NEHJ, que como se ha comentado es propensa a acumular más errores. </p>   
+            </div>
+         
+
+          <div class="concepto-clave margin5">
+            <p class= 'concepto-clave__title'><%= t.recuerda%></p>  
+            <p class="indented margin2"> Uno de los hallazgos más interesantes en relación a estas vías de reparación es la actividad selectiva de los inhibidores de PARP en tumores con defectos en BRCA1/2. Los pacientes con estas alteraciones se asocian a una menor capacidad de reparación del ADN, y por lo tanto, dependen de otros procesos alternativos para que las células con daños puedan sobrevivir. PARP es fundamental para reparar las roturas de cadena simple del ADN, pero si no funciona de manera correcta (si se inhibe), esas roturas dan lugar a la formación de roturas de cadena doble, que requieren la actividad de BRCA1/2 para resolverse, Así pues, en los tumores que carecen de la función de BRCA (normalmente por presencia de mutación germinal en uno de los alelos, con pérdida del segundo alelo – segundo hit) se ha observado que la inhibición de PARP hace que la célula sea incapaz de sobrevivir, en un proceso denominado letalidad sintética. </p>
+            <p class="indented"> Los inhibidores de PARP han demostrado su actividad en pacientes con cáncer de mama, ovario, próstata y páncreas con mutaciones BRCA1/2. </p>
+          </div>  
+
+           <%= partial(:'components/image-big',  :locals => { :image => "images/letalidad-sintetica.png", :title => "Figura 3: Hipótesis de la letalidad sintética. ", :text => "En una célula normal (BRCA wild-type), tanto PARP como BRCA1/2 participan en las vías de reparación del ADN. Si en este contexto se administra un inhibidor de PARP, la célula sobrevive, ya que tiene el sistema de reparación de BRCA intacto. En un paciente portador de mutación en uno de los alelos de BRCA1/2, dado que el otro alelo es funcional, aunque se administre un inhibidor de PARP, la célula sobrevive. Sin embargo, en un paciente portador de mutación bi-alélica en BRCA1/2, si se administra un inhibidor de PARP se produce la letalidad sintética por acúmulo de fallos en las vías de reparación de ADN. Sacado de <i>Antonarakis ES, Eur Urol, 2020. </i>", :id => "mecanismo-reparacion"}) %> 	
+
+           <p class="indented margin5">Los platinos son agentes citotóxicos alquilantes que causan enlaces cruzados en la cadena del ADN, que no pueden ser reparados cuando la vía de la recombinación homóloga está dañada, lo que conduce a la muerte celular. Esta estrategia también ha demostrado su beneficio en el tratamiento del cáncer de mama y ovario con mutaciones patogénicas en BRCA1 o BRCA2. </p>
+
+------------          
+
+          
+
+
+
+    <div class="content--2" id="bibliografia">
+      <%= partial(:'components/header1', :locals => { :text => t.bibliografia}) %>
+      <ul class= "list">
+        <%= partial(:'components/biblio',  :locals => { :title => t.biblio1_title, :magazine => t.biblio1_magazine, :link => t.biblio1_link}) %>
+        <%= partial(:'components/biblio',  :locals => { :title => t.biblio2_title, :magazine => t.biblio2_magazine, :link => t.biblio2_link}) %>
+        <%= partial(:'components/biblio',  :locals => { :title => t.biblio3_title, :magazine => t.biblio3_magazine, :link => t.biblio3_link}) %>
+        <%= partial(:'components/biblio',  :locals => { :title => t.biblio4_title, :magazine => t.biblio4_magazine, :link => t.biblio4_link}) %>
+        <%= partial(:'components/biblio',  :locals => { :title => t.biblio5_title, :magazine => t.biblio5_magazine, :link => t.biblio5_link}) %>
+        <%= partial(:'components/biblio',  :locals => { :title => t.biblio6_title, :magazine => t.biblio6_magazine, :link => t.biblio6_link}) %>
+        <%= partial(:'components/biblio',  :locals => { :title => t.biblio7_title, :magazine => t.biblio7_magazine, :link => t.biblio7_link}) %>
+        <%= partial(:'components/biblio',  :locals => { :title => t.biblio8_title, :magazine => t.biblio8_magazine, :link => t.biblio8_link}) %>
+        <%= partial(:'components/biblio',  :locals => { :title => t.biblio9_title, :magazine => t.biblio9_magazine, :link => t.biblio9_link}) %>
+        <%= partial(:'components/biblio',  :locals => { :title => t.biblio10_title, :magazine => t.biblio10_magazine, :link => t.biblio10_link}) %>
+        <%= partial(:'components/biblio',  :locals => { :title => t.biblio11_title, :magazine => t.biblio11_magazine, :link => t.biblio11_link}) %>
+      </ul>
+    </div>
+
+    
+
+
+
+
+      </div>
+  </div>
+</div>
