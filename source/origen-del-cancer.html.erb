@@ -39,7 +39,7 @@
 
           <%= partial(:'components/concepto-clave', :locals => {  :title => t.concepto_clave,  :text => t.predictivos_highlight}) %>
 
-          <%= partial(:'components/image-big',  :locals => { :image => "images/biomarcadores-predictivos.png", :title => t.image2_title, :text => t.image2_text, :id => "biomarcadores-predictivos"}) %>          
+          <%= partial(:'components/image-big',  :locals => { :image => "images/biomarcadores-predictivos.png", :title => t.image2_title, :text => "(A) en pacientes que reciben tratamiento específico frente al biomarcador, (B) en pacientes que no reciben dicho tratamiento. (C) Pacientes que expresan, y (D) patientes que no expresan el biomarcadores de interés. En este caso se puede observar como la administración de un tratamiento específico modifica la probabilidad de supervivencia de los pacientes. Tomada de <i>ESMO Handbook of Translational Research, 2nd edition, 2015.</i>", :id => "biomarcadores-predictivos"}) %>          
 
           <p class= "indented margin5"> <%= t.biomarcadores_text2 %></p>
           <p class= "indented margin5"> <%= t.biomarcadores_text3 %></p>
@@ -56,12 +56,12 @@
           <p class= "indented margin5"> <%= t.cap2_t3 %></p>  
           <div class="card_row">
             <%= partial(:'components/card', :locals => { :title => t.cap2_card1_title, :body => t.cap2_card1_body }) %>
-            <%= partial(:'components/card', :locals => { :title => t.cap2_card2_title, :body => t.cap2_card2_body}) %>
+            <%= partial(:'components/card', :locals => { :title => t.cap2_card2_title, :body => "Son genes “activadores”, es decir, actúan como el acelerador de un coche, de manera que una alteración en la función de un proto-oncogén sería el equivalente a tener el acelerador continuamente presionado (activación continua del proceso de carcinogénesis). Pueden activarse mediante translocaciones cromosómicas, mutaciones puntuales o amplificaciones/sobre-expresiones. Normalmente, la alteración de un solo  alelo (heterocigosis) es suficiente para que se manifieste (por eso se denominan genes dominantes). <br> <p><i>Ejemplos de oncogenes: MYC y RAS</i></p>"}) %>
           </div>
           <%= partial(:'components/image-big',  :locals => { :image => "images/oncogen.png", :title => t.cap2_img2_title, :text => t.cap2_img2_text, :id => "oncogen"}) %>
            <div class="card_row">
-            <%= partial(:'components/card', :locals => { :title => t.cap2_card3_title, :body => t.cap2_card3_body }) %>
-            <%= partial(:'components/card', :locals => { :title => t.cap2_card4_title, :body => t.cap2_card4_body}) %>
+            <%= partial(:'components/card', :locals => { :title => t.cap2_card3_title, :body => "Por el contrario, estos genes actúan como “frenos”, de manera que cuando no está alterada su función, inhiben la carcinogénesis. Son los llamados “guardianes del genoma”. Las mutaciones en los genes supresores generalmente producen un truncamiento de la proteína codificada por dicho gen, y es necesaria la alteración de los dos alelos (por eso se denominan genes recesivos), causando la pérdida de heterocigosidad (en inglés, LOH), para que se manifiesten.  <br> <p><i>Ejemplos de genes supresores tumorales: p53 y RB1 </i></p>" }) %>
+            <%= partial(:'components/card', :locals => { :title => t.cap2_card4_title, :body => "Son genes que codifican proteínas implicadas en la reparación del ADN. Su alteración conlleva la imposibilidad de reparar estos errores, acumulándose por tanto, en las células mutaciones. Son genes recesivos, al igual que los genes supresores. <br> <p><i>Ejemplos de genes de reparación del ADN: BRCA1 y BRCA2 </i></p>"}) %>
           </div>
           <%= partial(:'components/header3', :locals => { :text => t.cap2_subtitle2, :number => '02.02' }) %> 
           <p class= "indented margin5"> <%= t.cap2_t3 %> <span class="container__highlight"><%= t.cap2_span1 %></span> <%= t.cap2_t4 %> </p>
@@ -69,7 +69,7 @@
           <p class= "indented margin5"> <%= t.cap2_t7 %></p>
 
 
-          <%= partial(:'components/image-big',  :locals => { :image => "images/mutaciones-somaticas.png", :title => t.cap2_img3_title, :text => t.cap2_img3_text, :id => "mutaciones-somaticas"}) %>
+          <%= partial(:'components/image-big',  :locals => { :image => "images/mutaciones-somaticas.png", :title => t.cap2_img3_title, :text => "Cada punto representa una muestra, y las líneas horizontales rojas son la media de las mutaciones en los respectivos tipos de cáncer. El eje vertical en escala logarítmica muestra el número de mutaciones por megabase de datos, mientras que los diferentes tipos de cáncer están ordenados en el eje horizontal según su número medio de mutaciones somáticas. . Figura sacada de <i> Alexandrov LB, Nature, 2013</i>", :id => "mutaciones-somaticas"}) %>
 
           <div class="card_row">
             <%= partial(:'components/card', :locals => { :title => t.cap2_card5_title, :body => t.cap2_card5_body }) %>
@@ -162,11 +162,11 @@
           </div>
 
           <%= partial(:'components/header3', :locals => { :text => "Clasificación taxonómica del cáncer", :number => '01.03' }) %>
-          <div class="indented margin5">El desciframiento del genoma del cáncer ha supuesto un impacto en la práctica clínica: ha permitido identificar nuevos genes implicados en el desarrollo y evolución del cáncer, así como establecer nuevas clasificaciones taxonómicas en determinados tipos de tumores. </div>
-          <div class="indented margin2">Como se ha mencionado anteriormente, hasta no hace mucho tiempo, los tumores se clasificaban en base a dos criterios: su localización u origen y su histología. Estos criterios siguen siendo utilizados actualmente para establecer el pronóstico inicial y el tratamiento. Sin embargo, es sabido que pacientes con tumores histológicamente iguales pueden tener pronósticos, evoluciones y respuestas a las terapias muy diferentes. </div>
-          <div class="indented margin2">Las mutaciones que afectan a los genes implicados en cáncer tienen un papel fundamental, y están sirviendo para re-definir la taxonomía de los diferentes tipos de tumores. Se pueden identificar subgrupos genéticamente claramente diferenciados dentro de un mismo tipo de tumor (misma histología) con respecto al pronóstico y la respuesta a los tratamientos. </div>
-          <div class="indented margin2">El Atlas del Genoma del Cáncer, conocido como TGCA (The Cancer Genome Atlas), tiene como finalidad a través de la secuenciación y su análisis, clasificar los diferentes tipos de tumores en base a sus perfiles moleculares. </div>
-          <div class="indented margin2">El cáncer colorectal es uno de los ejemplos de estos avances. Estos tumores se pueden clasificar claramente según el perfil de mutación de los genes implicados en la vía de KRAS. Se sabe que las mutaciones en KRAS acontecen en aproximadamente el 40% de los tumores colorectales. Otro subtipo de este tumor alberga mutaciones en BRAF, uno de los efectores inmediatos de KRAS. Ambas mutaciones (KRAS y BRAF) han demostrado que disminuyen la capacidad de respuesta a las terapias de anticuerpos monoclonales anti-EGFR en estos pacientes (Figura 5). </div>
+          <p class="indented margin5">El desciframiento del genoma del cáncer ha supuesto un impacto en la práctica clínica: ha permitido identificar nuevos genes implicados en el desarrollo y evolución del cáncer, así como establecer nuevas clasificaciones taxonómicas en determinados tipos de tumores. </p>
+          <p class="indented margin2">Como se ha mencionado anteriormente, hasta no hace mucho tiempo, los tumores se clasificaban en base a dos criterios: su localización u origen y su histología. Estos criterios siguen siendo utilizados actualmente para establecer el pronóstico inicial y el tratamiento. Sin embargo, es sabido que pacientes con tumores histológicamente iguales pueden tener pronósticos, evoluciones y respuestas a las terapias muy diferentes. </p>
+          <p class="indented margin2">Las mutaciones que afectan a los genes implicados en cáncer tienen un papel fundamental, y están sirviendo para re-definir la taxonomía de los diferentes tipos de tumores. Se pueden identificar subgrupos genéticamente claramente diferenciados dentro de un mismo tipo de tumor (misma histología) con respecto al pronóstico y la respuesta a los tratamientos. </p>
+          <p class="indented margin2">El Atlas del Genoma del Cáncer, conocido como TGCA (The Cancer Genome Atlas), tiene como finalidad a través de la secuenciación y su análisis, clasificar los diferentes tipos de tumores en base a sus perfiles moleculares. </p>
+          <p class="indented margin2">El cáncer colorectal es uno de los ejemplos de estos avances. Estos tumores se pueden clasificar claramente según el perfil de mutación de los genes implicados en la vía de KRAS. Se sabe que las mutaciones en KRAS acontecen en aproximadamente el 40% de los tumores colorectales. Otro subtipo de este tumor alberga mutaciones en BRAF, uno de los efectores inmediatos de KRAS. Ambas mutaciones (KRAS y BRAF) han demostrado que disminuyen la capacidad de respuesta a las terapias de anticuerpos monoclonales anti-EGFR en estos pacientes (Figura 5). </p>
 
           <%= partial(:'components/image-big',  :locals => { :image => "images/analisis-integrador.png", :title => "Figura 5: Análisis integrador de cambios genómicos en 195 tumores colorectales", :text => "Los tumores hipermutados están altamente enriquecidos para mutaciones BRAF (V600E). Los cambios en el número de copias de los 22 cromosomas se muestran en rojo para las ganacias y en azul para las pérdidas en el número de copias. Sacada de The Cancer Genome Atlas Network, Nature, 2012. ", :id => "integrador"}) %>
 

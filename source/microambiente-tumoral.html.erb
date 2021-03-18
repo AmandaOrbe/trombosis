@@ -51,79 +51,80 @@
            <p class= "indented margin5"> <%= t.cap2_t1 %></p>
           <%= partial(:'components/image-big',  :locals => { :image => "images/cascada-metastasica.png", :title => "Figura 2: Cascada metastásica", :text => "", :id => "cascada-metastasica"}) %>
 
-          <div class="card_row">
-            <%= partial(:'components/card', :locals => { :title => "Invasión: ", :body => "La invasión tumoral es la capacidad de las células tumorales de alterar la membrana basal y penetrar en el estroma adyacente, y es la característica distintiva de la malignidad. Este proceso requiere cambios importantes en la morfología y fenotipo de las células, como es la pérdida de la capacidad de adhesión célula-célula, junto con la degradación de la matriz y motilidad celular (proceso enmarcado dentro de la transición epitelio-mesénquima (TEM)). " }) %>
-            <%= partial(:'components/card', :locals => { :title => "Intravasación: ", :body => "La entrada de las células tumorales en la circulación puede ser a través de vasos sanguíneos o linfáticos. Durante este proceso se producen una serie de cambios en las células tumorales, ya que deben someterse a grandes deformaciones elásticas para penetrar a través del endotelio. Este paso al interior de los vasos sanguíneos puede estar motivado por estos cambios físicos, o bien por cambios estructurales en los propios vasos sanguíneos, que a su vez pueden facilitar la entrada de las células tumorales. Otra posibilidad es que se estimule la formación de nuevos vasos sanguíneos, que son más permeables y facilitan la entrada de las células tumorales (angiogénesis tumoral). "}) %>
-          </div>
-          <div class="card_row">
-            <%= partial(:'components/card', :locals => { :title => "Transporte vascular: ", :body => "Durante su tránsito por el sistema circulatorio, las células tumorales están sujetas a fuerzas hemodinámicas, inmunológicas, situaciones de estrés y colisiones con otras células sanguíneas. El estrés del propio flujo sanguíneo puede ser suficiente para destruir la mayoría de las células tumorales. Estas células también deben tener la capacidad de evadir el sistema inmune, para lo cual muchas veces se sirven de las plaquetas como escudo, como ya se ha comentado previamente. " }) %>
-            <%= partial(:'components/card', :locals => { :title => "Detención: ", :body => "La circulación termina cuando llegan a un órgano a distancia. Dependiendo del tipo célula tumoral, cada una de ellas tiene preferencia por diferentes órganos (Tabla 1). En este aspecto se ha desarrollado la teoría de la “semilla y el suelo”: las células tumorales asentarán en un lugar donde el microambiente local sea favorable."}) %>
-          </div>
-          <div class="card_row">
-            <%= partial(:'components/card', :locals => { :title => "Extravasación: ", :body => "Tiene lugar cuando las células tumorales atraviesan el endotelio del vaso hacia el parénquima del tejido de destino. Los mecanismos que intervienen son muy similares a los de la invasión, donde intervienen moléculas de adhesión celular, proteinasas y factores de movilidad. En algunas ocasiones, las células tumorales pueden adherirse al endotelio y sobrevivir, para después crecer intravasalmente. " }) %>
-            <%= partial(:'components/card', :locals => { :title => "Infiltración y colonización: ", :body => "Representa un paso muy importante en la cascada metastásica. Muy pocas células, a pesar de llevar a cabo los procesos anteriores son capaces de colonizar el tejido de asiento. Incluso en algunos tipos de tumores, las metástasis pueden surgir décadas después, lo que indica que las células tumorales pueden sobrevivir en un estado de latencia durante largo períodos. Este proceso de infiltración y colonización depende en gran medida del microambiente tumoral, que puede favorecer el crecimiento de las células tumorales. "}) %>
-          </div>
 
-			<h1>TABLA</h1>
-			<h1>TABLA</h1>
-			<h1>TABLA</h1>
+           <%= partial(:'components/header3', :locals => { :text => "Invasión: ", :number => '02.01' }) %>
+           <p class="indented margin5"> La invasión tumoral es la capacidad de las células tumorales de alterar la membrana basal y penetrar en el estroma adyacente, y es la característica distintiva de la malignidad. Este proceso requiere cambios importantes en la morfología y fenotipo de las células, como es la pérdida de la capacidad de adhesión célula-célula, junto con la degradación de la matriz y motilidad celular (proceso enmarcado dentro de la transición epitelio-mesénquima (TEM)). </p>          
 
 
+           <%= partial(:'components/header3', :locals => { :text => "Intravasación: ", :number => '02.02' }) %>
+           <p class="indented margin5"> La entrada de las células tumorales en la circulación puede ser a través de vasos sanguíneos o linfáticos. Durante este proceso se producen una serie de cambios en las células tumorales, ya que deben someterse a grandes deformaciones elásticas para penetrar a través del endotelio. Este paso al interior de los vasos sanguíneos puede estar motivado por estos cambios físicos, o bien por cambios estructurales en los propios vasos sanguíneos, que a su vez pueden facilitar la entrada de las células tumorales. Otra posibilidad es que se estimule la formación de nuevos vasos sanguíneos, que son más permeables y facilitan la entrada de las células tumorales (angiogénesis tumoral). </p>    
 
- 			<table class="tabla">
+           <%= partial(:'components/header3', :locals => { :text => "Transporte vascular: ", :number => '02.03' }) %>
+           <p class="indented margin5"> Durante su tránsito por el sistema circulatorio, las células tumorales están sujetas a fuerzas hemodinámicas, inmunológicas, situaciones de estrés y colisiones con otras células sanguíneas. El estrés del propio flujo sanguíneo puede ser suficiente para destruir la mayoría de las células tumorales. Estas células también deben tener la capacidad de evadir el sistema inmune, para lo cual muchas veces se sirven de las plaquetas como escudo, como ya se ha comentado previamente. </p>   
+
+           <%= partial(:'components/header3', :locals => { :text => "Detención: ", :number => '02.04' }) %>
+           <p class="indented margin5"> La circulación termina cuando llegan a un órgano a distancia. Dependiendo del tipo célula tumoral, cada una de ellas tiene preferencia por diferentes órganos (Tabla 1). En este aspecto se ha desarrollado la teoría de la “semilla y el suelo”: las células tumorales asentarán en un lugar donde el microambiente local sea favorable.</p>          
+
+           <%= partial(:'components/header3', :locals => { :text => "Extravasación: ", :number => '02.05' }) %>
+           <p class="indented margin5"> Tiene lugar cuando las células tumorales atraviesan el endotelio del vaso hacia el parénquima del tejido de destino. Los mecanismos que intervienen son muy similares a los de la invasión, donde intervienen moléculas de adhesión celular, proteinasas y factores de movilidad. En algunas ocasiones, las células tumorales pueden adherirse al endotelio y sobrevivir, para después crecer intravasalmente. </p>          
+
+
+           <%= partial(:'components/header3', :locals => { :text => "Infiltración y colonización: ", :number => '02.06' }) %>
+           <p class="indented margin5"> Representa un paso muy importante en la cascada metastásica. Muy pocas células, a pesar de llevar a cabo los procesos anteriores son capaces de colonizar el tejido de asiento. Incluso en algunos tipos de tumores, las metástasis pueden surgir décadas después, lo que indica que las células tumorales pueden sobrevivir en un estado de latencia durante largo períodos. Este proceso de infiltración y colonización depende en gran medida del microambiente tumoral, que puede favorecer el crecimiento de las células tumorales. </p>          
+
+
+
+ 			<table class="tabla margin5">
 		    <tr class="tabla__row">
-		      <th class="tabla__head tabla__row-header">Tipo de Tumor</th>
+		      <th class="tabla__head tabla__row-header tabla__25 ">Tipo de Tumor</th>
 		      <th class="tabla__head">Lugar de metástasis</th>
 		    </tr>
 		    <tr class="tabla__row ">
-		      <td class="tabla__row-header">Mama</td>
+		      <td class="tabla__row-header tabla__25">Mama</td>
 		      <td class="tabla__cell">Ganglios linfáticos axilares, pulmón, pleura, hígado, hueso, cerebro, glándula suprerrenal </td>
 		    </tr>
 		    <tr class="tabla__row-gray">
-		      <td class="tabla__row-header">Colon</td>
+		      <td class="tabla__row-header tabla__25">Colon</td>
 		      <td class="tabla__cell">Ganglios linfáticos regionales, hígado, pulmón, invasión por contigüidad a vejega o estómago</td>
 		    </tr>
 		    <tr class="tabla__row">
-		      <td class="tabla__row-header">Riñón</td>
+		      <td class="tabla__row-header tabla__25">Riñón</td>
 		      <td class="tabla__cell">Pulmón, hígado, hueso</td>
 		    </tr>
 		    <tr class="tabla__row-gray">
-		      <td class="tabla__row-header">Pulmón</td>
+		      <td class="tabla__row-header tabla__25">Pulmón</td>
 		      <td class="tabla__cell">Ganglios linfáticos regionales, pluera,hígado, hueso, cerebro, glándula suprerrenal, bazo</td>
 		    </tr>
 		    <tr class="tabla__row">
-		      <td class="tabla__row-header">Ovario</td>
+		      <td class="tabla__row-header tabla__25">Ovario</td>
 		      <td class="tabla__cell">Peritoneo, Ganglios linfáticos regionales, pulmón, hígado</td>
 		    </tr>
 		    <tr class="tabla__row-gray">
-		      <td class="tabla__row-header">Páncreas</td>
+		      <td class="tabla__row-header tabla__25">Páncreas</td>
 		      <td class="tabla__cell">Hígado, invasión por continuidad a estómago, colon, peritoneo</td>
 		    </tr>
 		    <tr class="tabla__row">
-		      <td class="tabla__row-header">Próstata</td>
+		      <td class="tabla__row-header tabla__25">Próstata</td>
 		      <td class="tabla__cell">Hueso, Ganglios linfáticos regionales</td>
 		    </tr>
 		    <tr class="tabla__row-gray">
-		      <td class="tabla__row-header">Gástrico</td>
+		      <td class="tabla__row-header tabla__25">Gástrico</td>
 		      <td class="tabla__cell">Ganglios linfáticos regionales, hígado, pulmón, hueso</td>
 		    </tr>
 		    <tr class="tabla__row">
-		      <td class="tabla__row-header">Testículo</td>
+		      <td class="tabla__row-header tabla__25">Testículo</td>
 		      <td class="tabla__cell">Ganglios linfáticos regionales, pulmón, hueso</td>
 		    </tr>
 		    <tr class="tabla__row-gray">
-		      <td class="tabla__row-header">Vejiga</td>
+		      <td class="tabla__row-header tabla__25">Vejiga</td>
 		      <td class="tabla__cell">Invasión por continuidad a recto, colon, próstata, uréter, vagina, hueso, ganglios linfáticos regionales, pulmón, peritoneo, hígado, cerebro  </td>
 		    </tr>
 		    <tr class="tabla__row">
-		      <td class="tabla__row-header">Endometrio</td>
+		      <td class="tabla__row-header tabla__25">Endometrio</td>
 		      <td class="tabla__cell">Ganglios linfáticos regionales, pulmón, hígado, ovario</td>
 		    </tr>
 		  </table>
 
-				<h1>TABLA</h1>
-			<h1>TABLA</h1>
-			<h1>TABLA</h1>
            
 
            <%= partial(:'components/header2', :locals => { :text => "Angiogénesis tumoral", :number => '03 ' }) %>

@@ -6,7 +6,7 @@
   <div id="main">
     <div class="container">
       <div class="content">
-        <%= partial(:'components/header1', :locals => { :text => "Microambiente tumoral y metástasis"}) %>
+        <%= partial(:'components/header1', :locals => { :text => "Vías de respuesta al daño del ADN"}) %>
 
         <div id="Prese">
           <%= partial(:'components/header2', :locals => { :text => t.presentacion, :number => ' ' }) %>
@@ -32,22 +32,32 @@
 
           <p class="indented margin5"> Los puntos de control de respuesta al daño del ADN funcionan de una forma muy compleja. El reconocimiento inicial del daño se produce mediante diversas proteínas de unión al ADN específicas para ese tipo de daño, que por sí solas o junto con otros complejos de proteínas señalan la repuesta al daño en el ADN. Entre estas proteínas se incluyen las relacionadas con ATM, ATR, DNA-PK y las quinasas de control CHEK1 y CHEK2, entre otras. ATM desempeña un papel fundamental en la señalización del daño en el ADN cuando se originan roturas de doble cadena, mientras que ATR está implicada en las roturas de cadena simple. Muchas de las respuestas celulares al daño del ADN se superponen e interactúan ampliamente, demostrando la complejidad de estas vías. A continuación veremos los mecanismos implicados en la reparación de las roturas de cadena simple <span class="container-highlight">(Figura 1).</span></p>
 
-          <div class="card_row">
-            <%= partial(:'components/card', :locals => { :title => "Reparación por escisión de nucleótidos", :body => "Los mecanismos más versátiles y ubicuos para la reparación del ADN son aquellos en los que se extrae la parte dañada o incorrecta de una de las cadenas del ADN, y el hueco resultante, se completa mediante la replicación con el uso de la cadena complementaria como plantilla. Este método es conocido como reparación por escisión de nucleótidos (NER – nucleotid excision repair). Sirve en aquellos casos en los que el daño se produce solamente en una de las cadenas del ADN. Cada hebra de ADN puede servir como plantilla para la reparación basada en la replicación de la otra hebra. Esta vía sirve para eliminar muchos tipos de lesiones, incluidos los daños voluminosos producidos por carcinógenos químicos, los enlaces cruzados entre nucleótidos de la misma hebra, y las alteraciones producidas por la radiación UV. Estas lesiones pueden ocasionar bloqueos en la transcripción y replicación debido a la distorsión de la conformidad helicoidal del ADN, dando lugar a mutaciones si no se reparan correctamente. Los pasos esenciales de esta vía son: <br> 
-            	<li> <ol>1) Reconocimiento del lugar dañado,</ol> 
-            		 <ol>2) Incisión de la cadena de ADN dañada cerca del lugar donde se encuentra la lesión,</ol> 
-            		 <ol>3) Eliminación de un tramo de la cadena afectada que contiene la lesión, </ol>
-            		 <ol> 4) Replicación para sustituir la región eliminada por un tramo de nucleótidos normales con el uso de la cadena complementaria como plantilla y</ol> 
-            		 <ol> 5) Ligación para unir la zona reparada en su extremo 3´ a la cadena de ADN contigua. </ol>
-            	</li>	 " }) %>
-            <%= partial(:'components/card', :locals => { :title => "Reparación por escisión de bases", :body => "Una fuente importante de daño al ADN surge del metabolismo normal que puede causar la oxidación y alquilación del ADN. El sistema de reparación que interviene principalmente en la identificación y eliminación de estas lesiones es la vía de reparación por escisión de bases (BER – Base excision repair). Esta vía es iniciada por un conjunto de glicosilasas específicas que reconocen la base alterada o inapropiada y la separan del ADN, tras lo cual se produce una ruptura de una sola cadena del ADN. Posteriormente, se añade un nucleótido normal y se completa la ligación del mismo. Uno de los elementos fundamentales en esta vía es la familia de polimerasas PARP (poly (ADP-ribose) polymerases), que une y recluta mediadores esenciales para reparar el daño. "}) %>
-            <%= partial(:'components/card', :locals => { :title => "Reparación por apareamiento erróneo ", :body => "Los mecanismos más versátiles y ubicuos para la reparación del ADN son aquellos en los que se extrae la parte dañada o incorrecta de una de las cadenas del ADN, y el hueco resultante, se completa mediante la replicación con el uso de la cadena complementaria como plantilla. Este método es conocido como reparación por escisión de nucleótidos (NER – nucleotid excision repair). Sirve en aquellos casos en los que el daño se produce solamente en una de las cadenas del ADN. Cada hebra de ADN puede servir como plantilla para la reparación basada en la replicación de la otra hebra. Esta vía sirve para eliminar muchos tipos de lesiones, incluidos los daños voluminosos producidos por carcinógenos químicos, los enlaces cruzados entre nucleótidos de la misma hebra, y las alteraciones producidas por la radiación UV. Estas lesiones pueden ocasionar bloqueos en la transcripción y replicación debido a la distorsión de la conformidad helicoidal del ADN, dando lugar a mutaciones si no se reparan correctamente. Los pasos esenciales de esta vía son: <br> 
-            	<li> <ol>1) reconocimiento de la zona de apareamiento erróneo, </ol> 
-            		 <ol>2) reclutamiento de los factores necesarios para reparar el daño, </ol> 
-            		 <ol>3) identificación de la cadena de ADN que contiene los nucleótidos apareados de manera errónea, seguida de su escisión, y </ol>
-            		 <ol> 4) síntesis de la zona eliminada y ligación. Algunos de los genes más importantes involucrados en esta vía son: MSH2, MSH3, MSH6, MLH1 y PMS2. </ol> 
-            		</li>"}) %>
-          </div>
+          <%= partial(:'components/header3', :locals => { :text => "Reparación por escisión de nucleótidos", :number => '01.01 ' }) %>  
+
+            <p class="indented margin5">Los mecanismos más versátiles y ubicuos para la reparación del ADN son aquellos en los que se extrae la parte dañada o incorrecta de una de las cadenas del ADN, y el hueco resultante, se completa mediante la replicación con el uso de la cadena complementaria como plantilla. Este método es conocido como reparación por escisión de nucleótidos (NER – nucleotid excision repair). Sirve en aquellos casos en los que el daño se produce solamente en una de las cadenas del ADN. Cada hebra de ADN puede servir como plantilla para la reparación basada en la replicación de la otra hebra. Esta vía sirve para eliminar muchos tipos de lesiones, incluidos los daños voluminosos producidos por carcinógenos químicos, los enlaces cruzados entre nucleótidos de la misma hebra, y las alteraciones producidas por la radiación UV. Estas lesiones pueden ocasionar bloqueos en la transcripción y replicación debido a la distorsión de la conformidad helicoidal del ADN, dando lugar a mutaciones si no se reparan correctamente. Los pasos esenciales de esta vía son: </p>
+
+            <%= partial(:'components/o-list',  :locals => { :list_items => [
+            ["1)","Reconocimiento del lugar dañado,"], 
+            ["2)","Incisión de la cadena de ADN dañada cerca del lugar donde se encuentra la lesión,"], 
+            ["3) ","Eliminación de un tramo de la cadena afectada que contiene la lesión,"], 
+            ["4) ","Replicación para sustituir la región eliminada por un tramo de nucleótidos normales con el uso de la cadena complementaria como plantilla y"],
+            ["5) ","Ligación para unir la zona reparada en su extremo 3´ a la cadena de ADN contigua. "]]}) %>
+
+          <%= partial(:'components/header3', :locals => { :text => "Reparación por escisión de bases", :number => '01.02 ' }) %>  
+
+            <p class="indented margin5">Una fuente importante de daño al ADN surge del metabolismo normal que puede causar la oxidación y alquilación del ADN. El sistema de reparación que interviene principalmente en la identificación y eliminación de estas lesiones es la vía de reparación por escisión de bases (BER – Base excision repair). Esta vía es iniciada por un conjunto de glicosilasas específicas que reconocen la base alterada o inapropiada y la separan del ADN, tras lo cual se produce una ruptura de una sola cadena del ADN. Posteriormente, se añade un nucleótido normal y se completa la ligación del mismo. Uno de los elementos fundamentales en esta vía es la familia de polimerasas PARP (poly (ADP-ribose) polymerases), que une y recluta mediadores esenciales para reparar el daño. </p>    
+
+          <%= partial(:'components/header3', :locals => { :text => "Reparación por apareamiento erróneo ", :number => '01.03 ' }) %>  
+
+            <p class="indented margin5">Los mecanismos más versátiles y ubicuos para la reparación del ADN son aquellos en los que se extrae la parte dañada o incorrecta de una de las cadenas del ADN, y el hueco resultante, se completa mediante la replicación con el uso de la cadena complementaria como plantilla. Este método es conocido como reparación por escisión de nucleótidos (NER – nucleotid excision repair). Sirve en aquellos casos en los que el daño se produce solamente en una de las cadenas del ADN. Cada hebra de ADN puede servir como plantilla para la reparación basada en la replicación de la otra hebra. Esta vía sirve para eliminar muchos tipos de lesiones, incluidos los daños voluminosos producidos por carcinógenos químicos, los enlaces cruzados entre nucleótidos de la misma hebra, y las alteraciones producidas por la radiación UV. Estas lesiones pueden ocasionar bloqueos en la transcripción y replicación debido a la distorsión de la conformidad helicoidal del ADN, dando lugar a mutaciones si no se reparan correctamente. Los pasos esenciales de esta vía son: </p>
+
+          <%= partial(:'components/o-list',  :locals => { :list_items => [
+            ["1)","Reconocimiento de la zona de apareamiento erróneo,"], 
+            ["2)","reclutamiento de los factores necesarios para reparar el daño"], 
+            ["3) ","identificación de la cadena de ADN que contiene los nucleótidos apareados de manera errónea, seguida de su escisión, y"], 
+            ["4) "," síntesis de la zona eliminada y ligación. Algunos de los genes más importantes involucrados en esta vía son: MSH2, MSH3, MSH6, MLH1 y PMS2."]]}) %>            
+
+          
 
           <%= partial(:'components/image-big',  :locals => { :image => "images/reparacion-roturas.png", :title => "Figura 1: ", :text => "Las 3 principales vías de reparación de roturas de cadena simple son la reparación por escisión de bases (BER), la reparación por escisión de nucleótidos (NER) y la reparación por apareamientos erróneos (MMR). Tras el reconocimiento de las bases alteradas, se realiza una incisión del ADN a través de endonucleasas y el desplazamiento o degradación de las secciones del ADN de cadena simple que contienen el daño. La reparación de esta sección de ADN y la ligadura de las cadenas, da como resultado la reparación del ADN. Tomada de <i>Abeloff´s Clinical Oncology, 6th Edition. Elsevier, 2019. </i>", :id => "reparacion-roturas"}) %> 
           	<br><br>
@@ -65,10 +75,15 @@
 
           <p class="indented margin5"> Por otra parte, las roturas de doble cadena son lesiones altamente letales si no se reparan correctamente. Los principales mecanismos para reparar estas roturas son la reparación por recombinación homóloga y la recombinación por extremos no homólogos (Figura 2). Las alteraciones en estas vías suelen inducir diversos tipos de aberraciones cromosómicas asociadas a la carcinogénesis. </p>
 
-          <div class="card_row">
-            <%= partial(:'components/card', :locals => { :title => "Recombinación homóloga (HRR-homologous recombination repair)", :body => "Es una vía muy compleja, pero de una gran fidelidad, ya que restaura el código original del ADN sin introducir errores, pero para ello requiere de una cromátida hermana como guía. Por ello, su actuación está restringida a las fases S y G2 del ciclo celular. Algunos componentes de esta vía incluyen las proteínas BRCA1, BRCA2, PALB2 y RAD51. Interviene también en la reparación de entrecruzamientos intercatenarios, que unen las cadenas de ADN con enlaces covalentes e impiden su posterior separación. " }) %>
-            <%= partial(:'components/card', :locals => { :title => "Recombinación por extremos no homólogos (NEHJ – non-homologous end-joining)", :body => "Repara las roturas de doble cadena mediante la religación de los extremos del ADN, pero sin utilizar una secuencia homóloga como guía. Esto hace que se puedan acumular errores, con la posibilidad de introducir nuevas mutaciones. Al contrario que el proceso de HRR, puede actuar durante todo el ciclo celular. "}) %>
-          </div>
+          <%= partial(:'components/header3', :locals => { :text => "Recombinación homóloga (HRR-homologous recombination repair) ", :number => '01.04 ' }) %>  
+
+            <p class="indented margin5">Es una vía muy compleja, pero de una gran fidelidad, ya que restaura el código original del ADN sin introducir errores, pero para ello requiere de una cromátida hermana como guía. Por ello, su actuación está restringida a las fases S y G2 del ciclo celular. Algunos componentes de esta vía incluyen las proteínas BRCA1, BRCA2, PALB2 y RAD51. Interviene también en la reparación de entrecruzamientos intercatenarios, que unen las cadenas de ADN con enlaces covalentes e impiden su posterior separación.  </p>
+
+          <%= partial(:'components/header3', :locals => { :text => "Recombinación por extremos no homólogos (NEHJ – non-homologous end-joining)", :number => '01.05 ' }) %>  
+
+            <p class="indented margin5">Repara las roturas de doble cadena mediante la religación de los extremos del ADN, pero sin utilizar una secuencia homóloga como guía. Esto hace que se puedan acumular errores, con la posibilidad de introducir nuevas mutaciones. Al contrario que el proceso de HRR, puede actuar durante todo el ciclo celular. </p>
+
+
 
           <%= partial(:'components/image-big',  :locals => { :image => "images/mecanismo-reparacion.png", :title => "Figura 2: Mecanismo de reparación de roturas de doble cadena. ", :text => ". A la izquierda, la más rápida, pero propensa a acumular errores, que sella directamente las roturas, dando lugar en ocasiones a la ganancia o la pérdida de varios nucleótidos. La recombinación homóloga, tiene más fidelidad al utilizar una cromátida hermana como guía para reparar el daño. Tomada de<i>Abeloff´s Clinical Oncology, 6th Edition. Elsevier, 2019. </i>", :id => "mecanismo-reparacion"}) %> 
           	<br><br>

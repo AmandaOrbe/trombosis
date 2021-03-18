@@ -1,0 +1,187 @@
+
+<% t =  data.origen%>
+<div id="home">
+  <%=partial(:'components/sidebar')  %>
+
+  <div id="main">
+    <div class="container">
+      <div class="content">
+        <%= partial(:'components/header1', :locals => { :text => t.title}) %>
+
+        <div id="Prese">
+          <%= partial(:'components/header2', :locals => { :text => t.presentacion, :number => ' ' }) %>
+          <p class= "indented margin5 "> En este módulo se examina la biología de las interacciones entre el sistema inmunitario y los tumores y se analiza de forma más superficial cómo los conocimientos científicos se han traducido en estrategias novedosas para aprovechar la respuesta inmune para tratar el cáncer, destacando el desarrollo de anticuerpos que bloquean los puntos de control inmunitario, terapias adoptivas con linfocitos T modificados (T-CAR cells) y algunas vacunas.  </p>
+          <br>
+        </div>
+        <br><br>
+
+        <div id="Objet">
+          <%= partial(:'components/header2', :locals => { :text => t.objetivos, :number => ' ' }) %>
+          <%= partial(:'components/list',  :locals => { :list_items => [["", "Conocer las características que convierten al sistema inmune en una herramienta frente al cáncer"], ["", "Comprender el proceso de inmunoedición que promueven los tumores para escapar del sistema inmune."], ["", "Conocer cómo funcionan los principales puntos de control inmune y como estos se han convertido en una forma de tratamiento contra el cáncer."], ["", "Conocer otras estrategias para potenciar el sistema inmune frente a los tumores. "]]}) %>
+        </div>
+
+        <%= partial(:'components/header2', :locals => { :text => "Contenidos", :number => ' ' }) %> 
+         
+          <p class= "indented margin5"> Existen al menos dos características que convierten al sistema inmunológico en una herramienta única contra el cáncer. </p>
+
+
+          <%= partial(:'components/list',  :locals => { :list_items => [["", "La diversidad de receptores en el sistema inmune adaptativo (receptor de linfocitos T (TCR – T cell receptor) y anticuerpos fabricados por los linfocitos B) ofrecen una capacidad sin igual para atacar objetivos específicos. "], ["", "El diverso armamento tanto del sistema inmune innato como de las células T citotóxicas ofrece el potencial de matar cualquier otra célula, una vez reconocida como “extraña”. "]]}) %>
+          <p class="indented margin5">Es importante recalcar que el concepto de la inmunoterapia se basa en que las células tumorales expresan antígenos en superficie diferentes a los de las células homólogas “normales” y que el sistema inmune es capaz de reconocer esas diferencias antigénicas. </p>
+          <p class="indented ">Los primeros hallazgos de que el sistema inmune podía utilizarse como tratamiento contra el cáncer surgieron de los experimentos realizados en modelos animales de cáncer. En ellos se demostró que varios tumores eran rechazados al ser trasplantados en animales inmunocompetentes. A partir de aquí se abrieron numerosas investigaciones hasta llegar al conocimiento que tenemos hoy sobre la inmunidad y el cáncer.</p>
+
+        <%= partial(:'components/header2', :locals => { :text => "El perfil antigénico para distinguir tumores de tejidos normales", :number => '01' }) %>
+
+        <p class="indented margin5">La inestabilidad genómica, una de las principales características del cáncer, es un generador de antígenos específicos del tumor. Como promedio, los tumores expresan entre 50 y 100 mutaciones missense (ver módulo 1) en regiones codificantes, de las cuales, aproximadamente el 20% crean neoantígenos, que a su vez son presentados por el antígeno leucocitario humano (sistema conocido por sus siglas en inglés HLA-Human leukocyte antigen) del individuo, y por lo tanto, son reconocidos por los linfocitos T. </p>
+
+        <%= partial(:'components/image-big',  :locals => { :image => "images/vigilancia-resistencia-tolerancia.png", :title => "Figura 1: Imagen del equilibrio entre la vigilancia inmunológica, la resistencia y la tolerancia. ", :text => "La transformación de las células normales en células tumorales implica la formación de neoantígenos. Una vigilancia inmunológica exitosa basada en el reconocimiento de estos antígenos específicos de los tumores llevaría a la eliminación del tumor en etapas tempranas. La supervivencia y la progresión de los tumores requiere que estos desarrollen mecanismos de resistencia que inhiban las respuestas inmunes específicas del tumor para matar las células tumorales. Alternativamente, si el tumor desarrolla mecanismos para inducir una tolerancia inmunológica a sus antígenos, no se puede desarrollar la respuesta inmune. Por último, los tumores podrían responder a la presión inmunológica de los linfocitos T eliminando las mutaciones, un proceso que se denomina edición inmunológica. Tomada de <i> Abeloff´s Clinical Oncology, 6th Edition. Elsevier, 2019. </i> ", :id => "vigilancia-resistencia-tolerancia"}) %>
+
+        <%= partial(:'components/header2', :locals => { :text => "Sellos inmunológicos del cáncer: Como evitar la destrucción inmunológica y la inflamación que promueve el tumor", :number => '02' }) %>
+
+        <%= partial(:'components/header3', :locals => { :text => "Evitar la destrucción inmunológica", :number => '02.01 ' }) %>  
+
+        <p class="indented margin5">Existen numerosos estudios que demuestran la capacidad que tienen los tumores para inducir la tolerancia de los linfocitos T a sus antígenos. Puede ser:</p>
+
+        <%= partial(:'components/list',  :locals => { :list_items => [
+            ["","Un proceso activo que implica el reconocimiento directo de los antígenos (los reconocen como “normales”)"], 
+            ["","Estudiar los criterios de causalidad de Bradford-Hill."], 
+            ["","Un proceso activo que implica el reconocimiento directo de los antígenos (los reconocen como “normales”)"]]}) %>
+
+            <p class="indented">Así pues, dependiendo del tipo de escape inmunológico, se podrían utilizar diferentes pautas para cambiar el equilibrio entre la evasión inmunológica del tumor y el reconocimiento inmunológico del mismo.</p> 
+            
+            <p class="indented">Los linfocitos T de pacientes con cáncer tienden a tener poca afinidad por su antígeno afín o a reconocer antígenos que se unen de una forma deficiente a su molécula HLA, lo que da lugar a un reconocimiento deficiente por parte de los linfocitos T.</p> 
+
+          <%= partial(:'components/header3', :locals => { :text => "Inflamación en el microambiente tumoral", :number => '02.02 ' }) %>  
+
+            <p class="indented margin5">El microambiente tumoral está repleto de mecanismos de supresión que amortiguan la respuesta inmune antitumoral. Las células inhibidoras, y las vías de señalización que se encuentra en el  microambiente tumoral no son exclusivas de los tumores, si no que componen un conjunto de mecanismo fisiológicos que han evolucionado para regular las respuestas inmunitarias a los auto-antígenos (es decir, que no haya respuestas frente a antígenos normales) y para reducir las respuestas inmunitarias e inflamatorias a los antígenos extraños, de modo que se limiten los daños en los tejidos cercanos. A continuación veremos algunas de las células que componen este microambiente tumoral.</p>
+
+          <%= partial(:'components/header3', :locals => { :text => "Linfocitos T reguladores y cáncer", :number => '02.03 ' }) %>  
+
+            <p class="indented margin5">Los linfocitos T reguladores (Treg) tienen funciones supresoras que permiten mantener la tolerancia a los auto-antígenos, regulan la respuesta inmune a los patógenos e inducen la tolerancia a los antígenos de los tumores. Inhiben la proliferación de otros tipos celulares de células T, del interferón gamma (IFN-y) y diversas citoquinas, y con ello disminuyen la respuesta inmune. A medida que se identifican nuevas moléculas de la membrana celular de los Treg, la capacidad de bloquear la actividad de estas células con anticuerpos presenta nuevas oportunidades para que las estrategias de inmunoterapia rompan la tolerancia de los tumores a los antígenos. </p>
+
+         <%= partial(:'components/header3', :locals => { :text => "Células mieloides inmaduras (iMCs)", :number => '02.04 ' }) %>  
+
+            <p class="indented margin5">Las células mieloides inmaduras (iMCs por sus siglas en inglés – immature myeloid cells), son un grupo heterogéneo de células entre las que se incluyen las conocidas como células mieloides supresoras (MDSCs – myeloid-derived suppressor cells), así como los macrófagos asociados a tumores (TAMs), que tienen capacidad inmunosupresora. Varias moléculas producidas por los tumores tienden a favorecer la acumulación de iMCs y MDSCs, entre ellas la IL-6, el factor estimulante de colonias 1 (CSF-1) o la IL-10, que van a promover la inflamación del microambiente tumoral. Los macrófagos se pueden dividir en M1, que son los mediadores de la inmunidad antitumoral, y M2, que son promotores de tumores. La infiltración de macrófagos en los tumores se ha asociado en gran medida con peor pronóstico en diferentes tipos de tumores. Diferentes estrategias, aún en modelos pre-clínicos, se están desarrollando para prevenir la acumulación de los macrófagos en los tumores. </p>
+
+
+         <%= partial(:'components/header3', :locals => { :text => "Células dendríticas inmaduras (CDs)", :number => '02.05 ' }) %>  
+
+            <p class="indented margin5">Las células dendríticas encontradas en el microambiente tumoral suelen tener un fenotipo inmaduro caracterizado por bajos niveles de producción de citoquinas pro-inflamatorias. Aunque las CD inmaduras pueden presentar antígenos a los linfocitos T, lo hacen sin la presencia de otras moléculas co-estimuladoras que son fundamentales para activar este proceso, por lo que inducen la tolerancia de los linfocitos T a esos antígenos. Por el contrario, cuando las CD se activan y dejan de ser inmaduras, tiene la capacidad de presentar antígenos junto a las señales co-estimuladoras necesarias que dan lugar a un fenotipo de linfocitos T efectores. Los tumores tienen diferentes mecanismos para inhibir la activación de las CD y mantenerlas en estado inmaduro. Numerosos tratamientos de inmunoterapia buscan inducir la activación y maduración de las CD.  </p>
+
+
+         <%= partial(:'components/header3', :locals => { :text => "Moléculas inhibidoras de la inmunidad del microambiente tumoral ", :number => '02.06 ' }) %>  
+
+            <p class="indented margin5">En el microambiente tumoral se expresan numerosas moléculas que inhiben la cascada inmune, como pueden ser enzimas que metabolizan ciertos aminoácidos que son fundamentales para la función de los linfocitos T, citoquinas que inhiben las respuestas inmunitarias antitumorales actuando sobre las células T efectoras para anular su actividad o la expresión de ligandos que se unen a los receptores que inhiben a los linfocitos (los llamados puntos de control o check-point). Uno de los mediadores de la falta de respuesta de los linfocitos T contra las células tumorales es la producción de indolamina 2,3-dioxigenasa (IDO), una enzima que se encuentra en muchas células, principalmente en los macrófagos o incluso en las propias células tumorales, que está involucrada en el metabolismo del triptófano. Los linfocitos T activos dependen en gran medida del triptófano para ser funcionantes, de tal manera que a través de la enzima IDO se induce una apoptosis a través de este mecanismo. Existe un fármaco, el epacadostat, un inhibidor oral de la IDO, que se encuentra en fase de investigación en diferentes ensayos en combinación con otros fármacos, como el pembrolizumab (anti-PD1) en pacientes con melanoma avanzado, demostrando resultados prometedores en los ensayos Fase I y II. </p>
+
+
+         <%= partial(:'components/header3', :locals => { :text => "Moléculas inhibidoras de la inmunidad del microambiente tumoral ", :number => '02.06 ' }) %>  
+
+            <p class="indented margin5">En el microambiente tumoral se expresan numerosas moléculas que inhiben la cascada inmune, como pueden ser enzimas que metabolizan ciertos aminoácidos que son fundamentales para la función de los linfocitos T, citoquinas que inhiben las respuestas inmunitarias antitumorales actuando sobre las células T efectoras para anular su actividad o la expresión de ligandos que se unen a los receptores que inhiben a los linfocitos (los llamados puntos de control o check-point). Uno de los mediadores de la falta de respuesta de los linfocitos T contra las células tumorales es la producción de indolamina 2,3-dioxigenasa (IDO), una enzima que se encuentra en muchas células, principalmente en los macrófagos o incluso en las propias células tumorales, que está involucrada en el metabolismo del triptófano. Los linfocitos T activos dependen en gran medida del triptófano para ser funcionantes, de tal manera que a través de la enzima IDO se induce una apoptosis a través de este mecanismo. Existe un fármaco, el epacadostat, un inhibidor oral de la IDO, que se encuentra en fase de investigación en diferentes ensayos en combinación con otros fármacos, como el pembrolizumab (anti-PD1) en pacientes con melanoma avanzado, demostrando resultados prometedores en los ensayos Fase I y II. </p>
+
+
+         <%= partial(:'components/header3', :locals => { :text => "Factor de crecimiento transformante ß (TGF-ß)", :number => '02.07 ' }) %>  
+
+            <p class="indented margin5">El TGF-ß es una citoquina inhibidora implicada en la respuesta inmune antitumoral. Este factor de crecimiento es producido por una gran variedad de tipos de células, incluyendo las propias células tumorales, y tiene efectos fisiológicos pleiotrópicos. En la mayoría de las células epiteliales normales, el TGF-ß es un potente inhibidor de la proliferación celular, que causa la detención del ciclo celular en fase G1. Sin embargo, en muchas células tumorales, las mutaciones en la vía del TGF-ß confieren una resistencia a esta inhibición del ciclo celular, permitiendo así un crecimiento descontrolado. Promueve también la invasión de tejidos vecinos mediante la inducción de metaloproteasas, y estimula la angiogénesis. Los niveles elevados en sangre de esta citoquina se asocian a mal pronóstico en cáncer de próstata, de vejiga, cáncer de pulmón y cáncer gástrico. Varios inhibidores de la vía del TGF-ß han sido probados en ensayos clínicos Fase I, incluyendo el fresolimumab, un anticuerpo monoclonal humano anti-TGF-ß1/2/3. Se ha demostrado su seguridad, pero aún no existen datos sobre su eficacia.  </p>
+
+
+          <%= partial(:'components/header2', :locals => { :text => "Ligandos y receptores que reducen la inmunidad del tumor", :number => '03' }) %>
+          <p class="indented margin5">Las principales moléculas que se han logrado atacar con éxito en la inmunoterapia contra el cáncer son las que actúan sobre los puntos de control inmune (checkpoint inhibitors). Los mecanismos de acción de estos inhibidores son diferentes, regulando respuestas inmunitarias en diferentes niveles, como es el caso de CTLA-4 y PD-1 (Figura 2), dos de las vías que han revolucionado la inmunoterapia contra el cáncer. </p>
+
+          <%= partial(:'components/image-big',  :locals => { :image => "images/puntos-de-control.png", :title => "Figura 2: Puntos de control de CTLA-4 y PD-1 ", :text => "Actúan regulando diferentes elementos de la respuesta de los linfocitos T. Los linfocitos T no activados expresan bajos niveles de CTLA-4 o PD-1 en su superficie. Para que un linfocito T se active se requieren 3 señales: la unión del antígeno con el receptor de células T (TCR), la interacción del complejo mayor de histocompatibilidad (MHC), con los receptores CD28 o CD4 de los linfocitos T y la generación de una señal co-estimuladora generada por la unión de B7 (1 o 2) con CD28. Cuando esto ocurre, CD28 amplifica la señalización del TCR para activar la proliferación de linfocitos T. CD28 y CTLA-4 comparten los mimos ligandos: B7-1 y B7-2. CTLA-4 por tanto, contrarresta la actividad co-estimuladora de CD28. Por el contrario, PD-1 se expresa tanto en el tejido (para así protegerlos del daño colateral durante la respuesta inflamatoria), como en los tumores. Tras la unión a sus ligandos (PD-L1 y PD-L2), PD-1 suprime la actividad de los linfocitos T. Los tumores inducen la expresión de PD-L1 y PD-L2, lo que reduce la respuesta inmune. Tomada de <i> Abeloff´s Clinical Oncology, 6th Edition. Elsevier, 2019. </i>", :id => "puntos-de-control"}) %>
+
+         <%= partial(:'components/header3', :locals => { :text => "Punto de control CTLA-4", :number => '03.01 ' }) %>  
+
+            <p class="indented margin5">CTLA-4 se expresa exclusivamente en los linfocitos T, donde regula principalmente la amplitud de las primeras etapas de su activación (de los linfocitos T), contrarrestando la actividad del receptor que estimula a los linfocitos T, el CD28. Para que CD28 active a los linfocitos T, necesita que el receptor de células T (TCR) sea activado primero por un antígeno específico. Tras el reconocimiento del antígeno, la señalización de CD28 activa los linfocitos T. CD28 y CTLA-4 comparten ligandos idénticos: CD80 (B7-1) y CD86 (B7-2). Debido a que CTLA-4 tiene mayor afinidad por estos ligandos, su expresión en la superficie de los linfocitos T frena la activación de los linfocitos T al impedir que CD28 se una tanto a CD80 como a CD86. Por eso, su expresión en condiciones normales es baja. El papel central del CTLA-4 en la regulación del sistema inmune está demostrado en modelos de ratones knockout para CTLA-4 en los cuales hay una hiperactivación inmune. CTLA-4 por lo tanto, disminuye la actividad de los linfocitos T “helper” (CD4 o colaboradores) y aumenta la actividad supresora de los linfocitos T reguladores (TReg). </p>
+
+         <%= partial(:'components/header3', :locals => { :text => "Punto de control PD-1", :number => '03.02 ' }) %>  
+
+            <p class="indented margin5">A diferencia de CTLA-4, la función principal de PD-1 es limitar la actividad de los linfocitos T en los tejidos periféricos en el momento de producirse una respuesta inflamatoria a una infección y limitar la autoinmunidad y el daño colateral que se puede producir. Esto se traduce en un importante mecanismo de resistencia inmunológica dentro del microambiente tumoral. La expresión de PD-1 se produce cuando los linfocitos T se activan. Se expresa en gran medida en los linfocitos que infiltran el tumor (denominados TIL por sus siglas: tumor infiltrating lymphocytes) de muchos tipos de tumores. Al igual que CTLA-4, PD-1 se expresa también en los linfocitos TReg, aumentando su actividad y proliferación. El bloqueo de PD-1 puede por tanto mejorar la respuesta inmune antitumoral disminuyendo el número y/o la actividad supresora de los linfocitos TReg. PD-1 también se expresa en los linfocitos B, los “natural killer” (NK) y los macrófagos. Por lo tanto, el bloqueo de PD-1 también mejora la actividad de las NK y la producción de anticuerpos. Los dos ligandos de PD-1 son B7-H1/PD-L1 (CD274) y B7-DC/PD-L2 (CD273).  Estos ligandos están regulados al alza en muchos tipos de tumores, siendo PD-L1 el principal que se expresa en los tumores. El bloqueo de PD-1 o de su ligando PD-L1 suponen uno de los tratamientos de inmunoterapia más eficaces a día de hoy. </p>
+
+
+          <table class="tabla margin5">
+        <tr class="tabla__row">
+          <th class="tabla__head tabla__row-header  ">Fármaco</th>
+          <th class="tabla__head">Diana</th>
+        </tr>
+        <tr class="tabla__row ">
+          <td class="tabla__cell ">NIpilimumab (Yervoy®)  </td>
+          <td class="tabla__cell">CTLA-4</td>
+        </tr>
+        <tr class="tabla__row-gray">
+          <td class="tabla__cell ">Nivolumab (Opdivo®) </td>
+          <td class="tabla__cell">PD-1</td>
+        </tr>
+        <tr class="tabla__row">
+          <td class="tabla__cell ">Pembrolizumab (Keytruda®) </td>
+          <td class="tabla__cell">PD-1</td>
+        </tr>
+        <tr class="tabla__row-gray">
+          <td class="tabla__cell ">Cemiplimab (Libtayo®) </td>
+          <td class="tabla__cell">PD-1</td>
+        </tr>
+        <tr class="tabla__row">
+          <td class="tabla__cell ">Atezolizumab (Tecentriq®) </td>
+          <td class="tabla__cell">PD-L1</td>
+        </tr>
+        <tr class="tabla__row-gray">
+          <td class="tabla__cell ">Avelumab (Bavencio®) </td>
+          <td class="tabla__cell">PD-L1</td>
+        </tr>
+        <tr class="tabla__row">
+          <td class="tabla__cell ">Durvalumab (Imfinzi®) </td>
+          <td class="tabla__cell">PD-L1</td>
+        </tr>
+      </table>
+      <br>
+      <b>Tabla 1: Fármacos que actúan en los diferentes puntos de control inmune. </b>
+      <p>Existen otras formas de potenciar el sistema inmune para atacar a los tumores: la terapia celular y las vacunas </p>
+
+
+      <%= partial(:'components/header3', :locals => { :text => "Estrategias de modificación de linfocitos T mediante ingeniería genética", :number => '03.03 ' }) %>  
+
+            <p class="indented margin5">La inmunoterapia adoptiva de linfocitos T modificados genéticamente busca inducir la expresión de nuevos genes en los linfocitos T citotóxicos que faciliten el reconocimiento de los tumores, mejoren la actividad de los linfocitos T, induzcan una citotoxicidad específica hacia los tumores y/o aumenten la memoria inmunológica. La modificación genética más conocida y empleada es la expresión de transgenes que codifican un receptor de células T (TCR) específico del tumor o los receptores de antígenos quiméricos (CAR – Chimeric antigen Receptors). Estos últimos tienen como ventaja que pueden reconocer antígenos de superficie a pesar de que los tumores expresen bajos niveles del MHC (necesario para la presentación de antígeno en condiciones normales). Esta terapia consiste en extraer linfocitos-T del paciente mediante aféresis, que posteriormente son modificados para que reconozcan y ataquen a las células tumorales, y vuelven a ser transferidos al paciente para que ejerzan su función. Su uso tiene aplicaciones fundamentalmente en tumores hematológicos, con resultados por el momento menos alentadores en tumores sólidos. </p>
+
+      <%= partial(:'components/card', :locals => { :title => "Estrategias de modificación de linfocitos T mediante ingeniería genética", :body => ""}) %>
+
+
+       <%= partial(:'components/image-big',  :locals => { :image => "images/modificacion-linfocitos-t.png", :title => "Figura 3: Esquema simplificado de la modificación de linfocitos T", :text => "", :id => "modificacion-linfocitos-t"}) %> 
+       <br> 
+
+       <div class="concepto-clave--background margin5">
+            <div class="concepto-clave__title">A modo de ejemplo</div>
+            <p class="margin2">Por ejemplo, algunas leucemias tienen en común la expresión de una proteína o antígeno de superficie llamada CD-19. Gracias a la ingeniería genética es posible reprogramar los linfocitos e introducir información genética para que expresen en su superficie el receptor quimérico o T-CAR que reconocerá el antígeno tumoral CD-19, destruyendo de forma específica las células tumorales que expresen dicho antígeno. </p>
+       </div>   
+
+      <%= partial(:'components/header3', :locals => { :text => "Vacunas", :number => '03.03 ' }) %>  
+
+            <p class="indented margin5">Las vacunas contra el cáncer incluyen estrategias de prevención y de tratamiento. Las de prevención se comentarán más ampliamente en los módulos 6 y 7 (frente al VPH, por ejemplo). La primera vacuna terapéutica con beneficio en un ensayo clínico fase III fue el Sipuleucel-T en pacientes con cáncer de próstata resistente a la castración metastásicos. Esta vacuna está basada en el concepto de que la activación óptima de los linfocitos T requiere el procesamiento y la presentación de antígeno por parte de las células dendríticas. Sipuleucel-T es una vacuna específica para cada paciente que se produce mediante la incubación de las células mononucleares de la sangre periférica del propio paciente con una proteína, la fosfatasa ácida prostática (PAP – un antígeno específico de la próstata) vinculada al factor de crecimiento y diferenciación de las células dendríticas GM-CSF. De esta manera, el fármaco activará a los linfocitos T, que atacarán a las células tumorales que expresen el antígeno específico, en este caso PAP. </p>
+
+       
+
+---------
+
+
+    <div class="content--2" id="bibliografia">
+      <%= partial(:'components/header1', :locals => { :text => t.bibliografia}) %>
+      <ul class= "list">
+        <%= partial(:'components/biblio',  :locals => { :title => t.biblio1_title, :magazine => t.biblio1_magazine, :link => t.biblio1_link}) %>
+        <%= partial(:'components/biblio',  :locals => { :title => t.biblio2_title, :magazine => t.biblio2_magazine, :link => t.biblio2_link}) %>
+        <%= partial(:'components/biblio',  :locals => { :title => t.biblio3_title, :magazine => t.biblio3_magazine, :link => t.biblio3_link}) %>
+        <%= partial(:'components/biblio',  :locals => { :title => t.biblio4_title, :magazine => t.biblio4_magazine, :link => t.biblio4_link}) %>
+        <%= partial(:'components/biblio',  :locals => { :title => t.biblio5_title, :magazine => t.biblio5_magazine, :link => t.biblio5_link}) %>
+        <%= partial(:'components/biblio',  :locals => { :title => t.biblio6_title, :magazine => t.biblio6_magazine, :link => t.biblio6_link}) %>
+        <%= partial(:'components/biblio',  :locals => { :title => t.biblio7_title, :magazine => t.biblio7_magazine, :link => t.biblio7_link}) %>
+        <%= partial(:'components/biblio',  :locals => { :title => t.biblio8_title, :magazine => t.biblio8_magazine, :link => t.biblio8_link}) %>
+        <%= partial(:'components/biblio',  :locals => { :title => t.biblio9_title, :magazine => t.biblio9_magazine, :link => t.biblio9_link}) %>
+        <%= partial(:'components/biblio',  :locals => { :title => t.biblio10_title, :magazine => t.biblio10_magazine, :link => t.biblio10_link}) %>
+        <%= partial(:'components/biblio',  :locals => { :title => t.biblio11_title, :magazine => t.biblio11_magazine, :link => t.biblio11_link}) %>
+      </ul>
+    </div>
+
+    
+
+
+
+
+      </div>
+  </div>
+</div>
