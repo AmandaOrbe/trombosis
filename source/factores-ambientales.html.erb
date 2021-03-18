@@ -1,0 +1,235 @@
+
+<% t =  data.origen%>
+<div id="home">
+  <%=partial(:'components/sidebar')  %>
+
+  <div id="main">
+    <div class="container">
+      <div class="content">
+        <%= partial(:'components/header1', :locals => { :text => "Factores ambientales"}) %>
+
+        <div id="Prese">
+          <%= partial(:'components/header2', :locals => { :text => t.presentacion, :number => ' ' }) %>
+          <p class= "indented margin5 "> Se sabe que el cáncer es un proceso que se desarrolla a lo largo de muchos años y está determinado por la interacción de los factores genéticos del huésped, así como por las exposiciones ambientales. Estas parecen desempeñar un papel importante en la determinación del riesgo del cáncer. El tabaquismo y la dieta representan uno de los más importantes, pero existen otros muchos con relaciones más o menos fuertes.  A continuación veremos algunos de los más importantes.  </p>
+
+        </div>
+        <br><br>
+
+        <div id="Objet">
+          <%= partial(:'components/header2', :locals => { :text => t.objetivos, :number => ' ' }) %>
+          <%= partial(:'components/list',  :locals => { :list_items => [
+            ["","Conocer y comprender que en el proceso de desarrollo de un cáncer existen complejas relaciones entre la genética del huésped y las exposiciones ambientales."], 
+            ["","Estudiar los criterios de causalidad de Bradford-Hill."], 
+            ["","Conocer algunos de los carcinógenos ambientales más frecuentes (dieta y tabaco, entre otros)"], 
+            ["","Comprender el proceso de carcinogénesis"],
+            ["","Conocer la importancia de las diferentes estrategias de prevención frente al cáncer"]]}) %>
+        </div>
+
+        <%= partial(:'components/header2', :locals => { :text => "Contenidos", :number => ' ' }) %>
+
+        <p class="indented margin5">De forma global, el riesgo de desarrollar cáncer en los seres humanos está determinado por un complejo sistema de relaciones entre la genética del huésped y las exposiciones ambientales. La exposición a un agente carcinógeno activa una cascada de mecanismos que pueden llegar a convertir, en último extremo, las células normales en células tumorales. A este proceso se le denomina carcinogénesis, y a los diferentes agentes causantes del mismo, carcinógenos. Se han identificado cientos de agentes carcinógenos ambientales, algunos de ellos confirmados, otros sospechosos. Los agentes carcinógenos suponen una parte importante de la mortalidad por cáncer en todo el mundo. La determinación de las causas del cáncer y de los mecanismos subyacentes que conducen a su desarrollo proporcionan una base para elaborar estrategias de prevención. </p>
+
+       <%= partial(:'components/header2', :locals => { :text => "Un poco de historia", :number => '01' }) %>
+
+        <p class="indented margin5">La contribución de los factores ambientales al cáncer se ha reconocido durante siglos. En 1775, el Dr. Pott observó que los deshollinadores presentaban una mayor incidencia de cáncer de escroto, que se atribuía a la frecuente y fuerte exposición al hollín. Un siglo más tarde, se comprobó que los trabajadores del alquitrán de hulla en Alemania experimentaban un exceso de cáncer de piel, lo cual también se relacionó con su exposición ocupacional. Posteriormente, en las décadas de 1920-1930 se identificó el benzo(a)pireno (BaP), un hidrocarburo policíclico aromático como potente carcinógeno en modelos animales. Más tarde, en 1960 diferentes estudios revelaron que el ADN es el blanco de estos agentes carcinógenos, y que la mutación genética es uno de los mecanismos más importantes por el cual estos agentes inducen el cáncer. A partir de aquí, la lista de carcinógenos ha ido creciendo rápidamente, junto con una mejor comprensión de los mecanismos de desarrollo de cáncer asociados a estos agentes. Estos avances han acontecido en gran medida gracias a los estudios epidemiológicos (principalmente estudios de cohortes de exposición y estudios de observación de incidencia de cáncer). El estudio de las pautas de incidencia del cáncer en todo el mundo, incluido el análisis del riesgo de padecer esta enfermedad entre las poblaciones migrantes, ha confirmado el papel fundamental del medio ambiente, así como el estilo de vida y factores socioeconómicos en la determinación del riesgo del cáncer. </p>        
+        <p class="indented margin5">Por ejemplo, el riesgo de cáncer hepático varía entre 20 y 40 veces a nivel internacional: la incidencia es mayor en Asia Oriental y menor en Europa y América Central. Las tasas de cáncer de mama son mayores en Estados Unidos y en los países europeos que en Asia, África y América del Sur. En este sentido, se han realizado estudios comparando la incidencia de cáncer entre personas de la misma etnia que viven en su país de origen, con la incidencia de las personas de esa misma etnia migrantes en la población de destino. Numerosos estudios de este tipo demuestran que, incluso en la primera generación tras la migración, las poblaciones inmigrantes asumen un patrón de riesgo de cáncer similar a la población nativa, poniendo de manifiesto la importancia que desempeñan los factores ambientales en el riesgo de desarrollar cáncer. </p>
+
+        <div class="concepto-clave--background margin5">
+            <div class="concepto-clave__title">A modo de ejemplo</div>
+            <p class="margin2">Por ejemplo, la incidencia de cáncer de mama entre las inmigrantes asiáticas a Estados Unidos se ha comparado con la de mujeres asiáticas que siguen viviendo en su país de origen. Tras una generación, el riesgo de cáncer de mama en las mujeres asiático-americanas se aproxima al de las mujeres nacidas en Estados Unidos y es notablemente mayor que el de las mujeres asiáticas que residen en su país de origen. </p>
+          </div>
+
+       <%= partial(:'components/header2', :locals => { :text => "Criterios de causalidad", :number => '02' }) %>
+
+        <p class="indented margin5">Para evaluar la probabilidad de que una exposición ambiental concreta esté vinculada causalmente con un determinado tipo de cáncer, los parámetros más comúnmente utilizados son los criterios de causalidad de Bradford-Hill, publicados en 1965: </p>
+
+
+          <%= partial(:'components/list',  :locals => { :list_items => [
+            ["Fuerza de asociación: ","A mayor intensidad de relación entre dos variables, mayor es la probabilidad de que exista una relación. "], 
+            ["Secuencia temporal: ","La exposición al factor presuntamente causal debe preceder en el tiempo a la aparición del efecto (el cáncer en este caso). En ocasiones es difícil de establecer."], 
+            ["Efecto dosis-respuesta: ","Cuanto mayor es el tiempo y/o dosis de exposición al factor causal, mayor es el riesgo de enfermedad. "], 
+            ["Consistencia: ","Los resultados del estudio deben mantenerse constantes y ser reproducibles en condiciones similares. "],
+            ["Plausibilidad biológica: ","La relación causal sugerida debe mantener la línea de los principios científicos aceptados en el momento, es decir, será más aceptada si conocemos el mecanismo patogénico subyacente."],
+            ["Coherencia:  ","La asociación no debe entrar en conflicto con lo que se sabe de la enfermedad."],
+            ["Especificidad de asociación: ","La especificidad (una causa conduce a un único efecto) aumenta la verosimilitud de la relación causal."],
+            ["Analogía: ","La analogía hace referencia a que asociaciones causales similares pueden producir enfermedades similares. "],
+            ["Evidencia experimental: ","La relación causal sugerida debe mantener la línea de los principios científicos aceptados en el momento, es decir, será más aceptada si conocemos el mecanismo patogénico subyacente."]]}) %>
+        
+
+        <p class="indented margin5">Ninguno de estos criterios por separado es suficiente para demostrar causalidad, pero cuantos más se cumplan, más verosímil será la causalidad entre exposición y enfermedad.</p>
+
+       <%= partial(:'components/header2', :locals => { :text => "Carcinógenos", :number => '03' }) %>
+
+
+        <p class="indented margin5">En la tabla 1 se describen brevemente algunos de los agentes químicos y físicos de interés ambiental y su relación con los diferentes tipos de tumores. Estos carcinógenos se han identificado a partir de exposiciones ocupacionales e iatrogénicas en dosis elevadas, sin embargo, con la excepción del tabaco, estos agentes contribuyen más bien poco. Esto apoya la hipótesis de que la mayoría de tumores malignos son el resultado de la interacción de varios o más carcinógenos, con el componente de muchos otros factores modificadores, como son la dieta y otros hábitos de vida.</p>
+
+        <table class="tabla margin5">
+        <tr class="tabla__row">
+          <th class="tabla__head tabla__row-header tabla__20 ">Tipo de Tumor</th>
+          <th class="tabla__head">Agentes carcinógenos con suficiente evidencia en humanos</th>
+          <th class="tabla__head">Agentes carcinógenos con evidencia limitada en humanos</th>
+        </tr>
+        <tr class="tabla__row ">
+          <td class="tabla__row-header tabla__20">Cavidad Oral</td>
+          <td class="tabla__cell">Alcohol, VPH, tabaco</td>
+          <td class="tabla__cell">Radiación solar</td>
+        </tr>
+        <tr class="tabla__row-gray">
+          <td class="tabla__row-header tabla__20">Gástrico</td>
+          <td class="tabla__cell"><i>Helycobacter pylori</i>, industria de producción de caucho, tabaco, radiación gamma</td>
+          <td class="tabla__cell">Amianto, virus Epstein-Barr, plomo, verduras encurtidas, pescado en salazón, nitratos y nitritos</td>
+        </tr>
+        <tr class="tabla__row">
+          <td class="tabla__row-header tabla__20">Colo-rectal</td>
+          <td class="tabla__cell">Alcohol, tabaco, radiación</td>
+          <td class="tabla__cell">Amianto, <i>Schistosoma japonicum</i> </td>
+        </tr>
+        <tr class="tabla__row-gray">
+          <td class="tabla__row-header tabla__20">Hepatocarcinoma y vías biliares</td>
+          <td class="tabla__cell">Aflatoxinas, alcohol, <i>Clonochis sineses</i>, anticonceptivos de estrógeno-progestágeno, VHC, VHB, <i>Opisthorchis viverrini</i>, plutonio, torio-232, cloruro de vinilo </td>
+          <td class="tabla__cell">Esteroides androgénicos, arsénico, VIH, <i>Schistosoma japonicum</i>, tricloroetileno, radiación X y gamma</td>
+        </tr>
+        <tr class="tabla__row">
+          <td class="tabla__row-header tabla__20">Páncreas</td>
+          <td class="tabla__cell">Tabaco</td>
+          <td class="tabla__cell">Alcohol, torio-232, radiación X y gamma, radioyodo</td>
+        </tr>
+        <tr class="tabla__row-gray">
+          <td class="tabla__row-header tabla__20">Pulmón</td>
+          <td class="tabla__cell">Tabaco, producción de aluminio, arsénico, amianto, berilio clorometil metil éter, cadmio, cromo, combustión de carbón y alquitrán de hulla, fundición de hierro y acero, níquel, plutonio, radón, producción de caucho, polvo de sílice, hollín, radiación X y gamma</td>
+          <td class="tabla__cell">Fabricación de vidrio, escape de motores, insecticidas, dioxinas, humos de soldadura, metal de cobalto con carburo de tungsteno</td>
+        </tr>
+        <tr class="tabla__row">
+          <td class="tabla__row-header tabla__20">Melanoma</td>
+          <td class="tabla__cell  tabla__40 tabla__40">Radiación solar, cámaras de bronceado que emiten rayos UV</td>
+          <td class="tabla__cell  tabla__40"></td>
+        </tr>
+        <tr class="tabla__row-gray">
+          <td class="tabla__row-header tabla__20">Mesotelioma</td>
+          <td class="tabla__cell  tabla__40">Asbesto, erionita</td>
+          <td class="tabla__cell  tabla__40"></td>
+        </tr>
+        <tr class="tabla__row">
+          <td class="tabla__row-header tabla__20">Mama</td>
+          <td class="tabla__cell  tabla__40">Alcohol, dietilbestrol, anticonceptivos de estrógeno-progestágeno y terapias de sustitución hormonal de menopausia, radiación X y gamma</td>
+          <td class="tabla__cell  tabla__40">Tabaco, óxido de etileno</td>
+        </tr>
+        <tr class="tabla__row-gray">
+          <td class="tabla__row-header tabla__20">Cérvix</td>
+          <td class="tabla__cell  tabla__40">Dietilbestrol (esposición en el útero), anticonceptivos de estrógeno-progestágeno, VIH, VPH, tabaco </td>
+          <td class="tabla__cell  tabla__40">Tetracloroetileno</td>
+        </tr>
+        <tr class="tabla__row">
+          <td class="tabla__row-header tabla__20">Ovario</td>
+          <td class="tabla__cell  tabla__40">Amianto, terapia de estrógenos, tabaco</td>
+          <td class="tabla__cell  tabla__40">Polvos de talco, radiación X y gamma</td>
+        </tr>
+        <tr class="tabla__row-gray">
+          <td class="tabla__row-header tabla__20">Próstata</td>
+          <td class="tabla__cell  tabla__40"></td>
+          <td class="tabla__cell  tabla__40">Arsénico, cadmio, industria de producción de caucho, torio-232, radiación X y gamma</td>
+        </tr>
+        <tr class="tabla__row">
+          <td class="tabla__row-header tabla__20">Riñón</td>
+          <td class="tabla__cell  tabla__40">Tabaco, radiación X y gamma</td>
+          <td class="tabla__cell  tabla__40">Arsénico, cadmio</td>
+        </tr>
+        <tr class="tabla__row-gray">
+          <td class="tabla__row-header tabla__20">Vejiga</td>
+          <td class="tabla__cell  tabla__40">Producción de aluminio, 4-aminobifenilo, arsénico, producción de auramina, ciclofosfamida, bencidina, clornafazina, producción de magenta, producción de caucho, Schistosoma haematobium, tabaco, radiación X y gamma</td>
+          <td class="tabla__cell  tabla__40">Brea de alquitrán de huya, escape de motores, exposiciones ocupacionales en peluquería y barbería, hollín, fabricación de textiles</td>
+        </tr>
+        <tr class="tabla__row">
+          <td class="tabla__row-header tabla__25">Cerebrales</td>
+          <td class="tabla__cell  tabla__40">Radiación X y gamma</td>
+          <td class="tabla__cell  tabla__40"></td>
+        </tr>
+        <tr class="tabla__row-gray">
+          <td class="tabla__row-header tabla__25">Leucemia y linfomas</td>
+          <td class="tabla__cell  tabla__40">Azatiopurina, benceno, busulfán, clorambucil, ciclofosfamida, cilosporina, , virus Epstein-Barr, etopósido con cisplatino y bleomicina, formaldehído, helicobácter pylory, VHC, VIH, virus linfotrópico humano de células tipo I, herpesvirus del sarcoma de Kaposi, melfalán, tabaco, radiación X y gamma</td>
+          <td class="tabla__cell  tabla__40">Cloranfenicol, óxido de etileno, etopósido, VHB, campos magnéticos, mitoxandrona, refinación de petróleo, radioyodo, radón-222, dioxina</td>
+        </tr>
+      </table>
+
+
+      <p><strong>Tabla 1: Lista parcial de exposiciones asociadas a cánceres humanos, identificadas por la IARC (International Agency for Research on Cancer). </strong>Sacado de Medelsohn J, The molecular basis of cancer. 2015. </p>
+      <p></p>
+
+      <%= partial(:'components/header3', :locals => { :text => "Dieta", :number => '03.01' }) %>
+      <p class="indented margin5">Muchos estudios han determinado que el aumento general del consumo de cereales, frutas y verduras y la disminución del consumo de alimentos ricos en grasas y el exceso de alcohol son medidas que reducen el riesgo general de desarrollar cáncer. El consumo de grasas está relacionado con tumores hormono-dependientes (mama, ovario, endometrio y próstata) y tumores gastrointestinales (colon, recto y vesícula biliar). Lo que no parece claro es, hasta qué punto se trata de una relación causal o si se relacionan con el tipo de grasa (saturada, insaturada o poliinsaturada) o el contenido calórico general de la dieta. </p>
+    
+      <p class="indented">La creciente prevalencia de personas con sobrepeso y obesas en todo el mundo, junto con la asociación entre la obesidad y el riesgo de cáncer, constituye una importante preocupación de salud pública. Un reciente meta-análisis de estudios prospectivos ha encontrado fuertes asociaciones entre el aumento del índice de masa corporal (IMC) y el adenocarcinoma de esófago, cáncer de tiroides, riñón, cáncer de colon, endometrio y vesícula biliar. Datos actuales sugieren que la mortalidad por cáncer aumenta un 10% por cada 5 kg/m2 de aumento del IMC. El mecanismo por el cual la obesidad aumenta el riesgo de cáncer no está claro, habiendo varias hipótesis al respecto, como por ejemplo el aumento en el almacenamiento y liberación de carcinógenos lipofílicos en el tejido adiposo; la falta de excreción de carcinógenos debido a la disminución de actividad física, etc. </p>
+
+      <p class="indented">Por otra parte, el riesgo de cáncer de colon se ha asociado con el consumo de carne roja y grasas de origen animal. Otros estudios han encontrado asociaciones entre el consumo de alimentos fritos y carnes asadas, a la parrilla o ahumadas con un mayor riesgo de cáncer colorectal. También se han observado asociaciones inversas entre el riesgo de cáncer y la ingesta de frutas y verduras. Una comprensión más profunda del papel de los factores alimentarios en la carcinogénesis humana, junto con cambios conductuales eficaces, pueden tener un impacto significativo en la incidencia de esta enfermedad. </p>
+
+      <p class="indented">El alcohol es causa directa de muchas enfermedades. Estudios demuestran que el riesgo de padecer cáncer digestivo asociado al consumo de alcohol aumenta entre un 10 y un 30% por cada dos unidades de alcohol consumidas al día. El riesgo de cáncer de esófago se incrementa en un 26% con dosis inferiores a 12,5 g/día y en un 79% con dosis entre 12,6 y 49,9 g/día. El estudio EPIC (Estudio prospectivo Europeo sobre dieta, cáncer y salud) demostró que el 10% de los tumores en varones y el 3% en las mujeres estaban relacionados de forma significativa con el consumo de alcohol. Estudios más recientes concluyen que el consumo de alcohol no proporciona prácticamente ninguna protección contra la mortalidad en la mayoría de los grupos por sexo y edad. </p>
+
+      <%= partial(:'components/header3', :locals => { :text => "Tabaco", :number => '03.02' }) %>
+
+      <p class="indented margin5">El consumo de tabaco sigue siendo el factor más importante y evitable en el riesgo de desarrollar cáncer. Se estima que el tabaco contribuye en al menos el 30% de todas las muertes por cáncer. Los tumores relacionados con esta exposición son el cáncer de pulmón, vejiga, pelvis renal, cabeza y cuello, esófago, páncreas y riñón entre otros. En el caso del cáncer de pulmón, aproximadamente el 90% de las muertes por cáncer de pulmón pueden atribuirse al tabaco. Este riesgo es mayor en personas que comienzan a fumar a edades tempranas y continúan fumando durante muchos años. El humo del tabaco está compuesto por numerosos compuestos químicos, algunos de los cuales son cancerígenos conocidos.</p>
+
+      <div class="concepto-clave">
+        <p class= 'concepto-clave__title'><%= t.recuerda%></p>  
+        <p class="margin2">La gran mayoría de tumores podrían prevenirse reduciendo la exposición a factores de riesgo conocidos y modificando el estilo de vida.</p>
+      </div>  
+
+      <%= partial(:'components/header2', :locals => { :text => "Carcinogénesis", :number => '04' }) %>
+      <p class= "indented margin5">De manera resumida la carcinogénesis se divide en varias etapas (Figura 1):</p>
+
+      <%= partial(:'components/list',  :locals => { :list_items => [
+        ["Fase de iniciación: ", "Existe la exposición a un carcinógeno, que produce una alteración en el ADN, que conlleva una mutación. Es un proceso irreversible, y pasa desapercibido durante mucho tiempo. "], 
+        ["Fase de promoción: ", "En este caso se requiere la exposición a un agente promotor, que son aquellos que actúan modificando y alterando los genes implicados en el control de la proliferación celular. Este agente aprovecha la ventaja proliferativa que otorga la primera fase. En este caso, se trata de un proceso reversible."] , 
+        [ " Fase de progresión: ","Se adquieren nuevas mutaciones o cambios epigenéticos, que confieran capacidades invasivas, metastásicas y de resistencia a fármacos. "]]}) %>  
+
+          <%= partial(:'components/image-big',  :locals => { :image => "images/carcinogenesis.png", :title => "Figura 1: Proceso de carcinogénesis", :text => "", :id => "carcinogenesis"}) %>     
+
+
+      <%= partial(:'components/header2', :locals => { :text => "Estrategias de prevención", :number => '05' }) %>
+      <p class= "indented margin5">La forma óptima de tratar todas las enfermedades, incluido el cáncer, es la prevención. Por lo tanto, el reto para los profesionales de la salud pública es diseñar y aplicar medidas preventivas contra el cáncer. </p>
+
+      <%= partial(:'components/list',  :locals => { :list_items => [
+        ["Prevención primaria: ", "se dirige a personas sanas y puede lograrse evitando la exposición a factores de riesgo (vacunación, control de riesgos ambientales, educación sanitaria). Evita la adquisición de la enfermedad (o disminuir la incidencia). "], 
+        ["Prevención secundaria: ", "estas medidas utilizan la detección e intervención tempranas antes de que las condiciones patológicas sean clínicamente evidentes. Dirigida a disminuir la prevalencia."] , 
+        [ "Prevención terciaria: ","comprende aquellas medidas dirigidas al tratamiento y a la rehabilitación de una enfermedad para ralentizar su progresión, y con ello la aparición o el agravamiento de complicaciones invalidantes, intentando mejorar la calidad de vida de los pacientes. "]]}) %>  
+
+      <%= partial(:'components/image-big',  :locals => { :image => "images/neoplasia.png", :title => "Figura 2: ", :text => "Representación línea de una secuencia que conduce a neoplasia y puntos de las estrategias de intervención de la salud pública para la prevención de la carcinogénesis en varias etapas. Modificada de <i>Abeloff´s Clinical Oncology, 6th Edition, 2019.</i> ", :id => "neoplasia"}) %>    
+
+      <p class= "indented margin5"> Una de las medidas de prevención adoptadas es la denominada “quimioprevención”, la cual se basa en el uso de intervenciones químicas o dietéticas para alterar la susceptibilidad de los seres humanos a las acciones de los potenciales carcinógenos, para así retardar, bloquear o revertir la carcinogénesis. Este modelo de prevención se puede aplicar a todos los niveles, y es especialmente eficaz en poblaciones de alto riesgo. </p> 
+
+      <div class="concepto-clave--background">
+        <div class="concepto-clave__title">A modo de ejemplo</div>
+        <p class="margin2">Los agentes que combaten o previenen el estrés oxidativo son posibles agentes quimiopreventivos. Se cree que el estrés oxidativo contribuye a la formación de múltiples tipos de cáncer, por lo tanto, el tratamiento con agentes antioxidantes puede bloquear la carcinogénesis. </p>
+      </div>
+
+
+---
+
+
+    
+
+
+    <div class="content--2" id="bibliografia">
+      <%= partial(:'components/header1', :locals => { :text => t.bibliografia}) %>
+      <ul class= "list">
+        <%= partial(:'components/biblio',  :locals => { :title => t.biblio1_title, :magazine => t.biblio1_magazine, :link => t.biblio1_link}) %>
+        <%= partial(:'components/biblio',  :locals => { :title => t.biblio2_title, :magazine => t.biblio2_magazine, :link => t.biblio2_link}) %>
+        <%= partial(:'components/biblio',  :locals => { :title => t.biblio3_title, :magazine => t.biblio3_magazine, :link => t.biblio3_link}) %>
+        <%= partial(:'components/biblio',  :locals => { :title => t.biblio4_title, :magazine => t.biblio4_magazine, :link => t.biblio4_link}) %>
+        <%= partial(:'components/biblio',  :locals => { :title => t.biblio5_title, :magazine => t.biblio5_magazine, :link => t.biblio5_link}) %>
+        <%= partial(:'components/biblio',  :locals => { :title => t.biblio6_title, :magazine => t.biblio6_magazine, :link => t.biblio6_link}) %>
+        <%= partial(:'components/biblio',  :locals => { :title => t.biblio7_title, :magazine => t.biblio7_magazine, :link => t.biblio7_link}) %>
+        <%= partial(:'components/biblio',  :locals => { :title => t.biblio8_title, :magazine => t.biblio8_magazine, :link => t.biblio8_link}) %>
+        <%= partial(:'components/biblio',  :locals => { :title => t.biblio9_title, :magazine => t.biblio9_magazine, :link => t.biblio9_link}) %>
+        <%= partial(:'components/biblio',  :locals => { :title => t.biblio10_title, :magazine => t.biblio10_magazine, :link => t.biblio10_link}) %>
+        <%= partial(:'components/biblio',  :locals => { :title => t.biblio11_title, :magazine => t.biblio11_magazine, :link => t.biblio11_link}) %>
+      </ul>
+    </div>
+
+    
+
+
+
+
+      </div>
+  </div>
+</div>
