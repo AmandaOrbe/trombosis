@@ -1,21 +1,21 @@
 
 <% t =  data.origen%>
 <div id="home">
-  <%=partial(:'components/sidebar')  %>
+  <%=partial(:'components/sidebar-ambientales')  %>
 
   <div id="main">
     <div class="container">
       <div class="content">
+        <div id="ambientales-presentacion">
         <%= partial(:'components/header1', :locals => { :text => "Factores ambientales"}) %>
 
-        <div id="Prese">
           <%= partial(:'components/header2', :locals => { :text => t.presentacion, :number => ' ' }) %>
           <p class= "indented margin5 "> Se sabe que el cáncer es un proceso que se desarrolla a lo largo de muchos años y está determinado por la interacción de los factores genéticos del huésped, así como por las exposiciones ambientales. Estas parecen desempeñar un papel importante en la determinación del riesgo del cáncer. El tabaquismo y la dieta representan uno de los más importantes, pero existen otros muchos con relaciones más o menos fuertes.  A continuación veremos algunos de los más importantes.  </p>
-
-        </div>
         <br><br>
+        </div>
+        
 
-        <div id="Objet">
+        <div id="ambientales-objetivos">
           <%= partial(:'components/header2', :locals => { :text => t.objetivos, :number => ' ' }) %>
           <%= partial(:'components/list',  :locals => { :list_items => [
             ["","Conocer y comprender que en el proceso de desarrollo de un cáncer existen complejas relaciones entre la genética del huésped y las exposiciones ambientales."], 
@@ -25,9 +25,15 @@
             ["","Conocer la importancia de las diferentes estrategias de prevención frente al cáncer"]]}) %>
         </div>
 
-        <%= partial(:'components/header2', :locals => { :text => "Contenidos", :number => ' ' }) %>
+        <div id="ambientales-introduccion">
+
+        <%= partial(:'components/header2', :locals => { :text => "Introducción", :number => ' ' }) %>
 
         <p class="indented margin5">De forma global, el riesgo de desarrollar cáncer en los seres humanos está determinado por un complejo sistema de relaciones entre la genética del huésped y las exposiciones ambientales. La exposición a un agente carcinógeno activa una cascada de mecanismos que pueden llegar a convertir, en último extremo, las células normales en células tumorales. A este proceso se le denomina carcinogénesis, y a los diferentes agentes causantes del mismo, carcinógenos. Se han identificado cientos de agentes carcinógenos ambientales, algunos de ellos confirmados, otros sospechosos. Los agentes carcinógenos suponen una parte importante de la mortalidad por cáncer en todo el mundo. La determinación de las causas del cáncer y de los mecanismos subyacentes que conducen a su desarrollo proporcionan una base para elaborar estrategias de prevención. </p>
+
+        </div>
+
+        <div id="ambientales-historia">
 
        <%= partial(:'components/header2', :locals => { :text => "Un poco de historia", :number => '01' }) %>
 
@@ -38,6 +44,9 @@
             <div class="concepto-clave__title">A modo de ejemplo</div>
             <p class="margin2">Por ejemplo, la incidencia de cáncer de mama entre las inmigrantes asiáticas a Estados Unidos se ha comparado con la de mujeres asiáticas que siguen viviendo en su país de origen. Tras una generación, el riesgo de cáncer de mama en las mujeres asiático-americanas se aproxima al de las mujeres nacidas en Estados Unidos y es notablemente mayor que el de las mujeres asiáticas que residen en su país de origen. </p>
           </div>
+        </div>
+
+        <div id="ambientales-criterios">
 
        <%= partial(:'components/header2', :locals => { :text => "Criterios de causalidad", :number => '02' }) %>
 
@@ -57,6 +66,10 @@
         
 
         <p class="indented margin5">Ninguno de estos criterios por separado es suficiente para demostrar causalidad, pero cuantos más se cumplan, más verosímil será la causalidad entre exposición y enfermedad.</p>
+
+        </div>
+
+        <div id="ambientales-carcinogenos">
 
        <%= partial(:'components/header2', :locals => { :text => "Carcinógenos", :number => '03' }) %>
 
@@ -155,6 +168,11 @@
       <p><strong>Tabla 1: Lista parcial de exposiciones asociadas a cánceres humanos, identificadas por la IARC (International Agency for Research on Cancer). </strong>Sacado de Medelsohn J, The molecular basis of cancer. 2015. </p>
       <p></p>
 
+
+
+
+      <div id="ambientales-dieta">
+
       <%= partial(:'components/header3', :locals => { :text => "Dieta", :number => '03.01' }) %>
       <p class="indented margin5">Muchos estudios han determinado que el aumento general del consumo de cereales, frutas y verduras y la disminución del consumo de alimentos ricos en grasas y el exceso de alcohol son medidas que reducen el riesgo general de desarrollar cáncer. El consumo de grasas está relacionado con tumores hormono-dependientes (mama, ovario, endometrio y próstata) y tumores gastrointestinales (colon, recto y vesícula biliar). Lo que no parece claro es, hasta qué punto se trata de una relación causal o si se relacionan con el tipo de grasa (saturada, insaturada o poliinsaturada) o el contenido calórico general de la dieta. </p>
     
@@ -164,6 +182,11 @@
 
       <p class="indented">El alcohol es causa directa de muchas enfermedades. Estudios demuestran que el riesgo de padecer cáncer digestivo asociado al consumo de alcohol aumenta entre un 10 y un 30% por cada dos unidades de alcohol consumidas al día. El riesgo de cáncer de esófago se incrementa en un 26% con dosis inferiores a 12,5 g/día y en un 79% con dosis entre 12,6 y 49,9 g/día. El estudio EPIC (Estudio prospectivo Europeo sobre dieta, cáncer y salud) demostró que el 10% de los tumores en varones y el 3% en las mujeres estaban relacionados de forma significativa con el consumo de alcohol. Estudios más recientes concluyen que el consumo de alcohol no proporciona prácticamente ninguna protección contra la mortalidad en la mayoría de los grupos por sexo y edad. </p>
 
+
+      </div>
+
+      <div id="ambientales-tabaco">
+
       <%= partial(:'components/header3', :locals => { :text => "Tabaco", :number => '03.02' }) %>
 
       <p class="indented margin5">El consumo de tabaco sigue siendo el factor más importante y evitable en el riesgo de desarrollar cáncer. Se estima que el tabaco contribuye en al menos el 30% de todas las muertes por cáncer. Los tumores relacionados con esta exposición son el cáncer de pulmón, vejiga, pelvis renal, cabeza y cuello, esófago, páncreas y riñón entre otros. En el caso del cáncer de pulmón, aproximadamente el 90% de las muertes por cáncer de pulmón pueden atribuirse al tabaco. Este riesgo es mayor en personas que comienzan a fumar a edades tempranas y continúan fumando durante muchos años. El humo del tabaco está compuesto por numerosos compuestos químicos, algunos de los cuales son cancerígenos conocidos.</p>
@@ -171,7 +194,12 @@
       <div class="concepto-clave">
         <p class= 'concepto-clave__title'><%= t.recuerda%></p>  
         <p class="margin2">La gran mayoría de tumores podrían prevenirse reduciendo la exposición a factores de riesgo conocidos y modificando el estilo de vida.</p>
-      </div>  
+      </div> 
+
+      </div> 
+      </div>
+
+      <div id="ambientales-carcinogenesis">
 
       <%= partial(:'components/header2', :locals => { :text => "Carcinogénesis", :number => '04' }) %>
       <p class= "indented margin5">De manera resumida la carcinogénesis se divide en varias etapas (Figura 1):</p>
@@ -183,6 +211,9 @@
 
           <%= partial(:'components/image-big',  :locals => { :image => "images/carcinogenesis.png", :title => "Figura 1: Proceso de carcinogénesis", :text => "", :id => "carcinogenesis"}) %>     
 
+      </div>
+
+      <div id="ambientales-prevencion">
 
       <%= partial(:'components/header2', :locals => { :text => "Estrategias de prevención", :number => '05' }) %>
       <p class= "indented margin5">La forma óptima de tratar todas las enfermedades, incluido el cáncer, es la prevención. Por lo tanto, el reto para los profesionales de la salud pública es diseñar y aplicar medidas preventivas contra el cáncer. </p>
@@ -199,7 +230,8 @@
       <div class="concepto-clave--background">
         <div class="concepto-clave__title">A modo de ejemplo</div>
         <p class="margin2">Los agentes que combaten o previenen el estrés oxidativo son posibles agentes quimiopreventivos. Se cree que el estrés oxidativo contribuye a la formación de múltiples tipos de cáncer, por lo tanto, el tratamiento con agentes antioxidantes puede bloquear la carcinogénesis. </p>
-      </div>
+      </div>    
+    </div>
 
 
 ---
@@ -208,7 +240,7 @@
     
 
 
-    <div class="content--2" id="bibliografia">
+    <div class="content--2" id="ambientales-biblio">
       <%= partial(:'components/header1', :locals => { :text => t.bibliografia}) %>
       <ul class= "list">
         <%= partial(:'components/biblio',  :locals => { :title => t.biblio1_title, :magazine => t.biblio1_magazine, :link => t.biblio1_link}) %>
@@ -233,3 +265,4 @@
       </div>
   </div>
 </div>
+    <%= javascript_include_tag "modulo7" %>
