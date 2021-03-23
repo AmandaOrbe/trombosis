@@ -1,0 +1,217 @@
+ <% t =  data.origen%>
+<div class="navigation">
+   <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
+      <label for="navi-toggle" class="navigation__button">
+        <span class="navigation__icon--1">&nbsp;</span>
+        <span class="navigation__icon--2">&nbsp;</span>
+        <span class="navigation__icon--3">&nbsp;</span>
+      </label>
+      <div class="navigation__background">&nbsp;</div>
+
+</div>
+
+
+<div id="sidebar" class= "hidden-phone">
+  <div class="sidebar">
+
+    <div class="sidebar-top">
+      <div class="sidebar-top__title">
+        <h2>Origen y biología del cáncer </h2>
+      </div>
+    </div>
+
+    <div class="sidebar-content  ">
+      <a href= "../origen-del-cancer.html" id= "origen" class="sidebar-content__item sidebar-content__title">
+        <div>
+        <h4>MÓDULO 1</h4>
+        <h5>Origen del cáncer </h5>
+        </div>
+      </a>
+      <a href= "../oncogenesis.html" id= "oncogenesis" class="sidebar-content__item sidebar-content__title">
+        <div>
+          <h4>MÓDULO 2</h4>
+          <h5>Oncogénesis y señalización celular</h5>
+        </div>
+      </a>
+
+      <a href= "../microambiente-tumoral.html" id= "origen" class="sidebar-content__item sidebar-content__title">
+        <div>
+          <h4>MÓDULO 3</h4>
+          <h5>Microambiente tumoral y metástasis</h5>
+        </div>
+      </a>
+
+
+      <a href= "../vias-de-respuesta.html" id= "origen" class="sidebar-content__item sidebar-content__title">
+        <div>
+        <h4>MÓDULO 4</h4>
+        <h5>Vías de respuesta al daño del ADN</h5>
+        </div>
+      </a>
+
+
+      <div class="sidebar-content__modulo-current ">
+        <a id= "inflamacion" class="sidebar-content__item sidebar-content__title ">
+          <div id= "contenidos" >        
+            <h4>MÓDULO 5</h4>
+            <h5>Inflamación y cáncer</h5>
+          </div>
+          <i class="fas fa-chevron-down sidebar-content__chevron-up"></i>
+        </a>
+        <div id="contenidos-tabs" >
+          <a href= #inflamacion-presentacion class="sidebar-content__item sidebar-content__chapter sidebar-content__item--current" id= inflamacion-presentacion-side %>
+            <p>Presentación</p>
+            <i class="fas fa-check-circle check "></i>
+            <span class="fas fa-chevron-right sidebar-content__item__chevron"></span>
+          </a>
+
+          <a href= #inflamacion-objetivos class="sidebar-content__item sidebar-content__chapter " id= inflamacion-objetivos-side %>
+            <p>Objetivos</p>
+            <i class="fas fa-check-circle check "></i>
+            <span class="fas fa-chevron-right sidebar-content__item__chevron"></span>
+          </a>
+
+          <a href= #inflamacion-introduccion class="sidebar-content__item sidebar-content__chapter" id= inflamacion-introduccion-side %>
+            <p>Introducción</p>
+            <i class="fas fa-check-circle check "></i>
+            <span class="fas fa-chevron-right sidebar-content__item__chevron"></span>
+          </a>
+
+          <a href= #inflamacion-perfil class="sidebar-content__item sidebar-content__chapter" id= inflamacion-perfil-side %>
+            <p>01. El perfil antigénico para distinguir tumores de tejidos normales</p>
+            <i class="fas fa-check-circle check "></i>
+            <span class="fas fa-chevron-right sidebar-content__item__chevron"></span>
+          </a>
+
+
+          <a href= #inflamacion-sellos class="sidebar-content__item sidebar-content__chapter" id= inflamacion-sellos-side %>
+            <p>02. Sellos inmunológicos del cáncer: Como evitar la destrucción inmunológica y la inflamación que promueve el tumor</p>
+            <i class="fas fa-check-circle check "></i>
+            <span class="fas fa-chevron-right sidebar-content__item__chevron"></span>
+          </a>
+
+          <a href= #inflamacion-evitar class="sidebar-content__item sidebar-content__subchapter" id= inflamacion-evitar-side %>
+            <p>02.01 Evitar la destrucción inmunológica</p>
+            <i class="fas fa-check-circle check "></i>
+          </a>
+
+          <a href= #inflamacion-microambiente class="sidebar-content__item sidebar-content__subchapter" id= inflamacion-microambiente-side %>
+            <p>02.02 Inflamación en el microambiente tumoral</p>
+            <i class="fas fa-check-circle check "></i>
+          </a>
+
+
+          <a href= #inflamacion-linfocitos class="sidebar-content__item sidebar-content__subchapter" id= inflamacion-linfocitos-side %>
+            <p>02.03 Linfocitos T reguladores y cáncer</p>
+            <i class="fas fa-check-circle check "></i>
+          </a>
+
+
+          <a href= #inflamacion-celulas class="sidebar-content__item sidebar-content__subchapter" id= inflamacion-celulas-side %>
+            <p>02.04 Células mieloides inmaduras (iMCs)</p>
+            <i class="fas fa-check-circle check "></i>
+          </a>
+
+
+          <a href= #inflamacion-dendriticas class="sidebar-content__item sidebar-content__subchapter" id= inflamacion-dendriticas-side %>
+            <p>02.05 Células dendríticas inmaduras (CDs)</p>
+            <i class="fas fa-check-circle check "></i>
+          </a>
+
+          <a href= #inflamacion-moleculas class="sidebar-content__item sidebar-content__subchapter" id= inflamacion-moleculas-side %>
+            <p>02.06 Moléculas inhibidoras de la inmunidad del microambiente tumoral</p>
+            <i class="fas fa-check-circle check "></i>
+          </a>
+
+
+          <a href= #inflamacion-factor class="sidebar-content__item sidebar-content__subchapter" id= inflamacion-factor-side %>
+            <p>02.07 Factor de crecimiento transformante ß (TGF-ß)</p>
+            <i class="fas fa-check-circle check "></i>
+          </a>
+
+          <a href= #inflamacion-ligandos class="sidebar-content__item sidebar-content__chapter" id= inflamacion-ligandos-side %>
+            <p>03. Ligandos y receptores que reducen la inmunidad del tumor</p>
+            <i class="fas fa-check-circle check "></i>
+            <span class="fas fa-chevron-right sidebar-content__item__chevron"></span>
+          </a>
+
+          <a href= #inflamacion-punto class="sidebar-content__item sidebar-content__subchapter" id= inflamacion-punto-side %>
+            <p>03.01 Punto de control CTLA-4</p>
+            <i class="fas fa-check-circle check "></i>
+          </a>
+
+          <a href= #inflamacion-punto2 class="sidebar-content__item sidebar-content__subchapter" id= inflamacion-punto2-side %>
+            <p>03.02 Punto de control PD-1</p>
+            <i class="fas fa-check-circle check "></i>
+          </a>
+
+           
+          <a href= #inflamacion-estrategias class="sidebar-content__item sidebar-content__subchapter" id= inflamacion-estrategias-side %>
+            <p>03.03 Estrategias de modificación de linfocitos T mediante ingeniería genética</p>
+            <i class="fas fa-check-circle check "></i>
+          </a>
+
+            
+          <a href= #inflamacion-vacunas class="sidebar-content__item sidebar-content__subchapter" id= inflamacion-vacunas-side %>
+            <p>03.04 Vacunas</p>
+            <i class="fas fa-check-circle check "></i>
+          </a>
+
+           
+          
+
+          <a href= #inflamacion-biblio class="sidebar-content__item sidebar-content__chapter" id= inflamacion-biblio-side %>
+            <p>Bibliografía</p>
+            <i class="fas fa-check-circle check "></i>
+            <span class="fas fa-chevron-right sidebar-content__item__chevron"></span>
+          </a>
+        </div>
+      </div>
+
+
+      <a href= "../agentes-infecciosos-y-cancer.html" id= "origen" class="sidebar-content__item sidebar-content__title">
+        <div>
+        <h4>MÓDULO 6</h4>
+        <h5>Agentes infecciosos y cáncer</h5>
+        </div>
+      </a>
+
+      <a href= "../factores-ambientales.html" id= "origen" class="sidebar-content__item sidebar-content__title">
+        <div>
+        <h4>MÓDULO 7</h4>
+        <h5>Factores ambientales</h5>
+        </div>
+      </a>
+      <div class="sidebar-content__item sidebar-content__title">
+        <div>
+        <h4></h4>
+        <h5></h5>
+        </div>
+      </div>
+  </div>
+
+
+ <br>
+ <br>
+ <br><br>
+ <br><br>
+ <br>
+ <br><br>
+ <br>
+ <br><br>
+ <br>
+ <br>
+
+ <br>
+ <br>
+ <br><br>
+ <br><br>
+ <br>
+ <br><br>
+ <br>
+ <br><br>
+ <br>
+ <br>
+
+  </div>
+</div>
