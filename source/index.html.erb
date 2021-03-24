@@ -1,42 +1,77 @@
-  <% link_to "/origen-del-cancer.html" do %>
-	  <div class="card">
-	    <h2>Origen del cáncer </h2>
-	  </div>
-  <% end %>
 
-  <% link_to "/oncogenesis.html" do %>
-	  <div class="card">
-	    <h2>Oncogénesis y señalización celular
-</h2>
-	  </div>
-  <% end %>
+<% t =  data.origen%>
+<div id="home">
+  <%=partial(:'components/sidebar')  %>
 
-  <% link_to "/microambiente-tumoral.html" do %>
-	  <div class="card">
-	    <h2>Microambiente tumoral y metástasis </h2>
-	  </div>
-  <% end %>
+  <div id="main">
+    <div class="container">
+      <div class="content home-content">
+      	<img src="images/certificacion-seom-green.png" alt="">
+      	<h4 class="home-h4">MÁSTER ONLINE de ONCOLOGÍA MÉDICA</h4>
+      	<div class="home-title">
+	      	<h3>CURSO</h3>
+	      	<h1>Origen y Biología del Cáncer</h1>
+      	</div>
+      	<div class="home-row">
+		 <% link_to "/origen-del-cancer.html", class:"home-card"do %>
+		
+			  	<h4>Módulo 1</h4>
+			    <h5>Origen del cáncer </h5>
+	
+		  <% end %>
 
-  <% link_to "/vias-de-respuesta.html" do %>
-	  <div class="card">
-	    <h2>Vías de respuesta al daño del ADN </h2>
-	  </div>
-  <% end %>
+		  <% link_to "/oncogenesis.html", class:"home-card"do %>
+			  
+			  	<h4>Módulo 2</h4>
+			    <h5>Oncogénesis y señalización celular</h5>
+	
+		  <% end %>
+		</div> 
 
-  <% link_to "/inflamacion-y-cancer.html" do %>
-	  <div class="card">
-	    <h2>Inflamación y cáncer</h2>
-	  </div>
-  <% end %>
+		<div class="home-row">
+		  <% link_to "/microambiente-tumoral.html", class:"home-card"do %>
+			  
+			  	<h4>Módulo 3</h4>
+			    <h5>Microambiente tumoral y <br> metástasis </h5>
+			 
+		  <% end %>
 
-  <% link_to "/agentes-infecciosos-y-cancer.html" do %>
-	  <div class="card">
-	    <h2>Agentes infecciosos y cáncer</h2>
-	  </div>
-  <% end %>  
+		  <% link_to "/vias-de-respuesta.html", class:"home-card", class:"home-card"do %>
+			
+			  	<h4>Módulo 4</h4>
+			    <h5>Vías de respuesta al daño del <br> ADN </h5>
+		
+		  <% end %>
+		</div> 
 
-  <% link_to "/factores-ambientales.html" do %>
-	  <div class="card">
-	    <h2>Factores ambientales</h2>
-	  </div>
-  <% end %>
+		<div class="home-row">
+
+		  <% link_to "/inflamacion-y-cancer.html", class:"home-card"do %>
+			  
+			  	<h4>Módulo 5</h4>
+			    <h5>Inflamación y cáncer</h5>
+			  
+		  <% end %>
+
+		  <% link_to "/agentes-infecciosos-y-cancer.html", class:"home-card"do %>
+			
+			  	<h4>Módulo 6</h4>
+			    <h5>Agentes infecciosos y cáncer</h5>
+
+		  <% end %>  
+		</div> 
+
+		<div class="home-row">
+
+		  <% link_to "/factores-ambientales.html", class:"home-card"do %>
+
+			  	<h4>Módulo 7</h4>
+			    <h5>Factores ambientales</h5>
+
+		  <% end %>
+		  <div class="invisible-card"></div>
+		</div>
+		</div> 
+	</div>
+	</div>
+</div>
