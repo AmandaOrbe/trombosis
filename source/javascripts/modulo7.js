@@ -134,3 +134,19 @@ window.addEventListener('scroll', function(){
 });
 
 
+
+
+// // **************************** LOCAL STORAGE*****************************
+
+
+const ambientales = document.getElementById('ambientales');
+
+
+  ambientales.addEventListener("click", function(event){
+    console.log("ambientales")
+    event.currentTarget.parentNode.classList.toggle("sidebar-content__invisible");
+    event.currentTarget.querySelector(".fa-chevron-down").classList.toggle("sidebar-content__chevron-up");
+
+  });
+
+

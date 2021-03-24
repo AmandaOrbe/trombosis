@@ -128,4 +128,19 @@ window.addEventListener('scroll', function(){
   localStorage.setItem("windowHeight", window.scrollY  );
 });
 
+/////////
+
+
+
+const respuesta = document.getElementById('respuesta');
+
+
+  respuesta.addEventListener("click", function(event){
+    console.log("respuesta")
+    event.currentTarget.parentNode.classList.toggle("sidebar-content__invisible");
+    event.currentTarget.querySelector(".fa-chevron-down").classList.toggle("sidebar-content__chevron-up");
+
+  });
+
+
 

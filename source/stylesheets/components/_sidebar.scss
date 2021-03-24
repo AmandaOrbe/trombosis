@@ -45,7 +45,7 @@
   top: 0px;
   padding-left: 2rem;
   padding-top: 0rem;
-  height:14rem;
+  height:24rem;
   @include respond(portrait) { // width < 1200
     height:24rem; //1rem = 9px,  9/16 = 56,25%
     padding-left: 2rem;
@@ -58,11 +58,12 @@
     width: 75%;
     text-align: left;
     height: 9rem;
+    margin-top: 7rem;
   }
 }
 
 .sidebar-content{
-  top :14rem;
+  top :24rem;
   display: block;
   position: absolute;
   left: 0px;
@@ -251,7 +252,7 @@ h2{
 color: white;
 font: $headers-font;
 font-weight: 400;
-font-size: 2.6rem;
+font-size: 3.2rem;
 @include respond(phone) { // width < 1200
   font-size: 6rem;
   max-width: 30rem;

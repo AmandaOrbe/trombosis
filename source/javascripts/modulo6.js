@@ -141,4 +141,17 @@ window.addEventListener('scroll', function(){
   localStorage.setItem("windowHeight", window.scrollY  );
 });
 
+// // **************************** LOCAL STORAGE*****************************
+
+
+const infecciosos = document.getElementById('infecciosos');
+
+
+  infecciosos.addEventListener("click", function(event){
+    console.log("infecciosos")
+    event.currentTarget.parentNode.classList.toggle("sidebar-content__invisible");
+    event.currentTarget.querySelector(".fa-chevron-down").classList.toggle("sidebar-content__chevron-up");
+
+  });
+
 
