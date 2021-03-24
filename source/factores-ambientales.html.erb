@@ -243,17 +243,12 @@
     <div class="content--2" id="ambientales-biblio">
       <%= partial(:'components/header1', :locals => { :text => t.bibliografia}) %>
       <ul class= "list">
-        <%= partial(:'components/biblio',  :locals => { :title => t.biblio1_title, :magazine => t.biblio1_magazine, :link => t.biblio1_link}) %>
-        <%= partial(:'components/biblio',  :locals => { :title => t.biblio2_title, :magazine => t.biblio2_magazine, :link => t.biblio2_link}) %>
-        <%= partial(:'components/biblio',  :locals => { :title => t.biblio3_title, :magazine => t.biblio3_magazine, :link => t.biblio3_link}) %>
-        <%= partial(:'components/biblio',  :locals => { :title => t.biblio4_title, :magazine => t.biblio4_magazine, :link => t.biblio4_link}) %>
-        <%= partial(:'components/biblio',  :locals => { :title => t.biblio5_title, :magazine => t.biblio5_magazine, :link => t.biblio5_link}) %>
-        <%= partial(:'components/biblio',  :locals => { :title => t.biblio6_title, :magazine => t.biblio6_magazine, :link => t.biblio6_link}) %>
-        <%= partial(:'components/biblio',  :locals => { :title => t.biblio7_title, :magazine => t.biblio7_magazine, :link => t.biblio7_link}) %>
-        <%= partial(:'components/biblio',  :locals => { :title => t.biblio8_title, :magazine => t.biblio8_magazine, :link => t.biblio8_link}) %>
-        <%= partial(:'components/biblio',  :locals => { :title => t.biblio9_title, :magazine => t.biblio9_magazine, :link => t.biblio9_link}) %>
-        <%= partial(:'components/biblio',  :locals => { :title => t.biblio10_title, :magazine => t.biblio10_magazine, :link => t.biblio10_link}) %>
-        <%= partial(:'components/biblio',  :locals => { :title => t.biblio11_title, :magazine => t.biblio11_magazine, :link => t.biblio11_link}) %>
+        <%= partial(:'components/biblio',  :locals => { :author => "DeVita VT, Lawrence TS, Rosenberg SA. ", :title => "DeVita, Hellman, and Rosenberg´s cancer: principles & practice of oncology. 11th Edition, Philadelphia, Wolters Kluwer. 2019.", :link => ""}) %>
+        <%= partial(:'components/biblio',  :locals => { :author => "Medelsohn J, Howley PM, Israel MA, Gray JW, et al. ", :title => "The molecular basis of cancer. Philadelphia, Elsevier. 2015. ", :link => ""}) %>
+        <%= partial(:'components/biblio',  :locals => { :author => "Niederhuber JE, Armitage JO, Doroshow JH, Kastan MB, et al. ", :title => "Abeloff´s Clinical Oncology, 6th Edition. Elsevier, 2019. ", :link => ""}) %>
+        <%= partial(:'components/biblio',  :locals => { :author => "Cogliano VJ, Baan R, Straif K, Grosse Y, et al. ", :title => "Preventable exposures associated with human cancers. J Natl Cancer Inst 2011. 103:1835.", :link => ""}) %>
+        <%= partial(:'components/biblio',  :locals => { :author => "DeVita VT Jr, Chu E. ", :title => "A history of cancer chemotherapy. Cancer Res, 2008. 21:8643-8653.", :link => ""}) %>
+        <%= partial(:'components/biblio',  :locals => { :author => "", :title => "IARC Working Group on the Evaluation of Carcinogenic Risks to Humans. Arsenic, metals, fibres and dusts. IARC Monogr Eval Carcinog Risks Hum, 2012. 100:11-465.", :link => ""}) %>
       </ul>
     </div>
 

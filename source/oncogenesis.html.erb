@@ -128,17 +128,26 @@
     <div class="content--2" id="oncogenesis-bibliografia">
       <%= partial(:'components/header1', :locals => { :text => t.bibliografia}) %>
       <ul class= "list">
-        <%= partial(:'components/biblio',  :locals => { :title => t.biblio1_title, :magazine => t.biblio1_magazine, :link => t.biblio1_link}) %>
-        <%= partial(:'components/biblio',  :locals => { :title => t.biblio2_title, :magazine => t.biblio2_magazine, :link => t.biblio2_link}) %>
-        <%= partial(:'components/biblio',  :locals => { :title => t.biblio3_title, :magazine => t.biblio3_magazine, :link => t.biblio3_link}) %>
-        <%= partial(:'components/biblio',  :locals => { :title => t.biblio4_title, :magazine => t.biblio4_magazine, :link => t.biblio4_link}) %>
-        <%= partial(:'components/biblio',  :locals => { :title => t.biblio5_title, :magazine => t.biblio5_magazine, :link => t.biblio5_link}) %>
-        <%= partial(:'components/biblio',  :locals => { :title => t.biblio6_title, :magazine => t.biblio6_magazine, :link => t.biblio6_link}) %>
-        <%= partial(:'components/biblio',  :locals => { :title => t.biblio7_title, :magazine => t.biblio7_magazine, :link => t.biblio7_link}) %>
-        <%= partial(:'components/biblio',  :locals => { :title => t.biblio8_title, :magazine => t.biblio8_magazine, :link => t.biblio8_link}) %>
-        <%= partial(:'components/biblio',  :locals => { :title => t.biblio9_title, :magazine => t.biblio9_magazine, :link => t.biblio9_link}) %>
-        <%= partial(:'components/biblio',  :locals => { :title => t.biblio10_title, :magazine => t.biblio10_magazine, :link => t.biblio10_link}) %>
-        <%= partial(:'components/biblio',  :locals => { :title => t.biblio11_title, :magazine => t.biblio11_magazine, :link => t.biblio11_link}) %>
+        <%= partial(:'components/biblio',  :locals => { 
+          :author => "Hanahan D and Weinberg RA. ", 
+          :title => "The hallmarks of cancer. Cell, 2000. 100 (1):57-60.", 
+          :link => ""}) %>
+        <%= partial(:'components/biblio',  :locals => { 
+          :author => "Hanahan D and Weinberg RA. ", 
+          :title => "Hallmarks of cancer: the next generation. Cell, 2011. 144 (5):646-74.", 
+          :link => ""}) %>
+        <%= partial(:'components/biblio',  :locals => { 
+          :author => "DeVita VT, Lawrence TS, Rosenberg SA. ", 
+          :title => "DeVita, Hellman, and Rosenberg´s cancer: principles & practice of oncology. 11th Edition, Philadelphia, Wolters Kluwer. 2019.", 
+          :link => ""}) %>
+        <%= partial(:'components/biblio',  :locals => { 
+          :author => "Medelsohn J, Howley PM, Israel MA, Gray JW, et al. ", 
+          :title => "The molecular basis of cancer. Philadelphia, Elsevier. 2015. ", 
+          :link => ""}) %>
+        <%= partial(:'components/biblio',  :locals => { 
+          :author => "Niederhuber JE, Armitage JO, Doroshow JH, Kastan MB, et al. ", 
+          :title => "Abeloff´s Clinical Oncology, 6th Edition. Elsevier, 2019. ", 
+          :link => ""}) %>
       </ul>
     </div>
 
