@@ -150,4 +150,20 @@ window.addEventListener('scroll', function(){
   localStorage.setItem("windowHeight", window.scrollY  );
 });
 
+////
+
+
+
+const microambiente = document.getElementById('microambiente');
+
+
+  microambiente.addEventListener("click", function(event){
+    console.log("microambiente")
+    event.currentTarget.parentNode.classList.toggle("sidebar-content__invisible");
+    event.currentTarget.querySelector(".fa-chevron-down").classList.toggle("sidebar-content__chevron-up");
+
+  });
+
+
+
 

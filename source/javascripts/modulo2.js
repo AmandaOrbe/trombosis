@@ -116,4 +116,16 @@ window.addEventListener('scroll', function(){
   localStorage.setItem("windowHeight", window.scrollY  );
 });
 
+//////////
+
+const oncogenesis = document.getElementById('oncogenesis');
+
+
+  oncogenesis.addEventListener("click", function(event){
+    console.log("oncogenesis")
+    event.currentTarget.parentNode.classList.toggle("sidebar-content__invisible");
+    event.currentTarget.querySelector(".fa-chevron-down").classList.toggle("sidebar-content__chevron-up");
+
+  });
+
 

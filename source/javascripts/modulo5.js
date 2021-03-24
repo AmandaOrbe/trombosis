@@ -162,4 +162,15 @@ window.addEventListener('scroll', function(){
   localStorage.setItem("windowHeight", window.scrollY  );
 });
 
+////
 
+
+const inflamacion = document.getElementById('inflamacion');
+
+
+  inflamacion.addEventListener("click", function(event){
+    console.log("inflamacion")
+    event.currentTarget.parentNode.classList.toggle("sidebar-content__invisible");
+    event.currentTarget.querySelector(".fa-chevron-down").classList.toggle("sidebar-content__chevron-up");
+
+  });
