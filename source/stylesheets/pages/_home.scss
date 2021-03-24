@@ -37,3 +37,71 @@
     // display: none !important;
     }
 }
+.home-content{
+  width:75rem !important;
+}
+
+.home-title{
+  h1{
+    font-size:6.4rem;
+    font-weight:700;
+    margin-bottom: 5rem;
+  }
+  h3{
+    font-size: 4rem;
+    margin-bottom: -2rem;
+    font-weight:700;
+    color: $dark-gray;
+  }
+
+}
+.home-row{
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.home-h4{
+  color: $primary;
+  font-size:2.2rem;
+  font-weight: 700;
+  font-family:$headers-font !important;
+} 
+
+.home-card{
+  box-shadow: $box-shadow;
+  border-left: 5px solid $primary;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  transition: all .5s ease-in-out;
+  height: 12rem;
+  // overflow: hidden;
+  width: 36rem;
+  padding: 0 2.4rem;
+  @include respond(portrait) { // width < 1200
+    margin: 4rem auto;
+    width: 77%;
+  }
+  @include respond(phone) { // width < 1200
+    width: 100%;
+  }
+  h4{
+    text-transform: uppercase;
+    color: $dark-gray;
+    font-size: 1.4rem;
+    font-weight: 600;
+    font-family: $body-font
+  }
+  h5{
+    color: $black;
+    font-size: 1.6rem;
+    font-weight: 700;
+    font-family: $body-font
+  }
+
+}
+.invisible-card{
+   width: 32rem;
+   margin: 2rem auto;
+}
+
