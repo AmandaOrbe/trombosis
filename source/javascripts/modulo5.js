@@ -174,3 +174,36 @@ const inflamacion = document.getElementById('inflamacion');
     event.currentTarget.querySelector(".fa-chevron-down").classList.toggle("sidebar-content__chevron-up");
 
   });
+
+
+// ************************************ PHONE MENU ****************************
+
+
+const inflamacionPhoneButton = document.getElementById("inflamacion-navigation__button");
+const inflamacionSidebarItems = document.querySelectorAll(".sidebar-content__chapter, .sidebar-content__subchapter") ;
+
+
+inflamacionPhoneButton.addEventListener("click", function(event){
+  document.getElementById("sidebar").classList.toggle("width-zero");
+  document.getElementById("main").classList.toggle("width-zero");
+  document.getElementById("main").classList.toggle("hidden-phone-main");
+  document.querySelector(".navigation__icon--1").classList.toggle("navigation__icon--1x");
+  document.querySelector(".navigation__icon--3").classList.toggle("navigation__icon--3x");
+  document.querySelector(".navigation__icon--2").classList.toggle("navigation__icon--2x");
+  document.querySelector(".navigation__background").classList.toggle("navigation__background--small");
+});
+
+
+inflamacionSidebarItems.forEach(function(item){
+  item.addEventListener("click", function(event){
+    document.getElementById("sidebar").classList.add("width-zero");
+    document.getElementById("main").classList.remove("width-zero");
+    document.getElementById("main").classList.remove("hidden-phone-main");
+    document.querySelector(".navigation__icon--1").classList.remove("navigation__icon--1x");
+    document.querySelector(".navigation__icon--3").classList.remove("navigation__icon--3x");
+    document.querySelector(".navigation__icon--2").classList.remove("navigation__icon--2x");
+    document.querySelector(".navigation__background").classList.remove("navigation__background--small");
+  });
+});
+
+
