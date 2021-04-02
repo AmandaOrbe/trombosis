@@ -150,3 +150,34 @@ const ambientales = document.getElementById('ambientales');
   });
 
 
+
+// ************************************ PHONE MENU ****************************
+
+
+const ambientalesPhoneButton = document.getElementById("ambientales-navigation__button");
+const ambientalesSidebarItems = document.querySelectorAll(".sidebar-content__chapter, .sidebar-content__subchapter") ;
+
+
+ambientalesPhoneButton.addEventListener("click", function(event){
+  document.getElementById("sidebar").classList.toggle("width-zero");
+  document.getElementById("main").classList.toggle("width-zero");
+  document.getElementById("main").classList.toggle("hidden-phone-main");
+  document.querySelector(".navigation__icon--1").classList.toggle("navigation__icon--1x");
+  document.querySelector(".navigation__icon--3").classList.toggle("navigation__icon--3x");
+  document.querySelector(".navigation__icon--2").classList.toggle("navigation__icon--2x");
+  document.querySelector(".navigation__background").classList.toggle("navigation__background--small");
+});
+
+
+ambientalesSidebarItems.forEach(function(item){
+  item.addEventListener("click", function(event){
+    document.getElementById("sidebar").classList.add("width-zero");
+    document.getElementById("main").classList.remove("width-zero");
+    document.getElementById("main").classList.remove("hidden-phone-main");
+    document.querySelector(".navigation__icon--1").classList.remove("navigation__icon--1x");
+    document.querySelector(".navigation__icon--3").classList.remove("navigation__icon--3x");
+    document.querySelector(".navigation__icon--2").classList.remove("navigation__icon--2x");
+    document.querySelector(".navigation__background").classList.remove("navigation__background--small");
+  });
+});
+

@@ -143,4 +143,35 @@ const respuesta = document.getElementById('respuesta');
   });
 
 
+// ************************************ PHONE MENU ****************************
+
+
+const respuestaPhoneButton = document.getElementById("respuesta-navigation__button");
+const respuestaSidebarItems = document.querySelectorAll(".sidebar-content__chapter, .sidebar-content__subchapter") ;
+
+
+respuestaPhoneButton.addEventListener("click", function(event){
+  document.getElementById("sidebar").classList.toggle("width-zero");
+  document.getElementById("main").classList.toggle("width-zero");
+  document.getElementById("main").classList.toggle("hidden-phone-main");
+  document.querySelector(".navigation__icon--1").classList.toggle("navigation__icon--1x");
+  document.querySelector(".navigation__icon--3").classList.toggle("navigation__icon--3x");
+  document.querySelector(".navigation__icon--2").classList.toggle("navigation__icon--2x");
+  document.querySelector(".navigation__background").classList.toggle("navigation__background--small");
+});
+
+
+respuestaSidebarItems.forEach(function(item){
+  item.addEventListener("click", function(event){
+    console.log(item);
+    document.getElementById("sidebar").classList.add("width-zero");
+    document.getElementById("main").classList.remove("width-zero");
+    document.getElementById("main").classList.remove("hidden-phone-main");
+    document.querySelector(".navigation__icon--1").classList.remove("navigation__icon--1x");
+    document.querySelector(".navigation__icon--3").classList.remove("navigation__icon--3x");
+    document.querySelector(".navigation__icon--2").classList.remove("navigation__icon--2x");
+    document.querySelector(".navigation__background").classList.remove("navigation__background--small");
+  });
+});
+
 

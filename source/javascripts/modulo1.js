@@ -130,16 +130,16 @@ const origen = document.getElementById('origen');
 
 
 const origenPhoneButton = document.getElementById("origen-navigation__button");
-const origenSidebarItems = document.querySelectorAll(".sidebar-content__item");
+const origenSidebarItems = document.querySelectorAll(".sidebar-content__chapter, .sidebar-content__subchapter") ;
 
 function toggleSidebar(){
-  document.getElementById("sidebar").classList.remove("width-zero");
-  document.getElementById("main").classList.add("width-zero");
-  document.getElementById("main").classList.add("hidden-phone-main");
-  document.querySelector(".navigation__icon--1").classList.add("navigation__icon--1x");
-  document.querySelector(".navigation__icon--3").classList.add("navigation__icon--3x");
-  document.querySelector(".navigation__icon--2").classList.add("navigation__icon--2x");
-  document.querySelector(".navigation__background").classList.add("navigation__background--small");
+  document.getElementById("sidebar").classList.toggle("width-zero");
+  document.getElementById("main").classList.toggle("width-zero");
+  document.getElementById("main").classList.toggle("hidden-phone-main");
+  document.querySelector(".navigation__icon--1").classList.toggle("navigation__icon--1x");
+  document.querySelector(".navigation__icon--3").classList.toggle("navigation__icon--3x");
+  document.querySelector(".navigation__icon--2").classList.toggle("navigation__icon--2x");
+  document.querySelector(".navigation__background").classList.toggle("navigation__background--small");
 }
 
 origenPhoneButton.addEventListener("click", function(event){
