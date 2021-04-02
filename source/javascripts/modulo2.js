@@ -128,4 +128,31 @@ const oncogenesis = document.getElementById('oncogenesis');
 
   });
 
+// ************************************ PHONE MENU ****************************
 
+
+const oncogenesisPhoneButton = document.getElementById("oncogenesis-navigation__button");
+const oncogenesisSidebarItems = document.querySelectorAll(".sidebar-content__item");
+
+function toggleSidebar(){
+  document.getElementById("sidebar").classList.toggle("hidden-phone");
+  document.getElementById("main").classList.toggle("hidden-phone");
+  document.getElementById("main").classList.toggle("hidden-phone-main");
+  document.querySelector(".navigation__icon--1").classList.toggle("navigation__icon--1x");
+  document.querySelector(".navigation__icon--3").classList.toggle("navigation__icon--3x");
+  document.querySelector(".navigation__icon--2").classList.toggle("navigation__icon--2x");
+  document.querySelector(".navigation__background").classList.toggle("navigation__background--small");
+}
+
+oncogenesisPhoneButton.addEventListener("click", function(event){
+  console.log(oncogenesisPhoneButton);
+  toggleSidebar();
+});
+
+
+oncogenesisSidebarItems.forEach(function(item){
+  item.addEventListener("click", function(event){
+    console.log(item);
+    toggleSidebar();
+  });
+});

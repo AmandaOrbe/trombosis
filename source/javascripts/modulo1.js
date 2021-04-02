@@ -64,7 +64,6 @@ const subChapters = [{tab: biomarcadores1Tab, content: biomarcadores1} ,
 
 window.addEventListener('scroll', function(){
   chapters.forEach(function(chapter){
-    console.log(chapter.content)
     if ((chapter.content.offsetTop - 500 )< (window.scrollY ) && (window.scrollY ) < ((chapter.content.offsetTop - 500) + chapter.content.scrollHeight)) {
       chapter.tab.classList.add('sidebar-content__item--current');
       chapter.tab.classList.remove('sidebar__content__read');
@@ -85,7 +84,6 @@ window.addEventListener('scroll', function(){
 
 window.addEventListener('scroll', function(){
   subChapters.forEach(function(chapter){
-    console.log(chapter.content)
     if (chapter.content.offsetTop < (window.scrollY ) && (window.scrollY ) < (chapter.content.offsetTop + chapter.content.scrollHeight)) {
       chapter.tab.classList.add('sidebar-content__item--current');
       chapter.tab.classList.remove('sidebar__content__read');
@@ -127,6 +125,45 @@ const origen = document.getElementById('origen');
     event.currentTarget.querySelector(".fa-chevron-down").classList.toggle("sidebar-content__chevron-up");
 
   });
+
+// ************************************ PHONE MENU ****************************
+
+
+const origenPhoneButton = document.getElementById("origen-navigation__button");
+const origenSidebarItems = document.querySelectorAll(".sidebar-content__item");
+
+function toggleSidebar(){
+  document.getElementById("sidebar").classList.remove("width-zero");
+  document.getElementById("main").classList.add("width-zero");
+  document.getElementById("main").classList.add("hidden-phone-main");
+  document.querySelector(".navigation__icon--1").classList.add("navigation__icon--1x");
+  document.querySelector(".navigation__icon--3").classList.add("navigation__icon--3x");
+  document.querySelector(".navigation__icon--2").classList.add("navigation__icon--2x");
+  document.querySelector(".navigation__background").classList.add("navigation__background--small");
+}
+
+origenPhoneButton.addEventListener("click", function(event){
+  toggleSidebar();
+});
+
+
+origenSidebarItems.forEach(function(item){
+  item.addEventListener("click", function(event){
+    console.log(item);
+    document.getElementById("sidebar").classList.add("width-zero");
+    document.getElementById("main").classList.remove("width-zero");
+    document.getElementById("main").classList.remove("hidden-phone-main");
+    document.querySelector(".navigation__icon--1").classList.remove("navigation__icon--1x");
+    document.querySelector(".navigation__icon--3").classList.remove("navigation__icon--3x");
+    document.querySelector(".navigation__icon--2").classList.remove("navigation__icon--2x");
+    document.querySelector(".navigation__background").classList.remove("navigation__background--small");
+  });
+});
+
+// document.getElementById("side_bibliografia").addEventListener("click", function(event){
+//   toggleSidebar();
+// });
+
 
 
 

@@ -66,12 +66,12 @@
   }
 
   &__background{
-    background-color: $orange;
+    background-color: $primary;
     height: 100vh;
     width: 5rem;
     position: fixed;
     box-shadow: $box-shadow;
-    transition: all .5s ease;
+    transition: all .1s ease;
     top: 0;
     left: 0;
 
