@@ -39,129 +39,279 @@
            <p class= "indented margin5"> La incidencia de ETV en pacientes con cáncer está en aumento en probable relación con la mejora de los métodos diagnósticos, la incorporación de nuevos tratamientos y una significativa mayor supervivencia de los pacientes con cáncer.</p>
 
           <%= partial(:'components/image-big',  :locals => { :image => "images/evolucion-anual-pacientes.png", :title => "" , :text => "Fuente: Khorana JCO 2006, 24:484-90", :id => "evolucion-anual-pacientes"}) %> 
+        </div>
+
+        <div id="factores-riesgo">
+          <%= partial(:'components/header2', :locals => { :text => "Factores de riesgo y pronóstico", :number => '01' }) %> 
+          <div id="factores-riesgo-pronostico">
+            <%= partial(:'components/header3', :locals => { :text => "Factores de riesgo y pronóstico de la enfermedad tromboembólica", :number => '01.01' }) %> 
+            <p class= "indented margin5"> El riesgo de ETV no es el mismo en todos los pacientes con cáncer ni en el mismo paciente a lo largo del tiempo. Este riesgo varía entre 10-50% en función de la presencia de diferentes factores de riesgo. Estos factores de riesgo se pueden dividir en:</p>
+            <br>
+
+            <h4 class="margin5"><b>Relacionados con el paciente:</b></h4>
+
+            <%= partial(:'components/list',  :locals => { :list_items => [
+              ["", "Comorbilidad(enfermedad respiratoria, cardíaca, nefropatía, infecciones, obesidad). "], 
+              ["", "Inmovilización."] , 
+              [ "","Características demográficas. "], 
+              ["", "Edad avanzada"], 
+              ["", "Antecedentes de trombosis."]]}) %>  
+            <br>  
+            <h4 class="margin5"><b>Relacionados con el cáncer:</b></h4>
+
+            <%= partial(:'components/list',  :locals => { :list_items => [
+              ["", "Los tumores sólidos con mayor riesgo de ETV son: Cáncer de páncreas, gástrico, renal, pulmón, ovario, útero y cerebral.. "], 
+              ["", "Entre las enfermedades hematológicas: mieloma, linfoma y leucemia aguda. "] , 
+              [ "","La enfermedad metastásica tiene mayor riesgo que la enfermedad localizada."], 
+              ["", "El riesgo es mayor en los 3-6 primeros meses desde el diagnóstico y cuando la enfermedad está activa."], 
+              ["", "Incidencia (%) acumulada de ETV según el tipo y el estadio del tumor (ver tabla)."]]}) %>  
+
+            <table class="tabla margin5">
+              <tr class="tabla__row">
+                <th class="tabla__head tabla__row-header tabla__50 ">Tipo de Tumor</th>
+                <th class="tabla__head tabla__25">Metastásico</th>
+                <th class="tabla__head tabla__25">Tipo de tumor Metastásico Regional</th>
+              </tr>
+              <tr class="tabla__row ">
+                <td class="tabla__row-header tabla__50">Páncreas</td>
+                <td class="tabla__cell tabla__25">7,5</td>
+                <td class="tabla__cell tabla__25">4,0</td>
+              </tr>
+              <tr class="tabla__row-gray">
+                <td class="tabla__row-header tabla__50 tabla__50">Estómago</td>
+                <td class="tabla__cell tabla__25">6,6</td>
+                <td class="tabla__cell tabla__25">4,4</td>
+              </tr>
+              <tr class="tabla__row">
+                <td class="tabla__row-header tabla__50 ">Riñón</td>
+                <td class="tabla__cell tabla__25">6,3</td>
+                <td class="tabla__cell tabla__25">6,8 </td>
+              </tr>
+              <tr class="tabla__row-gray">
+                <td class="tabla__row-header tabla__50 ">Ovario</td>
+                <td class="tabla__cell tabla__25">4,2</td>
+                <td class="tabla__cell tabla__25">1,9</td>
+              </tr>
+              <tr class="tabla__row">
+                <td class="tabla__row-header tabla__50 ">Linfoma</td>
+                <td class="tabla__cell tabla__25">2,8</td>
+                <td class="tabla__cell tabla__25">3,6</td>
+              </tr>
+              <tr class="tabla__row-gray">
+                <td class="tabla__row-header tabla__50 ">Pulmón</td>
+                <td class="tabla__cell tabla__25">3,2</td>
+                <td class="tabla__cell tabla__25">2,3</td>
+              </tr>
+              <tr class="tabla__row">
+                <td class="tabla__row-header tabla__50 ">Colon</td>
+                <td class="tabla__cell tabla__25 ">3,5</td>
+                <td class="tabla__cell tabla__25  ">2,7</td>
+              </tr>
+              <tr class="tabla__row-gray">
+                <td class="tabla__row-header tabla__50 ">Útero</td>
+                <td class="tabla__cell tabla__25  ">5,3</td>
+                <td class="tabla__cell tabla__25  ">2,1</td>
+              </tr>
+              <tr class="tabla__row">
+                <td class="tabla__row-header tabla__50 ">Vejiga</td>
+                <td class="tabla__cell tabla__25  ">5,6</td>
+                <td class="tabla__cell tabla__25  ">3,8</td>
+              </tr>
+              <tr class="tabla__row-gray">
+                <td class="tabla__row-header tabla__50 ">Mama</td>
+                <td class="tabla__cell tabla__25  ">2,8</td>
+                <td class="tabla__cell tabla__25  ">1,2</td>
+              </tr>
+              <tr class="tabla__row">
+                <td class="tabla__row-header tabla__50 ">Próstata</td>
+                <td class="tabla__cell tabla__25  ">1,2</td>
+                <td class="tabla__cell tabla__25  ">1,3</td>
+              </tr>
+              </tr>
+            </table>
+
+            <br>  
+            <h4 class="margin5"><b>Relacionados con el tratamiento:</b></h4>
+            <p  class="indented margin5">La administración de quimioterapia está relacionada con mayor riesgo de ETV y supone un riesgo de hasta más de 6 veces de desarrollar ETV. Entre los fármacos que se asocian de forma más evidente al desarrollo de enfermedad tromboembólica se encuentra el cisplatino.</p>
+            <p  class="indented margin2">Otros tratamientos como la terapia hormonal con tamoxifeno y el empleo de agentes estimuladores de la eritropoyesis aumentan el riesgo de ETV.</p>
+
+            <p  class="indented margin5">Otro factor de riesgo es ser portador de catéter venoso central que aumenta el riesgo de ETV en miembros superiores relacionado con la agresión vascular y las infecciones relacionadas con su implantación.</p>
+
+          <%= partial(:'components/concepto-clave', :locals => { :title => "importante", :text => "La cirugía es un factor de riesgo de presentar ETV y este riesgo se mantiene hasta más de 7 semanas después. Este riesgo es mayor en mayores de 65 años, enfermedad metastásica, ascitis, antecedentes de fallo cardíaco congestivo, IMC > 25mg/m2, Plaquetas > 400.00/microL, Albumina < 3g/dL y tiempo de cirugía mayor de 2 horas."}) %>
+
+            <p  class="indented margin5">Otros factores como el empleo de esteroides reciente o la existencia de complicaciones postoperatorias (sepsis, reintubación, paro cardíaco, infección de la herida quirúrgica) parecen estar relacionados con una mayor incidencia de ETV</p>
+
+            <br>
+          </div>   
+          <div id="factores-pronostico">
+            <%= partial(:'components/header3', :locals => { :text => "Factores pronósticos:", :number => '01.02' }) %> 
+
+            <p  class="indented margin5">La aparición de fenómenos tromboembólicos se asocia con un incremento en la morbilidad y mortalidad de los pacientes con cáncer respecto a los que no presentan ETV o no presentan cáncer.</p>
+
+            <%= partial(:'components/image-big',  :locals => { :image => "images/overall-survival.png", :title => "Figura 1C Adjusted for major confounders: Age, gender, race, cancer type, stage, year of therapy, chemotherapy type and dose intensity, major laboratory abnormalities, PS, BMI, and comorbid conditions" , :text => "Fuente: Khorana et al Cancer 2012", :id => "overall-survival"}) %> 
+
+            <div class="card_row">
+              <%= partial(:'components/image-small',  :locals => { :image => "images/overall-survival-a.png",  :title => "Figura 2. ", :text => "Overall survival for National Cancer Institute of Canada PA3 patients randomly assigned to gemcitabine plus erlotinib. VTE, venous thromboembolism.",  :id => "survival-a"}) %>
+              <%= partial(:'components/image-small',  :locals => { :image => "images/overall-survival-b.png",  :title => "Figura 3. ", :text => "Overall survival for National Cancer Institute of Canada PA3 patients randomly assigned to gemcitabine plus placebo. VTE, venous thromboembolism.",  :id => "survival-b"}) %>             
+            </div>
+            <br>  
+
+            <%= partial(:'components/list',  :locals => { :list_items => [
+              ["", "El riesgo de muerte tras un episodio de ETV es hasta ocho veces mayor en los pacientes con cáncer respecto a los que no lo padecen. "], 
+              ["", "La ETV es la segunda causa de muerte en pacientes con cáncer y provoca un importante impacto en la calidad de vida de estos pacientes."] , 
+              [ "","En un estudio retrospectivo sobre pacientes hospitalizados por ETV se objetivó que el riesgo de muerte a los 6 meses era de 84% en los pacientes con cáncer frente al 29% en la población general."]]}) %>  
 
 
+            <%= partial(:'components/image-big',  :locals => { :image => "images/causas-muerte.png", :title => "Figura 2." , :text => " Causas de muerte en pacientes con cáncer", :id => "causas-muerte"}) %> 
 
-        ----
+            <p  class="indented margin5">La ETV recurrente es tres veces superior en pacientes con cáncer y hace necesaria la anticoagulación en periodos más prolongados.</p>
+
+            <%= partial(:'components/image-big',  :locals => { :image => "images/cumulative-incidence.png", :title => "Figura 1E" , :text => " Cumulative incidence of recurrent VTE during anticoagulant therapy", :id => "cumulative-incidence"}) %> 
+            
+            <p  class="indented margin5">La anticoagulación en pacientes con cáncer provoca mayor riesgo de hemorragia en los pacientes con cáncer que en los que no presentan la enfermedad.</p>
+
+            <%= partial(:'components/image-big',  :locals => { :image => "images/anticoagulant.png", :title => "Figura 1F" , :text => " Cumulative incidence of bleeding during anticoagulant therapy", :id => "anticoagulant"}) %> 
+            
+            <p  class="indented margin5">El riesgo de tromboembolismo pulmonar grave en pacientes sometidos a una intervención quirúrgica es hasta tres veces superior en pacientes con cáncer.</p>
+          </div>  
+         </div>  
+<br>
+        
+        <div id="factores-predictivos">
+          <%= partial(:'components/header2', :locals => { :text => "Modelos predictivos de riesgo", :number => '02' }) %>
+            
+            <p  class="indented margin5">Son varios los modelos predictivos de ETV que han sido desarrollados. <span class="container__highlight">Khorana fue el primer score validado en pacientes con cancer en tratamiento con quimioterapia. Este score ha sido validado en diferentes estudios prospectivos.</span> </p>
+            <p  class="indented margin2">Los porcentajes de riesgo en función de la clasificación del riesgo basada en el Modelo Khorana varían según los estudios por la diferente selección de pacientes y los periodos de seguimiento.</p>
+
+
+            <h4 class="margin5"><b>Tabla 3. Modelo predictivo de Khorana et al. para la ETV asociada a quimioterapia.</b></h4>
+
+            <table class="tabla margin5">
+              <tr class="tabla__row">
+                <th class="tabla__head tabla__row-header tabla__75 ">Características de los pacientes</th>
+                <th class="tabla__head tabla__25">Puntos</th>
+              </tr>
+              <tr class="tabla__row ">
+                <td class="tabla__row-header tabla__75"><b>Localización del tumor primario</b></td>
+                <td class="tabla__cell tabla__25"></td>
+                
+              </tr>
+              <tr class="tabla__row">
+                <td class="tabla__rowcell tabla__75 indented">    Muy alto riesgo: estómago, páncreas</td>
+                <td class="tabla__cell tabla__25">2</td>
+               
+              </tr>
+              <tr class="tabla__row">
+                <td class="tabla__rowcell tabla__75 indented">    Alto riesgo: pulmón, linfomas, ginecológico, vejiga, testículo</td>
+                <td class="tabla__cell tabla__25">1</td>
+             
+              </tr>
+              <tr class="tabla__row-gray">
+                <td class="tabla__cell tabla__75 ">Recuento de plaquetas prequimioterapia ≥375.000/mm3</td>
+                <td class="tabla__cell tabla__25">1</td>
+               
+              </tr>
+              <tr class="tabla__row">
+                <td class="tabla__rowcell tabla__75 ">Hemoglobina <10 g/dl o uso de agentes eritropoyéticos</td>
+                <td class="tabla__cell tabla__25">1</td>
+              </tr>
+              <tr class="tabla__row-gray">
+                <td class="tabla__rowcell tabla__75 ">Recuento de leucocitos prequimioterapia >11.000/mm3</td>
+                <td class="tabla__cell tabla__25">1</td>
+              </tr>
+              <tr class="tabla__row">
+                <td class="tabla__rowcell tabla__75 ">IMC ≥35kg/m2</td>
+                <td class="tabla__cell tabla__25 ">1</td>
+              </tr>
+              </tr>
+            </table>
+
+
+            <table class="tabla margin5">
+              <tr class="tabla__row">
+                <th class="tabla__head tabla__row-header tabla__33 ">Puntuación total</th>
+                <th class="tabla__head tabla__33">Categoría de riesgo</th>
+                <th class="tabla__head tabla__33">Riesgo de ETV sintomática</th>
+              </tr>
+              <tr class="tabla__row ">
+                <td class="tabla__row-header tabla__33">0</td>
+                <td class="tabla__cell tabla__33">Bajo</td>
+                <td class="tabla__cell tabla__33">0,8 – 3%</td>
+              </tr>
+              <tr class="tabla__row-gray">
+                <td class="tabla__row-header tabla__33 ">1 – 2</td>
+                <td class="tabla__cell tabla__33">Intermedio</td>
+                <td class="tabla__cell tabla__33">1,8 – 8,4%</td>
+              </tr>
+              <tr class="tabla__row">
+                <td class="tabla__row-header tabla__50 ">3 o más</td>
+                <td class="tabla__cell tabla__33">Alto</td>
+                <td class="tabla__cell tabla__33">7,1 – 41%</td>
+              </tr>
+              </tr>
+            </table>
+    
+
+            <h4 class="margin5"><b>Tabla 4. Tabla. Modelos predictivos de ETV en pacinetes con cancer.</b></h4>
+            <div class="scroll-container">
+            <table class="tabla margin5">
+              <tr class="tabla__row">
+                <th class="tabla__head tabla__row-header  "></th>
+                <th class="tabla__head ">KHORANA</th>
+                <th class="tabla__head ">VIENNA CATS score</th>
+                <th class="tabla__head ">PROTECHT score</th>
+                <th class="tabla__head ">CONKO score</th>
+                <th class="tabla__head ">Oncothromb-Tic Onco score </th>
+                <th class="tabla__head ">Compass-CAT score</th>
+                <th class="tabla__head ">Onkotev score</th>
+                <th class="tabla__head ">Pabinger el al.</th>
+              </tr>
+              <tr class="tabla__row ">
+                <td class="tabla__row-header ">Nº de variables</td>
+                <td class="tabla__cell ">5</td>
+                <td class="tabla__cell ">7</td>
+                <td class="tabla__cell ">6</td>
+                <td class="tabla__cell ">6</td>
+                <td class="tabla__cell ">4</td>
+                <td class="tabla__cell ">8</td>
+                <td class="tabla__cell ">8</td>
+                <td class="tabla__cell ">2</td>
+              </tr>
+              <tr class="tabla__row-gray ">
+                <td class="tabla__row-header ">Validado</td>
+                <td class="tabla__cell ">Sí</td>
+                <td class="tabla__cell ">No</td>
+                <td class="tabla__cell ">No</td>
+                <td class="tabla__cell ">No</td>
+                <td class="tabla__cell ">Sí</td>
+                <td class="tabla__cell ">Sí</td>
+                <td class="tabla__cell ">No</td>
+                <td class="tabla__cell ">Sí</td>
+              </tr>
+              <tr class="tabla__row-gray ">
+                <td class="tabla__row-header ">Variables</td>
+                <td class="tabla__cell ">Tipo de tumor, Anemia/Estimulantes EPO, Leucocitosis, Trombocitosis, IMC > 35kg/m2</td>
+                <td class="tabla__cell ">Tipo de tumor, Anemia/ Estimulantes EPO, Leucocitosis, Trombocitosis, IMC > 35, D-Dímero, P-Selectina</td>
+                <td class="tabla__cell ">Tipo de tumor, Anemia/Estimulantes, EPO, Leucocitosis, Trombocitosis, IMC > 35kg/m2, QT basada en Gemcitabina-Platino</td>
+                <td class="tabla__cell ">Tipo de tumor, Anemia/Estimulantes EPO, Leucocitosis, Trombocitosis, IMC > 35kg/m2, Performance Status</td>
+                <td class="tabla__cell ">Tipo de tumor, IMC > 25, Score genético, Estadio</td>
+                <td class="tabla__cell ">Trombocitosis, Estadio, Antraciclina/Hormona,  Tiempo desde diagnóstico, Portactah, Factores de riesgo cardiovascular, Hospitalización reciente, Antecedentes personales</td>
+                <td class="tabla__cell ">Tipo de tumor, Anemia/Estimulantes EPO, Leucocitosis, Trombocitosis, IMC > 35, Estadio, Antecedentes personales, ETV, Compresión linfática/vascular</td>
+                <td class="tabla__cell ">Tipo de tumor, D-Dímero</td>
+              </tr>
+
+ 
+              </tr>
+            </table>
+          </div>
+          <p  class="indented margin2">Existen otros modelos predictivos, algunos de ellos validados también en pacientes con cancer (ver tabla).</p>
+    
  
 
         </div>  
 
         
-        <div id="oncogenesis-mantenimiento">
-          <%= partial(:'components/header3', :locals => { :text => "Mantenimiento de la señalización proliferativa", :number => '01' }) %>
-
-          <p  class="indented margin5">Podría decirse que uno de los rasgos más importantes de las células tumorales es su capacidad para mantener la proliferación de manera crónica. De forma normal, los tejidos controlan cuidadosamente las señales que promueven el crecimiento y la división celular, asegurando así una homeostasis para mantener la arquitectura y la función de cada uno de los tejidos. Las células tumorales, al alterar esta homeostasis, se convierten en las “dueñas” de estos tejidos. Las señales proliferativas son transmitidas en gran parte por factores de crecimiento que se unen a sus receptores en la superficie celular, que normalmente contienen dominios tirosin-quinasa intracelulares. Estos proceden a enviar señales que regulan el ciclo celular, el crecimiento celular o la supervivencia celular. Las células tumorales pueden adquirir esta capacidad de mantener activa la señalización proliferativa de varias maneras: </p>
-
-          <%= partial(:'components/list',  :locals => { :list_items => [["", "Pueden producir ellas mismas ligandos de factores de crecimiento, e incluso la expresión de receptores afines, lo que da lugar a una estimulación proliferativa autocrina. "], ["", "Otra posibilidad es que las células tumorales envíen señales para estimular a las células normales que conforman el estroma asociado al tumor, que a su vez producen factores de crecimiento a favor de las células tumorales. "] , [ "","La señalización de los receptores también puede alterarse aumentando la cantidad de los mismos que se encuentran en la superficie de la célula, de tal manera, que esas células van a ser muy sensibles a la presencia de mínimas cantidades de ligando, que de otra manera no serían capaces de estimular a los receptores. El mismo resultado puede observarse cuando hay una alteración estructural en el receptor que facilita que se active en ausencia del ligando (activación constitutiva). "], ["", "Otra de las posibilidades es que se produzca una activación de la señalización intracelular sin necesidad del estímulo a través de los receptores. "]]}) %>  
-
-
-          <div class="concepto-clave--background margin5">
-            <div class="concepto-clave__title">A modo de ejemplo</div>
-            <p class="margin2">Los avances en la secuenciación de los diferentes tumores han revelado que determinadas mutaciones somáticas predicen la activación constitutiva de los circuitos de señalización. Por ejemplo, el 40% de los melanomas contienen mutaciones activadoras que afectan a la estructura de la proteína B-RAF, lo cual genera una activación constitutiva a través de las MAP-quinasas. </p>
-          </div>
-
-          <p class="indented margin5"> También pueden existir una interrupción de los mecanismos de retroalimentación negativa que atenúan la señalización proliferativa, que normalmente funcionan para asegurar la homeostasis de flujo de señales intracelulares. Uno de los prototipos de esta regulación afecta a PTEN, que de manera normal contrarresta la actividad de PI3K. Las mutaciones en PTEN amplifican, por tanto, la señalización de PI3K y promueven la tumorigénesis en diversos tipos tumorales. </p>
-
-          <p class="indented">Hay que tener en cuenta que un exceso de señales proliferativas puede desencadenar un efecto contrario en las células, dando lugar a una senescencia y/o apoptosis celular. Esta respuesta aparentemente paradójica refleja los mecanismos de defensa celular intrínsecos para desechar aquellas células con un exceso de señalización proliferativa. Sin embargo, también se ha demostrado que algunas células tumorales tiene la capacidad de adaptarse a altos niveles de señalización proliferativa, inhabilitando este circuito de inducción de senescencia o apoptosis. </p>
-        </div>
-
-
-        <div id="oncogenesis-perdida">
-
-          <%= partial(:'components/header3', :locals => { :text => "Pérdida de señales supresoras de crecimiento", :number => '02' }) %>
-
-          <p class="indented margin5">Las células tumorales deben evitar los circuitos que regulan de forma negativa la proliferación celular, los cuales dependen en muchos casos de los denominados genes supresores de tumores. Los dos supresores de tumores más conocidos son RB1 y TP53, que funcionan como puntos de control dirigiendo las decisiones de las células para proliferar o por el contrario, activar la senescencia o apoptosis. </p>          
-          <p class="indented ">Las células tumorales con defectos en RB1 o TP53 carecen de las funciones que este gen ejerce como guardián del ciclo celular, haciendo que la proliferación sea persistente. </p>
-        </div>
-
-
-        <div id="oncogenesis-resistencia">
-          <%= partial(:'components/header3', :locals => { :text => "Resistencia a la muerte celular", :number => '03' }) %>
-          <p class="indented margin5"> El proceso de muerte celular programada por apoptosis es una barrera natural para el desarrollo del cáncer. La maquinaria encargada de la apoptosis está compuesta por reguladores extrínsecos, los cuales reciben y procesan señales extracelulares (ligando Fas / receptor Fas) y reguladores intrínsecos, que procesan señales intracelulares. Cada una de ellos culmina con la activación de una proteasa que en condiciones normales está latente (caspasa), que al activarse, inicia una cascada de proteólisis en la que la célula se “desmonta” progresivamente hasta ser consumida por las células fagocitarias. Uno de los componentes más importantes en este circuito es la familia de proteínas reguladoras Bcl-2, un inhibidor de la apoptosis. </p>
-          <p class="indented "> Las condiciones celulares que desencadenan la apoptosis no están totalmente clarificadas, pero se han identificado varios sensores de anomalías, como TP53, que se activa ante roturas sustanciales de ADN u otras anomalías cromosómicas. Otro de los sensores es, como se ha comentado previamente, la señalización hiperactiva por parte de ciertas oncoproteínas (exceso de señalización proliferativa). La pérdida de la función de TP53 es uno de los eventos más comunes que adquieren las células tumorales para evadir o limitar la apoptosis.</p>
-          <p class="indented margin5"> Las condiciones celulares que desencadenan la apoptosis no están totalmente clarificadas, pero se han identificado varios sensores de anomalías, como TP53, que se activa ante roturas sustanciales de ADN u otras anomalías cromosómicas. Otro de los sensores es, como se ha comentado previamente, la señalización hiperactiva por parte de ciertas oncoproteínas (exceso de señalización proliferativa). La pérdida de la función de TP53 es uno de los eventos más comunes que adquieren las células tumorales para evadir o limitar la apoptosis. </p>
-          <p class="indented">Paradójicamente, la falta de nutrientes, la radioterapia o ciertos agentes citotóxicos pueden inducir niveles elevados de autofagia que son protectores para las células tumorales, perjudicando en lugar de acentuando la muerte celular. Se ha demostrado también que algunas células tumorales sometidas a un estrés grave se reducen a través de la autofagia a un estado de latencia que puede ser reversible mucho tiempo después (recidivas tardías de algunos tumores). </p>
-
-          <p class="indented margin5">A diferencia de la apoptosis, en la que la célula se contrae hasta ser consumida por sus vecinas, en la necrosis celular, las células se hinchan y explotan, liberando su contenido en el microambiente local. Esto hace que se liberan señales pro-inflamatorias en el microambiente tisular, reclutando células inflamatorias del sistema inmune, cuya función es eliminar los desechos necróticos y evaluar el daño. Sin embargo, en un ambiente tumoral, las células inmunes pueden promover activamente el tumor, fomentando la angiogénesis, la proliferación y la invasión. Por lo tanto, si bien la necrosis parece en principio algo beneficioso para contrarrestar la hiperproliferación de las células tumorales, en última instancia puede ser más perjudicial que beneficiosa. </p>
-        </div>
-
-
-        <div id="oncogenesis-activacion">
-          <%= partial(:'components/header3', :locals => { :text => "Activación de la inmortalidad replicativa", :number => '04' }) %>
-
-          <p class="indented margin5">Para que una célula tumoral genere un tumor macroscópico, es necesario que adquiera un potencial de replicación ilimitado. Esta capacidad contrasta con la mayoría de los linajes celulares normales del organismo humano, que son capaces de atravesar un número limitado de ciclos de crecimiento y división celular. </p>  
-          <p class="indented">La telomerasa es una polimerasa del ADN especializada en agregar segmentos teloméricos repetidos a los extremos finales del ADN (ADN telomérico). Está casi ausente en las células que no tienen una capacidad inmortal, y por el contrario, se expresa de manera significativa en la gran mayoría de las células tumorales inmortales. Al extender el ADN telomérico, se contrarresta la progresiva erosión de los telómeros. Esta erosión conduce finalmente a la muerte celular, considerada como un reloj que determina el limitado potencial de reproducción de las células normales. . Por lo tanto, la presencia de la actividad de la telomersa se vincula con la resistencia a la senescencia y/o apoptosis. </p>  
-        </div>
-
         
-        <div id="oncogenesis-induccion">
-
-          <%= partial(:'components/header3', :locals => { :text => "Inducción de la angiogénesis", :number => '05' }) %> 
-
-          <p class="indented margin5">Al igual que los tejidos normales, los tumores requieren un sustento en forme de nutrientes y oxígeno, así como la capacidad de desechar otros metabolitos y el dióxido de carbono. La formación de nuevos vasos sanguíneos asociada al tumor, responde a estas necesidades. Durante la embriogénesis, el desarrollo de vasos sanguíneos es fundamental, pero tras ello, la vasculatura se vuelve inactiva. En el adulto, como parte del proceso fisiológico de curación de heridas y el ciclo reproductivo femenino, la angiogénesis se activa, pero de forma transitoria. En muchos tumores, este interruptor se activa de forma constante, permitiendo la formación de nuevos vasos que ayudan a sostener el crecimiento de las células tumorales. Este proceso se desarrollará en mayor detalle en el módulo 3. </p>
-
-        </div>  
-
-
-        <div id="oncogenesis-invasion">
-          <%= partial(:'components/header3', :locals => { :text => "Activación de la invasión y metástasis", :number => '06' }) %> 
-          <p class="indented margin5">El proceso de invasión y metástasis se ha esquematizado en una serie de pasos, que se suceden como una cascada, que comprenden, entre otros, la invasión local, la intravasación de las células tumorales en los vasos sanguíneos o linfáticos cercanos, el tránsito de estas células por el sistema linfático o sanguíneo, seguido de la extravasación de las células en el parénquima de un tejido a distancia, donde se formará la metástasis a través de la colonización. Esta cascada se desarrolla en mayor detalle en el módulo 3. </p>
-        </div>  
-
-        <div id="oncogenesis-inestabilidad">
-          <%= partial(:'components/header3', :locals => { :text => "Inestabilidad genómica", :number => '07' }) %> 
-          <p class="indented margin5">La adquisición de los múltiples hallmarks enumerados previamente depende en gran medida de una sucesión de alteraciones en el genoma de las células tumorales. Estas alteraciones confieren ventajas selectivas a subclones de células, permitiendo su crecimiento y proliferación. </p>
-          <p class="indented">Por otra parte, la capacidad del genoma para detectar y resolver defectos en el ADN garantiza que las probabilidades de mutaciones espontáneas sean muy bajas en cada una de las generaciones celulares. Sin embargo, las células tumorales pueden adquirir alteraciones que afecten a estos sistemas de reparación del ADN, dando lugar a la acumulación de mutaciones.</p>
-          <p class="indented">Estas vías de respuesta al daño al ADN se repasan en mayor profundidad en el módulo 4. </p>
-        </div>  
-
-        <div id="oncogenesis-inflamacion">
-          <%= partial(:'components/header3', :locals => { :text => "Inflamación promovida por el tumor", :number => '08' }) %> 
-          <p class="indented margin5">Algunos tumores están ampliamente infiltrados por células del sistema inmune (tanto innato como adaptativo), y por lo tanto, reflejan las condiciones inflamatorias de los tumores. La respuesta inflamatoria de los tumores es paradójica, ya que en un principio se pensaba que ejercía solamente un efecto negativo sobre los tumores, promoviendo que el sistema inmune erradicara las células tumorales. Pero también se ha observado que mejora la tumorigénesis y la progresión, ayudando de hecho, a que las neoplasias adquieran capacidades distintivas. La inflamación puede contribuir a suministrar factores de crecimiento que sostienen la señalización proliferativa, factores que limitan la muerte celular, factores proangiogénicos, etc. Por lo tanto,  la inflamación puede considerarse una característica habilitante para la adquisición de otra serie de capacidades por parte de las células tumorales. </p>
-        </div>  
-
-        <div id="oncogenesis-alteracion">
-          <%= partial(:'components/header3', :locals => { :text => "Alteración del metabolismo energético", :number => '09' }) %> 
-          <p class="indented margin5">La proliferación crónica y a menudo incontrolada que representa la esencia de la enfermedad neoplásica implica no solo la alteración de la proliferación celular, sino también de los correspondientes ajustes del metabolismo energético con el fin de impulsar el crecimiento y la división celular. La glicólisis es una ruta metabólica por la cual la glucosa es degradada para obtener energía, y es fundamental para la obtención de la misma en muchos tipos celulares. Funciona en ausencia de oxígeno (anaerobiosis). Las células tumorales son capaces, incluso en presencia de oxígeno, de reprogramar su metabolismo de la glucosa, y limitarlo a la glicólisis, lo que conduce al estado denominado “glicólisis aeróbica”. Esto se hace a expensas de una importación elevada de glucosa al citoplasma (por eso muchos tipos de tumores tienen aumento de captación de glucosa en la tomografía por emisión de positrones (PET) con un análogo de la glucosa (18F-fluorodeoxiglucosa, FCG).</p>
-        </div>  
-
-        <div id="oncogenesis-evasion">
-          <%= partial(:'components/header3', :locals => { :text => "Evasión del sistema inmune", :number => '10' }) %> 
-          <p class="indented margin5">Existen sistemas de vigilancia inmunológica responsables de reconocer y eliminar la gran mayoría de las células tumorales incipientes. Sin embargo, parece ser que los tumores pueden adquirir la capacidad de evadir este sistema de vigilancia en un proceso denominado “inmunoedición”, por el cual los clones de células tumorales altamente inmunógenas se eliminan, dejando solamente variantes débilmente inmunógenas para poder crecer y generar tumores sin ser reconocidas por el sistema inmune. Algunos conceptos sobre la relación entre el sistema inmune y el cáncer se desarrollarán con más detalle en el módulo 5.</p>
-        </div>  
-          
-
-          
-
-    
-
-
-    <div class="content--2" id="oncogenesis-bibliografia">
-      <%= partial(:'components/header1', :locals => { :text => t.bibliografia}) %>
-      <ul class= "list">
-        <%= partial(:'components/biblio',  :locals => { 
-          :author => "Hanahan D and Weinberg RA. ", 
-          :title => "The hallmarks of cancer. Cell, 2000. 100 (1):57-60.", 
-          :link => ""}) %>
-        <%= partial(:'components/biblio',  :locals => { 
-          :author => "Hanahan D and Weinberg RA. ", 
-          :title => "Hallmarks of cancer: the next generation. Cell, 2011. 144 (5):646-74.", 
-          :link => ""}) %>
-        <%= partial(:'components/biblio',  :locals => { 
-          :author => "DeVita VT, Lawrence TS, Rosenberg SA. ", 
-          :title => "DeVita, Hellman, and Rosenberg´s cancer: principles & practice of oncology. 11th Edition, Philadelphia, Wolters Kluwer. 2019.", 
-          :link => ""}) %>
-        <%= partial(:'components/biblio',  :locals => { 
-          :author => "Medelsohn J, Howley PM, Israel MA, Gray JW, et al. ", 
-          :title => "The molecular basis of cancer. Philadelphia, Elsevier. 2015. ", 
-          :link => ""}) %>
-        <%= partial(:'components/biblio',  :locals => { 
-          :author => "Niederhuber JE, Armitage JO, Doroshow JH, Kastan MB, et al. ", 
-          :title => "Abeloff´s Clinical Oncology, 6th Edition. Elsevier, 2019. ", 
-          :link => ""}) %>
-      </ul>
-    </div>
 
     
 

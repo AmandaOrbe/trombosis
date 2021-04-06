@@ -1,5 +1,5 @@
 .card_row{
-  display: block;
+  display: flex;
   justify-content: space-between;
    @include respond(portrait) { // width < 1200
       display: block;
