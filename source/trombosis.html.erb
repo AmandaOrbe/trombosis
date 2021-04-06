@@ -7,11 +7,11 @@
     <div class="container">
       <div class="content">
         <div id="oncogenesis-presentacion">
-        <%= partial(:'components/header1', :locals => { :text => "Oncogénesis y señalización celular"}) %>
+        <%= partial(:'components/header1', :locals => { :text => "Factores de riesgo y pronóstico de la enfermedad tromboembólica"}) %>
 
-        <div id="Prese">
+        <div id="factores-presentacion">
           <%= partial(:'components/header2', :locals => { :text => t.presentacion, :number => ' ' }) %>
-          <p class= "indented margin5 "> Las características del cáncer comprenden una serie de capacidades biológicas adquiridas durante las múltiples etapas que forman parte del desarrollo de los tumores. Los sellos distintivos del cáncer (o “hallmarks”) constituyen una forma de organizar y racionalizar las complejidades de las enfermedades neoplásicas. Incluyen el mantenimiento de la señalización proliferativa, la evasión de las señales supresoras del crecimiento, la resistencia a la muerte celular, la capacidad de adquirir una inmortalidad en la replicación, la inducción de la angiogénesis y la activación de la invasión y formación de metástasis, entre otras. Subyacentes a estos “hallmarks” se encuentran la inestabilidad genómica, que genera la diversidad genómica que acelera el desarrollo de los tumores; y la inflamación, que fomenta a su vez algunas de las otras capacidades. De manera más reciente se han añadido dos nuevas características: la alteración del metabolismo energético y la evasión del sistema inmunológico. A todo esto, se debe añadir otra complejidad, y es que las células tumorales reclutan otras células normales que contribuyen a la adquisición de estos “hallmarks” creando el denominado “microambiente tumoral”.  </p>
+          <p class= "indented margin5 "> Los pacientes con cáncer tienen un mayor riesgo de <b>Enfermedad Tromboembólica Venosa</b> (ETV) secundario al estado de hipercoagulabilidad asociado al tumor y a distintos factores de riesgo dependientes del paciente o del tratamiento.  </p>
           <br>
           <p class= "indented  "> En este módulo veremos el conjunto global de estas capacidades biológicas, y desarrollaremos algunas de ellas, mientras que otras serán más detalladas en módulos aparte.  </p>
         </div>
@@ -20,18 +20,26 @@
         
           <%= partial(:'components/header2', :locals => { :text => t.objetivos, :number => ' ' }) %>
         </div>  
-        <div id="oncogenesis-objetivos" class="margin2">
-          <p>El objetivo principal de este módulo es:</p> 
-          <%= partial(:'components/list',  :locals => { :list_items => [["", "Entender y comprender las capacidades biológicas que se adquieren en las diferentes etapas del desarrollo del cáncer (hallmarks del cáncer)."]]}) %>
-        <p class="margin2">Algunas de ellas serán desarrolladas en este módulo, mientras que otras se explicarán con mayor detalle en módulos aparte.</p>
+        <div id="factores-objetivos" class="margin2">
+          <p>Los objetivos de este módulo son:</p> 
+          <%= partial(:'components/list',  :locals => { :list_items => [["", "Conocer la incidencia y mortalidad asociada a ETV."], ["", "Conocer la incidencia y mortalidad asociada a ETV."], ["", "Conocer la incidencia y mortalidad asociada a ETV."]]}) %>
+        
         </div>
 
-        <div id="oncogenesis-introduccion">
+        <div id="factores-introduccion">
           <%= partial(:'components/header2', :locals => { :text => "Introducción", :number => '' }) %>
-          <p class= "indented margin5"> Inicialmente, en el año 2000, Hanahan y Weinberg, reportaron los denominados sellos distintivos o “hallmarks” del cáncer, compuestos por seis capacidades biológicas que hicieron comprender mejor la notable diversidad de las enfermedades neoplásicas. Este proceso se basa en el principio fundamental de que las células normales evolucionan progresivamente hacia un estado tumoral, a través del cual van adquiriendo diferentes capacidades biológicas distintivas. Para ello es necesario entender que los tumores son muy complejos y están formados por múltiples tipos de células diferentes que interaccionan entre sí, formando lo que se denomina como “microambiente tumoral”. En 2011, estos mismos autores, revisaron y actualizaron estas capacidades, incorporando progresos conceptuales, ampliando el esquema <b>(Figura 1).</b>  </p>
+          <p class= "indented margin5"> Los pacientes con cáncer tienen mayor riesgo de presentar complicaciones tromboembólicas debido a que el cáncer favorece un estado de hipercoagulabilidad o coagulación intravascular diseminada crónica. Las manifestaciones clínicas pueden oscilar desde alteraciones analíticas hasta complicaciones trombóticas o hemorrágicas graves.</p>
 
+          <%= partial(:'components/concepto-clave', :locals => { :title => "importante", :text => "La aparición de la trombosis puede preceder el diagnóstico de cáncer en meses o años o puede aparecer al diagnóstico o durante el tratamiento."}) %>
 
-          <%= partial(:'components/image-big',  :locals => { :image => "images/hallmarks.png", :title => "Hallmarks o sellos distintivos del cáncer." , :text => "En el curso de la carcinogénesis se adquieren diferentes capacidades funcionales que conducen finalmente al desarrollo de los tumores. Modificada de Hanahan D, Weinberg RA. Cell, 2011.", :id => "hallmarks"}) %>  
+          <p class= "indented margin5"> Aunque la mayoría de los pacientes con cáncer no van a presentar episodios tromboembólicos, su incidencia es elevada, siendo hasta cinco veces superior a la población en general. La incidencia va a depender de los distintos factores de riesgo, siendo de hasta siete veces mayor en aquellos pacientes con cáncer activo o metastásico. El mayor riesgo de desarrollar un evento trombótico ocurre en los 3-6 primeros meses tras el diagnóstico.</p>
+
+          <%= partial(:'components/image-big',  :locals => { :image => "images/distribucion.png", :title => "Figura 1A. The distribution of venous thromboembolism events is illustrated for the cancer cohort after the initiation of chemotherapy" , :text => "Fuente: Khorana et al Cancer 2012", :id => "disctribucion"}) %> 
+
+           <p class= "indented margin5"> La incidencia de ETV en pacientes con cáncer está en aumento en probable relación con la mejora de los métodos diagnósticos, la incorporación de nuevos tratamientos y una significativa mayor supervivencia de los pacientes con cáncer.</p>
+
+        ----
+ 
 
         </div>  
 
