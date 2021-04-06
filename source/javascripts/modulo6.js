@@ -114,8 +114,7 @@ window.addEventListener('scroll', function(){
 
 window.addEventListener('scroll', function(){
   infecciososSubChapters.forEach(function(chapter){
-    console.log(chapter.tab);
-    console.log(chapter.content);
+
     if ((chapter.content.offsetTop - 500) < (window.scrollY ) && (window.scrollY ) < ((chapter.content.offsetTop- 500 ) + chapter.content.scrollHeight)) {
       chapter.tab.classList.add('sidebar-content__item--current');        
       chapter.tab.classList.remove('sidebar__content__read');
@@ -148,7 +147,6 @@ const infecciosos = document.getElementById('infecciosos');
 
 
   infecciosos.addEventListener("click", function(event){
-    console.log("infecciosos")
     event.currentTarget.parentNode.classList.toggle("sidebar-content__invisible");
     event.currentTarget.querySelector(".fa-chevron-down").classList.toggle("sidebar-content__chevron-up");
 

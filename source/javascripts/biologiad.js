@@ -1,3 +1,5 @@
+//= require jquery
+//= require bootstrap
 
 
 const cards = document.querySelectorAll('.card')
