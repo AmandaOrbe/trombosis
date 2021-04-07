@@ -7,199 +7,387 @@
     <div class="container">
       <div class="content">
 
-        <div id="microambiente-presentacion">
+        <div id="profilaxis-presentacion">
 
-        <%= partial(:'components/header1', :locals => { :text => "Microambiente tumoral y metástasis"}) %>
+        <%= partial(:'components/header1', :locals => { :text => "Profilaxis antitrombótica"}) %>
           <%= partial(:'components/header2', :locals => { :text => t.presentacion, :number => ' ' }) %>
-          <p class= "indented margin5 "> Uno de los retos más importantes de la oncología es el tratamiento de la enfermedad metastásica, ya que es la causa principal de las muertes relacionadas con cáncer. Comprender la biología y las características de las células tumorales es de importancia crítica para mejorar el pronóstico de los pacientes. Actualmente, se sugiere que los factores del microambiente, así como los cambios epigenéticos, desempeñan un papel clave en la formación de las metástasis. En este capítulo se describen los rasgos celulares y moleculares que conducen a la metástasis y cómo el microambiente influye en este proceso.  </p>
+          <p class= "indented margin5 "> Existen distintas estrategias para prevenir los eventos tromboembólicos en pacientes con cáncer, tanto hospitalizados como en aquellos pacientes con tratamiento ambulatorio. Estas estrategias incluyen medidas farmacológicas y mecánicas que tienen como objetivo reducir la incidencia de ETV en estos pacientes.  </p>
           <br>
         </div>
         <br><br>
 
-        <div id="microambiente-objetivos">
+        <div id="profilaxis-objetivos">
           <%= partial(:'components/header2', :locals => { :text => t.objetivos, :number => ' ' }) %>
-          <%= partial(:'components/list',  :locals => { :list_items => [["", "Comprender que los tumores están formados por un complejo sistema de células que interaccionan entre sí (microambiente tumoral)."], ["", "	Conocer los diferentes pasos de la cascada metastásica"], ["", "	Entender el proceso de angiogéneis tumoral y sus principales componentes"]]}) %>
+           <p class= "indented margin5 "> Conocer las indicaciones de profilaxis de la ETV en los distintos grupos de pacientes oncológicos. </p>
         </div>
 
-        <div id="microambiente-poblaciones">
-          <%= partial(:'components/header2', :locals => { :text => "Poblaciones celulares del microambiente tumoral", :number => '01' }) %>
-          <p class= "indented margin5"> Las metástasis son responsables de más del 90% de todas las muertes relacionadas con el cáncer. La formación de metástasis implica numerosos procesos, entre ellos: invasión y migración de las células tumorales desde el tumor primario, diseminación y supervivencia en el torrente circulatorio, la invasión de los tejidos a distancia, adaptación metabólica en el mismo, etc. Es decir, se trata de un proceso altamente complejo. </p>
-          <p class= "indented"> Aunque las propiedades intrínsecas adquiridas por las células tumorales son necesarias para una colonización metastásica exitosa, los factores celulares y moleculares dentro del microambiente tumoral también contribuyen de forma importante en este fenómeno. En el microambiente tumoral podemos encontrar diferentes tipos de células que promueven la progresión tumoral, incluidas las células madre (stem cells), las células vasculares angiogénicas, las células inmunes y los fibroblastos.  </p>
+        <div id="profilaxis-ingresado">
+          <%= partial(:'components/header2', :locals => { :text => "Paciente médico ingresado", :number => '01' }) %>
+          <p class= "indented margin5"> El riesgo de ETV en el paciente con cáncer ingresado va a depender de diferentes factores:</p>
+          <%= partial(:'components/list',  :locals => { :list_items => [
+            ["", "Comorbilidad del paciente"], 
+            ["", "Proceso agudo que ha condicionado el ingreso hospitalario "], 
+            ["", "Inmovilidad"], 
+            ["", "Tratamientos"], 
+            ["", "La propia enfermedad cancerosa"]]}) %>
 
+          <%= partial(:'components/concepto-clave', :locals => { :title => "idea clave", :text => "La confluencia de varios de estos factores hace que la incidencia de ETV en estos pacientes sea elevada y son varios los estudios que han estudiado el beneficio de profilaxis antitrombótica en los pacientes hospitalizados."}) %>
 
-          <%= partial(:'components/image-big',  :locals => { :image => "images/ambiente-tumoral.png", :title => "Figura 1: ", :text => "A) Visión más simplista del cáncer; B) Visión más realista del cáncer. Las investigaciones destinadas a comprender la biología del cáncer se han centrado históricamente en las células tumorales, que constituyen el motor de la enfermedad neoplásica. Esta visión de los tumores como “nada más” que un análisis de las células tumorales ignora la verdadera realidad: que las células tumorales reclutan y corrompen una variedad de células normales que forman el estroma asociado al tumor. Este estroma, a su vez, actúa de forma recíproca sobre las células tumorales. El conjunto de poblaciones heterogéneas de células tumorales y del estroma se suele denominar microambiente tumoral. Modificada de <i> Hanahan D, Weinberg RA. Cell, 2011.</i>", :id => "ambiente-tumoral"}) %> 
+          <p class= "indented margin5"> Son 3 los estudios más importantes que han estudiado el beneficio de la profilaxis farmacológica con <span class="container__highlight">heparina.</span> </p>
+          
+          <%= partial(:'components/card', :locals => { :title => "ARTEMIS", :body => "En el estudio ARTEMIS, con 849 pacientes hospitalizados de los cuales el 15,4% con cáncer se comparó fondaparinux con placebo y se objetivó una reducción significativa de ETV(10,5% frente al 5,6%, p=0,029). Paradójicamente se observó un incremento del riesgo de trombosis en el subgrupo de pacientes con cáncer que recibieron fodnaparinux en comparación con el placebo (FIGURA 2A)." }) %> 
 
-          <div id="microambiente-celulas-madre">
-            <%= partial(:'components/header3', :locals => { :text => "Células madre", :number => '01.01' }) %>
-            <p  class=" indented margin5">Las células madre son células que conservan la capacidad de renovarse a sí mismas a través de la división celular y pueden diferenciarse en una amplia gama de tipos celulares más especializados. Se han identificado células con propiedades de célula madre en diferentes tipos de tumores (colon, mama, cabeza y cuello, páncreas, melanoma, etc). El origen de estas células no está del todo claro, y puede diferir en los diferentes tipos de tumores. Se ha formulado la hipótesis de que las células madre tumorales surgen de las células madre progenitoras de ese tejido tras sufrir una transformación, o bien pueden provenir de una célula epitelial desdiferenciada. Las propiedades de las células madre también pueden ser adquiridas por las células tumorales a través de la transición epitelio-mesénquima (EMT – Epithelial-mesenchymal transition; proceso por el cual las células epiteliales se transforman en mesenquimales, ganando así capacidad migratoria e invasiva). Aunque el papel de las células madre en la progresión de los tumores no está totalmente dilucidado, se cree que estas células pueden ser las responsables de la diseminación metastásica. Sin embargo, se ha demostrado también, que para mantener el fenotipo de las células madre, son necesarios otros factores presentes en el microambiente tumoral, como los fibroblastos o células del estroma. </p>
-          </div>  
+          <%= partial(:'components/card', :locals => { :title => "MEDENOX", :body => "El segundo estudio es el estudio MEDENOX, con 866 pacientes hospitalizados de los cuales el 12,4% estaban enfermos de cáncer, analizó el efecto de enoxaparina 20mg frente enoxaparina 40 mg al día o placebo. La dosis de 40 mg se asoció a una menor incidencia de ETV que el placebo en los pacientes hospitalizados (5,5% frente a 14,9%,p < 0,001). Sin embargo, en el subgrupo de pacientes con cáncer aunque existía una menor incidencia de ETV (9,7 frente al 19,5%), ésta no era significativa. Este resultado probablemente esté condicionado por el bajo número de pacientes con cáncer." }) %>  
 
-          <div id="microambiente-celulas-vasculares">
-            <%= partial(:'components/header3', :locals => { :text => "Células vasculares angiogénicas", :number => '01.02' }) %>
-            <p class="indented margin5">La angiogénesis facilita la propagación hematógena de los tumores. La producción anómala de factores proangiogénicos por parte de las células tumorales da lugar a la formación de vasos sanguíneos malformados e irregulares que a menudo contienen roturas en su revestimiento que facilitan la extravasación y la diseminación de las células tumorales. Las células endoteliales y los pericitos son importantes componentes estructurales y funcionales del tumor y de su vasculatura. </p>
-            <p class="indented ">Las células endoteliales juegan un papel activo en la adhesión, extravasación y el estado latente (dormancy en inglés) de las células tumorales. La adhesión de las células tumorales al endotelio requiere la expresión de ligandos y receptores afines por parte de las células tumorales y endoteliales. De forma similar, los pericitos juegan un papel fundamental en la tumorigénesis al favorecer la maduración y el funcionamiento de los nuevos vasos sanguíneos formados en el tumor. Promueven la supervivencia de las células endoteliales y estabilizan los vasos del tumor. </p>
-          </div>  
+          <%= partial(:'components/card', :locals => { :title => "PREVENT", :body => "
+            El tercer estudio es el estudio PREVENT. El estudio PREVENT con 3706 pacientes (5,1% pacientes con cáncer) analizó el beneficio de dalteparina en la profilaxis de ETV. El riesgo de ETV se redujo del 5% al 2,8% (p=0,0015). Al igual que en el estudio con enoxaparina se objetivó una reducción del riesgo de trombosis en el subgrupo de pacientes con cáncer que recibieron dalteparina en comparación con los pacientes que recibieron placebo." }) %>
 
-          <div id="microambiente-celulas-inmunes">
+           <%= partial(:'components/image-big',  :locals => { :image => "images/overall-survival.png", :title => "Figura 2A. Cancer subgroups of medical thromboprophylaxis trials" , :text => "Fuente: Carrier M, Am J Med 2014" , :id => "cancer-subgroups"}) %>  
 
-           <%= partial(:'components/header3', :locals => { :text => "Células inmunes", :number => '01.03' }) %>
-           <p class="indented margin5"> La mayoría de los tumores contienen infiltrados de células inmunes derivados de las células mieloides y linfoides.</p>
+            <p class= "indented margin5 container__highlight"> Recientemente, se ha publicado un metanálisis que incluye estos tres ensayos clínicos. Los resultados son contradictorios, reflejando un mayor riesgo de ETV en los pacientes tratados con heparina. Estos resultados pueden deberse a los resultados del studio ARTEMIS, que no se tratan de poblaciones homogeneas y el bajo número de pacientes.</p>
 
-          <div class="card_row">
-            <%= partial(:'components/card', :locals => { :title => "Macrófagos: ", :body => "Existen un subconjunto de macrófagos, los denominados macrófagos asociados a tumores (TAMs) que se han vinculado a la progresión de los tumores y al proceso de metástasis. La presencia de macrófagos está asociada a mal pronóstico en mucho de los tumores sólidos. Estos macrófagos expresan una variedad de factores de crecimiento y citoquinas que promueven la angiogénesis, invasión, extravasación, metástasis y supresión inmunológica del tumor (ver módulo 5: inflamación y cáncer). Por ejemplo, liberan proteasas para favorecer la invasión y migración de las células tumorales. Estos macrófagos se localizan en regiones de hipoxia, por lo que el microambiente hipóxico parece que pueda favorecer su activación. " }) %>
-            <%= partial(:'components/card', :locals => { :title => "Neutrófilos: ", :body => "Representan entre el 50% y el 75% del total de leucocitos circulantes en sangre. Desempeñan un papel fundamental en la inflamación y son una de las primeras respuestas ante lo patógenos, incluyendo bacterias, virus y hongos. Se ha sugerido una función pro-metastásica de los neutrófilos, ya que pueden promover la permeabilidad vascular, estimular la invasión y proliferación de células tumorales en otros lugares a distancia de los tejidos. "}) %>
-          </div>          
-          <div class="card_row">
-            <%= partial(:'components/card', :locals => { :title => "Plaquetas: ", :body => "Son el segundo tipo de células más abundantes en sangre y juegan un papel importante en la hemostasia, trombosis e inflamación. Las plaquetas son una de las primeras células que interactúan con las células tumorales en el torrente sanguíneo. De hecho se observa un aumento del estado de hipercoagulabilidad en pacientes con cáncer como resultado de determinados factores pro-coagulantes producidos por las células tumorales. Se cree que las plaquetas forman una  barrera física alrededor de las células tumorales, protegiéndolas de la lisis mediada por los linfocitos natural killer. Por otra parte también mejoran la adhesión de las células tumorales al endotelio y promueven la permeabilidad del mismo. " }) %>
+            <p class= "indented margin5">Aunque los datos que soportan la profilaxis en pacientes con cáncer hospitalizados son escasos y los datos presentados de los pacientes hospitalizados sin cáncer no son extrapolables a los pacientes con cáncer, en ausencia de estudios específicos en esta población se recomienda profilaxis con anticoagulantes durante el ingreso en los pacientes hospitalizados con cáncer por enfermedad médica aguda o con movilidad reducida en ausencia de contraindicaciones para la anticoagulación y así lo <span class="container__highlight">reflejan las principales guías clínicas.</span> </p>
+
+            <p class= "indented margin5 container__highlight"> Los agentes recomendados son la heparina de bajo peso molecular o heparina no fraccionada.</p>     
           </div>
-          </div>  
 
-          <div id="microambiente-proceso">
-            <%= partial(:'components/header2', :locals => { :text => "Proceso de invasión y metástasis", :number => '02' }) %>
+          <div id="profilaxis-quirurgico">
+            <%= partial(:'components/header2', :locals => { :text => "Paciente quirúrgico", :number => '02' }) %>
+            <p class= "indented margin5">La cirugía supone un factor de riesgo de desarrollo de ETV en los pacientes con cáncer por diversos factores como la inmovilización, el estado protrombótico asociado al tumor, y los factores dependientes del acto quirúrgico como son el tiempo y tipo de anestesia y el grado de agresividad quirúrgica.</p>
+            <p class= "indented margin5">Todo paciente sometido a una intervención quirúrgica presenta un riesgo de desarrollar ETV asociada únicamente al acto quirúrgico. Este riesgo se puede incrementar si coexiste con otros factores de riesgo dependientes del paciente, como la edad o la comorbilidad asociada, u otros factores de riesgo no dependientes del paciente como el tipo de cirugía o el tiempo de inmovilización necesario para la recuperación.</p>
 
-             <p class= "indented margin5"> <%= t.cap2_t1 %></p>
-            <%= partial(:'components/image-big',  :locals => { :image => "images/cascada-metastasica.png", :title => "Figura 2: Cascada metastásica", :text => "", :id => "cascada-metastasica"}) %>
-          </div>  
+            <h4 class="margin5"><b>Tabla 1.Riesgo de ETV en pacientes sometidos a cirugía.</b></h4>
 
-          <div id="microambiente-invasion">
-             <%= partial(:'components/header3', :locals => { :text => "Invasión: ", :number => '02.01' }) %>
-             <p class="indented margin5"> La invasión tumoral es la capacidad de las células tumorales de alterar la membrana basal y penetrar en el estroma adyacente, y es la característica distintiva de la malignidad. Este proceso requiere cambios importantes en la morfología y fenotipo de las células, como es la pérdida de la capacidad de adhesión célula-célula, junto con la degradación de la matriz y motilidad celular (proceso enmarcado dentro de la transición epitelio-mesénquima (TEM)). </p>
-          </div>  
+            <table class="tabla margin5">
+              
+              <tr class="tabla__row">
+                <td class="tabla__row-header tabla__50">Muy bajo riesgo </td>
+                <td class="tabla__cell tabla__50">incidencia de ETV < 0,5% </td> 
+              </tr>
+              <tr class="tabla__row-gray">
+                <td class="tabla__row-header tabla__50">Bajo riesgo </td>
+                <td class="tabla__cell tabla__50">incidencia de ETV ~1,5% </td>
+              </tr>
+              <tr class="tabla__row">
+                <td class="tabla__row-header tabla__50">Moderado riesgo  </td>
+                <td class="tabla__cell tabla__50">incidencia de ETV ~3,0% </td> 
+              </tr>
+              <tr class="tabla__row-gray">
+                <td class="tabla__row-header tabla__50">Alto riesgo </td>
+                <td class="tabla__cell tabla__50">incidencia de ETV ~6,0%</td>
+              </tr>
+              </tr>
+            </table>
 
-          <div id="microambiente-intravasacion">          
-           <%= partial(:'components/header3', :locals => { :text => "Intravasación: ", :number => '02.02' }) %>
-           <p class="indented margin5"> La entrada de las células tumorales en la circulación puede ser a través de vasos sanguíneos o linfáticos. Durante este proceso se producen una serie de cambios en las células tumorales, ya que deben someterse a grandes deformaciones elásticas para penetrar a través del endotelio. Este paso al interior de los vasos sanguíneos puede estar motivado por estos cambios físicos, o bien por cambios estructurales en los propios vasos sanguíneos, que a su vez pueden facilitar la entrada de las células tumorales. Otra posibilidad es que se estimule la formación de nuevos vasos sanguíneos, que son más permeables y facilitan la entrada de las células tumorales (angiogénesis tumoral). </p>  
-          </div>  
+            <p class= "indented margin5">Existen escalas de evaluación de este riesgo. La escala más empleada es la escala de Caprini. Esta escala ha sido validada en varias poblaciones sometidas a cirugías (general, vascular, urológica, gastrointestinal, cirugía plástica y reconstructiva).</p>
 
-          <div id="microambiente-transporte">  
-           <%= partial(:'components/header3', :locals => { :text => "Transporte vascular: ", :number => '02.03' }) %>
-           <p class="indented margin5"> Durante su tránsito por el sistema circulatorio, las células tumorales están sujetas a fuerzas hemodinámicas, inmunológicas, situaciones de estrés y colisiones con otras células sanguíneas. El estrés del propio flujo sanguíneo puede ser suficiente para destruir la mayoría de las células tumorales. Estas células también deben tener la capacidad de evadir el sistema inmune, para lo cual muchas veces se sirven de las plaquetas como escudo, como ya se ha comentado previamente. </p>   
-          </div>  
+             <h4 class="margin5"><b>Tabla 1.Riesgo de ETV en pacientes sometidos a cirugía.</b></h4>
 
-          <div id="microambiente-detencion">
-           <%= partial(:'components/header3', :locals => { :text => "Detención: ", :number => '02.04' }) %>
-           <p class="indented margin5"> La circulación termina cuando llegan a un órgano a distancia. Dependiendo del tipo célula tumoral, cada una de ellas tiene preferencia por diferentes órganos (Tabla 1). En este aspecto se ha desarrollado la teoría de la “semilla y el suelo”: las células tumorales asentarán en un lugar donde el microambiente local sea favorable.</p>  
-          </div>  
+            <table class="tabla margin5">
+              
+             <tr class="tabla__row">
+                <th class="tabla__head tabla__row-header tabla__50 ">1 punto</th>
+                <th class="tabla__head tabla__50">2 puntos</th>
+                <th class="tabla__head tabla__50">3 puntos</th>
+                <th class="tabla__head tabla__50">5 puntos</th>
+              </tr>
+              <tr class="tabla__row">
+                <td class="tabla__cell tabla__50 align-top">
+                  <ul>
+                    <li>Edad 41-60 años</li>
+                    <li>Cirugía menor</li>
+                    <li>índice de masa corporal > 25kg/m2 </li>
+                    <li>Edema</li>
+                    <li>Varices</li>
+                    <li>Embarazo o postparto</li>
+                    <li>Antecedentes de aborto espontáneo o recidivante inexplicado</li>
+                    <li>Anticonceptivos orales o terapia hormonal sustitutiva</li>
+                    <li>Sepsis (< 1 mes antes)</li>
+                    <li>Neumonía grave, incluyendo neumonía (< 1 mes antes)</li>
+                    <li>Pruebas funcionales respiratorias alteradas</li>
+                    <li>Infarto agudo de miocardio</li>
+                    <li>Insuficiencia cardíaca congestiva (< 1 mes antes)</li>
+                    <li>Antecedentes de enfermedad inflamatoria intestinal</li>
+                    <li>Patología médica que exige reposo en la cama</li>
+                  </ul>
+                   
+                  
+                </td>
+                <td class="tabla__cell tabla__50 gray align-top"><ul>
+                  <li>Edad 61-74 años</li>
+                  <li>Cirugía artroscópica</li>
+                  <li>Cirugía abierta importante (< 45 min)</li>
+                  <li>Cirugía laparoscópica (< 45 min)</li>
+                  <li>Neoplasia</li>
+                  <li>Paciente encamado (> 72 horas)</li>
+                  <li>Inmovilización con escayola</li>
+                  <li>Acceso  venoso central</li>
+                </ul> </td>
+                <td class="tabla__cell tabla__50 align-top"><ul>
+                  <li>Edad ≥ 75 años</li>
+                  <li>Antecedentes  de ETV</li>
+                  <li>Antecedentes familiares de ETV</li>
+                  <li>Factor V Leiden</li>
+                  <li>Mutación 20210A de la protrombina</li>
+                  <li>Anticoagulante lúpico</li>
+                  <li>Anticuerpos anticardiolipina</li>
+                  <li>Hiperhomocisteinemia</li>
+                  <li>Trobocitopenia inducida por heparina</li>
+                  <li>Otras trombofilias congénitas o adquiridas</li>
+                </ul> </td>
+                <td class="tabla__cell tabla__50 gray align-top"><ul>
+                  <li>Ictus (< 1 mes antes) </li>
+                  <li>Artroscopia electiva</li>
+                  <li>Fractura de cadera, pelvis o extremidad inferior</li>
+                  <li>Traumatismo agudo de médula espinal (< 1 mes antes)</li>
+                </ul> </td>
+              </tr>
+              </tr>
+            </table>
 
-          <div id="microambiente-extravasacion">          
-           <%= partial(:'components/header3', :locals => { :text => "Extravasación: ", :number => '02.05' }) %>
-           <p class="indented margin5"> Tiene lugar cuando las células tumorales atraviesan el endotelio del vaso hacia el parénquima del tejido de destino. Los mecanismos que intervienen son muy similares a los de la invasión, donde intervienen moléculas de adhesión celular, proteinasas y factores de movilidad. En algunas ocasiones, las células tumorales pueden adherirse al endotelio y sobrevivir, para después crecer intravasalmente. </p>   
-          </div>  
+            <p class= "indented margin5">En función de la puntuación en la escala Caprini se establecen 4 grupos de riesgo con diferentes recomendaciones de profilaxis farmacológica y/o mecánica.</p>
 
-          <div id="microambiente-infiltracion">         
-             <%= partial(:'components/header3', :locals => { :text => "Infiltración y colonización: ", :number => '02.06' }) %>
-             <p class="indented margin5"> Representa un paso muy importante en la cascada metastásica. Muy pocas células, a pesar de llevar a cabo los procesos anteriores son capaces de colonizar el tejido de asiento. Incluso en algunos tipos de tumores, las metástasis pueden surgir décadas después, lo que indica que las células tumorales pueden sobrevivir en un estado de latencia durante largo períodos. Este proceso de infiltración y colonización depende en gran medida del microambiente tumoral, que puede favorecer el crecimiento de las células tumorales. </p> 
+            <h4 class="margin5"><b>Tabla 1.Riesgo de ETV en pacientes sometidos a cirugía.</b></h4>
 
+            <table class="tabla margin5">
+               <tr class="tabla__row">
+                <th class="tabla__head tabla__15 ">Puntuación Caprini</th>
+                <th class="tabla__head tabla__15">Nivel de riesgo</th>
+                <th class="tabla__head tabla__70">Recomendaciones</th>
+              </tr>
+              <tr class="tabla__row">
+                <td class="tabla__row-header tabla__15">0 </td>
+                <td class="tabla__cell tabla__15">Riesgo muy bajo</td> 
+                <td class="tabla__cell tabla__70">Para pacientes de cirugía general y abdominal-pélvica con <b>riesgo muy bajo de ETV</b>  (< 0,5%; puntuación de Rogers < 7; <b>puntuación de Caprini 0</b>) recomendamos no utilizar ninguna profilaxis farmacológica (Grado 1B) ni mecánica (Grado 2C) específicas, aparte de la <b>deambulación precoz.</b> </td> 
+              </tr>
+              <tr class="tabla__row-gray">
+                <td class="tabla__row-header tabla__15">1-2 </td>
+                <td class="tabla__cell tabla__15">Riesgo bajo</td>
+                <td class="tabla__cell tabla__70">Para pacientes de cirugía general y abdominal-pélvica con <b>riesgo bajo de ETV </b> (~1,5%; puntuación de Rogers 7-10; puntuación de <b>Caprini 1-2</b>), sugerimos que es mejor utilizar la <b> profilaxis mecánica</b>, preferiblemente con compresión neumática intermitente (CNI), que no emplear profilaxis (Grado 2C).</td>
+              </tr>
+              <tr class="tabla__row">
+                <td class="tabla__row-header tabla__15">3-4 </td>
+                <td class="tabla__cell tabla__15">Riesgo moderado</td>
+                <td class="tabla__cell tabla__70">Para pacientes de cirugía general y abdominal-pélvica con <b>riesgo moderado de ETV </b> (~3,0%; puntuación de Rogers > 10; puntuación de <b>Caprini 3-4</b>), <b>que no tienen riesgo alto de complicaciones importantes por hemorragia</b>, sugerimos que la <b>HBPM</b> (Grado 2B), la HNF en dosis bajas (Grado 2B) o la profilaxis mecánica, preferiblemente con CNI (Grado 2C), son alternativas mejores que la ausencia de profilaxis. 
+                <br>               
+                Para pacientes de cirugía general y abdominal-pélvica con <b>riesgo moderado de ETV</b> (3,0%; puntuación de Rogers > 1; puntuación de <b>Caprini 3-4</b>) que tienen <b> riesgo alto de complicaciones importantes por hemorragia</b> o para aquellos en quienes se cree que las consecuencias de la hemorragia son especialmente graves, sugerimos que la <b>profilaxis mecánica</b>, preferiblemente con CNI, es mejor que no aplicar profilaxis.
+                 </td>
+              </tr>
+              <tr class="tabla__row-gray">
+                <td class="tabla__row-header tabla__15"> ≥ 5  </td>
+                <td class="tabla__cell tabla__15">Riesgo alto</td> 
+                <td class="tabla__cell tabla__70">Para pacientes de cirugía general y abdominal-pélvica con <b>riesgo alto de ETV</b> (~6,0%; puntuación de <b>Caprini 5</b>), <b>que no tienen riesgo alto de complicaciones importantes por hemorragia</b>, recomendamos usar profilaxis farmacológica con HBPM (Grado 1B) o HNF en dosis bajas (Grado 1B), mejor que no usar ninguna profilaxis. Sugerimos que a la profilaxis farmacológica debería añadirse profilaxis mecánica con medias elásticas o CNI (Grado 2C).
+                <br>
+                Para pacientes de cirugía general y abdominal-pélvica con <b>riesgo alto de ETV que tiene riesgo alto de complicaciones importantes por hemorragia</b> o para aquellos en quienes se cree que las consecuencias de la hemorragia son especialmente graves, sugerimos que la profilaxis mecánica, preferiblemente con CNI, es mejor que no aplicar profilaxis <b>hasta que el riesgo de hemorragia disminuya y pueda iniciarse la profilaxis farmacológica</b> (Grado 2C).
+                <br>
+                Para pacientes con <b>riesgo alto de ETV tratados con cirugía abdominal o pélvica para un cáncer</b> y que por lo demás no tienen riesgo alto de complicaciones importantes por hemorragia, <b>recomendamos profilaxis farmacológica de duración prolongada (cuatro semanas) con HBPM</b> mejor que la profilaxis de duración limitada (Grado 1B).
+                </td> 
+              </tr>
+              </tr>
+            </table>
+            <div class="small-text">HBPM: Heparina de bajo peso molecular</div>
+            <div class="small-text">HNF: Heparina no fraccionada</div>
+
+            <p class= "indented margin5"> La profilaxis farmacológica puede hacerse con dosis bajas de HNF, HBPM, fondaparinux, o medidas físicas:  </p>
+
+            <%= partial(:'components/card', :locals => { :title => "HNF", :body => "
+              Las dosis bajas de HNF reducen la incidencia de TVP y TEP. Las dosis bajas empleadas son 5.000 UI 2h antes del preoperatorio y cada 8-12 horas en el postoperatorio." }) %> 
+            <%= partial(:'components/card', :locals => { :title => "HBMP", :body => "La eficacia de la HBMP frente a la HNF ha demostrado en múltiples estudios comparativos ser similar en la prevención de ETV con similares tasas de complicaciones (hemorragia) asociada, por lo que debido a su mayor comodidad el empleo de HBPM se ha convertido en la terapia más empleada en este contexto (posología inyección subcutánea una vez al día frente a tres veces al día).
+" }) %> 
+            <%= partial(:'components/card', :locals => { :title => "Fondaparinux", :body => "Fondaparinux ha sido comparado con HBPM (dalteparina) demostrando ser al menos tan eficaz como esta en la prevención de ETV en pacientes sometidos a cirugía abdominal de alto riesgo. Sin embargo, la guía ACCP 2012 sólo recomienda el empleo de fondaparinux en caso de contraindicación de HBPM o HNF." }) %>  
+
+
+            <%= partial(:'components/list',  :locals => { :list_items => [
+            ["", "La profilaxis recomendada en pacientes que van a ser sometidos a cirugía debe iniciarse previamente a la intervención,  <b>reiniciarse lo antes possible tras la cirugía</b>,  y durar al menos 7-10 días."], 
+            ["", "Se recomienda el empleo de HNF cada 8-12h o HBPM una vez al día."], 
+            ["", "El 40% de los eventos trombóticos se han descrito más allá de la tercera semana postcirugía; por este motivo diversos ensayos randomizados han comparado la tromboprofilaxis habitual de 7-10 días con una tromboprofilaxis extendida de 4 semanas de duración en pacientes sometidos a cirugía abdomino-pélvica de alto riesgo demostrando una reducción significativa de la incidencia de fenómenos trombóticos sin incremetar el riesgo de sangrado."], 
+            ["", "De forma unánime todas las guías clínicas recomiendan la tromboprofilaxis extendida en los pacientes sometidos a cirugía por cáncer abdomino-pélvica con factores de riesgo."], 
+            ["", "Existen pocos datos sobre la adecuada tromboprofilaxis de la cirugía laparoscópica oncológica. Recientemente se ha publicado un estudio italiano que comparaba la profilaxis de corta duración de 7-10 días frente a la profilaxis extendida de 4 semanas en pacientes sometidos a cirugía laparoscópica por cáncer colorrectal."], 
+            ["", "Se demostró una reducción significativa de los eventos tromboembólicos venosos en los pacientes que recibieron la profilaxis extendida (corta duración 9,7% versus 0% profilaxis extendida, p =0,001) sin incrementar el riesgo de sangrado."]]}) %>
+          </div>
+
+          <div id="profilaxis-cateter">
+            <%= partial(:'components/header2', :locals => { :text => "Paciente portador de catéter venoso central (port –a- cath)", :number => '03' }) %>
+
+
+            <p class= "indented margin5">La colocación de catéter venoso central en los pacientes oncológicos para facilitar el tratamiento y evitar complicaciones del mismo es una práctica cada día más habitual. Una de las complicaciones asociadas a la colocación de catéter es la aparición de ETV en miembros superiores que aparece en el 2-5% de estos pacientes. La fabricación de catéters con nuevos materiales menos trombogénicos parece haber reducido el riesgo de esta complicación en las últimas décadas.</p>
+
+            <p class= "indented margin5">Múltiples estudios, incluyendo un metanálisis, sugieren que debe ser posicionado en el lado derecho, en la vena yugular con el catéter posicionado en la auricular derecha en su unión con la vena cava superior. 
+            <br>
+            El tratamiento recomendado en caso de trombosis, es la HBPM durante 3-6 meses y valorar individualmente cada caso para mantener dicha terapia en caso de mantener el catéter.
+            <br>
+            Los nuevos anticoagulants orales directos, pueden ser considerados una opción, aunque hay menos evidencia científica que avale su uso. 
+            <br>
+            No se recomienda la retirada, salvo infección, contraindicación de anticoagulación o fallo de tratamiento anticoagulante. </p>
+
+
+            <p class= "indented margin5">Se han desarrollado múltiples estudios con el objetivo de valorar el beneficio de la profilaxis con HBPM o warfarina en estos pacientes pero ninguno de estos estudios ha demostrado que exista beneficio significativo asociado a esta práctica y sin embargo si se objetivó un aumento de las complicaciones en forma de sangrados.</p>
+
+            <%= partial(:'components/concepto-clave', :locals => { :title => "", :text => "Las guías NCCN, ESMO, ASCO, SEOM y ACCP no recomiendan el empleo sistemático de profilaxis antitrombótica en este grupo de pacientes. "})%>
+
+          </div>
+
+          <div id="profilaxis-ambulatorio">
+            <%= partial(:'components/header2', :locals => { :text => "Paciente médico en tratamiento con quimioterapia en un medio ambulatorio", :number => '04' }) %>
+            <p class= "indented margin5">El riesgo de ETV en pacientes ambulatorios es menor que en los pacientes hospitalizados. Sin embargo existen distintos factores de riesgo que contribuyen a que la incidencia de estos eventos sea mayor en algunos pacientes en tratamiento ambulatorio con quimioterapia</p>
+            
+            <p class= "indented margin5">El empleo de quimioterapia aumenta en más de 6 veces el riesgo de ETV. <b>Este riesgo alcanza el 30% en población con Cáncer de páncreas o pulmón ALK o ROS-1 positivo.</b> En los últimos años se han realizado varios estudios y se ha publicado un metanálisis que han permitido demostrar el beneficio del empleo de heparinas de bajo y ultrabajo peso molecular en la profilaxis de ETV en pacientes con cáncer de hasta un 50%, sin demostrar impacto en la supervivencia ni mortalidad . </p>
+
+            <br>
+
+            <div id="factores-estudios">
+              <%= partial(:'components/header3', :locals => { :text => "Estudios de tromboprofilaxis ambulatoria en pacientes con cáncer en tratamiento con quimioterapia.", :number => '04.01' }) %> 
+
+              <%= partial(:'components/card', :locals => { :title => "PROTECHT", :body => "Evaluó en 1150 pacientes con tumores sólidos avanzados o localmente avanzados el empleo de nadroparina frente a placebo. Se objetivó una reducción significativa de los eventos trombóticos arteriales o venosos reduciéndose del 3,9% en los pacientes tratados con placebo frente al 2% con nadroparina sin aumento en complicaciones hemorrágicas." }) %> 
+
+              <%= partial(:'components/card', :locals => { :title => "FRAGEM-UK", :body => "Realizado en 123 pacientes con cáncer de páncreas, comparaba el tratamiento profiláctico con dalteparina asociada a gemcitabina frente a gemcitabina sola. La incidencia de ETV disminuyo del 25% con gemcitabina frente a 3,5% con dalteparina-gemcitabina de manera significativa objetivándose también la desaparición de los eventos tromboembólicos mortales a los 100 días en la rama de estudio (0% con dalteparina-gemcitabina frente a 9% con gemcitabina)." }) %> 
+
+              <%= partial(:'components/card', :locals => { :title => "CONKO-004", :body => "Seleccionó 312 pacientes con cáncer de páncreas avanzado o localmente avanzado, que fueron aleatorizados para recibir quimioterapia estándar con o sin enoxaparina. Se demostró una reducción significativa de los eventos tromboembólicos venosos a los 3 meses (9,87% con quimioterapia frente a 1,25% con quimioterapia- enoxaparina) y a los 12 meses (15% con quimioterapia frente a 5% con quimioterapia-enoxaparina)." }) %> 
+
+              <%= partial(:'components/card', :locals => { :title => "SAVE-ONCO", :body => "Analizó en 3.212 pacientes con tumor sólido avanzado o localmente avanzado, el tratamiento con quimioterapia más placebo frente a quimioterapia más semuloparina (heparina de ultrabajo peso molecular) y demostró una reducción de eventos tromboembólicos (3,4% con placebo y 1,2% con semuloparina; p <0,001). No se objetivaron diferencias significativas en las complicaciones hemorrágicas." }) %> 
+
+              <%= partial(:'components/card', :locals => { :title => "PRODIGE", :body => "Se trata de un studio aleatorizado que incluyó 186 pacientes con glioma. Se aleatorizaron a recibir Dalteparina 5000 UI/24h o placebo durante 6 meses iniciándose durante las 4 semanas tras la cirugía. El tratamiento se mantuvo hasta los 12 meses. El objetivo primario fue comparer el riesgo acumulado de ETV a los 6 meses. Este studio objetivó una tendencia a menor ETV y mayor sangrado intracranial en el subgrupo tratado con Dalteparina, aunque este resultado no fue significativo." }) %> 
+
+              <%= partial(:'components/card', :locals => { :title => "FRAGMATIC", :body => "Se trata de un estudio aleatorizado que incluyó 2202 pacientes con cancer de pulmón. Fueron aleatorizados a recibir tratamiento con Dalteparina 5000 UI/24h durante 24 semanas o placebo en combinación con la quimioterapia estándar. Se observe una disminución significativa del riesgo de thrombosis del 4,2%. No se observaron diferencias significativas en sangrado." }) %> 
+
+              <%= partial(:'components/card', :locals => { :title => "PHACS", :body => "Se trata de un estudio aleatorizado que incluyó 98 pacientes con cualquier tipo de tumor con Khorana score superior a 2 que comenzaban Nuevo tratamiento con quimioterapia. Se aleatorizarona tratamiento con Dalteparina 5000 UI/24h durante 12 semanas frente a placebo. No se observaron diferencias significativas en la incidencia de ETV aunque sí fue menor en los pacientes anticoagulados. Tampoco se observaron diferencias significativas en sangrados mayores, objetivándose una mayor incidencia de sangrados clínicamente relevantes en los pacinetes tratados con dalteparina." }) %> 
+
+              <h4 class="margin5"><b>Tabla 5. Estudios de tromboprofilaxis ambulatoria en pacientes con cáncer en tratamiento con quimioterapia.</b></h4>
+
+             <table class="tabla margin5">
+              <tr class="tabla__row">
+                <th class="tabla__head tabla__row-header  ">Estudio</th>
+                <th class="tabla__head ">Número de pacientes</th>
+                <th class="tabla__head ">Tipo de tumor</th>
+                <th class="tabla__head ">Riesgo de trombósis</th>
+                <th class="tabla__head ">LMWH</th>
+                <th class="tabla__head ">Dósis</th>
+              </tr>
+              <tr class="tabla__row ">
+                <td class="tabla__row-header ">PROTECHT Lancet Onc'09</td>
+                <td class="tabla__cell ">1150</td>
+                <td class="tabla__cell ">Pulmón, páncreas, estómago, colorectal, pecho, ovarios, cabeza y cuello</td>
+                <td class="tabla__cell ">Alto (páncreas, estómago), bajo (pecho, cabeza y cuello)</td>
+                <td class="tabla__cell ">Nadroparin</td>
+                <td class="tabla__cell ">3800 UI/24h</td>
+              </tr>
+              <tr class="tabla__row-gray">
+                <td class="tabla__row-header  ">FRAGEM-UK</td>
+                <td class="tabla__cell ">123</td>
+                <td class="tabla__cell ">Páncreas</td>
+                <td class="tabla__cell ">Alto</td>
+                <td class="tabla__cell ">Dalteparin</td>
+                <td class="tabla__cell ">200 UI/kg/24h <br> x4wk seguido <br>150 UI/kg/24h <br> x8wk </td>
+              </tr>
+              <tr class="tabla__row">
+                <td class="tabla__row-header  ">CONKO-004</td>
+                <td class="tabla__cell ">312</td>
+                <td class="tabla__cell ">Páncreas</td>
+                <td class="tabla__cell ">Alto</td>
+                <td class="tabla__cell ">Enoxaparin</td>
+                <td class="tabla__cell ">1 mg/kg/24h <br> x3m seguido <br>40 mg/24h x3m</td>
+              </tr>
+              <tr class="tabla__row-gray">
+                <td class="tabla__row-header  ">SAVE-ONCO NEJM'12</td>
+                <td class="tabla__cell ">3212</td>
+                <td class="tabla__cell ">Pulmón, estómago, colorectal, páncreas, riñón y ovarios</td>
+                <td class="tabla__cell ">Medio-alto</td>
+                <td class="tabla__cell ">Semuloparin</td>
+                <td class="tabla__cell ">20 mg/24h </td>
+              </tr>
+              <tr class="tabla__row">
+                <td class="tabla__row-header  ">PRODIGE</td>
+                <td class="tabla__cell ">186</td>
+                <td class="tabla__cell ">Glioma</td>
+                <td class="tabla__cell ">Alto</td>
+                <td class="tabla__cell ">Dalteparin</td>
+                <td class="tabla__cell ">5000 IU/24h 6 meses</td>
+              </tr>
+              <tr class="tabla__row-gray">
+                <td class="tabla__row-header  ">FRAGMATIC</td>
+                <td class="tabla__cell ">2202</td>
+                <td class="tabla__cell ">Pulmón</td>
+                <td class="tabla__cell ">Alto</td>
+                <td class="tabla__cell ">Dalteparin</td>
+                <td class="tabla__cell ">5000 IU/24h 24 semanas</td>
+              </tr>
+              <tr class="tabla__row">
+                <td class="tabla__row-header  ">PHACS</td>
+                <td class="tabla__cell ">98</td>
+                <td class="tabla__cell ">Todos los timos de tumores</td>
+                <td class="tabla__cell ">Alto (páncreas, gastrico), Bajo (pecho)</td>
+                <td class="tabla__cell ">Dalteparin</td>
+                <td class="tabla__cell ">5000 IU/24h 12 semanas</td>
+              </tr>
+              </tr>
+            </table>
+            <br>
+
+             <table class="tabla margin5">
+              <tr class="tabla__row">
+                <th class="tabla__head tabla__row-header  ">Estudio</th>
+                <th class="tabla__head ">VTE (%) <br> CT + LMVH vs CT</th>
+                <th class="tabla__head ">Sangrado mayor <br> CT + LMVH vs QT</th>
+                <th class="tabla__head ">Sangrado menor <br> CT + LMVH vs CT</th>
+              </tr>
+              <tr class="tabla__row ">
+                <td class="tabla__row-header ">PROTECHT Lancet Onc'09</td>
+                <td class="tabla__cell ">2,0% vs 3,9% *(VTE+AE) <br> p= 0,02</td>
+                <td class="tabla__cell ">0,7% vs 0% <br> p=0,18</td>
+                <td class="tabla__cell ">7,4% vs 7,9%</td>
+              </tr>
+              <tr class="tabla__row-gray">
+                <td class="tabla__row-header  ">FRAGEM-UK</td>
+                <td class="tabla__cell ">23,0% vs 3,4% <br> RR 0,145, p=0,002</td>
+                <td class="tabla__cell ">3,4% vs 3,2%</td>
+                <td class="tabla__cell ">9,0% vs 3,0%</td>
+              </tr>
+              <tr class="tabla__row">
+                <td class="tabla__row-header  ">CONKO-004 <br> ASCO'10</td>
+                <td class="tabla__cell ">5,0% vs 14,5% <br> p<0,05</td>
+                <td class="tabla__cell ">Ninguna diferencia <br>p=NS</td>
+                <td class="tabla__cell ">NR</td> 
+              </tr>
+              <tr class="tabla__row-gray">
+                <td class="tabla__row-header  ">SAVE-ONCO NEJM'12</td>
+                <td class="tabla__cell ">1,2% vs 3,4% <br> HR 0,36, p<0,001</td>
+                <td class="tabla__cell ">1,2% vs 1,2%</td>
+                <td class="tabla__cell ">1,6% vs 0,9%</td>
+              </tr>
+              <tr class="tabla__row">
+                <td class="tabla__row-header  ">PRODIGE</td>
+                <td class="tabla__cell ">9,1 vs 15%, <br>HR 0,51; <br>p=0,29</td>
+                <td class="tabla__cell ">3,0 vs 0% <br>NS</td>
+                <td class="tabla__cell ">-</td> 
+              </tr>
+              <tr class="tabla__row-gray">
+                <td class="tabla__row-header  ">PHACS</td>
+                <td class="tabla__cell ">12% vs 21%,<br> HR 0,69:p=NS</td>
+                <td class="tabla__cell ">2 vs 2% <br> NS</td>
+                <td class="tabla__cell ">6 vs 2% (minor) <br> 14 vs 2% p<0,05 (clinically relevant)</td> 
+              </tr>
+              </tr>
+            </table>
+
+            <p class= "indented margin5">Como demuestran algunos estudios mencionados previemente y un reciente metanálisis (Ben-Aharon et al.), la HBPM disminuye los ETV hasta en un 50%. Esta reducción es aun mayor en pacientes con cancer de páncreas y pulmón. Como consecuencia de esta terapia profiláctica sí se observa una mayor incidencia de sangrados menores, sin aumentar los mayores de manera significativa ni impactar en la mortalidad.</p>
+                     
+            <p class= "indented margin2">Por lo tanto la terapia con HBPM en pacientes de alto riesgo parece ser segura y disminuir la incidencia de eventos trombóticos en estos enfermos.</p>
+          </div>
           
+          <div id="factores-estudios">
+            
+            <%= partial(:'components/header3', :locals => { :text => "Papel de los anticoagulantes directos en la profilaxis ambulatoria en pacientes con cáncer.", :number => '04.02' }) %> 
 
+            <p class= "indented margin2">En los últimos años hemos ido conociendo nuevos datos acerca de los anticoagulantes directos. Los nuevos anticoagulantes orales directos parecen abrir una puerta al tratamiento oral antiocoagulante en pacientes con cáncer. Dos estudios recientes (Estudio AVERT y CASSINI) y dos metanálisis (Beccatini et al. y Li et al.) revelan la existencia de un beneficio significativo en la prevención de ETV con una incidencia acceptable de sangrados mayores.</p>
 
+            <p class= "indented margin2">En el studio AVERT, se evaluó el papel de Apixaban 2,5 mg/12 horas durante 6 meses en pacientes con distintos tipos de tumores con Score Khorana de alto riesgo. Se objetivo una disminución del porcentaje de ETV del 6%, aunque con mayor riesgo de sangrado. No se observaron diferencias en supervivencia.</p>
 
-         			<table class="tabla margin5">
-        		    <tr class="tabla__row">
-        		      <th class="tabla__head tabla__row-header tabla__25 ">Tipo de Tumor</th>
-        		      <th class="tabla__head">Lugar de metástasis</th>
-        		    </tr>
-        		    <tr class="tabla__row ">
-        		      <td class="tabla__row-header tabla__25">Mama</td>
-        		      <td class="tabla__cell">Ganglios linfáticos axilares, pulmón, pleura, hígado, hueso, cerebro, glándula suprerrenal </td>
-        		    </tr>
-        		    <tr class="tabla__row-gray">
-        		      <td class="tabla__row-header tabla__25">Colon</td>
-        		      <td class="tabla__cell">Ganglios linfáticos regionales, hígado, pulmón, invasión por contigüidad a vejega o estómago</td>
-        		    </tr>
-        		    <tr class="tabla__row">
-        		      <td class="tabla__row-header tabla__25">Riñón</td>
-        		      <td class="tabla__cell">Pulmón, hígado, hueso</td>
-        		    </tr>
-        		    <tr class="tabla__row-gray">
-        		      <td class="tabla__row-header tabla__25">Pulmón</td>
-        		      <td class="tabla__cell">Ganglios linfáticos regionales, pluera,hígado, hueso, cerebro, glándula suprerrenal, bazo</td>
-        		    </tr>
-        		    <tr class="tabla__row">
-        		      <td class="tabla__row-header tabla__25">Ovario</td>
-        		      <td class="tabla__cell">Peritoneo, Ganglios linfáticos regionales, pulmón, hígado</td>
-        		    </tr>
-        		    <tr class="tabla__row-gray">
-        		      <td class="tabla__row-header tabla__25">Páncreas</td>
-        		      <td class="tabla__cell">Hígado, invasión por continuidad a estómago, colon, peritoneo</td>
-        		    </tr>
-        		    <tr class="tabla__row">
-        		      <td class="tabla__row-header tabla__25">Próstata</td>
-        		      <td class="tabla__cell">Hueso, Ganglios linfáticos regionales</td>
-        		    </tr>
-        		    <tr class="tabla__row-gray">
-        		      <td class="tabla__row-header tabla__25">Gástrico</td>
-        		      <td class="tabla__cell">Ganglios linfáticos regionales, hígado, pulmón, hueso</td>
-        		    </tr>
-        		    <tr class="tabla__row">
-        		      <td class="tabla__row-header tabla__25">Testículo</td>
-        		      <td class="tabla__cell">Ganglios linfáticos regionales, pulmón, hueso</td>
-        		    </tr>
-        		    <tr class="tabla__row-gray">
-        		      <td class="tabla__row-header tabla__25">Vejiga</td>
-        		      <td class="tabla__cell">Invasión por continuidad a recto, colon, próstata, uréter, vagina, hueso, ganglios linfáticos regionales, pulmón, peritoneo, hígado, cerebro  </td>
-        		    </tr>
-        		    <tr class="tabla__row">
-        		      <td class="tabla__row-header tabla__25">Endometrio</td>
-        		      <td class="tabla__cell">Ganglios linfáticos regionales, pulmón, hígado, ovario</td>
-        		    </tr>
-        		  </table>
+            <p class= "indented margin2">Por otro lado en el estudio CASSINI, se evalúo el papel de Rivaroxaban 10 mg al día 6 meses en pacientes de alto riesgo por Khorana score con cualquier tipo de tumor. No se observaron diferencias en el analisis inicial por intencion de tratar en el porcentaje de ETV en ambas ramas, pero sí disminuye la incidencia de ETV un 3,8% de manera significativa cuando se analizaron los datos en el análisis por protocolo. No se observaron diferencias en sangrados ni mortalidad en ambas ramas.</p>
 
+            <p class= "indented margin2">Por dicho motivo, estas terapias, son una nueva opción terapeútica para nuestros enfermos, también en el escenario de la profilaxis.</p>
 
-          </div>  
-
-          <div id="microambiente-angiogenesis">
-
-           
-            <%= partial(:'components/header2', :locals => { :text => "Angiogénesis tumoral", :number => '03 ' }) %>
-            <%= partial(:'components/image-big',  :locals => { :image => "images/angiogenesis.png", :title => "Figura 3: Pasos de la angiogénesis tumoral.  ", :text => "Figura modificad de <i> Siemann DW. Vascular targeting agents. Horizons in Cancer Therpeutics: From Bench to Bedise. 2002; 3(2):4-15. </i> ", :id => "angiogenesis"}) %>
-
-            <p class="indented margin5"> Los tumores sólidos requieren que el sistema vascular crezca más allá de unos 2mm de diámetro, el tamaño mínimo para permitir la difusión de oxígeno y de nutrientes. La vasculatura tumoral supera con creces este límite, proporcionando a la vez un conducto a través del cual las células tumorales pueden diseminarse por el torrente sanguíneo. El descubrimiento de la angiogésis tumoral, logró que en 2003 se marcara un hito en el tratamiento del cáncer, cuando la FDA aprobó el anticuerpo monoclonal Avastin (Bevacizumab) como tratamiento de primera línea para el cáncer colorrectal metastásico. A continuación, se dará una visión global de la angiogénesis tumoral, destacando algunas de la vías moleculares que regulan este proceso.</p>  
-          </div>  
-
-          <div id="microambiente-formacion">
-
-
-          <%= partial(:'components/header3', :locals => { :text => "Formación de vasos sanguíneos tumorales", :number => '03.01' }) %>
-
-
-          <p class="indented margin5">Los vasos sanguíneos de los tumores se caracterizan por estar muy desorganizados en comparación con los de órganos normales. Son tortuosos y deformes y a veces terminan en lagos de sangre abiertos. Estos vasos tienen “aperturas” entre las células endoteliales y una cobertura deficiente por parte de los pericitos, lo que explica la mayor permeabilidad de los mismos. Los patrones de flujo suelen ser lentos y desiguales. En los tumores de crecimiento rápido, la regulación angiogénica aberrante puede no llegar a ser suficiente, produciéndose regiones de anoxia y/o isquemia localizada. Esto a su vez produce un feedback, puesto que la hipoxia promueve directamente la señalización angiogénica en los tumores.</p> 
-
-          <p class="indented margin5">Numerosas moléculas regulan diferentes aspectos de la angiogénesis, tanto fisiológica. como tumoral. La principal es la familia de factores de crecimiento del endotelio vascular (VEGF – vascular endothelial growth factor), que junto con sus receptores, regulan la proliferación, la supervivencia y la función de las células endoteliales. </p>
-
-          <p class="indented margin5"> <span class="container__highlight">VEGF:</span>  El factor de crecimiento del endotelio vascular (conocido como VEGF-A), es uno de los factores angiogénicos más estudiados. Estimula la proliferación de las células endoteliales, la supervivencia y la permeabilidad de los vasos sanguíneos. Pertenece a una familia de factores de crecimiento (VEGF-B, VEGF-C y VEGF-D, entre otros). En modelos de ratones se observó que la pérdida de un solo alelo VEGF daba lugar a la letalidad temprana en los embriones de ratón, caracterizada por una morfología anormal de los vasos sanguíneos. </p>
-
-          <p class="indented margin5">  VEGF se une a sus receptores análogos, VEGFR1 y VEGFR-2. El más potente es el receptor VEGFR-2, que activa de forma robusta varias vías que conducen a la proliferación de células endoteliales. La eliminación de este receptor también produce la letalidad embrionaria en ratones. Se ha demostrado que algunas células tumorales sobreexpresan VEGF. Además, muchas otras proteínas relacionadas con la oncogénesis, como KRAS, HER2 o p53 regulan la angiogénesis mediante la inducción de expresión de VEGF.</p>
-
-          <p class="indented margin5">  El tratamiento con anti-VEGF/VEGFR se ha demostrado que tiene efectos antivasculares y puede inducir la normalización vascular. Los tumores más sensibles a este tratamiento son aquellos más vascularizados, y que dependen más de esta factor de crecimiento endotelial. Actualmente existen más de 10 antiangiogénicos que bloquean VEGF (bevacizumab, regorafenib, ramucirumab, sorafenib, sunitinib, pazopanib, axitinib, lenvatinib, cabozantinib, etc) aprobados por la FDA. </p>
-
-         <%= partial(:'components/image-big',  :locals => { :image => "images/crecimiento-endotelial.png", :title => "Figura 4: Factores de crecimiento endotelial y sus receptores.", :text => "", :id => "crecimiento-endotelial"}) %>
-
+          ------
           
-     
-          </div>  
-      
-
-
-
-    <div class="content--2" id="microambiente-biblio">
-      <%= partial(:'components/header1', :locals => { :text => t.bibliografia}) %>
-      <ul class= "list">
-        <%= partial(:'components/biblio',  :locals => { :author => "DeVita VT, Lawrence TS, Rosenberg SA. ", :title => "DeVita, Hellman, and Rosenberg´s cancer: principles & practice of oncology. 11th Edition, Philadelphia, Wolters Kluwer. 2019.", :link => ""}) %>
-        <%= partial(:'components/biblio',  :locals => { :author => "Medelsohn J, Howley PM, Israel MA, Gray JW, et al. ", :title => "The molecular basis of cancer. Philadelphia, Elsevier. 2015. ", :link => ""}) %>
-        <%= partial(:'components/biblio',  :locals => { :author => "Niederhuber JE, Armitage JO, Doroshow JH, Kastan MB, et al. ", :title => "Abeloff´s Clinical Oncology, 6th Edition. Elsevier, 2019. ", :link => ""}) %>
-        <%= partial(:'components/biblio',  :locals => { :author => "Hanahan D and Weinberg RA. ", :title => "The hallmarks of cancer. Cell, 2000. 100 (1):57-60.", :link => ""}) %>
-        <%= partial(:'components/biblio',  :locals => { :author => "Hanahan D and Weinberg RA. ", :title => "Hallmarks of cancer: the next generation. Cell, 2011. 144 (5):646-74.", :link => ""}) %>
-        <%= partial(:'components/biblio',  :locals => { :author => "Coultas L, Chawengsaksophak K, ROssant J. ", :title => "Endothelial cells and VEGF in vascular development. Nature, 2005; 438:937-945.", :link => ""}) %>
-        <%= partial(:'components/biblio',  :locals => { :author => "Siemann DW. ", :title => "Vascular targeting agents. Horizons in Cancer Therpeutics: From Bench to Bedise. 2002; 3(2):4-15.", :link => ""}) %>
-        <%= partial(:'components/biblio',  :locals => { :author => "Ferrara N, Gerber HP, LeCouter J. ", :title => ". The biology of VEGF and its receptors. Nat Med 2003; 9:669-76.", :link => ""}) %>
-      </ul>
-    </div>
-
-    
-
-
-
 
       </div>
   </div>
