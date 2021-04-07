@@ -1,0 +1,336 @@
+
+<% t =  data.origen%>
+<div id="home">
+  <%=partial(:'components/sidebar-respuesta')  %>
+
+  <div id="main">
+    <div class="container">
+      <div class="content">
+        <div id="tratamiento-presentacion">
+          <%= partial(:'components/header1', :locals => { :text => "Tratamiento"}) %>
+          <%= partial(:'components/header2', :locals => { :text => t.presentacion, :number => ' ' }) %>
+          <p class= "indented margin5 "> Debido al aumento en la incidencia de ETV asociada a cáncer es de relevante importancia conocer como abordar estos pacientes, cuál es el tratamiento óptimo y cuánto debe durar este tratamiento.  </p>
+          <br>
+        </div>
+
+        <br><br>
+
+        <div id="tratamiento-objetivos">
+          <%= partial(:'components/header2', :locals => { :text => t.objetivos, :number => ' ' }) %>
+          <%= partial(:'components/list',  :locals => { :list_items => [
+            ["", "Repasar el tratamiento de la ETV asociada a cáncer."], 
+            ["", "Conocer las indicaciones de trombólisis y colocación de filtro de vena cava. "], 
+            ["", "Repasar el tratamiento de la ETV a corto y largo plazo."], 
+            ["", "Repasar el tratamiento de la ETV incidental."]]}) %>
+
+
+  
+        </div>
+
+        <div id="tratamiento-indicaciones">
+          <%= partial(:'components/header2', :locals => { :text => "Indicaciones de tratamiento trombolítico inicial y de filtro de vena cava", :number => '01' }) %>
+          <div id="tratamiento-introduccion">
+              <%= partial(:'components/header3', :locals => { :text => "Introducción", :number => '01.01' }) %> 
+
+          <p class="indented margin5">El cáncer constituye un factor de riesgo independiente para desarrollar tromboembolia. La incidencia de ETV en los pacientes con cáncer es superior a la de la población en general como ya hemos mencionado previamente.</p>
+          <p class="indented margin5">La ETV (en forma de TVP o TEP) en los pacientes con cáncer conlleva el riesgo de un aumento de dos a cinco veces en la tasa de recurrencia y de dos a seis veces en la de hemorragia grave con respecto a la población general, y suele correlacionarse con etapas avanzadas de la enfermedad.</p>
+
+          <%= partial(:'components/concepto-clave', :locals => { :title => "idea clave", :text => "El tratamiento de la ETV pretende mejorar los síntomas, evitar la progresión del trombo, prevenir la embolia de pulmón, reducir el riesgo de recurrencia y disminuir el riesgo de síndrome postrombótico e hipertensión pulmonar."}) %>
+
+          <p class="indented margin5">El tratamiento anticoagulante, que es la base del tratamiento de la ETV, debe iniciarse tan pronto como sea posible.</p>
+        </div>
+
+        <div id="tratamiento-establecida">
+          <%= partial(:'components/header3', :locals => { :text => "Tratamiento de la ETV establecida", :number => '01.02' }) %> 
+
+          <p class="indented margin5">El tratamiento anticoagulante, que es la base del tratamiento de la ETV, debe iniciarse tan pronto como sea posible.</p>
+
+            <%= partial(:'components/list',  :locals => { :list_items => [
+            ["","<b> La fase aguda</b>, que comprende los primeros 5 a 10 días desde el diagnóstico y pretende mejorar los síntomas, evitar la progresión del trombo y prevenir la embolia pulmonar mortal."], 
+            ["","<b>La fase de tratamiento a largo plazo</b> (profilaxis secundaria), que tiene como objetivo prevenir las recurrencia de la ETV y disminuir las complicaciones a largo plazo (síndrome postrombótico e hipertensión pulmonar). La duración deesta fase es de al menos 3 a 6 meses."]]}) %> 
+          <p class="indented margin5">El tratamiento anticoagulante a dosis terapéuticas debe iniciarse lo antes posible con HBPM. Hay que tener en cuenta las contraindicaciones absolutas y relativas de anticoagulación.</p> 
+        </div>
+
+        <div id="tratamiento-absolutas">
+          <%= partial(:'components/header3', :locals => { :text => "Contraindicaciones absolutas", :number => '01.03' }) %> 
+
+          <p class="indented margin5">El tratamiento anticoagulante, que es la base del tratamiento de la ETV, debe iniciarse tan pronto como sea posible.</p>
+
+          <%= partial(:'components/list',  :locals => { :list_items => [
+            ["","Hemorragia reciente en SNC."], 
+            ["","Lesión espinal con alto riesgo de sangrado."], 
+            ["","Hemorragia mayor activa que requiere trasfusión de más de 2 concentrados de hematíes en 24h."], 
+            ["","Punción lumbar reciente."]]}) %> 
+        </div>
+
+        <div id="tratamiento-relativas">
+          <%= partial(:'components/header3', :locals => { :text => "Contraindicaciones relativas", :number => '01.04' }) %> 
+
+          <p class="indented margin5">El tratamiento anticoagulante, que es la base del tratamiento de la ETV, debe iniciarse tan pronto como sea posible.</p>
+
+          <%= partial(:'components/list',  :locals => { :list_items => [
+            ["","Sangrados crónicos."], 
+            ["","Hemorragia clínicamente significativa (> 48h)."], 
+            ["","Cirugía mayor reciente asociada a un alto riesgo de sangrado. "], 
+            ["","Trombocitopenia (< 50.000)."], 
+            ["","Disfunción grave de plaquetas."], 
+            ["","Coagulopatía sistémica."]]}) %> 
+        </div>
+
+        <p class="indented margin5">El tratamiento de la fase aguda ha cambiado en los últimos años. La publicación reciente de dos revisiones Cochrane en 2017 y 2018 ha establecido un cambio en la pauta de tratamiento junto a los recientes resultados de los ensayos clínicos con HBPM y anticoagulants directos.</p>
+
+        <p class="indented margin2">En la revision Cochrane publicada en 2017, se observa una menor mortalidad en el grupo de pacientes con cancer tratados con HBPM frente a los tratados con HNF. (OR 0,53 IC 95% (0,33-0,85;p=0,009).</p>
+
+        <p class="indented margin2">Sin embargo, en la revision Cochrane publicada en 2018, se observa una tendencia al descenso en la mortalidad a los 3 meses (RR 0,66, IC 95% 0,40-1,10) y una menor tasa de recurrencias con HBPM comparado con HNF (RR 0,69 IC 95% 0,27-1,76), no significativa. Fondaparinux no fue diferente a HBPM ni HNF en este escenario ni en mortalidad, recurrencia ni sangrados. </p>
+
+        <p class="indented margin2">A su vez, los resultados recientes del studio SELECT-D ofrecen datos esperanzadores de los nuevos anticoagulantes orales en esta fase posicianando a  Rivaroxaban como una nueva opción terapéutica, ya que su uso en esta fase inicial demostró similar eficacia que HBPM.</p>
+
+        <p class=" margin2"> <b>Recomendaciones:</b></p>
+
+         <%= partial(:'components/o-list',  :locals => { :list_items => [
+            ["1","EL tratamiento de elección es la HBPM."], 
+            ["2","Rivaroxaban puede iniciarse en esta fase inicial si existe bajo riesgo de sangrado y en ausencia de interacciones medicamentosas."], 
+            ["3","La heparina no fraccionada y Fondaparinux se consideran alternativas a la HBPM y la terapia oral con anticoagulants directos, cuando ambos no puedan ser administrados."]]}) %> 
+        </div>
+
+        <div id="tratamiento-trombolisis">
+          <%= partial(:'components/header3', :locals => { :text => "Trombolísis", :number => '01.05' }) %> 
+
+        <p class="indented margin5">Debido a la ausencia de ensayos randomizados específicos de pacientes con cáncer las indicaciones de la terapia trombolitica son esencialmente las mismas que en los pacientes sin cáncer. En general se recomienda el empleo de trombolísis en pacientes con cáncer con eventos trombóticos que comprometan la vida o la pérdida de un miembro. Las indicaciones y los potenciales beneficios deben de ser valorados individualmente de forma cuidadosa ante ante el alto riesgo de sangrado y hemorragia fatal asociada a la terapia trombolítica.</p>
+      </div>
+
+      <div id="tratamiento-filtro">
+          <%= partial(:'components/header3', :locals => { :text => "Filtro de vena cava", :number => '01.06' }) %> 
+
+        <p class="indented margin5">Debe considerarse la colocación de filtro de vena cava en los pacientes con TVP aguda proximal de miembros inferiores o con TEP que presenten contraindicaciones absolutas para la anticoagulación. Debe considerarse igualmente en los pacientes con TEP con fracaso tras la anticoagulación para la ETV a pesar de los incrementos de dosis, en pacientes no cumplidores con el tratamiento anticoagulante y en aquellos con disfunción cardíaca o pulmonar o con hipertensión pulmonar documentada lo suficientemente graves como para que cualquier nuevo TEP recurrente sea una amenaza para la vida.</p>
+
+        <p class="indented margin2">Sólo existe un ensayo clínico aleatorizado, el estudio PREPIC, que valora la adición de un filtro de VCI permanente al tratamiento anticoagulante estándar, pero menos del 20% de los sujetos incluidos eran pacientes oncológicos. Este estudio demuestra una reducción del riesgo de TEP en la rama de anticoagulación más filtro en comparación con la anticoagulación sola, aunque con un incremento del riesgo de TVP y sin impacto en la supervivencia.</p>
+      </div> 
+      <div id="tratamiento-recomendaciones">
+          <%= partial(:'components/header3', :locals => { :text => "Recomendaciones del tratamiento inicial", :number => '01.07' }) %> 
+
+        <%= partial(:'components/o-list',  :locals => { :list_items => [
+            ["1","La HBPM se recomienda para el tratamiento inicial de la ETV establecida en los pacientes con cáncer"], 
+            ["2"," Rivaroxaban puede iniciarse en pacientes con bajo riesgo de sangrado y ausencia de interacciones pedicamentosas."], 
+            ["3","<b>La trombólisis en los pacientes con cáncer y ETV establecida sólo puede considerarse caso por caso</b>, con una atención particular a las contraindicaciones, sobre todo al riesgo de hemorragia mayor o fatal."], 
+            ["3","En el tratamiento inicial de la ETV los filtros de VCI pueden considerarse en los pacientes con contraindicaciones para la anticoagulación y en caso de recurrencia de TEP bajo anticoagulación óptima. Se recomienda una reevaluación periódica de las contraindicaciones para la anticoagulación, y ésta debe reanudarse cuando sea segura."]]}) %> 
+      </div>
+
+      <div id="tratamiento-recurrencia">
+          <%= partial(:'components/header3', :locals => { :text => "Tratamiento de la recurrencia de la ETV", :number => '01.08' }) %> 
+
+        
+        <p class="indented margin5">El tratamiento a largo plazo o también llamado profilaxis secundaria, tiene como fin evitar la recurrencia y disminuir las complicaciones secundarias al ETV. El tratamiento indicado es la anticoagulación. Son 4 los ensayos clínicos los que han comparado el empleo de HBPM frente a warfarina para saber cuál es la mejor terapia en estos pacientes y cuánto debe durar dicho tratamiento.</p>
+
+        <p class="indented margin2">Los cuatro estudios evidenciaron una menor tasa de recurrencias en el grupo de HBPM sin encontrarse diferencias en sangrados ni mortalidad, salvo en el estudio CLOT que si se objetivó una disminución de la mortalidad a los 12 meses en los pacientes que recibieron Dalteparina que no presentaban metástasis en el momento del diagnóstico.</p>
+
+        <%= partial(:'components/image-big',  :locals => { :image => "images/overall-survival.png", :title => "Figura 1A. The distribution of venous thromboembolism events is illustrated for the cancer cohort after the initiation of chemotherapy" , :text => "Fuente:Lee et aI. NEJM 2003" , :id => "cancer-subgroups"}) %>  
+
+        <h4 class="margin5"><b>Tabla. Estudios aleatorizados sobre tratamiento a largo plazo de la ETV en pacientes con cancer.</b></h4>
+
+        <table class="tabla margin5">
+              <tr class="tabla__row">
+                <th class="tabla__head tabla__row-header  ">Ensayo clínico</th>
+                <th class="tabla__head ">Tratamiento</th>
+                <th class="tabla__head ">Reduccion del riesgo</th>
+                <th class="tabla__head ">HR</th>
+                <th class="tabla__head ">Sangrado mayor</th>
+                <th class="tabla__head ">Mortalidad</th>
+              </tr>
+              <tr class="tabla__row ">
+                <td class="tabla__row-header ">CLOT,2003</td>
+                <td class="tabla__cell ">AVK vs Dalteparina <br>6 meses</td>
+                <td class="tabla__cell ">52%</td>
+                <td class="tabla__cell ">0,48 <br>p=0,002</td>
+                <td class="tabla__cell ">5% vs 6% <br>p=0,27</td>
+                <td class="tabla__cell ">41% vs 39% <br>p=0,53</td>
+              </tr>
+              <tr class="tabla__row-gray">
+                <td class="tabla__row-header  ">ONCENOX, 2006</td>
+                <td class="tabla__cell ">AVK vs Enoxaparina <br>6 meses</td>
+                <td class="tabla__cell ">32%</td>
+                <td class="tabla__cell ">0,68 <br> p=NS</td>
+                <td class="tabla__cell ">2,9% vs 6,5% vs 11,1% <br>p=NS</td>
+                <td class="tabla__cell ">32,4% vs 22,6% vs 41,7% <br> p=NS</td>
+              </tr>
+              <tr class="tabla__row">
+                <td class="tabla__row-header  ">CANTHANOX, 2002</td>
+                <td class="tabla__cell ">AVK vs Enoxaparina <br>3 meses</td>
+                <td class="tabla__cell ">30%</td>
+                <td class="tabla__cell ">0,70 <br>p=0,09</td> 
+                <td class="tabla__cell ">16% vs 7% <br>p=0,09</td> 
+                <td class="tabla__cell ">22,7% vs 11,3% <br>p=0,007</td> 
+              </tr>
+              <tr class="tabla__row-gray">
+                <td class="tabla__row-header  ">LITE, 2006</td>
+                <td class="tabla__cell ">Tinzaparina <br>3 meses</td>
+                <td class="tabla__cell ">56%</td>
+                <td class="tabla__cell ">0,44 <br> p=0,044</td> 
+                <td class="tabla__cell ">7% vs 7% <br>p=NS</td> 
+                <td class="tabla__cell ">47% vs 47% <br> p=NS</td> 
+              </tr>
+              <tr class="tabla__row">
+                <td class="tabla__row-header  ">CLOT, 2015</td>
+                <td class="tabla__cell ">Tinzaparina <br>6 meses</td>
+                <td class="tabla__cell ">69%</td>
+                <td class="tabla__cell ">0,65 (0,41-1,03) <br>p=0,07</td> 
+                <td class="tabla__cell ">2,7 vs 2,4% <br>p=0,77</td> 
+                <td class="tabla__cell ">33,5 vs 30,6% <br>p=0,54</td> 
+              </tr>
+              </tr>
+            </table>
+
+            <h4 class="margin5"><b>Papel de los anticoagulantes directos en el tratamiento de etv en cáncer a largo plazo.</b></h4>
+            <p class="indented margin2">Actualmente, en la población general, los anticoagulantes orales de acción directa, Edoxabán, Rivaroxabán, Apixabán y Dabigatrán, se han convertido en la estrategia de tratamiento preferida para el tratamiento de la ETV aguda.</p>
+            <p class="indented margin2">Estas terapias se han convertido en un foco de estudio también en pacientes con cáncer por su facilidad de administración y por no precisar controles de laboratorio durante su administración. En estos últimos años hemos asistido a la publicación de 4 estudios clave con anticoagulantes directos en el tratamiento de la ETV a largo plazo en pacientes con cancer (ver tabla).</p>
+            <p class="indented margin2">En los primeros ensayos controlados aleatorios se evaluó la eficacia y seguridad de Edoxabán y Rivaroxabán en comparación con Dalteparina para el tratamiento de ETV en pacientes con cáncer.  Un metanalisis posterior de estos dos estudios concluyó que el empleo de los nuevos anticoagulantes orales, frente a la terapia con HBPM, en el tratamiento de la ETV a largo plazo, no se asocia a una disminución significativa del riesgo de recurrencia y sí se asocia a un mayor riesgo de sangrado (RR 1,74, IC 95% 1,05-2,88). </p>
+            <p class="indented margin2">En base a los resultados de estos estudios, las guías internacionales incluyeron la recomendación de emplear estas nuevas terapias (Edoxabán y Rivaroxabán) para el tratamiento de la ETV en pacientes con cáncer muy seleccionados.</p>
+
+            <div class="scroll-container">
+              <table class="tabla margin5 ">
+                <tr class="tabla__row ">
+                  <th class="tabla__head tabla__row-header  ">Estudio</th>
+                  <th class="tabla__head ">N</th>
+                  <th class="tabla__head ">Tipo estudio</th>
+                  <th class="tabla__head ">Inclusión</th>
+                  <th class="tabla__head ">Rama experimental (E)</th>
+                  <th class="tabla__head ">Rama control(C)</th>
+                  <th class="tabla__head ">Duración</th>
+                  <th class="tabla__head ">Objetivos</th>
+                  <th class="tabla__head ">Resultados (E/C) </th>
+                </tr>
+                <tr class="tabla__row ">
+                  <td class="tabla__row-header ">Raskob et al, 2018 <br>HOKUSAI Study</td>
+                  <td class="tabla__cell ">1046</td>
+                  <td class="tabla__cell ">Aleatorizado <br>No inferioridad</td>
+                  <td class="tabla__cell ">Paciente con cáncer activo o diagnosticado en los 2 últimos años</td>
+                  <td class="tabla__cell ">Dosis terapéutica de HBPM durante al menos 5 días seguido 60 mg al día de Edoxaban</td>
+                  <td class="tabla__cell ">Dalteparina 200 UI/kg al día durante un mes seguido de  150 UI/kg al día</td>
+                  <td class="tabla__cell ">6-12m</td>
+                  <td class="tabla__cell ">Op: Riesgo de recurrencia+ sangrado (12m)</td>
+                  <td class="tabla__cell ">12,8% VS 13,5%, HR 0,97 IC 95%(0,7-1,36) p=0,006 (No inferioridad)<br><br> Recurrencia: 7,9% vs 11,3% <br> Sangrado: 6,9% vs 4%,p=0,04 </td>
+                </tr>
+                <tr class="tabla__row-gray">
+                  <td class="tabla__row-header  ">Young et al, 2018 <br><br> SELECT-D Study</td>
+                  <td class="tabla__cell ">406</td>
+                  <td class="tabla__cell ">Aleatorizado <br> Estudio piloto</td>
+                  <td class="tabla__cell ">Cáncer activo</td>
+                  <td class="tabla__cell ">Rivaroxaban 15 mg dos veces al día durante 3 semanas seguido de 20 mg al día</td>
+                  <td class="tabla__cell ">Dalteparina 200 UI/kg al día durante un mes seguido de  150 UI/kg al día</td>
+                  <td class="tabla__cell ">6m</td>
+                  <td class="tabla__cell ">Op: riesgo de recurrencia</td>
+                  <td class="tabla__cell ">4% vs 11% IC 95% (0,19-0,99) <br><br>Sangrado: 6% vs 4%</td>
+                </tr>
+                <tr class="tabla__row-gray">
+                  <td class="tabla__row-header  ">Young et al, 2018 <br><br> SELECT-D Study</td>
+                  <td class="tabla__cell ">406</td>
+                  <td class="tabla__cell ">Aleatorizado <br> Estudio piloto</td>
+                  <td class="tabla__cell ">Cáncer activo</td>
+                  <td class="tabla__cell ">Rivaroxaban 15 mg dos veces al día durante 3 semanas seguido de 20 mg al día</td>
+                  <td class="tabla__cell ">Dalteparina 200 UI/kg al día durante un mes seguido de  150 UI/kg al día</td>
+                  <td class="tabla__cell ">6m</td>
+                  <td class="tabla__cell ">Op: riesgo de recurrencia</td>
+                  <td class="tabla__cell ">4% vs 11% IC 95% (0,19-0,99) <br><br>Sangrado: 6% vs 4%</td>
+                </tr>
+                <tr class="tabla__row">
+                  <td class="tabla__row-header  ">McBane et al, 2020 <br><br>ADAM VTE Study</td>
+                  <td class="tabla__cell ">287</td>
+                  <td class="tabla__cell ">Aleatorizado Superioridad</td>
+                  <td class="tabla__cell ">Cáncer activo</td> 
+                  <td class="tabla__cell ">Apixaban 10 mg 2 veces al día durante 7 días seguido de 5 mg dos veces al día</td> 
+                  <td class="tabla__cell ">Dalteparina 200 UI/kg al día durante un mes seguido de  150 UI/kg al día</td> 
+                  <td class="tabla__cell ">6m</td> 
+                  <td class="tabla__cell ">OP: Riesgo de Sangrado</td> 
+                  <td class="tabla__cell ">0% vs 1,4% <br></br>Recurrencia: 0,7% vs 6,3% <br> IC 95% (0.013-0.780)</td> 
+                </tr>
+                <tr class="tabla__row-gray">
+                  <td class="tabla__row-header  ">Agnelli et al, 2020 <br></br>CARAVAGGIO Study</td>
+                  <td class="tabla__cell ">1155</td>
+                  <td class="tabla__cell ">Aleatorizado No inferioridad</td>
+                  <td class="tabla__cell ">Paciente con cáncer activo o diagnosticado en los 2 últimos años</td> 
+                  <td class="tabla__cell ">Apixaban 10 mg 2 veces al día durante 7 días seguido de 5 mg dos veces al día</td> 
+                  <td class="tabla__cell ">Dalteparina 200 UI/kg al día durante un mes seguido de  150 UI/kg al día</td> 
+                  <td class="tabla__cell ">6m</td> 
+                  <td class="tabla__cell ">Op: riesgo de recurrencia</td> 
+                  <td class="tabla__cell ">5,6%vs 7,9% <br>IC 95% (0.37- 1.07). P<0.001 (No inferioridad) <br><br>Sangrado: 3,8 vs 4%</td> 
+                </tr>
+                </tr>
+              </table>
+            </div> 
+            <p class="indented margin5">Sin embargo, como se puede observar en la tabla superior, en 2020, se han publicado los resultados de 2 estudios que han evaluado el papel de Apixaban en este escenario. Inicialmente en un estudio piloto de seguridad en 287 pacientes con cáncer y más recientemente se han publicado los resultados del estudio Caravaggio sobre la eficacia y seguridad de Apixaban en pacientes con cáncer. </p> 
+            <p class="indented margin2">En base a estos resultados prometedores, un reciente metanálisis ha evaluado la eficacia y seguridad de estas terapias orales que incluyó estos 4 estudios.</p>
+            <p class="indented margin2">Este metanálisis concluye que el empleo de estos anticoagulantes orales en pacientes con cáncer disminuye el riesgo de recurrencia sin incrementar significativamente el riesgo de sangrado. Se observó un 5.2% de recurrencias en los tratados terapia oral y un 8.2% en los tratados con HBPM (RR 0.62; IC 95% (0.43–0.91)). El riesgo de sangrado observado fue de un 4.3% y 3.3%,  en los tratados con anticoagulantes directos y con HBPM, respectivamente (RR 1.31; 95% CI 0.83–2.08).</p>
+            <p class="indented margin2">Algunos estudios sugieren un mayor riesgo de sangrado en aquellos enfermos con tumores del tracto gastrointestinal, por lo que en este subgrupo de pacientes el tratamiento con HBPM parece más seguro.</p>
+            <p class="indented margin5">Actualmente las principales guías clínicas recomiendan el empleo de estas terapias en el tratamiento de la ETV en pacientes con cáncer, incluyendo el tratamiento con Rivaroxaban, Edoxaban y Apixaban como primera opción terapéutica en pacientes sin lesiones del tracto gastrointestinal (ver tabla).</p>
+
+            <h4 class="margin5"><b>Tabla. Recomendaciones NCCN 2020. Tratamiento de ETV aguda en pacientes con cáncer (12).</b></h4>
+
+            <table class="tabla margin5">
+              <tr class="tabla__row">
+                <th class="tabla__head tabla__row-header  ">Pacientes sin lesiones gastrointestinales: </th>
+              </tr>
+              <tr class="tabla__row ">
+                <td class="tabla__cell ">1- <span class="primary"> <b>Apixaban</b></span> 10 mg dos veces al día, 7 días seguido de 5 mg al día. (categoría 1)</td>
+              </tr>
+              <tr class="tabla__row-gray">
+                <td class="tabla__cell ">2.- HBPM o HNF durante 5 días seguido de <span class="primary"><b>Edoxaban</b></span> 60 mg al día (categoría 1).</td>
+              </tr>
+              <tr class="tabla__row">
+                <td class="tabla__cell ">3- <span class="primary"><b>Rivaroxaban</b></b></span> 15 mg dos veces al día durante 21 días seguido </td> 
+              </tr>
+              </tr>
+            </table>
+
+            <h4 class="margin5"><b>Contraindicaciones absolutas:</b></h4>
+
+            <p class="margin5"><b>Insuficiencia renal crónica avanzada: </b></p>
+
+            <%= partial(:'components/o-list',  :locals => { :list_items => [
+            ["1","Apixaban: CrCl <25 mL/min."], 
+            ["2","Dabigatran, Edoxaban, y Rivaroxaban: CrCl <30 mL/min."]]}) %> 
+
+            <p class="margin5"><b>Enfermedad hepática: </b></p>
+
+            <%= partial(:'components/o-list',  :locals => { :list_items => [
+            ["1","Apixaban o Edoxaban: alanina aminotransferasa (ALT)/aspartato aminotransferasa (AST) >2 x límite alto de la normalidad; bilirrubina total >1.5 x límite alto de la normalidad."], 
+            ["2","Rivaroxaban: ALT/AST >3x límite alto de la normalidad."]]}) %> 
+
+            <p class="margin5"><b>Fármacos inhibidores/inductores de CYP3A4 y Glucoproteina P.</b></p>
+
+            <h4 class="margin5"><b>Contraindicaciones relativas:</b></h4>
+            <%= partial(:'components/list',  :locals => { :list_items => [
+            ["", "Usar con cuidado en pacientes con lesiones del tracto gastrointestinal, patología gastrointestinal o instrumentalización a dicho nivel."], 
+            ["", "Usar con cuidado en pacientes con daño renal o hepático previo."], 
+            ["", "Usar con cuidado en pacientes en tratamiento con quimioterapia o terapias nefrotóxicas o hepatotóxicas."], 
+            ["", "RComprobar interacciones medicamentosas con su medicación habitual. "]]}) %>
+
+            <p class="indented margin5">En cuanto a la duración del tratamiento, <span class="container__highlight">no se disponen de ensayos clínicos orientados a determinar cuál es la duración óptima.</span></p>
+            <p class="indented margin2">Los estudios anteriormente mencionados empleaban anticoagulación durante periodos de 3-6 meses. No existen datos sobre la duración del tratamiento más allá de 6 meses. Se recomienda mantener el tratamiento más allá de 6 meses si persisten factores de riesgo, como enfermedad oncológica activa o tratamiento con quimioterapia. </span></p>  
+          </div>
+
+        <div id="tratamiento-incidental">
+          <%= partial(:'components/header3', :locals => { :text => "Tratamiento de la ETV incidental: TEP, TVP y trombosis visceral", :number => '01.09' }) %> 
+          
+          <p class="indented margin5">Se entiende por enfermedad tromboembólica incidental el hallazgo casual de ETV al realizar una prueba complementaria por otra indicación durante el diagnóstico y el seguimiento de la enfermedad tumoral. Debido a la mejoría de las técnicas diagnósticas y el incremento de la supervivencia de los pacients con cáncer, se ha observado un incremento de la ETV incidental en las últimas décadas.</p>
+          
+          <%= partial(:'components/concepto-clave', :locals => { :title => "importante", :text => "Se recomienda el término de ETV incidental en lugar de asintomática, un porcentaje significativo de los síntomas pueden pasar desapercibidos o ser confundidos con los síntomas propios de la neoplasia."}) %>
+
+          <p class="indented margin5">No existen ensayos randomizados que hayan valorado de forma específica el tratamiento de la ETV incidental. Los estudios existentes sugieren una mortalidad a un año de los eventos incidentales similar a los eventos sintomáticos. Tampoco se han demostrado diferencias en la tasa de recurrencia y sangrado asociado al terapia anticoagulante entre los eventos incidentales y sintomáticos.</p>
+
+
+        <%= partial(:'components/image-big',  :locals => { :image => "images/overall-survival.png", :title => "Fig 2. Kaplan-Meier cumulative survival curve until overall death with cancer with incidental versus symptomatic pulmonary embolism (PE; P = 70)." , :text => "Fuente: Den Exter et aI. j Clin Oncol 2011" , :id => "cumulative-survival"}) %>  
+        <%= partial(:'components/image-big',  :locals => { :image => "images/overall-survival.png", :title => "Fig 3. Cumulative risk of recurrent venous thromboembolism for patients with cancer with incidental versus symptomatic pulmonary embolism (P; P = 77)." , :text => "Fuente: Den Exter et aI. j Clin Oncol 2011" , :id => "cumulative-risk"}) %>  
+
+        <p class="indented margin5">Basado en consenso de expertos, todas las guías clínicas recomiendan que la TVP y la embolia de pulmón incidental sean tratados de forma semejante a los episodios sintomáticos. En cuanto a las trombosis viscerales diagnosticadas de forma incidental se recomienda una valoración individualizada de la relación riesgo/beneficio de la terapia anticoagulante.</p>
+        <p class="indented margin2">En el caso del TEP subsegmentario hay menor evidencia para dicha recomendación por lo que debe individualizarse en cada paciente valorando riesgos y beneficios.</p>
+
+        <h4 class="margin5"><b>Sistema nervioso central y anticoagulación</b></h4>
+
+        <p class="indented margin5">En el caso de los tumores que afectan al sistema nervioso central, si no hay contraindicación seguiremos las mismas recomendaciones que en otros tumors sólidos. Sin embargo, en pacientes con metastasis cerebrales por melanoma o cancer renal se debe valorar una reducción del 25% de la dosis de HBPM por el elevado riesgo de sangrado. </p>
+        <p class="indented margin2">En pacientes con glioma del tronco también debe valorarse esta reducción ante la posible severidad de un sangrado en esta region anatómica.</p>
+
+
+
+        </div>
+</div>
+  <%= javascript_include_tag "modulo4" %>
