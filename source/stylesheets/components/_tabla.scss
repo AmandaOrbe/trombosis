@@ -17,8 +17,8 @@
 		width: 25%;
 	}
 
-	&__75{
-		width: 25%;
+	&__70{
+		width: 70%;
 	}
 
 	&__33{
@@ -35,6 +35,10 @@
 
 	&__40{
 		width: 40%;
+	}
+
+	&__15{
+		width: 15%;
 	}
 
 	&__row-header{
@@ -54,4 +58,17 @@
 		padding: 1.5rem;
 	}
 
+	li{
+		padding: 1rem;
+		list-style: none;
+		vertical-align: top;
+	}
+
+	.gray{
+		background-color: $light-gray;
+	}
+
+	.align-top{
+		vertical-align:top;
+	}
 }
