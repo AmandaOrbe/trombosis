@@ -5,36 +5,26 @@
 
 
 
-const respuestaPresentacionTab = document.getElementById("respuesta-presentacion-side");
-const respuestaPresentacion = document.getElementById("respuesta-presentacion");
+const factoresPresentacionTab = document.getElementById("factores-presentacion-side");
+const factoresPresentacion = document.getElementById("factores-presentacion");
 
-const respuestaObjetivosTab = document.getElementById("respuesta-objetivos-side");
-const respuestaObjetivos = document.getElementById("respuesta-objetivos");
+const factoresObjetivosTab = document.getElementById("factores-objetivos-side");
+const factoresObjetivos = document.getElementById("factores-objetivos");
 
-const respuestaIntroduccionTab = document.getElementById("respuesta-introduccion-side");
-const respuestaIntroduccion = document.getElementById("respuesta-introduccion");
+const factoresIntroduccionTab = document.getElementById("factores-introduccion-side");
+const factoresIntroduccion = document.getElementById("factores-introduccion");
 
-const respuestaRespuestaTab = document.getElementById("respuesta-respuesta-side");
-const respuestaRespuesta = document.getElementById("respuesta-respuesta");
+const factoresRiesgoTab = document.getElementById("factores-riesgo-side");
+const factoresRiesgo = document.getElementById("factores-riesgo");
 
-const respuestaReparacionTab = document.getElementById("respuesta-reparacion-side");
-const respuestaReparacion = document.getElementById("respuesta-reparacion");
+const factoresRiesgoPronosticoTab = document.getElementById("factores-riesgo-pronostico-side");
+const factoresRiesgoPronostico = document.getElementById("factores-riesgo-pronostico");
 
-const respuestaEscisionTab = document.getElementById("respuesta-escision-side");
-const respuestaEscision = document.getElementById("respuesta-escision");
+const factoresPronosticoTab = document.getElementById("factores-pronostico-side");
+const factoresPronostico = document.getElementById("factores-pronostico");
 
-const respuestaApareamientoTab = document.getElementById("respuesta-apareamiento-side");
-const respuestaApareamiento = document.getElementById("respuesta-apareamiento");
-
-const respuestaRecombinacionTab = document.getElementById("respuesta-recombinacion-side");
-const respuestaRecombinacion = document.getElementById("respuesta-recombinacion");
-
-const respuestaNoHomologosTab = document.getElementById("respuesta-no-homologos-side");
-const respuestaNoHomologos = document.getElementById("respuesta-no-homologos");
-
-
-const respuestaBiblioTab = document.getElementById("respuesta-biblio-side");
-const respuestaBiblio = document.getElementById("respuesta-biblio");
+const factoresPredictivosTab = document.getElementById("factores-predictivos-side");
+const factoresPredictivos = document.getElementById("factores-predictivos");
 
 
 
@@ -44,22 +34,20 @@ const respuestaBiblio = document.getElementById("respuesta-biblio");
 
 
 
-const resuestaChapters = [{tab: respuestaPresentacionTab, content: respuestaPresentacion} ,
-                  {tab: respuestaObjetivosTab, content: respuestaObjetivos} ,
-                  {tab: respuestaIntroduccionTab, content: respuestaIntroduccion},
-                  {tab: respuestaRespuestaTab, content: respuestaRespuesta},
-                  {tab: respuestaBiblioTab, content: respuestaBiblio}
+
+const factoresChapters = [{tab: factoresPresentacionTab, content: factoresPresentacion} ,
+                  {tab: factoresObjetivosTab, content: factoresObjetivos} ,
+                  {tab: factoresIntroduccionTab, content: factoresIntroduccion},
+                  {tab: factoresRiesgoTab, content: factoresRiesgo},
+                  {tab: factoresPredictivosTab, content: factoresPredictivos},
                 ]
 
 
 
 
 
-const resuestaSubChapters = [{tab: respuestaReparacionTab, content: respuestaReparacion} ,
-                  {tab: respuestaEscisionTab, content: respuestaEscision} ,
-                  {tab: respuestaApareamientoTab, content: respuestaApareamiento},
-                  {tab: respuestaRecombinacionTab, content: respuestaRecombinacion},
-                  {tab: respuestaNoHomologosTab, content: respuestaNoHomologos},
+const factoresSubChapters = [{tab: factoresRiesgoPronosticoTab, content: factoresRiesgoPronostico} ,
+                  {tab: factoresPronosticoTab, content: factoresPronostico} ,
                 ]
 
 
@@ -78,9 +66,8 @@ const resuestaSubChapters = [{tab: respuestaReparacionTab, content: respuestaRep
 
 
 window.addEventListener('scroll', function(){
-  resuestaChapters.forEach(function(chapter){
-    console.log(chapter.tab);
-    console.log(chapter.content);
+  factoresChapters.forEach(function(chapter){
+
 
     if ((chapter.content.offsetTop - 500) < (window.scrollY ) && (window.scrollY ) < ((chapter.content.offsetTop- 500 ) + chapter.content.scrollHeight)) {
       chapter.tab.classList.add('sidebar-content__item--current');        
@@ -100,8 +87,8 @@ window.addEventListener('scroll', function(){
 
 
 window.addEventListener('scroll', function(){
-  resuestaSubChapters.forEach(function(chapter){
-    console.log(chapter.content);
+  factoresSubChapters.forEach(function(chapter){
+
 
     if ((chapter.content.offsetTop - 500) < (window.scrollY ) && (window.scrollY ) < ((chapter.content.offsetTop- 500 ) + chapter.content.scrollHeight)) {
       chapter.tab.classList.add('sidebar-content__item--current');        
@@ -130,27 +117,27 @@ window.addEventListener('scroll', function(){
 
 /////////
 
+// // **************************** chevron*****************************
+
+const factores = document.getElementById('factores');
 
 
-const respuesta = document.getElementById('respuesta');
-
-
-  respuesta.addEventListener("click", function(event){
-    console.log("respuesta")
+  factores.addEventListener("click", function(event){
+    console.log("factores")
     event.currentTarget.parentNode.classList.toggle("sidebar-content__invisible");
     event.currentTarget.querySelector(".fa-chevron-down").classList.toggle("sidebar-content__chevron-up");
 
   });
 
 
-// ************************************ PHONE MENU ****************************
+// // ************************************ PHONE MENU ****************************
 
 
-const respuestaPhoneButton = document.getElementById("respuesta-navigation__button");
-const respuestaSidebarItems = document.querySelectorAll(".sidebar-content__chapter, .sidebar-content__subchapter") ;
+const factoresPhoneButton = document.getElementById("factores-navigation__button");
+const factoresSidebarItems = document.querySelectorAll(".sidebar-content__chapter, .sidebar-content__subchapter") ;
 
 
-respuestaPhoneButton.addEventListener("click", function(event){
+factoresPhoneButton.addEventListener("click", function(event){
   document.getElementById("sidebar").classList.toggle("width-zero");
   document.getElementById("main").classList.toggle("width-zero");
   document.getElementById("main").classList.toggle("hidden-phone-main");
@@ -161,7 +148,7 @@ respuestaPhoneButton.addEventListener("click", function(event){
 });
 
 
-respuestaSidebarItems.forEach(function(item){
+factoresSidebarItems.forEach(function(item){
   item.addEventListener("click", function(event){
     console.log(item);
     document.getElementById("sidebar").classList.add("width-zero");
