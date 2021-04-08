@@ -12,35 +12,28 @@
 	      	<h3>CURSO</h3>
 	      	<h1>Origen y Biología del Cáncer</h1>
       	</div>
-      	<div class="home-row">
-		 <% link_to "/factores-de-riesgo.html", class:"home-card"do %>
+
+      	<%= partial(:'components/header3', :locals => { :text => "Presentación", :number => '' }) %>
+      	 <p class= "margin2">Los pacientes con cáncer presentan un estado de hipercoagulabilidad adquirido que va desde anormalidades asíntomáticas en tests analíticos de coagulación hasta tromboembolismos mortales...</p>
+
+      	 <%= partial(:'components/header3', :locals => { :text => "Objetivos", :number => '' }) %>
+      	 <p class= "margin2">Los objetivos que pretentde este curso es disponer de unos conocimientos básicos sobre los factores de riesgo, la prevención, el diagnóstico precoz y el tratamiento de estos tumores</p>
+
+      	 <%= partial(:'components/header3', :locals => { :text => "Autoría", :number => '' }) %>
+      	 <p class= "margin2"><b>Dirección</b></p>
+      	 <%= partial(:'components/list',  :locals => { :list_items => [
+            ["", "Dr Andrés Muñoz Martín"]]}) %>
+            <p class= "margin2"><b>Autoría</b></p>
+      	 <%= partial(:'components/list',  :locals => { :list_items => [
+            ["", "Dr Andrés Muñoz Martín"],
+            ["", "Dra Rebeca Mondéjar Solís"]]}) %>
+
+
 		
-			  	<h4>Módulo 1</h4>
-			    <h5>Factores de riesgo y pronóstico de la enfermedad tromboembólica</h5>
-	
-		  <% end %>
-
-		  <% link_to "/profilaxis.html", class:"home-card"do %>
-			  
-			  	<h4>Módulo 2</h4>
-			    <h5>Profilaxis antitrombótica</h5>
-	
-		  <% end %>
-		</div> 
-
-		<div class="home-row">
-		  <% link_to "/tratamiento.html", class:"home-card"do %>
-			  
-			  	<h4>Módulo 3</h4>
-			    <h5>Tratamiento</h5>
-			 
-		  <% end %>
-
-		  
-		</div> 
-
+<%= partial(:'components/siguiente',  :locals => { :link => "../factores-de-riesgo.html.html"}) %> 
 
 		</div> 
 	</div>
 	</div>
 </div>
+  <%= javascript_include_tag "modulo0" %>
