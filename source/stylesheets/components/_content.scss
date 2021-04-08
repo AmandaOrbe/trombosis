@@ -16,8 +16,9 @@
     }
 
     @include respond(phone) { // width < 1200
-       margin: 4rem;
-        width: auto;
+      margin: 1rem;
+      width: auto;
+      min-height: 100vh;
     }
 
     &--2{
