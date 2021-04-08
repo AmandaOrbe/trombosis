@@ -1,7 +1,7 @@
  <% t =  data.origen%>
 <div class="navigation">
    <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
-      <label for="navi-toggle" id="respuesta-navigation__button">
+      <label for="navi-toggle" id="tratamiento-navigation__button">
         <span class="navigation__icon--1">&nbsp;</span>
         <span class="navigation__icon--2">&nbsp;</span>
         <span class="navigation__icon--3">&nbsp;</span>
@@ -16,126 +16,119 @@
 
     <div class="sidebar-top">
       <div class="sidebar-top__title">
-        <h2>Vías de respuesta al daño del ADN</h2>
+        <h2>Factores de riesgo y pronóstico de la enfermedad tromboembólica</h2>
       </div>
     </div>
 
     <div class="sidebar-content  ">
-      <a href= "../origen-del-cancer.html" id= "origen" class="sidebar-content__item sidebar-content__title">
+     
+      <a href= "../factores.html" id= "origen" class="sidebar-content__item sidebar-content__title">
         <div>
         <h4>MÓDULO 1</h4>
-        <h5>Origen del cáncer </h5>
+        <h5>Factores de riesgo y pronóstico de la enfermedad tromboembólica</h5>
         </div>
       </a>
-      <a href= "../oncogenesis.html" id= "oncogenesis" class="sidebar-content__item sidebar-content__title">
+      
+      <a href= "../profilaxis.html" id= "origen" class="sidebar-content__item sidebar-content__title">
         <div>
-          <h4>MÓDULO 2</h4>
-          <h5>Oncogénesis y señalización celular</h5>
+        <h4>MÓDULO 2</h4>
+        <h5>Profilaxis antitrombótica</h5>
         </div>
       </a>
-
-      <a href= "../microambiente-tumoral.html" id= "microambiente" class="sidebar-content__item sidebar-content__title">
-        <div>
-          <h4>MÓDULO 3</h4>
-          <h5>Microambiente tumoral y metástasis</h5>
-        </div>
-      </a>
-
 
       <div class="sidebar-content__modulo-current ">
-        <a id= "respuesta" class="sidebar-content__item sidebar-content__title ">
+        <a id= "tratamiento" class="sidebar-content__item sidebar-content__title ">
           <div id= "contenidos" >        
-            <h4>MÓDULO 4</h4>
-            <h5>Vías de respuesta al daño del ADN</h5>
+            <h4>MÓDULO 3</h4>
+            <h5>Tratamiento</h5>
           </div>
           <i class="fas fa-chevron-down sidebar-content__chevron-up"></i>
         </a>
         <div id="contenidos-tabs" >
-          <a href= #respuesta-presentacion class="sidebar-content__item sidebar-content__chapter sidebar-content__item--current" id= respuesta-presentacion-side %>
+          <a href= #tratamiento-presentacion class="sidebar-content__item sidebar-content__chapter sidebar-content__item--current" id= tratamiento-presentacion-side %>
             <p>Presentación</p>
             <i class="fas fa-check-circle check "></i>
             <span class="fas fa-chevron-right sidebar-content__item__chevron"></span>
           </a>
 
-          <a href= #respuesta-objetivos class="sidebar-content__item sidebar-content__chapter " id= respuesta-objetivos-side %>
+          <a href= #tratamiento-objetivos class="sidebar-content__item sidebar-content__chapter " id= tratamiento-objetivos-side %>
             <p>Objetivos</p>
             <i class="fas fa-check-circle check "></i>
             <span class="fas fa-chevron-right sidebar-content__item__chevron"></span>
           </a>
 
-          <a href= #respuesta-introduccion class="sidebar-content__item sidebar-content__chapter" id= respuesta-introduccion-side %>
-            <p>Introducción</p>
+          <a href= #tratamiento-indicaciones class="sidebar-content__item sidebar-content__chapter" id= tratamiento-indicaciones-side %>
+            <p>01. Indicaciones de tratamiento trombolítico inicial y de filtro de vena cava</p>
             <i class="fas fa-check-circle check "></i>
             <span class="fas fa-chevron-right sidebar-content__item__chevron"></span>
           </a>
 
-          <a href= #respuesta-respuesta class="sidebar-content__item sidebar-content__chapter" id= respuesta-respuesta-side %>
-            <p>01. Vías de respuesta al daño del ADN</p>
-            <i class="fas fa-check-circle check "></i>
-            <span class="fas fa-chevron-right sidebar-content__item__chevron"></span>
-          </a>
-
-          <a href= #respuesta-reparacion class="sidebar-content__item sidebar-content__subchapter" id= respuesta-reparacion-side %>
-            <p>01.01 Reparación por escisión de nucleótidos</p>
+          <a href= #tratamiento-introduccion class="sidebar-content__item sidebar-content__subchapter" id= tratamiento-introduccion-side %>
+            <p>01.01 Introducción</p>
             <i class="fas fa-check-circle check "></i>
           </a>
 
-          <a href= #respuesta-escision class="sidebar-content__item sidebar-content__subchapter" id= respuesta-escision-side %>
-            <p>01.02 Reparación por escisión de bases</p>
+          <a href= #tratamiento-establecida class="sidebar-content__item sidebar-content__subchapter" id= tratamiento-establecida-side %>
+            <p>01.02 Tratamiento de la ETV establecida</p>
             <i class="fas fa-check-circle check "></i>
           </a>
 
-
-          <a href= #respuesta-apareamiento class="sidebar-content__item sidebar-content__subchapter" id= respuesta-apareamiento-side %>
-            <p>01.03 Reparación por apareamiento erróneo</p>
+          <a href= #tratamiento-absolutas class="sidebar-content__item sidebar-content__subchapter" id= tratamiento-absolutas-side %>
+            <p>01.03 Contraindicaciones absolutas</p>
             <i class="fas fa-check-circle check "></i>
           </a>
 
 
-          <a href= #respuesta-recombinacion class="sidebar-content__item sidebar-content__subchapter" id= respuesta-recombinacion-side %>
-            <p>01.04 Recombinación homóloga (HRR-homologous recombination repair)</p>
+          <a href= #tratamiento-relativas class="sidebar-content__item sidebar-content__subchapter" id= tratamiento-relativas-side %>
+            <p>01.04 Contraindicaciones relativas</p>
+            <i class="fas fa-check-circle check "></i>
+          </a>
+
+          <a href= #tratamiento-trombolisis class="sidebar-content__item sidebar-content__subchapter" id= tratamiento-trombolisis-side %>
+            <p>01.05 Trombolísis</p>
+            <i class="fas fa-check-circle check "></i>
+          </a>
+
+          <a href= #tratamiento-filtro class="sidebar-content__item sidebar-content__subchapter" id= tratamiento-filtro-side %>
+            <p>01.06 Filtro de vena cava</p>
             <i class="fas fa-check-circle check "></i>
           </a>
 
 
-          <a href= #respuesta-no-homologos class="sidebar-content__item sidebar-content__subchapter" id= respuesta-no-homologos-side %>
-            <p>01.05 Recombinación por extremos no homólogos (NEHJ – non-homologous end-joining</p>
+          <a href= #tratamiento-recomendaciones class="sidebar-content__item sidebar-content__subchapter" id= tratamiento-recomendaciones-side %>
+            <p>01.07 Recomendaciones del tratamiento inicial</p>
+            <i class="fas fa-check-circle check "></i>
+          </a>
+
+          <a href= #tratamiento-recurrencia class="sidebar-content__item sidebar-content__subchapter" id= tratamiento-recurrencia-side %>
+            <p>01.08 Tratamiento de la recurrencia de la ETV", :number => '01.08' }) %> </p>
             <i class="fas fa-check-circle check "></i>
           </a>
 
 
-           
           
 
-          <a href= #respuesta-biblio class="sidebar-content__item sidebar-content__chapter" id= respuesta-biblio-side %>
-            <p>Bibliografía</p>
-            <i class="fas fa-check-circle check "></i>
-            <span class="fas fa-chevron-right sidebar-content__item__chevron"></span>
-          </a>
+
         </div>
       </div>
 
 
-      <a href= "../inflamacion-y-cancer.html" id= "origen" class="sidebar-content__item sidebar-content__title">
-        <div>
-        <h4>MÓDULO 5</h4>
-        <h5>Inflamación y cáncer</h5>
-        </div>
-      </a>
 
-      <a href= "../agentes-infecciosos-y-cancer.html" id= "origen" class="sidebar-content__item sidebar-content__title">
-        <div>
-        <h4>MÓDULO 6</h4>
-        <h5>Agentes infecciosos y cáncer</h5>
-        </div>
-      </a>
+      
 
-      <a href= "../factores-ambientales.html" id= "origen" class="sidebar-content__item sidebar-content__title">
+
+      <div class="sidebar-content__item sidebar-content__title">
         <div>
-        <h4>MÓDULO 7</h4>
-        <h5>Factores ambientales</h5>
+        <h4></h4>
+        <h5></h5>
         </div>
-      </a>
+      </div>
+      <div class="sidebar-content__item sidebar-content__title">
+        <div>
+        <h4></h4>
+        <h5></h5>
+        </div>
+      </div>
       <div class="sidebar-content__item sidebar-content__title">
         <div>
         <h4></h4>
