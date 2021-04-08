@@ -20,7 +20,7 @@
           <%= partial(:'components/header2', :locals => { :text => t.objetivos, :number => ' ' }) %>
            <p class= "indented margin5 "> Conocer las indicaciones de profilaxis de la ETV en los distintos grupos de pacientes oncológicos. </p>
         </div>
-
+        <br><br>
         <div id="profilaxis-ingresado">
           <%= partial(:'components/header2', :locals => { :text => "Paciente médico ingresado", :number => '01' }) %>
           <p class= "indented margin5"> El riesgo de ETV en el paciente con cáncer ingresado va a depender de diferentes factores:</p>
@@ -42,7 +42,7 @@
           <%= partial(:'components/card', :locals => { :title => "PREVENT", :body => "
             El tercer estudio es el estudio PREVENT. El estudio PREVENT con 3706 pacientes (5,1% pacientes con cáncer) analizó el beneficio de dalteparina en la profilaxis de ETV. El riesgo de ETV se redujo del 5% al 2,8% (p=0,0015). Al igual que en el estudio con enoxaparina se objetivó una reducción del riesgo de trombosis en el subgrupo de pacientes con cáncer que recibieron dalteparina en comparación con los pacientes que recibieron placebo." }) %>
 
-           <%= partial(:'components/image-big',  :locals => { :image => "images/overall-survival.png", :title => "Figura 2A. Cancer subgroups of medical thromboprophylaxis trials" , :text => "Fuente: Carrier M, Am J Med 2014" , :id => "cancer-subgroups"}) %>  
+           <%= partial(:'components/image-big',  :locals => { :image => "images/cancer-subgroups.png", :title => "Figura 2A. Cancer subgroups of medical thromboprophylaxis trials" , :text => "Fuente: Carrier M, Am J Med 2014" , :id => "cancer-subgroups"}) %>  
 
             <p class= "indented margin5 container__highlight"> Recientemente, se ha publicado un metanálisis que incluye estos tres ensayos clínicos. Los resultados son contradictorios, reflejando un mayor riesgo de ETV en los pacientes tratados con heparina. Estos resultados pueden deberse a los resultados del studio ARTEMIS, que no se tratan de poblaciones homogeneas y el bajo número de pacientes.</p>
 
@@ -56,7 +56,7 @@
             <p class= "indented margin5">La cirugía supone un factor de riesgo de desarrollo de ETV en los pacientes con cáncer por diversos factores como la inmovilización, el estado protrombótico asociado al tumor, y los factores dependientes del acto quirúrgico como son el tiempo y tipo de anestesia y el grado de agresividad quirúrgica.</p>
             <p class= "indented margin5">Todo paciente sometido a una intervención quirúrgica presenta un riesgo de desarrollar ETV asociada únicamente al acto quirúrgico. Este riesgo se puede incrementar si coexiste con otros factores de riesgo dependientes del paciente, como la edad o la comorbilidad asociada, u otros factores de riesgo no dependientes del paciente como el tipo de cirugía o el tiempo de inmovilización necesario para la recuperación.</p>
 
-            <h4 class="margin5"><b>Tabla 1.Riesgo de ETV en pacientes sometidos a cirugía.</b></h4>
+            <h4 class="margin5"><b>Tabla 2. Riesgo de ETV en pacientes sometidos a cirugía.</b></h4>
 
             <table class="tabla margin5">
               
@@ -81,7 +81,7 @@
 
             <p class= "indented margin5">Existen escalas de evaluación de este riesgo. La escala más empleada es la escala de Caprini. Esta escala ha sido validada en varias poblaciones sometidas a cirugías (general, vascular, urológica, gastrointestinal, cirugía plástica y reconstructiva).</p>
 
-             <h4 class="margin5"><b>Tabla 1.Riesgo de ETV en pacientes sometidos a cirugía.</b></h4>
+             <h4 class="margin5"><b>Tabla 3. Escala de evaluación del riesgo de Caprini.</b></h4>
 
             <table class="tabla margin5">
               
@@ -147,7 +147,7 @@
 
             <p class= "indented margin5">En función de la puntuación en la escala Caprini se establecen 4 grupos de riesgo con diferentes recomendaciones de profilaxis farmacológica y/o mecánica.</p>
 
-            <h4 class="margin5"><b>Tabla 1.Riesgo de ETV en pacientes sometidos a cirugía.</b></h4>
+            <h4 class="margin5"><b>Tabla 4. Recomendaciones de profilaxis de la ETV en cirugía no ortopédica de la ACCP (2012) según categorías de riesgo de ETV (puntuación de Caprini)</b></h4>
 
             <table class="tabla margin5">
                <tr class="tabla__row">
@@ -195,10 +195,11 @@
             <%= partial(:'components/card', :locals => { :title => "HBMP", :body => "La eficacia de la HBMP frente a la HNF ha demostrado en múltiples estudios comparativos ser similar en la prevención de ETV con similares tasas de complicaciones (hemorragia) asociada, por lo que debido a su mayor comodidad el empleo de HBPM se ha convertido en la terapia más empleada en este contexto (posología inyección subcutánea una vez al día frente a tres veces al día).
 " }) %> 
             <%= partial(:'components/card', :locals => { :title => "Fondaparinux", :body => "Fondaparinux ha sido comparado con HBPM (dalteparina) demostrando ser al menos tan eficaz como esta en la prevención de ETV en pacientes sometidos a cirugía abdominal de alto riesgo. Sin embargo, la guía ACCP 2012 sólo recomienda el empleo de fondaparinux en caso de contraindicación de HBPM o HNF." }) %>  
+            <%= partial(:'components/card', :locals => { :title => "Medidas físicas", :body => "Se consideran medidas físicas preventivas eficaces la compresión intermitente en las piernas, las medias de compresión ascendente, la compresión neumática distal intermitente y las bombas de pie mecánicas. La compresión mecánica reduce la incidencia de ETV en pacientes de moderado riesgo y en cambio, el empleo de medias de compresión reduce el riesgo de ETV solo en pacientes de bajo riesgo. Estas medidas previenen la aparición de ETV tanto la incidencia de TVP y en menor medida la incidencia de TEP. Las medidas físicas son medidas complementarias que aumenta la eficacia de la profilaxis farmacológica y deben emplearse en aquellos pacientes en los que existe contraindicación de profilaxis farmacológica." }) %>  
 
 
             <%= partial(:'components/list',  :locals => { :list_items => [
-            ["", "La profilaxis recomendada en pacientes que van a ser sometidos a cirugía debe iniciarse previamente a la intervención,  <b>reiniciarse lo antes possible tras la cirugía</b>,  y durar al menos 7-10 días."], 
+            ["", "La profilaxis recomendada en pacientes que van a ser sometidos a cirugía debe iniciarse previamente a la intervención,  <span class='container__highlight'>reiniciarse lo antes possible tras la cirugía</span>,  y durar al menos 7-10 días."], 
             ["", "Se recomienda el empleo de HNF cada 8-12h o HBPM una vez al día."], 
             ["", "El 40% de los eventos trombóticos se han descrito más allá de la tercera semana postcirugía; por este motivo diversos ensayos randomizados han comparado la tromboprofilaxis habitual de 7-10 días con una tromboprofilaxis extendida de 4 semanas de duración en pacientes sometidos a cirugía abdomino-pélvica de alto riesgo demostrando una reducción significativa de la incidencia de fenómenos trombóticos sin incremetar el riesgo de sangrado."], 
             ["", "De forma unánime todas las guías clínicas recomiendan la tromboprofilaxis extendida en los pacientes sometidos a cirugía por cáncer abdomino-pélvica con factores de riesgo."], 
@@ -212,13 +213,13 @@
 
             <p class= "indented margin5">La colocación de catéter venoso central en los pacientes oncológicos para facilitar el tratamiento y evitar complicaciones del mismo es una práctica cada día más habitual. Una de las complicaciones asociadas a la colocación de catéter es la aparición de ETV en miembros superiores que aparece en el 2-5% de estos pacientes. La fabricación de catéters con nuevos materiales menos trombogénicos parece haber reducido el riesgo de esta complicación en las últimas décadas.</p>
 
-            <p class= "indented margin5">Múltiples estudios, incluyendo un metanálisis, sugieren que debe ser posicionado en el lado derecho, en la vena yugular con el catéter posicionado en la auricular derecha en su unión con la vena cava superior. 
-            <br>
-            El tratamiento recomendado en caso de trombosis, es la HBPM durante 3-6 meses y valorar individualmente cada caso para mantener dicha terapia en caso de mantener el catéter.
-            <br>
-            Los nuevos anticoagulants orales directos, pueden ser considerados una opción, aunque hay menos evidencia científica que avale su uso. 
-            <br>
-            No se recomienda la retirada, salvo infección, contraindicación de anticoagulación o fallo de tratamiento anticoagulante. </p>
+            <p class= "indented margin5">Múltiples estudios, incluyendo un metanálisis, sugieren que debe ser posicionado en el lado derecho, en la vena yugular con el catéter posicionado en la auricular derecha en su unión con la vena cava superior. </p>
+           
+            <p class= "indented margin2">El tratamiento recomendado en caso de trombosis, es la HBPM durante 3-6 meses y valorar individualmente cada caso para mantener dicha terapia en caso de mantener el catéter.</p>
+          
+            <p class= "indented margin2">Los nuevos anticoagulants orales directos, pueden ser considerados una opción, aunque hay menos evidencia científica que avale su uso. </p>
+      
+            <p class= "indented margin2">No se recomienda la retirada, salvo infección, contraindicación de anticoagulación o fallo de tratamiento anticoagulante. </p>
 
 
             <p class= "indented margin5">Se han desarrollado múltiples estudios con el objetivo de valorar el beneficio de la profilaxis con HBPM o warfarina en estos pacientes pero ninguno de estos estudios ha demostrado que exista beneficio significativo asociado a esta práctica y sin embargo si se objetivó un aumento de las complicaciones en forma de sangrados.</p>
@@ -231,7 +232,7 @@
             <%= partial(:'components/header2', :locals => { :text => "Paciente médico en tratamiento con quimioterapia en un medio ambulatorio", :number => '04' }) %>
             <p class= "indented margin5">El riesgo de ETV en pacientes ambulatorios es menor que en los pacientes hospitalizados. Sin embargo existen distintos factores de riesgo que contribuyen a que la incidencia de estos eventos sea mayor en algunos pacientes en tratamiento ambulatorio con quimioterapia</p>
             
-            <p class= "indented margin5">El empleo de quimioterapia aumenta en más de 6 veces el riesgo de ETV. <b>Este riesgo alcanza el 30% en población con Cáncer de páncreas o pulmón ALK o ROS-1 positivo.</b> En los últimos años se han realizado varios estudios y se ha publicado un metanálisis que han permitido demostrar el beneficio del empleo de heparinas de bajo y ultrabajo peso molecular en la profilaxis de ETV en pacientes con cáncer de hasta un 50%, sin demostrar impacto en la supervivencia ni mortalidad . </p>
+            <p class= "indented margin5">El empleo de quimioterapia aumenta en más de 6 veces el riesgo de ETV. <span class="container__highlight">Este riesgo alcanza el 30% en población con Cáncer de páncreas o pulmón ALK o ROS-1 positivo.</span> En los últimos años se han realizado varios estudios y <span class="container__highlight">se ha publicado un metanálisis</span> que han permitido demostrar el beneficio del empleo de heparinas de bajo y ultrabajo peso molecular en la profilaxis de ETV en pacientes con <span class="container__highlight">cáncer de hasta un 50%, sin demostrar impacto en la supervivencia ni mortalidad.</span> </p>
 
             <br>
 
@@ -384,12 +385,24 @@
 
             <p class= "indented margin2">Por otro lado en el estudio CASSINI, se evalúo el papel de Rivaroxaban 10 mg al día 6 meses en pacientes de alto riesgo por Khorana score con cualquier tipo de tumor. No se observaron diferencias en el analisis inicial por intencion de tratar en el porcentaje de ETV en ambas ramas, pero sí disminuye la incidencia de ETV un 3,8% de manera significativa cuando se analizaron los datos en el análisis por protocolo. No se observaron diferencias en sangrados ni mortalidad en ambas ramas.</p>
 
-            <p class= "indented margin2">Por dicho motivo, estas terapias, son una nueva opción terapeútica para nuestros enfermos, también en el escenario de la profilaxis.</p>
+            <p class= "indented margin2">Por dicho motivo, estas terapias, son una nueva opción terapeútica para nuestros enfermos, también en el escenario de la profilaxis.</p> 
 
-          ------
+          </div>
           
+          <div id="profilaxis-ambulatoria">
+            
+            <%= partial(:'components/header3', :locals => { :text => "Recomendaciones profilaxis ambulatoria", :number => '04.03' }) %>  
+
+            <p class= "indented margin5">Las recomendaciones del empleo de profilaxis en pacientes con cáncer y tratamiento de quimioterapia en un medio extrahospitalario, basadas en dichos resultados son</p>  
+
+            <%= partial(:'components/list',  :locals => { :list_items => [
+            ["", "La anticoagulación profiláctica rutinaria de estos pacientes no se recomienda."], 
+            ["", "Se debe de considerar la tromboprofilaxis con HBPM <span class='container__highlight'> o anticoagulantes orales directos </span> en pacientes con criterios de alto riesgo de ETV y bajo riesgo de sangrado. En el momento actual no existe una definición unánime de alto riesgo, se recomienda empelar la escala de Khorana como una medida objetiva de alto riesgo valorando la tromboprofilaxis en los pacientes que presenten un score de Khorana mayor o igual a 3. Otras definiciones basadas en criterios clínicos incluyen considerar la anticoagulación profiláctica en aquellos pacientes con antecedentes de ETV, pacientes con cáncer de pulmón <span class='container__highlight'>ROS-1 O ALK positivo </span> o páncreas localmente avanzados o metastásicos, etc. <br> <span class='container__highlight'>En caso de optar por la opción de anticoagulación oral, se recomienda comprobar interacciones medicamentosas previamente. </span>"], 
+            ["", "La profilaxis de ETV está indicada en los pacientes con Mieloma Múltiple en tratamiento con talidomida o lenalidomida en combinación con quimioterapia o dexametasona (o ambas). La elección del fármaco (HBPM, Warfarina, Aspirina) dependerá del riesgo individualizado de cada paciente. En los pacientes con factores de riesgo o tratados con combinación de quimioterapia de alto riesgo (doxorrubicina, dexametasona, poliquimioterapia) se recomienda HBPM y en aquell os pacientes sin factores de riesgo se recomienda acido acetilsalícilico."]]}) %> 
 
       </div>
   </div>
+
+      <%= partial(:'components/siguiente',  :locals => { :link => "../tratamiento.html"}) %> 
 </div>
   <%= javascript_include_tag "modulo2" %>

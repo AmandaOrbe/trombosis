@@ -12,11 +12,8 @@
         <div id="factores-presentacion">
           <%= partial(:'components/header2', :locals => { :text => t.presentacion, :number => ' ' }) %>
           <p class= "indented margin5 "> Los pacientes con cáncer tienen un mayor riesgo de <b>Enfermedad Tromboembólica Venosa</b> (ETV) secundario al estado de hipercoagulabilidad asociado al tumor y a distintos factores de riesgo dependientes del paciente o del tratamiento.  </p>
-          <br>
-          <p class= "indented  "> En este módulo veremos el conjunto global de estas capacidades biológicas, y desarrollaremos algunas de ellas, mientras que otras serán más detalladas en módulos aparte.  </p>
         </div>
-        <br><br>
-
+        <br>
         
           <%= partial(:'components/header2', :locals => { :text => t.objetivos, :number => ' ' }) %>
         </div>  
@@ -37,12 +34,13 @@
 
           <p class= "indented margin5"> Aunque la mayoría de los pacientes con cáncer no van a presentar episodios tromboembólicos, su incidencia es elevada, siendo hasta cinco veces superior a la población en general. La incidencia va a depender de los distintos factores de riesgo, siendo de hasta siete veces mayor en aquellos pacientes con cáncer activo o metastásico. El mayor riesgo de desarrollar un evento trombótico ocurre en los 3-6 primeros meses tras el diagnóstico.</p>
 
-          <%= partial(:'components/image-big',  :locals => { :image => "images/distribucion.png", :title => "Figura 1A. The distribution of venous thromboembolism events is illustrated for the cancer cohort after the initiation of chemotherapy" , :text => "Fuente: Khorana et al Cancer 2012", :id => "disctribucion"}) %> 
+          <%= partial(:'components/image-big',  :locals => { :image => "images/distribucion.png", :title => "Figura 1. The distribution of venous thromboembolism events is illustrated for the cancer cohort after the initiation of chemotherapy" , :text => "Fuente: Khorana et al Cancer 2012", :id => "disctribucion"}) %> 
 
            <p class= "indented margin5"> La incidencia de ETV en pacientes con cáncer está en aumento en probable relación con la mejora de los métodos diagnósticos, la incorporación de nuevos tratamientos y una significativa mayor supervivencia de los pacientes con cáncer.</p>
 
-          <%= partial(:'components/image-big',  :locals => { :image => "images/evolucion-anual-pacientes.png", :title => "" , :text => "Fuente: Khorana JCO 2006, 24:484-90", :id => "evolucion-anual-pacientes"}) %> 
+          <%= partial(:'components/image-big',  :locals => { :image => "images/evolucion-anual-pacientes.png", :title => "Figura 2" , :text => "Fuente: Khorana JCO 2006, 24:484-90", :id => "evolucion-anual-pacientes"}) %> 
         </div>
+        <br><br><br>
 
         <div id="factores-riesgo">
           <%= partial(:'components/header2', :locals => { :text => "Factores de riesgo y pronóstico", :number => '01' }) %> 
@@ -54,7 +52,7 @@
             <h4 class="margin5"><b>Relacionados con el paciente:</b></h4>
 
             <%= partial(:'components/list',  :locals => { :list_items => [
-              ["", "Comorbilidad(enfermedad respiratoria, cardíaca, nefropatía, infecciones, obesidad). "], 
+              ["", "Comorbilidad (enfermedad respiratoria, cardíaca, nefropatía, infecciones, obesidad). "], 
               ["", "Inmovilización."] , 
               [ "","Características demográficas. "], 
               ["", "Edad avanzada"], 
@@ -63,11 +61,11 @@
             <h4 class="margin5"><b>Relacionados con el cáncer:</b></h4>
 
             <%= partial(:'components/list',  :locals => { :list_items => [
-              ["", "Los tumores sólidos con mayor riesgo de ETV son: Cáncer de páncreas, gástrico, renal, pulmón, ovario, útero y cerebral.. "], 
+              ["", "Los tumores sólidos con mayor riesgo de ETV son: Cáncer de páncreas, gástrico, renal, pulmón, ovario, útero y cerebral. "], 
               ["", "Entre las enfermedades hematológicas: mieloma, linfoma y leucemia aguda. "] , 
               [ "","La enfermedad metastásica tiene mayor riesgo que la enfermedad localizada."], 
               ["", "El riesgo es mayor en los 3-6 primeros meses desde el diagnóstico y cuando la enfermedad está activa."], 
-              ["", "Incidencia (%) acumulada de ETV según el tipo y el estadio del tumor (ver tabla)."]]}) %>  
+              ["", "Incidencia (%) acumulada de ETV según el tipo y el estadio del tumor (<b>ver tabla</b>)."]]}) %>  
 
             <table class="tabla margin5">
               <tr class="tabla__row">
@@ -142,7 +140,7 @@
 
           <%= partial(:'components/concepto-clave', :locals => { :title => "importante", :text => "La cirugía es un factor de riesgo de presentar ETV y este riesgo se mantiene hasta más de 7 semanas después. Este riesgo es mayor en mayores de 65 años, enfermedad metastásica, ascitis, antecedentes de fallo cardíaco congestivo, IMC > 25mg/m2, Plaquetas > 400.00/microL, Albumina < 3g/dL y tiempo de cirugía mayor de 2 horas."}) %>
 
-            <p  class="indented margin5">Otros factores como el empleo de esteroides reciente o la existencia de complicaciones postoperatorias (sepsis, reintubación, paro cardíaco, infección de la herida quirúrgica) parecen estar relacionados con una mayor incidencia de ETV</p>
+            <p  class="indented margin5">Otros factores como el empleo de esteroides reciente o la existencia de complicaciones postoperatorias (sepsis, reintubación, paro cardíaco, infección de la herida quirúrgica) parecen estar relacionados con una mayor incidencia de ETV.</p>
 
             <br>
           </div>   
@@ -151,11 +149,11 @@
 
             <p  class="indented margin5">La aparición de fenómenos tromboembólicos se asocia con un incremento en la morbilidad y mortalidad de los pacientes con cáncer respecto a los que no presentan ETV o no presentan cáncer.</p>
 
-            <%= partial(:'components/image-big',  :locals => { :image => "images/overall-survival.png", :title => "Figura 1C Adjusted for major confounders: Age, gender, race, cancer type, stage, year of therapy, chemotherapy type and dose intensity, major laboratory abnormalities, PS, BMI, and comorbid conditions" , :text => "Fuente: Khorana et al Cancer 2012", :id => "overall-survival"}) %> 
+            <%= partial(:'components/image-big',  :locals => { :image => "images/overall-survival.png", :title => "Figura 3. Adjusted for major confounders: Age, gender, race, cancer type, stage, year of therapy, chemotherapy type and dose intensity, major laboratory abnormalities, PS, BMI, and comorbid conditions" , :text => "Fuente: Khorana et al Cancer 2012", :id => "overall-survival"}) %> 
 
             <div class="card_row">
-              <%= partial(:'components/image-small',  :locals => { :image => "images/overall-survival-a.png",  :title => "Figura 2. ", :text => "Overall survival for National Cancer Institute of Canada PA3 patients randomly assigned to gemcitabine plus erlotinib. VTE, venous thromboembolism.",  :id => "survival-a"}) %>
-              <%= partial(:'components/image-small',  :locals => { :image => "images/overall-survival-b.png",  :title => "Figura 3. ", :text => "Overall survival for National Cancer Institute of Canada PA3 patients randomly assigned to gemcitabine plus placebo. VTE, venous thromboembolism.",  :id => "survival-b"}) %>             
+              <%= partial(:'components/image-small',  :locals => { :image => "images/overall-survival-a.png",  :title => "Figura 4. ", :text => "Overall survival for National Cancer Institute of Canada PA3 patients randomly assigned to gemcitabine plus erlotinib. VTE, venous thromboembolism.",  :id => "survival-a"}) %>
+              <%= partial(:'components/image-small',  :locals => { :image => "images/overall-survival-b.png",  :title => "Figura 5. ", :text => "Overall survival for National Cancer Institute of Canada PA3 patients randomly assigned to gemcitabine plus placebo. VTE, venous thromboembolism.",  :id => "survival-b"}) %>             
             </div>
             <br>  
 
@@ -165,11 +163,11 @@
               [ "","En un estudio retrospectivo sobre pacientes hospitalizados por ETV se objetivó que el riesgo de muerte a los 6 meses era de 84% en los pacientes con cáncer frente al 29% en la población general."]]}) %>  
 
 
-            <%= partial(:'components/image-big',  :locals => { :image => "images/causas-muerte.png", :title => "Figura 2." , :text => " Causas de muerte en pacientes con cáncer", :id => "causas-muerte"}) %> 
+            <%= partial(:'components/image-big',  :locals => { :image => "images/causas-muerte.png", :title => "Figura 6." , :text => " Causas de muerte en pacientes con cáncer", :id => "causas-muerte"}) %> 
 
             <p  class="indented margin5">La ETV recurrente es tres veces superior en pacientes con cáncer y hace necesaria la anticoagulación en periodos más prolongados.</p>
 
-            <%= partial(:'components/image-big',  :locals => { :image => "images/cumulative-incidence.png", :title => "Figura 1E" , :text => " Cumulative incidence of recurrent VTE during anticoagulant therapy", :id => "cumulative-incidence"}) %> 
+            <%= partial(:'components/image-big',  :locals => { :image => "images/cumulative-incidence.png", :title => "Figura 7." , :text => " Cumulative incidence of recurrent VTE during anticoagulant therapy", :id => "cumulative-incidence"}) %> 
             
             <p  class="indented margin5">La anticoagulación en pacientes con cáncer provoca mayor riesgo de hemorragia en los pacientes con cáncer que en los que no presentan la enfermedad.</p>
 
@@ -254,7 +252,8 @@
               </tr>
             </table>
     
-
+            <br>
+            <br>
             <h4 class="margin5"><b>Tabla 4. Tabla. Modelos predictivos de ETV en pacinetes con cancer.</b></h4>
             <div class="scroll-container">
             <table class="tabla margin5">
@@ -313,7 +312,8 @@
 
         </div>  
 
-        
+              <%= partial(:'components/siguiente',  :locals => { :link => "../profilaxis.html"}) %> 
+
         
 
     

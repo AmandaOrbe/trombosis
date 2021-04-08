@@ -39,22 +39,21 @@
 
           <p class="indented margin5">El tratamiento anticoagulante, que es la base del tratamiento de la ETV, debe iniciarse tan pronto como sea posible.</p>
         </div>
-
+        <br>
         <div id="tratamiento-establecida">
           <%= partial(:'components/header3', :locals => { :text => "Tratamiento de la ETV establecida", :number => '01.02' }) %> 
 
-          <p class="indented margin5">El tratamiento anticoagulante, que es la base del tratamiento de la ETV, debe iniciarse tan pronto como sea posible.</p>
+          <p class="indented margin5">El tratamiento de la ETV en los pacientes con cáncer es la anticoagulación farmacológica siendo el fármaco de elección la HBPM. En el tratamiento anticoagulante de la ETV, como esquema general, se definen dos fases:</p>
 
             <%= partial(:'components/list',  :locals => { :list_items => [
             ["","<b> La fase aguda</b>, que comprende los primeros 5 a 10 días desde el diagnóstico y pretende mejorar los síntomas, evitar la progresión del trombo y prevenir la embolia pulmonar mortal."], 
             ["","<b>La fase de tratamiento a largo plazo</b> (profilaxis secundaria), que tiene como objetivo prevenir las recurrencia de la ETV y disminuir las complicaciones a largo plazo (síndrome postrombótico e hipertensión pulmonar). La duración deesta fase es de al menos 3 a 6 meses."]]}) %> 
           <p class="indented margin5">El tratamiento anticoagulante a dosis terapéuticas debe iniciarse lo antes posible con HBPM. Hay que tener en cuenta las contraindicaciones absolutas y relativas de anticoagulación.</p> 
         </div>
+        <br>
 
         <div id="tratamiento-absolutas">
           <%= partial(:'components/header3', :locals => { :text => "Contraindicaciones absolutas", :number => '01.03' }) %> 
-
-          <p class="indented margin5">El tratamiento anticoagulante, que es la base del tratamiento de la ETV, debe iniciarse tan pronto como sea posible.</p>
 
           <%= partial(:'components/list',  :locals => { :list_items => [
             ["","Hemorragia reciente en SNC."], 
@@ -62,11 +61,9 @@
             ["","Hemorragia mayor activa que requiere trasfusión de más de 2 concentrados de hematíes en 24h."], 
             ["","Punción lumbar reciente."]]}) %> 
         </div>
-
+        <br>
         <div id="tratamiento-relativas">
           <%= partial(:'components/header3', :locals => { :text => "Contraindicaciones relativas", :number => '01.04' }) %> 
-
-          <p class="indented margin5">El tratamiento anticoagulante, que es la base del tratamiento de la ETV, debe iniciarse tan pronto como sea posible.</p>
 
           <%= partial(:'components/list',  :locals => { :list_items => [
             ["","Sangrados crónicos."], 
@@ -84,7 +81,7 @@
         <p class="indented margin2">Sin embargo, en la revision Cochrane publicada en 2018, se observa una tendencia al descenso en la mortalidad a los 3 meses (RR 0,66, IC 95% 0,40-1,10) y una menor tasa de recurrencias con HBPM comparado con HNF (RR 0,69 IC 95% 0,27-1,76), no significativa. Fondaparinux no fue diferente a HBPM ni HNF en este escenario ni en mortalidad, recurrencia ni sangrados. </p>
 
         <p class="indented margin2">A su vez, los resultados recientes del studio SELECT-D ofrecen datos esperanzadores de los nuevos anticoagulantes orales en esta fase posicianando a  Rivaroxaban como una nueva opción terapéutica, ya que su uso en esta fase inicial demostró similar eficacia que HBPM.</p>
-
+        <br>
         <p class=" margin2"> <b>Recomendaciones:</b></p>
 
          <%= partial(:'components/o-list',  :locals => { :list_items => [
@@ -92,13 +89,14 @@
             ["2","Rivaroxaban puede iniciarse en esta fase inicial si existe bajo riesgo de sangrado y en ausencia de interacciones medicamentosas."], 
             ["3","La heparina no fraccionada y Fondaparinux se consideran alternativas a la HBPM y la terapia oral con anticoagulants directos, cuando ambos no puedan ser administrados."]]}) %> 
         </div>
+        <br>
 
         <div id="tratamiento-trombolisis">
           <%= partial(:'components/header3', :locals => { :text => "Trombolísis", :number => '01.05' }) %> 
 
         <p class="indented margin5">Debido a la ausencia de ensayos randomizados específicos de pacientes con cáncer las indicaciones de la terapia trombolitica son esencialmente las mismas que en los pacientes sin cáncer. En general se recomienda el empleo de trombolísis en pacientes con cáncer con eventos trombóticos que comprometan la vida o la pérdida de un miembro. Las indicaciones y los potenciales beneficios deben de ser valorados individualmente de forma cuidadosa ante ante el alto riesgo de sangrado y hemorragia fatal asociada a la terapia trombolítica.</p>
       </div>
-
+      <br>
       <div id="tratamiento-filtro">
           <%= partial(:'components/header3', :locals => { :text => "Filtro de vena cava", :number => '01.06' }) %> 
 
@@ -106,13 +104,14 @@
 
         <p class="indented margin2">Sólo existe un ensayo clínico aleatorizado, el estudio PREPIC, que valora la adición de un filtro de VCI permanente al tratamiento anticoagulante estándar, pero menos del 20% de los sujetos incluidos eran pacientes oncológicos. Este estudio demuestra una reducción del riesgo de TEP en la rama de anticoagulación más filtro en comparación con la anticoagulación sola, aunque con un incremento del riesgo de TVP y sin impacto en la supervivencia.</p>
       </div> 
+      <br>
       <div id="tratamiento-recomendaciones">
           <%= partial(:'components/header3', :locals => { :text => "Recomendaciones del tratamiento inicial", :number => '01.07' }) %> 
 
         <%= partial(:'components/o-list',  :locals => { :list_items => [
             ["1","La HBPM se recomienda para el tratamiento inicial de la ETV establecida en los pacientes con cáncer"], 
             ["2"," Rivaroxaban puede iniciarse en pacientes con bajo riesgo de sangrado y ausencia de interacciones pedicamentosas."], 
-            ["3","<b>La trombólisis en los pacientes con cáncer y ETV establecida sólo puede considerarse caso por caso</b>, con una atención particular a las contraindicaciones, sobre todo al riesgo de hemorragia mayor o fatal."], 
+            ["3","<span class='container__highlight'>La trombólisis en los pacientes con cáncer y ETV establecida sólo puede considerarse caso por caso</span>, con una atención particular a las contraindicaciones, sobre todo al riesgo de hemorragia mayor o fatal."], 
             ["3","En el tratamiento inicial de la ETV los filtros de VCI pueden considerarse en los pacientes con contraindicaciones para la anticoagulación y en caso de recurrencia de TEP bajo anticoagulación óptima. Se recomienda una reevaluación periódica de las contraindicaciones para la anticoagulación, y ésta debe reanudarse cuando sea segura."]]}) %> 
       </div>
 
@@ -124,7 +123,7 @@
 
         <p class="indented margin2">Los cuatro estudios evidenciaron una menor tasa de recurrencias en el grupo de HBPM sin encontrarse diferencias en sangrados ni mortalidad, salvo en el estudio CLOT que si se objetivó una disminución de la mortalidad a los 12 meses en los pacientes que recibieron Dalteparina que no presentaban metástasis en el momento del diagnóstico.</p>
 
-        <%= partial(:'components/image-big',  :locals => { :image => "images/overall-survival.png", :title => "Figura 1A. The distribution of venous thromboembolism events is illustrated for the cancer cohort after the initiation of chemotherapy" , :text => "Fuente:Lee et aI. NEJM 2003" , :id => "cancer-subgroups"}) %>  
+        <%= partial(:'components/image-big',  :locals => { :image => "images/distribution-thromboembolism.png", :title => "Figura 1. The distribution of venous thromboembolism events is illustrated for the cancer cohort after the initiation of chemotherapy" , :text => "Fuente:Lee et aI. NEJM 2003" , :id => "distribution-thromboembolism"}) %>  
 
         <h4 class="margin5"><b>Tabla. Estudios aleatorizados sobre tratamiento a largo plazo de la ETV en pacientes con cancer.</b></h4>
 
@@ -293,7 +292,8 @@
 
             <%= partial(:'components/o-list',  :locals => { :list_items => [
             ["1","Apixaban o Edoxaban: alanina aminotransferasa (ALT)/aspartato aminotransferasa (AST) >2 x límite alto de la normalidad; bilirrubina total >1.5 x límite alto de la normalidad."], 
-            ["2","Rivaroxaban: ALT/AST >3x límite alto de la normalidad."]]}) %> 
+            ["2","Rivaroxaban: ALT/AST >3x límite alto de la normalidad."]
+            ]}) %> 
 
             <p class="margin5"><b>Fármacos inhibidores/inductores de CYP3A4 y Glucoproteina P.</b></p>
 
@@ -318,8 +318,8 @@
           <p class="indented margin5">No existen ensayos randomizados que hayan valorado de forma específica el tratamiento de la ETV incidental. Los estudios existentes sugieren una mortalidad a un año de los eventos incidentales similar a los eventos sintomáticos. Tampoco se han demostrado diferencias en la tasa de recurrencia y sangrado asociado al terapia anticoagulante entre los eventos incidentales y sintomáticos.</p>
 
 
-        <%= partial(:'components/image-big',  :locals => { :image => "images/overall-survival.png", :title => "Fig 2. Kaplan-Meier cumulative survival curve until overall death with cancer with incidental versus symptomatic pulmonary embolism (PE; P = 70)." , :text => "Fuente: Den Exter et aI. j Clin Oncol 2011" , :id => "cumulative-survival"}) %>  
-        <%= partial(:'components/image-big',  :locals => { :image => "images/overall-survival.png", :title => "Fig 3. Cumulative risk of recurrent venous thromboembolism for patients with cancer with incidental versus symptomatic pulmonary embolism (P; P = 77)." , :text => "Fuente: Den Exter et aI. j Clin Oncol 2011" , :id => "cumulative-risk"}) %>  
+        <%= partial(:'components/image-big',  :locals => { :image => "images/mortalidad-12-meses.png", :title => "Fig 2. Kaplan-Meier cumulative survival curve until overall death with cancer with incidental versus symptomatic pulmonary embolism (PE; P = 70)." , :text => "Fuente: Den Exter et aI. j Clin Oncol 2011" , :id => "cumulative-survival"}) %>  
+        <%= partial(:'components/image-big',  :locals => { :image => "images/recurrencia-12-meses.png", :title => "Fig 3. Cumulative risk of recurrent venous thromboembolism for patients with cancer with incidental versus symptomatic pulmonary embolism (P; P = 77)." , :text => "Fuente: Den Exter et aI. j Clin Oncol 2011" , :id => "cumulative-risk"}) %>  
 
         <p class="indented margin5">Basado en consenso de expertos, todas las guías clínicas recomiendan que la TVP y la embolia de pulmón incidental sean tratados de forma semejante a los episodios sintomáticos. En cuanto a las trombosis viscerales diagnosticadas de forma incidental se recomienda una valoración individualizada de la relación riesgo/beneficio de la terapia anticoagulante.</p>
         <p class="indented margin2">En el caso del TEP subsegmentario hay menor evidencia para dicha recomendación por lo que debe individualizarse en cada paciente valorando riesgos y beneficios.</p>
@@ -328,9 +328,9 @@
 
         <p class="indented margin5">En el caso de los tumores que afectan al sistema nervioso central, si no hay contraindicación seguiremos las mismas recomendaciones que en otros tumors sólidos. Sin embargo, en pacientes con metastasis cerebrales por melanoma o cancer renal se debe valorar una reducción del 25% de la dosis de HBPM por el elevado riesgo de sangrado. </p>
         <p class="indented margin2">En pacientes con glioma del tronco también debe valorarse esta reducción ante la posible severidad de un sangrado en esta region anatómica.</p>
+     </div>
 
 
 
-        </div>
 </div>
   <%= javascript_include_tag "modulo3" %>

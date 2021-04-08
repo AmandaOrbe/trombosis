@@ -29,6 +29,9 @@ const profilaxisEstudios = document.getElementById("profilaxis-estudios");
 const profilaxisAnticoagulantesTab = document.getElementById("profilaxis-anticoagulantes-side");
 const profilaxisAnticoagulantes = document.getElementById("profilaxis-anticoagulantes");
 
+const profilaxisAmbulatoriaTab = document.getElementById("profilaxis-ambulatoria-side");
+const profilaxisAmbulatoria = document.getElementById("profilaxis-ambulatoria");
+
 
 
 
@@ -51,6 +54,7 @@ const profilaxisChapters = [{tab: profilaxisPresentacionTab, content: profilaxis
 
 const profilaxisSubChapters = [{tab: profilaxisEstudiosTab, content: profilaxisEstudios} ,
                   {tab: profilaxisAnticoagulantesTab, content: profilaxisAnticoagulantes} ,
+                  {tab: profilaxisAmbulatoriaTab, content: profilaxisAmbulatoria}
                 ]
 
 
