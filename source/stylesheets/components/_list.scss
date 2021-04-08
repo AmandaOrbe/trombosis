@@ -5,6 +5,8 @@
   font-weight: 400;
   font-size: 1.8rem;
   line-height: 3.6rem;
+  text-align: justify;
+  hyphens: auto;
   
    @include respond(portrait) { // width < 1200
       margin-left: 3rem;
