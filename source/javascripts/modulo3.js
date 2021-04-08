@@ -5,53 +5,38 @@
 
 
 
-const microambientePresentacionTab = document.getElementById("microambiente-presentacion-side");
-const microambientePresentacion = document.getElementById("microambiente-presentacion");
+const tratamientoPresentacionTab = document.getElementById("tratamiento-presentacion-side");
+const tratamientoPresentacion = document.getElementById("tratamiento-presentacion");
 
-const microambienteObjetivosTab = document.getElementById("microambiente-objetivos-side");
-const microambienteObjetivos = document.getElementById("microambiente-objetivos");
+const tratamientoObjetivosTab = document.getElementById("tratamiento-objetivos-side");
+const tratamientoObjetivos = document.getElementById("tratamiento-objetivos");
 
-const microambientePoblacionesTab = document.getElementById("microambiente-poblaciones-side");
-const microambientePoblaciones = document.getElementById("microambiente-poblaciones");
+const tratamientoIndicacionesTab = document.getElementById("tratamiento-indicaciones-side");
+const tratamientoIndicaciones = document.getElementById("tratamiento-indicaciones");
 
-const microambienteCelulasMadreTab = document.getElementById("microambiente-celulas-madre-side");
-const microambienteCelulasMadre = document.getElementById("microambiente-celulas-madre");
+const tratamientoIntroduccionTab = document.getElementById("tratamiento-introduccion-side");
+const tratamientoIntroduccion = document.getElementById("tratamiento-introduccion");
 
-const microambienteCelulasVascularesTab = document.getElementById("microambiente-celulas-vasculares-side");
-const microambienteCelulasVasculares = document.getElementById("microambiente-celulas-vasculares");
+const tratamientoEstablecidaTab = document.getElementById("tratamiento-establecida-side");
+const tratamientoEstablecida = document.getElementById("tratamiento-establecida");
 
-const microambienteCelulasInmunesTab = document.getElementById("microambiente-celulas-inmunes-side");
-const microambienteCelulasInmunes = document.getElementById("microambiente-celulas-inmunes");
+const tratamientoAbsolutasTab = document.getElementById("tratamiento-absolutas-side");
+const tratamientoAbsolutas = document.getElementById("tratamiento-absolutas");
 
-const microambienteProcesoTab = document.getElementById("microambiente-proceso-side");
-const microambienteProceso = document.getElementById("microambiente-proceso");
+const tratamientoRelativasTab = document.getElementById("tratamiento-relativas-side");
+const tratamientoRelativas = document.getElementById("tratamiento-relativas");
 
-const microambienteInvasionTab = document.getElementById("microambiente-invasion-side");
-const microambienteInvasion = document.getElementById("microambiente-invasion");
+const tratamientoTrombolisisTab = document.getElementById("tratamiento-trombolisis-side");
+const tratamientoTrombolisis = document.getElementById("tratamiento-trombolisis");
 
-const microambienteIntravasacionTab = document.getElementById("microambiente-intravasacion-side");
-const microambienteIntravasacion = document.getElementById("microambiente-intravasacion");
+const tratamientoFiltroTab = document.getElementById("tratamiento-filtro-side");
+const tratamientoFiltro = document.getElementById("tratamiento-filtro");
 
-const microambienteTransporteTab = document.getElementById("microambiente-transporte-side");
-const microambienteTransporte = document.getElementById("microambiente-transporte");
+const tratamientoRecomendacionesTab = document.getElementById("tratamiento-recomendaciones-side");
+const tratamientoRecomendaciones = document.getElementById("tratamiento-recomendaciones");
 
-const microambienteDetencionTab = document.getElementById("microambiente-detencion-side");
-const microambienteDetencion = document.getElementById("microambiente-detencion");
-
-const microambienteExtravasacionTab = document.getElementById("microambiente-extravasacion-side");
-const microambienteExtravasacion = document.getElementById("microambiente-extravasacion");
-
-const microambienteInfiltracionTab = document.getElementById("microambiente-infiltracion-side");
-const microambienteInfiltracion = document.getElementById("microambiente-infiltracion");
-
-const microambienteAngiogenesisTab = document.getElementById("microambiente-angiogenesis-side");
-const microambienteAngiogenesis = document.getElementById("microambiente-angiogenesis");
-
-const microambienteFormacionTab = document.getElementById("microambiente-formacion-side");
-const microambienteFormacion = document.getElementById("microambiente-formacion");
-
-const microambienteBiblioTab = document.getElementById("microambiente-biblio-side");
-const microambienteBiblio = document.getElementById("microambiente-biblio");
+const tratamientoRecurrenciaTab = document.getElementById("tratamiento-recurrencia-side");
+const tratamientoRecurrencia = document.getElementById("tratamiento-recurrencia");
 
 
 
@@ -61,28 +46,25 @@ const microambienteBiblio = document.getElementById("microambiente-biblio");
 
 
 
-const microambienteChapters = [{tab: microambientePresentacionTab, content: microambientePresentacion} ,
-                  {tab: microambienteObjetivosTab, content: microambienteObjetivos} ,
-                  {tab: microambientePoblacionesTab, content: microambientePoblaciones},
-                  {tab: microambienteProcesoTab, content: microambienteProceso},
-                  {tab: microambienteAngiogenesisTab, content: microambienteAngiogenesis},
-                  {tab: microambienteBiblioTab, content: microambienteBiblio}
+
+
+const tratamientoChapters = [{tab: tratamientoPresentacionTab, content: tratamientoPresentacion} ,
+                  {tab: tratamientoObjetivosTab, content: tratamientoObjetivos} ,
+                  {tab: tratamientoIndicacionesTab, content: tratamientoIndicaciones}
                 ]
 
 
 
 
 
-const microambienteSubChapters = [{tab: microambienteCelulasMadreTab, content: microambienteCelulasMadre} ,
-                  {tab: microambienteCelulasVascularesTab, content: microambienteCelulasVasculares} ,
-                  {tab: microambienteCelulasInmunesTab, content: microambienteCelulasInmunes},
-                  {tab: microambienteInvasionTab, content: microambienteInvasion},
-                  {tab: microambienteIntravasacionTab, content: microambienteIntravasacion},
-                  {tab: microambienteTransporteTab, content: microambienteTransporte},
-                  {tab: microambienteDetencionTab, content: microambienteDetencion},
-                  {tab: microambienteExtravasacionTab, content: microambienteExtravasacion},
-                  {tab: microambienteInfiltracionTab, content: microambienteInfiltracion},
-                  {tab: microambienteFormacionTab, content: microambienteFormacion}
+const tratamientoSubChapters = [{tab: tratamientoIntroduccionTab, content: tratamientoIntroduccion} ,
+                  {tab: tratamientoEstablecidaTab, content: tratamientoEstablecida} ,
+                  {tab: tratamientoAbsolutasTab, content: tratamientoAbsolutas},
+                  {tab: tratamientoRelativasTab, content: tratamientoRelativas},
+                  {tab: tratamientoTrombolisisTab, content: tratamientoTrombolisis},
+                  {tab: tratamientoFiltroTab, content: tratamientoFiltro},
+                  {tab: tratamientoRecomendacionesTab, content: tratamientoRecomendaciones},
+                  {tab: tratamientoRecurrenciaTab, content: tratamientoRecurrencia}
                 ]
 
 
@@ -101,7 +83,7 @@ const microambienteSubChapters = [{tab: microambienteCelulasMadreTab, content: m
 
 
 window.addEventListener('scroll', function(){
-  microambienteChapters.forEach(function(chapter){
+  tratamientoChapters.forEach(function(chapter){
     console.log(chapter.content);
 
     if ((chapter.content.offsetTop - 500) < (window.scrollY ) && (window.scrollY ) < ((chapter.content.offsetTop- 500 ) + chapter.content.scrollHeight)) {
@@ -122,7 +104,7 @@ window.addEventListener('scroll', function(){
 
 
 window.addEventListener('scroll', function(){
-  microambienteSubChapters.forEach(function(chapter){
+  tratamientoSubChapters.forEach(function(chapter){
     console.log(chapter.content);
 
     if ((chapter.content.offsetTop - 500) < (window.scrollY ) && (window.scrollY ) < ((chapter.content.offsetTop- 500 ) + chapter.content.scrollHeight)) {
@@ -154,10 +136,10 @@ window.addEventListener('scroll', function(){
 
 
 
-const microambiente = document.getElementById('microambiente');
+const tratamiento = document.getElementById('tratamiento');
 
 
-  microambiente.addEventListener("click", function(event){
+  tratamiento.addEventListener("click", function(event){
 
     event.currentTarget.parentNode.classList.toggle("sidebar-content__invisible");
     event.currentTarget.querySelector(".fa-chevron-down").classList.toggle("sidebar-content__chevron-up");
@@ -167,12 +149,12 @@ const microambiente = document.getElementById('microambiente');
 // ************************************ PHONE MENU ****************************
 
 
-const microambientePhoneButton = document.getElementById("microambiente-navigation__button");
-const microambienteSidebarItems = document.querySelectorAll(".sidebar-content__chapter, .sidebar-content__subchapter") ;
+const tratamientoPhoneButton = document.getElementById("tratamiento-navigation__button");
+const tratamientoSidebarItems = document.querySelectorAll(".sidebar-content__chapter, .sidebar-content__subchapter") ;
 
 
 
-microambientePhoneButton.addEventListener("click", function(event){
+tratamientoPhoneButton.addEventListener("click", function(event){
   document.getElementById("sidebar").classList.toggle("width-zero");
   document.getElementById("main").classList.toggle("width-zero");
   document.getElementById("main").classList.toggle("hidden-phone-main");
@@ -183,7 +165,7 @@ microambientePhoneButton.addEventListener("click", function(event){
 });
 
 
-microambienteSidebarItems.forEach(function(item){
+tratamientoSidebarItems.forEach(function(item){
   item.addEventListener("click", function(event){
 
     document.getElementById("sidebar").classList.add("width-zero");
