@@ -1,7 +1,7 @@
  <% t =  data.origen%>
 <div class="navigation">
    <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
-      <label for="navi-toggle" id="microambiente-navigation__button">
+      <label for="navi-toggle" id="profilaxis-navigation__button">
         <span class="navigation__icon--1">&nbsp;</span>
         <span class="navigation__icon--2">&nbsp;</span>
         <span class="navigation__icon--3">&nbsp;</span>
@@ -16,163 +16,102 @@
 
     <div class="sidebar-top">
       <div class="sidebar-top__title">
-        <h2>Microambiente tumoral y metástasis</h2>
+        <h2>Factores de riesgo y pronóstico de la enfermedad tromboembólica</h2>
       </div>
     </div>
 
     <div class="sidebar-content  ">
-      <a href= "../origen-del-cancer.html" id= "origen" class="sidebar-content__item sidebar-content__title">
+     
+      <a href= "../factores.html" id= "origen" class="sidebar-content__item sidebar-content__title">
         <div>
         <h4>MÓDULO 1</h4>
-        <h5>Origen del cáncer </h5>
+        <h5>Factores de riesgo y pronóstico de la enfermedad tromboembólica</h5>
         </div>
       </a>
-      <a href= "../oncogenesis.html" id= "oncogenesis" class="sidebar-content__item sidebar-content__title">
-        <div>
-          <h4>MÓDULO 2</h4>
-          <h5>Oncogénesis y señalización celular</h5>
-        </div>
-      </a>
-
 
       <div class="sidebar-content__modulo-current ">
-        <a id= "microambiente" class="sidebar-content__item sidebar-content__title ">
+        <a id= "profilaxis" class="sidebar-content__item sidebar-content__title ">
           <div id= "contenidos" >        
-            <h4>MÓDULO 3</h4>
-            <h5>Microambiente tumoral y metástasis</h5>
+            <h4>MÓDULO 2</h4>
+            <h5>Profilaxis antitrombótica</h5>
           </div>
           <i class="fas fa-chevron-down sidebar-content__chevron-up"></i>
         </a>
         <div id="contenidos-tabs" >
-          <a href= #microambiente-presentacion class="sidebar-content__item sidebar-content__chapter sidebar-content__item--current" id= microambiente-presentacion-side %>
+          <a href= #profilaxis-presentacion class="sidebar-content__item sidebar-content__chapter sidebar-content__item--current" id= profilaxis-presentacion-side %>
             <p>Presentación</p>
             <i class="fas fa-check-circle check "></i>
             <span class="fas fa-chevron-right sidebar-content__item__chevron"></span>
           </a>
 
-          <a href= #microambiente-objetivos class="sidebar-content__item sidebar-content__chapter " id= microambiente-objetivos-side %>
+          <a href= #profilaxis-objetivos class="sidebar-content__item sidebar-content__chapter " id= profilaxis-objetivos-side %>
             <p>Objetivos</p>
             <i class="fas fa-check-circle check "></i>
             <span class="fas fa-chevron-right sidebar-content__item__chevron"></span>
           </a>
 
-          <a href= #microambiente-poblaciones class="sidebar-content__item sidebar-content__chapter" id= microambiente-poblaciones-side %>
-            <p>01. Poblaciones celulares del microambiente tumoral</p>
+          <a href= #profilaxis-ingresado class="sidebar-content__item sidebar-content__chapter" id= profilaxis-ingresado-side %>
+            <p>01. Paciente médico ingresado</p>
             <i class="fas fa-check-circle check "></i>
             <span class="fas fa-chevron-right sidebar-content__item__chevron"></span>
           </a>
 
-          <a href= #microambiente-celulas-madre class="sidebar-content__item sidebar-content__subchapter" id= microambiente-celulas-madre-side %>
-            <p>01.01 Células madre</p>
+          <a href= #profilaxis-quirurgico class="sidebar-content__item sidebar-content__chapter" id= profilaxis-quirurgico-side %>
+            <p>02. Paciente quirúrgico</p>
             <i class="fas fa-check-circle check "></i>
+            <span class="fas fa-chevron-right sidebar-content__item__chevron"></span>
           </a>
 
-          <a href= #microambiente-celulas-vasculares class="sidebar-content__item sidebar-content__subchapter" id= microambiente-celulas-vasculares-side %>
-            <p>01.02 Células vasculares angiogénicas</p>
+          <a href= #profilaxis-cateter class="sidebar-content__item sidebar-content__chapter" id= profilaxis-cateter-side %>
+            <p>03. Paciente portador de catéter venoso central (port –a- cath)</p>
             <i class="fas fa-check-circle check "></i>
+            <span class="fas fa-chevron-right sidebar-content__item__chevron"></span>
           </a>
 
-
-          <a href= #microambiente-celulas-inmunes class="sidebar-content__item sidebar-content__subchapter" id= microambiente-celulas-inmunes-side %>
-            <p>01.03 Células inmunes</p>
-            <i class="fas fa-check-circle check "></i>
-          </a>
-
-
-           
-
-          <a href= #microambiente-celulas-inmunes class="sidebar-content__item sidebar-content__chapter" id= microambiente-proceso-side >
-            <p>02. Proceso de invasión y metástasis</p>
+          <a href= #profilaxis-ambulatorio class="sidebar-content__item sidebar-content__chapter" id= profilaxis-ambulatorio-side %>
+            <p>04. Paciente médico en tratamiento con quimioterapia en un medio ambulatorio</p>
             <i class="fas fa-check-circle check "></i>
             <span class="fas fa-chevron-right sidebar-content__item__chevron"></span>
           </a>
 
 
-          <a href= #microambiente-invasion class="sidebar-content__item sidebar-content__subchapter" id= microambiente-invasion-side >
-            <p>02.01 Invasión</p>
+          <a href= #profilaxis-estudios class="sidebar-content__item sidebar-content__subchapter" id= profilaxis-estudios-side %>
+            <p>04.01 Estudios de tromboprofilaxis ambulatoria en pacientes con cáncer en tratamiento con quimioterapia.</p>
             <i class="fas fa-check-circle check "></i>
           </a>
 
-          <a href= #microambiente-intravasacion class="sidebar-content__item sidebar-content__subchapter" id= microambiente-intravasacion-side >
-            <p>02.02 Intravasación</p>
+          <a href= #profilaxis-anticoagulantes class="sidebar-content__item sidebar-content__subchapter" id= profilaxis-anticoagulantes-side %>
+            <p>04.02 Papel de los anticoagulantes directos en la profilaxis ambulatoria en pacientes con cáncer.</p>
             <i class="fas fa-check-circle check "></i>
           </a>
 
-          <a href= #microambiente-transporte class="sidebar-content__item sidebar-content__subchapter" id= microambiente-transporte-side >
-            <p>02.03 Transporte vascular </p>
-            <i class="fas fa-check-circle check "></i>
-          </a>
 
-          <a href= #microambiente-detencion class="sidebar-content__item sidebar-content__subchapter" id= microambiente-detencion-side >
-            <p>02.04 Detención </p>
-            <i class="fas fa-check-circle check "></i>
-          </a>
-
-          <a href= #microambiente-extravasacion class="sidebar-content__item sidebar-content__subchapter" id= microambiente-extravasacion-side >
-            <p>02.05 Extravasación </p>
-            <i class="fas fa-check-circle check "></i>
-          </a>
-
-          <a href= #microambiente-infiltracion class="sidebar-content__item sidebar-content__subchapter" id= microambiente-infiltracion-side >
-            <p>02.06 Infiltración y colonización </p>
-            <i class="fas fa-check-circle check "></i>
-          </a>
-
-           
-
-          <a href= #microambiente-angiogenesis class="sidebar-content__item sidebar-content__chapter" id= microambiente-angiogenesis-side %>
-            <p>03. Angiogénesis tumoral</p>
-            <i class="fas fa-check-circle check "></i>
-            <span class="fas fa-chevron-right sidebar-content__item__chevron"></span>
-          </a>
-           
-          <a href= #microambiente-formacion class="sidebar-content__item sidebar-content__subchapter" id= microambiente-formacion-side >
-            <p>03.01 Formación de vasos sanguíneos tumorales </p>
-            <i class="fas fa-check-circle check "></i>
-          </a> 
-
-          
-
-
-          
-
-          <a href= #microambiente-biblio class="sidebar-content__item sidebar-content__chapter" id= microambiente-biblio-side %>
-            <p>Bibliografía</p>
-            <i class="fas fa-check-circle check "></i>
-            <span class="fas fa-chevron-right sidebar-content__item__chevron"></span>
-          </a>
         </div>
       </div>
 
 
 
-      <a href= "../vias-de-respuesta.html" id= "origen" class="sidebar-content__item sidebar-content__title">
+      
+
+      <a href= "../tratamiento.html" id= "origen" class="sidebar-content__item sidebar-content__title">
         <div>
-        <h4>MÓDULO 4</h4>
-        <h5>Vías de respuesta al daño del ADN</h5>
+        <h4>MÓDULO 3</h4>
+        <h5>Tratamiento</h5>
         </div>
       </a>
 
-      <a href= "../inflamacion-y-cancer.html" id= "origen" class="sidebar-content__item sidebar-content__title">
+      <div class="sidebar-content__item sidebar-content__title">
         <div>
-        <h4>MÓDULO 5</h4>
-        <h5>Inflamación y cáncer</h5>
+        <h4></h4>
+        <h5></h5>
         </div>
-      </a>
-
-      <a href= "../agentes-infecciosos-y-cancer.html" id= "origen" class="sidebar-content__item sidebar-content__title">
+      </div>
+      <div class="sidebar-content__item sidebar-content__title">
         <div>
-        <h4>MÓDULO 6</h4>
-        <h5>Agentes infecciosos y cáncer</h5>
+        <h4></h4>
+        <h5></h5>
         </div>
-      </a>
-
-      <a href= "../factores-ambientales.html" id= "origen" class="sidebar-content__item sidebar-content__title">
-        <div>
-        <h4>MÓDULO 7</h4>
-        <h5>Factores ambientales</h5>
-        </div>
-      </a>
+      </div>
       <div class="sidebar-content__item sidebar-content__title">
         <div>
         <h4></h4>
