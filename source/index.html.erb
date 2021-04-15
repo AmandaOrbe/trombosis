@@ -6,7 +6,7 @@
   <div id="main">
     <div class="container">
       <div class="content home-content">
-      	<img src="images/certificacion-seom-green.png" alt="">
+      	<img src="images/logo-SEOM.png" alt="">
 
       	<h4 class="home-h4 mergin5">MÁSTER ONLINE de ONCOLOGÍA MÉDICA</h4>
       	<div class="home-title">
@@ -15,10 +15,22 @@
       	</div>
 
       	<%= partial(:'components/header3', :locals => { :text => "Presentación", :number => '' }) %>
-      	 <p class= "margin2">Los pacientes con cáncer presentan un estado de hipercoagulabilidad adquirido que va desde anormalidades asíntomáticas en tests analíticos de coagulación hasta tromboembolismos mortales...</p>
+      	 <p class= "margin2">Los pacientes con cáncer presentan un estado de hipercoagulabilidad adquirido que va desde anormalidades asíntomáticas en tests analíticos de coagulación hasta tromboembolismos mortales.</p>
+
+         <p class= "margin2">Más del 11% de los pacientes oncológicos sufrirán un evento tromboembólico (ETE) clínico y hasta el 20% presentarán un ETE a lo largo de la enfermedad. Esta cifra parece estar infraestimada ya que en series de autopsias se demuestra su presencia hasta en el 50% de los pacientes con neoplasias.</p>
+
+         <p class= "margin2">La enfermedad tromboembólica representa la segunda causa de muerte en estos pacientes y puede anteceder al diagnóstico tumoral en meses e incluso años.</p>
+
+         <p class= "margin2">Por todo ello el abordaje correcto de esta patología, tanto a nivel de profilaxis como de tratamiento, es de vital importancia para el correcto manejo del paciente oncológico.</p>
 
       	 <%= partial(:'components/header3', :locals => { :text => "Objetivos", :number => '' }) %>
-      	 <p class= "margin2">Los objetivos que pretentde este curso es disponer de unos conocimientos básicos sobre los factores de riesgo, la prevención, el diagnóstico precoz y el tratamiento de estos tumores</p>
+      	 <p class= "margin2">Los principales objetivos del curso son los siguientes:</p>
+
+          <%= partial(:'components/list',  :locals => { :list_items => [
+            ["", "Conocer la incidencia, los factores de riesgo y pronóstico de la ETV."], 
+            ["", "Conocer las indicaciones de profilaxis antitrombótica en el paciente médico ingresado, paciente quirúrgico, paciente portador de catéter venoso central (port -a-cath), paciente médico en tratamiento con quimioterapia en un medio ambulatorio."], 
+            ["", "Aprender a manejar la ETV en las fases iniciales y a largo plazo."], 
+            ["", "Conocer las distintas terapias anticoagulantes y la evidencia de uso de loa nuevos anticoagulantes orales."]]}) %>
 
       	 <%= partial(:'components/header3', :locals => { :text => "Autoría", :number => '' }) %>
       	 <p class= "margin2"><b>Dirección</b></p>
